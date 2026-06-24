@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+
+    <style>
+	.xyzCls{
+	font-weight:bold;
+	font-size:50px!important;
+	}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+			
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: orange;
+        }
+		.abc{
+			 margin-top: 20px;
+            font-weight: bold;
+            color: cyan;
+		}
+		
+		
+    </style>
+</head>
+<body>
+
+
+    <header>
+        <h1 style="text-align:center; padding:20px;color:blue">
+            Welcome to My Website
+        </h1>
+    </header>
+
+    <main>
+	<p 
+	style="color:red;font-style:italic;font-size:160px;" 
+	class="xyzCls"
+	>this is my paragraph</p>
+	
+        <h2>Home Page</h2>
+        <p>This is a basic HTML page with a footer.</p>
+
+        <form onsubmit="showName(event)">
+		
+            <input
+                type="text"
+                id="name"
+                name="namex"
+                required
+                minlength="4"
+                maxlength="10"
+                size="20"
+                placeholder="Enter Name"
+            />
+			
+
+            <button type="submit">Show Name</button>
+        </form>
+		
+		<div id="result1" class="abc">123</div>
+
+        <div id="result">some value</div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showName(event) {
+            event.preventDefault(); // Prevent form refresh of browser
+			
+			//var x = 10
+			//es6 - ecma
+			//let x = 10
+			//const pi = 3.1417
+			//const = x = 10
+			//es6 - ecma script
+
+            const name = document.getElementById("name").value;
+			
+
+            // Show in alert
+            //alert("Entered Name: " + name);
+			console.log(name);
+			console.log("Entered Name: " + name);
+
+            // Show on page
+            document.getElementById("result").innerText =
+                "You entered: " + name;
+        }
+    </script>
+
+</body>
+</html>
