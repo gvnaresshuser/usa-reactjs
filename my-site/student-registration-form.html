@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="student-registration-form.css">
+</head>
+
+<body>
+<a href="index.html" class="back-btn">
+    ← Back to Home
+</a>
+    <h1 align="center">Student Registration Form</h1>
+
+    <form id="studentForm">
+
+        <fieldset>
+            <legend><b>Personal Information</b></legend>
+
+            <label>Student Name:</label><br>
+            <input type="text" id="studentName" placeholder="Enter Student Name">
+            <br><br>
+
+            <label>Father Name:</label><br>
+            <input type="text" id="fatherName">
+            <br><br>
+
+            <label>Mother Name:</label><br>
+            <input type="text" id="motherName">
+            <br><br>
+
+            <label>Email:</label><br>
+            <input type="email" id="email">
+            <br><br>
+
+            <label>Mobile Number:</label><br>
+            <input type="tel" id="mobile">
+            <br><br>
+
+            <label>Password:</label><br>
+            <input type="password" id="password">
+            <br><br>
+
+            <label>Date of Birth:</label><br>
+            <input type="date" id="dob">
+            <br><br>
+
+            <label>Age:</label><br>
+            <input type="number" id="age">
+            <br><br>
+
+            <label>Gender:</label><br>
+
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+
+            <legend><b>Educational Details</b></legend>
+            <label>Qualification:</label><br>
+            <select id="qualification">
+                <option>--Select Qualification--</option>
+                <option>B.Tech</option>
+                <option>B.Sc</option>
+                <option>B.Com</option>
+                <option>BCA</option>
+                <option>MCA</option>
+                <option>M.Tech</option>
+            </select>
+
+            <br><br>
+
+            <label>College Name:</label><br>
+            <input type="text" id="college">
+
+            <br><br>
+
+            <label>Year of Passing:</label><br>
+            <input type="number" id="yop">
+
+            <br><br>
+
+            <label>Percentage:</label><br>
+            <input type="number" id="percentage">
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+
+            <legend><b>Course Details</b></legend>
+
+            <label>Interested Courses:</label><br>
+
+            <input type="checkbox" name="course" value="HTML"> HTML
+            <input type="checkbox" name="course" value="CSS"> CSS
+            <input type="checkbox" name="course" value="JavaScript"> JavaScript
+            <input type="checkbox" name="course" value="ReactJS"> ReactJS
+            <input type="checkbox" name="course" value="NodeJS"> NodeJS
+            <input type="checkbox" name="course" value="ExpressJS"> ExpressJS
+            <input type="checkbox" name="course" value="PostgreSQL"> PostgreSQL
+
+            <br><br>
+
+            <label>Preferred Batch:</label><br>
+
+            <input type="radio" name="batch" value="Morning"> Morning
+            <input type="radio" name="batch" value="Afternoon"> Afternoon
+            <input type="radio" name="batch" value="Evening"> Evening
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+
+            <legend><b>Address</b></legend>
+            <label>Address:</label><br>
+            <textarea id="address" rows="5" cols="40"></textarea>
+
+            <br><br>
+
+            <label>Upload Resume:</label><br>
+            <input type="file" id="resume">
+
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+        <input type="button" value="Click Me" onclick="showMessage()">
+
+    </form>
+
+    <!-- External JavaScript -->
+    <script src="student-registration-form.js"></script>
+
+</body>
+
+</html>

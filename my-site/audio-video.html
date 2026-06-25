@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Audio & Video Demo</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            min-height: 100vh;
+            padding: 40px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 42px;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        h2 {
+            color: #1565c0;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #2196f3;
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            border: 5px solid #2196f3;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        /* =============================================== */
+        /* Back Button */
+        .back-btn {
+          
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-btn:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html" class="back-btn">
+        ← Back to Home
+    </a>
+    <div class="container">
+        <h1>🎵 HTML5 Audio & 🎬 Video Demo</h1>
+
+        <div class="card">
+            <h2>🎵 Audio Player</h2>
+
+            <p>
+                The <strong>&lt;audio&gt;</strong> element is used to play MP3, WAV,
+                and OGG audio files in a web page.
+            </p>
+
+            <audio controls>
+                <!-- LOCAL AUDIO SOURCE: -->
+                <source src="audio/audio.mp3" type="audio/mpeg" />
+
+                <!-- REMOTE AUDIO SOURCE: -->
+                <!-- <source src="https://samplelib.com/mp3/sample-3s.mp3" type="audio/mpeg"> -->
+
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+
+        <div class="card">
+            <h2>🎬 Video Player</h2>
+
+            <p>
+                The <strong>&lt;video&gt;</strong> element is used to play MP4, WebM
+                and OGG videos directly inside the browser.
+            </p>
+
+            <video controls poster="images/poster.jpg">
+                <!-- LOCAL VIDEO SOURCE: -->
+                <source src="video/video.mp4" type="video/mp4">
+
+                <!-- REMOTE VIDEO SOURCE: -->
+                <!-- <source src="https://media.istockphoto.com/id/157461615/video/stormy-ocean.mp4?s=mp4-640x640-is&k=20&c=3DNPck_Q3AOjnCrVBv6RziNBg7tJXAPZsWwHM95gCyI=" type="video/mp4"> -->
+
+
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <footer>HTML5 Multimedia Demo | Audio & Video Tags</footer>
+    </div>
+</body>
+
+</html>

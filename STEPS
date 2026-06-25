@@ -1,0 +1,79 @@
+Mr.Subba Reddy:+1 (310) 384-2796
+Mr.Ram:+1 (678) 834-2506
+
+
+echo "# usa-reactjs" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/gvnaresshuser/usa-reactjs.git
+git push -u origin main
+
+
+git remote add origin https://github.com/gvnaresshuser/usa-reactjs.git
+git branch -M main
+git push -u origin main
+
+
+======================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git init
+Initialized empty Git repository in E:/MURALI/REACT-JS-CRASH-COURSE/usa-reactjs/.git/
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git init
+Reinitialized existing Git repository in E:/MURALI/REACT-JS-CRASH-COURSE/usa-reactjs/.git/
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   html-basics/SCREENS/CODE_EXPLANATION.png
+        new file:   html-basics/SCREENS/What does a browser understands.png
+        new file:   html-basics/test.html
+        new file:   my-site/STEPS TO CREATE HTTP-SERVER FOR TESTING PURPOSE.png
+        new file:   my-site/index.html
+        new file:   my-site/script.js
+        new file:   my-site/style.css
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        STEPS
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "files"
+[master (root-commit) b2c0002] files
+ 8 files changed, 266 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 html-basics/SCREENS/CODE_EXPLANATION.png
+ create mode 100644 html-basics/SCREENS/What does a browser understands.png
+ create mode 100644 html-basics/test.html
+ create mode 100644 my-site/STEPS TO CREATE HTTP-SERVER FOR TESTING PURPOSE.png
+ create mode 100644 my-site/index.html
+ create mode 100644 my-site/script.js
+ create mode 100644 my-site/style.css
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git remote add origin https://github.com/gvnaresshuser/usa-reactjs.git
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git branch -M main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push -u origin main
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 1.78 MiB | 1007.00 KiB/s, done.
+Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/gvnaresshuser/usa-reactjs.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
