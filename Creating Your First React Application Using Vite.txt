@@ -1,0 +1,85 @@
+ Creating Your First React Application Using Vite
+
+In this exercise, you will create your first React application using the Vite build tool and the npm package manager.
+
+Step 1: Create a New React Application
+
+Run the following command in the Command Prompt or Terminal:
+
+```bash
+npm create vite@latest my-react-app
+```
+
+When prompted, choose the following options:
+
+Framework:
+
+ React
+
+Variant:
+
+ JavaScript
+
+---
+
+Step 2: Navigate to the Project Folder
+
+```bash
+cd my-react-app
+```
+
+---
+
+Step 3: Install Project Dependencies
+
+```bash
+npm install
+```
+
+---
+
+Step 4: Start the Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+Step 5: View the Application
+
+Open your preferred web browser (recommended: Google Chrome) and visit:
+
+```
+http://localhost:5173
+```
+
+You should now see your React application running successfully.
+
+---
+
+Step 6: Open the Project in Visual Studio Code
+
+Make sure you are inside the project directory, then run:
+
+```bash
+code .
+```
+
+This command will open the project in Visual Studio Code.
+
+---
+
+Step 7: Explore the Project Structure
+
+Take some time to observe and understand the files and folders that Vite has created, such as:
+
+ `node_modules/`
+ `public/`
+ `src/`
+ `index.html`
+ `package.json`
+ `vite.config.js`
+ `.gitignore`
+
+
