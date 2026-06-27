@@ -77,3 +77,140 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 branch 'main' set up to track 'origin/main'.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
++++++++++++++++++++++++++++++++++++++++++++
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Class Component - Complete Lifecycle Order.png
+        new file:   Functional Component - Complete Lifecycle Order.png
+        new file:   REACTJS-INTRODUCTION/0.What you should know.png
+        new file:   REACTJS-INTRODUCTION/1.Steps to create reactjs app with VITE.png
+        new file:   REACTJS-INTRODUCTION/2.Files and Folders.png
+        new file:   REACTJS-INTRODUCTION/3.ReactJS-Startup Flow.png
+        new file:   REACTJS-INTRODUCTION/5.Props State.png
+        new file:   REACTJS-INTRODUCTION/6.Components DOM Tree.png
+        new file:   REACTJS-INTRODUCTION/7.Components.png
+        new file:   REACTJS-INTRODUCTION/8.App made with components.png
+        new file:   REACTJS-INTRODUCTION/Assignment - 3 - Solution.txt
+        new file:   REACTJS-INTRODUCTION/Assignment - 3-Instalation.png
+        new file:   REACTJS-INTRODUCTION/Assignment-1-Instalation.png
+        new file:   REACTJS-INTRODUCTION/Assignment-2-Instalation.png
+        new file:   REACTJS-INTRODUCTION/CODE_EXPLANATION-App-jsx.png
+        new file:   REACTJS-INTRODUCTION/CODE_EXPLANATION-index.png
+        new file:   REACTJS-INTRODUCTION/CODE_EXPLANATION-main.jsx.png
+        new file:   REACTJS-INTRODUCTION/Chrome-Extension-1.png
+        new file:   REACTJS-INTRODUCTION/Chrome-Extension.png
+        new file:   REACTJS-INTRODUCTION/Creating React App-1.png
+        new file:   REACTJS-INTRODUCTION/Creating React App-2.png
+        new file:   REACTJS-INTRODUCTION/Creating React App.png
+        new file:   REACTJS-INTRODUCTION/How to Operate Training Material.png
+        new file:   REACTJS-INTRODUCTION/NODE-JS-20-19-3.png
+        new file:   REACTJS-INTRODUCTION/NOTES.txt
+        new file:   REACTJS-INTRODUCTION/NodeJS Installation with NVM.png
+        new file:   REACTJS-INTRODUCTION/NodeJS-Version.png
+        new file:   REACTJS-INTRODUCTION/NodeJS.png
+        new file:   REACTJS-INTRODUCTION/PLUGINS.png
+        new file:   REACTJS-INTRODUCTION/RECAP.png
+        new file:   REACTJS-INTRODUCTION/Solution-2.png
+        new file:   REACTJS-INTRODUCTION/StrictMode.png
+        new file:   REACTJS-INTRODUCTION/TERMS TO KNOW.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/1.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/10.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/12.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/13.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/2.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/3.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/4.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/6.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/7.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/8.png
+        new file:   REACTJS-INTRODUCTION/Theory about ReactJS/9.png
+        new file:   REACTJS-INTRODUCTION/VS Code Editor-Plugin-1-ES7- ReactReduxReact-Native snippets.png
+        new file:   REACTJS-INTRODUCTION/VS Code Editor-Plugin-2-Prettier-Code Format.png
+        new file:   REACTJS-INTRODUCTION/VS Code Editor-Plugin-3-Prettier-Code Format.png
+        new file:   REACTJS-INTRODUCTION/VS Code Editor-Plugin-4-Prettier-Code Format.png
+        new file:   REACTJS-INTRODUCTION/VS Code Editor-Plugin-5-Code Spell Checker.png
+        new file:   REACTJS-INTRODUCTION/VS Code Editor-Plugin-6-TailwindCSS.png
+        new file:   REACTJS-INTRODUCTION/VS Code Editor.png
+        new file:   REACTJS-INTRODUCTION/What a Browser Understands.png
+        new file:   REACTJS-INTRODUCTION/why Logo 2 (React logo) is spinning.png
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "27-06-2026 added files"
+[main 4d0e9a9] 27-06-2026 added files
+ 53 files changed, 162 insertions(+)
+ create mode 100644 Class Component - Complete Lifecycle Order.png
+ create mode 100644 Functional Component - Complete Lifecycle Order.png
+ create mode 100644 REACTJS-INTRODUCTION/0.What you should know.png
+ create mode 100644 REACTJS-INTRODUCTION/1.Steps to create reactjs app with VITE.png
+ create mode 100644 REACTJS-INTRODUCTION/2.Files and Folders.png
+ create mode 100644 REACTJS-INTRODUCTION/3.ReactJS-Startup Flow.png
+ create mode 100644 REACTJS-INTRODUCTION/5.Props State.png
+ create mode 100644 REACTJS-INTRODUCTION/6.Components DOM Tree.png
+ create mode 100644 REACTJS-INTRODUCTION/7.Components.png
+ create mode 100644 REACTJS-INTRODUCTION/8.App made with components.png
+ create mode 100644 REACTJS-INTRODUCTION/Assignment - 3 - Solution.txt
+ create mode 100644 REACTJS-INTRODUCTION/Assignment - 3-Instalation.png
+ create mode 100644 REACTJS-INTRODUCTION/Assignment-1-Instalation.png
+ create mode 100644 REACTJS-INTRODUCTION/Assignment-2-Instalation.png
+ create mode 100644 REACTJS-INTRODUCTION/CODE_EXPLANATION-App-jsx.png
+ create mode 100644 REACTJS-INTRODUCTION/CODE_EXPLANATION-index.png
+ create mode 100644 REACTJS-INTRODUCTION/CODE_EXPLANATION-main.jsx.png
+ create mode 100644 REACTJS-INTRODUCTION/Chrome-Extension-1.png
+ create mode 100644 REACTJS-INTRODUCTION/Chrome-Extension.png
+ create mode 100644 REACTJS-INTRODUCTION/Creating React App-1.png
+ create mode 100644 REACTJS-INTRODUCTION/Creating React App-2.png
+ create mode 100644 REACTJS-INTRODUCTION/Creating React App.png
+ create mode 100644 REACTJS-INTRODUCTION/How to Operate Training Material.png
+ create mode 100644 REACTJS-INTRODUCTION/NODE-JS-20-19-3.png
+ create mode 100644 REACTJS-INTRODUCTION/NOTES.txt
+ create mode 100644 REACTJS-INTRODUCTION/NodeJS Installation with NVM.png
+ create mode 100644 REACTJS-INTRODUCTION/NodeJS-Version.png
+ create mode 100644 REACTJS-INTRODUCTION/NodeJS.png
+ create mode 100644 REACTJS-INTRODUCTION/PLUGINS.png
+ create mode 100644 REACTJS-INTRODUCTION/RECAP.png
+ create mode 100644 REACTJS-INTRODUCTION/Solution-2.png
+ create mode 100644 REACTJS-INTRODUCTION/StrictMode.png
+ create mode 100644 REACTJS-INTRODUCTION/TERMS TO KNOW.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/1.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/10.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/12.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/13.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/2.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/3.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/4.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/6.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/7.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/8.png
+ create mode 100644 REACTJS-INTRODUCTION/Theory about ReactJS/9.png
+ create mode 100644 REACTJS-INTRODUCTION/VS Code Editor-Plugin-1-ES7- ReactReduxReact-Native snippets.png
+ create mode 100644 REACTJS-INTRODUCTION/VS Code Editor-Plugin-2-Prettier-Code Format.png
+ create mode 100644 REACTJS-INTRODUCTION/VS Code Editor-Plugin-3-Prettier-Code Format.png
+ create mode 100644 REACTJS-INTRODUCTION/VS Code Editor-Plugin-4-Prettier-Code Format.png
+ create mode 100644 REACTJS-INTRODUCTION/VS Code Editor-Plugin-5-Code Spell Checker.png
+ create mode 100644 REACTJS-INTRODUCTION/VS Code Editor-Plugin-6-TailwindCSS.png
+ create mode 100644 REACTJS-INTRODUCTION/VS Code Editor.png
+ create mode 100644 REACTJS-INTRODUCTION/What a Browser Understands.png
+ create mode 100644 REACTJS-INTRODUCTION/why Logo 2 (React logo) is spinning.png
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 58, done.
+Counting objects: 100% (58/58), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (57/57), done.
+Writing objects: 100% (57/57), 22.95 MiB | 1.02 MiB/s, done.
+Total 57 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   ae004f7..4d0e9a9  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
