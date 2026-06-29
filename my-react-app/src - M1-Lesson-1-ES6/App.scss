@@ -1,0 +1,64 @@
+//======================== VARIABLES ==========================
+$primary-color: #d6f0d6;
+$secondary-color: red;
+$tertiary-color: orange;
+$my-color: navy;
+body {
+    background-color: $primary-color;
+}
+p {
+    color: $secondary-color;
+}
+div{
+    color: $tertiary-color;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+//===================== MIXINS ==========================
+@mixin rounded($radius) {
+    border-radius: $radius;
+}
+
+button {
+    @include rounded(25px);
+}
+//===================== NESTED SELECTORS ==========================
+nav {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    margin-top: 10px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin-right: 1rem;
+
+            a {
+                color: $my-color;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+//-------------------------------------------------
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.card {
+    @include flex-center;
+    height: 200px;
+    width: 200px;
+    background: lightblue;
+    margin: 0 auto; 
+}

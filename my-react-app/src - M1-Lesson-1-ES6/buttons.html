@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Simple Button Types Example</title>
+</head>
+
+<body>
+    <h2>Button Types Demo</h2>
+
+    <form id="myForm">
+        <p>
+            <label>Name: <input type="text" name="name"></label>
+        </p>
+        <p>
+            <label>Email: <input type="email" name="email"></label>
+        </p>
+
+        <!-- Submit button -->
+        <button type="submit">Submit Button</button>
+
+        <!-- Normal clickable button -->
+        <button type="button" onclick="alert('Button clicked!')">Normal Button</button>
+
+        <!-- Reset button -->
+        <button type="reset">Reset Button</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // prevent actual submission
+            const formData = new FormData(this);
+            const name = formData.get("name");
+            const email = formData.get("email");
+            alert(`Form submitted!\nName: ${name}\nEmail: ${email}`);
+        });
+    </script>
+</body>
+
+</html>

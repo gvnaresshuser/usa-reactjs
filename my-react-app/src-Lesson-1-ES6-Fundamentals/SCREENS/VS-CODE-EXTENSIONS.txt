@@ -1,0 +1,362 @@
+For *React JS development in VS Code*, these are the most useful extensions that I recommend for your React + Vite projects.
+
+## 1. ES7+ React/Redux/React-Native Snippets
+
+Extension Name:
+*ES7+ React/Redux/React-Native snippets*
+
+### Benefits
+
+* Quickly generate React components
+* React hooks snippets
+* Redux snippets
+
+### Examples
+
+Type:
+
+```text
+rafce
+```
+
+Press *Tab*
+
+Generates:
+
+```jsx
+import React from 'react';
+
+const App = () => {
+  return (
+    <div>App</div>
+  );
+};
+
+export default App;
+```
+
+---
+
+## 2. Prettier
+
+Extension Name:
+*Prettier - Code formatter*
+
+### Benefits
+
+Automatically formats code.
+
+Before:
+
+```javascript
+const name="Naresh"
+const age=25
+```
+
+After:
+
+```javascript
+const name = "Naresh";
+const age = 25;
+```
+
+### Format Shortcut
+
+```text
+Shift + Alt + F
+```
+
+---
+
+## 3. ESLint
+
+Extension Name:
+*ESLint*
+
+### Benefits
+
+* Detects errors
+* Suggests improvements
+* Enforces coding standards
+
+Example:
+
+```javascript
+let name = "Naresh";
+```
+
+ESLint may suggest:
+
+```javascript
+const name = "Naresh";
+```
+
+---
+
+## 4. Auto Rename Tag
+
+Extension Name:
+*Auto Rename Tag*
+
+### Example
+
+If you change:
+
+```html
+<div>
+```
+
+to
+
+```html
+<section>
+```
+
+Closing tag automatically changes:
+
+```html
+</section>
+```
+
+---
+
+## 5. Auto Close Tag
+
+Extension Name:
+*Auto Close Tag*
+
+### Example
+
+Type:
+
+```html
+<div>
+```
+
+Automatically creates:
+
+```html
+<div></div>
+```
+
+---
+
+## 6. Path Intellisense
+
+Extension Name:
+*Path Intellisense*
+
+### Benefits
+
+Autocomplete file paths.
+
+Example:
+
+```javascript
+import Header from "./
+```
+
+Shows available files automatically.
+
+---
+
+## 7. Tailwind CSS IntelliSense
+
+Extension Name:
+*Tailwind CSS IntelliSense*
+
+### Benefits
+
+Autocomplete Tailwind classes.
+
+Example:
+
+```jsx
+className="bg-
+```
+
+Suggestions:
+
+```text
+bg-red-500
+bg-blue-500
+bg-green-500
+```
+
+Very useful for React + Tailwind projects.
+
+---
+
+## 8. Material Icon Theme
+
+Extension Name:
+*Material Icon Theme*
+
+### Benefits
+
+Beautiful icons for:
+
+* React files
+* JS files
+* CSS files
+* Images
+* Folders
+
+Makes project navigation easier.
+
+---
+
+## 9. Error Lens
+
+Extension Name:
+*Error Lens*
+
+### Benefits
+
+Shows errors directly in the editor.
+
+Instead of:
+
+```javascript
+const name =
+```
+
+Error appears immediately on the line.
+
+---
+
+## 10. GitLens
+
+Extension Name:
+*GitLens*
+
+### Benefits
+
+* Git history
+* Blame annotations
+* Commit tracking
+
+Very useful in team projects.
+
+---
+
+## 11. Thunder Client
+
+Extension Name:
+*Thunder Client*
+
+### Benefits
+
+API testing inside VS Code.
+
+Example:
+
+```http
+GET http://localhost:3000/api/products
+```
+
+No need to open Postman.
+
+---
+
+## 12. npm Intellisense
+
+Extension Name:
+*npm Intellisense*
+
+### Benefits
+
+Auto-completes npm package imports.
+
+Example:
+
+```javascript
+import axios from "axios";
+```
+
+Suggestions appear automatically.
+
+---
+
+## 13. JavaScript (ES6) Code Snippets
+
+Extension Name:
+*JavaScript (ES6) code snippets*
+
+### Example
+
+Type:
+
+```text
+imp
+```
+
+Generates:
+
+```javascript
+import moduleName from "module";
+```
+
+---
+
+## 14. Code Spell Checker
+
+Extension Name:
+*Code Spell Checker*
+
+### Benefits
+
+Detects spelling mistakes in variables and comments.
+
+Example:
+
+```javascript
+const usrname = "Naresh";
+```
+
+Suggests:
+
+```javascript
+username
+```
+
+---
+
+## 15. Live Server (For HTML/CSS/JS)
+
+Extension Name:
+*Live Server*
+
+### Benefits
+
+Runs HTML projects instantly.
+
+Right Click:
+
+```text
+index.html
+```
+
+→ *Open with Live Server*
+
+Useful when teaching HTML/CSS/JavaScript before React.
+
+---
+
+# Recommended Extensions for Your React Full Stack Classes
+
+Install these first:
+
+✅ ES7+ React/Redux Snippets
+✅ Prettier
+✅ ESLint
+✅ Auto Rename Tag
+✅ Auto Close Tag
+✅ Path Intellisense
+✅ Tailwind CSS IntelliSense
+✅ Material Icon Theme
+✅ Error Lens
+✅ Thunder Client
+✅ GitLens
+
+These cover almost everything needed for *React 19 + Vite + Tailwind CSS + Node.js + Express.js + PostgreSQL (PERN Stack)* development. 🚀
