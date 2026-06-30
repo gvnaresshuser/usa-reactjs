@@ -1,5 +1,7 @@
-import React from 'react';
-import './App.css';
+//App-TemplateLiterals.jsx
+
+import React from "react";
+import "./App.css";
 
 function App() {
   // Initial user array
@@ -16,7 +18,7 @@ function App() {
 
   users.push({
     id: newId,
-    email: `${newEmail}`,//BACKTICKS USED HERE NOT SINGLE QUOTES
+    email: `${newEmail}`, //BACKTICKS USED HERE NOT SINGLE QUOTES
   });
 
   // Add another user again
@@ -34,7 +36,7 @@ function App() {
 
       <h2>User List</h2>
       <ul style={{ listStyleType: "none", padding: 0 }}>
-        {users.map(user => (
+        {users.map((user) => (
           <li key={user.id}>
             <strong>ID:</strong> {user.id} <br />
             <strong>Email:</strong> {user.email}
