@@ -1,37 +1,21 @@
-import { useState, useEffect } from "react";
+import React,{useState} from 'react'
 
-function FunctionalComponentLifecycleDemo() {
-  console.log("1. Component Function Executed");
-
-  const [count, setCount] = useState(0);
-
-  // Equivalent to componentDidMount()
-  useEffect(() => {
-    console.log("2. Component Mounted");
-
-    return () => {
-      console.log("6. Component Will Unmount");
-    };
-  }, []);
-
-  // Equivalent to componentDidUpdate()
-  useEffect(() => {
-    if (count !== 0) {
-      console.log("5. Component Updated");
+function App() {
+    //let x = 10;
+    const [x, setX] = useState(10);
+    function test(){
+        //x = 200;
+        setX(x+1);
+        console.log(x);
     }
-  }, [count]);
-
-  console.log("3. Rendering UI");
-
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>React Functional Component Lifecycle</h1>
-
-      <h2>Count: {count}</h2>
-
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-    </div>
-  );
+    <>
+        <div>{x}</div>
+        <button onClick={test}>Click</button>
+    </>
+  )
 }
 
-export default FunctionalComponentLifecycleDemo;
+export default App
+
+

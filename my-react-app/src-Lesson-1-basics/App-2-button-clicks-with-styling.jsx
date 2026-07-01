@@ -54,27 +54,27 @@ function App() {
           padding: "20px",
         }}
       >
-        <button class="myButton" onClick={handleClick}>
+        <button className="myButton" onClick={handleClick}>
           Click Me 1
         </button>
-        <button class="myButton" onClick={() => handleClick()}>
+        <button className="myButton" onClick={() => handleClick()}>
           Click Me 2
         </button>
         {/* WILL NOT WORK */}
         {/* Because the function executes during rendering. */}
-        <button class="myButton" onClick={handleClick()}>
+        <button className="myButton" onClick={handleClick()}>
           Click Me 3
         </button>
-        <button class="myButton" onClick={() => handleClick}>
+        <button className="myButton" onClick={() => handleClick}>
           Click Me 4
         </button>
         {/* calling funtion with arguments */}
-        <button class="myButton" onClick={() => handleClickWithArgs(1, 2)}>
+        <button className="myButton" onClick={() => handleClickWithArgs(1, 2)}>
           Click Me 5
         </button>
         {setTimeout(handleClickTimeout, 3000)} -
         {setTimeout(() => handleClickTimeout(), 3000)}
-        <button class="myButton" onClick={test}>
+        <button className="myButton" onClick={test}>
           Click Me 6
         </button>
       </div>

@@ -245,3 +245,36 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
    18521f3..3754224  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   my-react-app/src-Lesson-1-basics/SCREENS/public-src-asstes.png
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "added notes public src/assets"
+[main 90eafad] added notes public src/assets
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 my-react-app/src-Lesson-1-basics/SCREENS/public-src-asstes.png
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 760.44 KiB | 22.37 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   98263e6..90eafad  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>

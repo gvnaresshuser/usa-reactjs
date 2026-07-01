@@ -1,0 +1,247 @@
+
+ Step 1: Using a Normal Variable
+
+```jsx
+import React from "react";
+
+function App() {
+  let x = 10;
+
+  function test() {
+    x = 200;
+    console.log(x);
+    return x;
+  }
+
+  return (
+    <>
+      <h1>Without useState</h1>
+      <h2>{test()}</h2>
+    </>
+  );
+}
+
+export default App;
+```
+
+ Output
+
+```
+Without useState
+
+200
+```
+
+ Explain
+
+* `x` is a normal JavaScript variable.
+* `test()` changes it to `200`.
+* Since `test()` is called while rendering, React displays `200`.
+* However, **React is not tracking this variable**.
+
+---
+
+ Step 2: Problem with a Normal Variable
+
+```jsx
+import React from "react";
+
+function App() {
+  let x = 10;
+
+  function increase() {
+    x++;
+    console.log(x);
+  }
+
+  return (
+    <>
+      <h1>x = {x}</h1>
+
+      <button onClick={increase}>
+        Increase
+      </button>
+    </>
+  );
+}
+
+export default App;
+```
+
+ What happens?
+
+Initially
+
+```
+x = 10
+```
+
+Click button
+
+Console
+
+```
+11
+12
+13
+```
+
+Screen
+
+```
+x = 10
+```
+
+still!
+
+ Why?
+
+Because
+
+* variable changed ✔
+* React didn't re-render ❌
+
+React doesn't know that `x` changed.
+
+---
+
+ Step 3: Using useState
+
+```jsx
+import { useState } from "react";
+
+function App() {
+  const [x, setX] = useState(10);
+
+  function increase() {
+    setX(x + 1);
+  }
+
+  return (
+    <>
+      <h1>x = {x}</h1>
+
+      <button onClick={increase}>
+        Increase
+      </button>
+    </>
+  );
+}
+
+export default App;
+```
+
+ Output
+
+Initially
+
+```
+x = 10
+```
+
+Click
+
+```
+11
+12
+13
+14
+...
+```
+
+The screen updates every time.
+
+---
+
+ Step 4: Compare Side by Side
+
+ Without useState
+
+```jsx
+let x = 10;
+
+function increase() {
+    x++;
+}
+```
+
+React **doesn't know** that `x` changed.
+
+---
+
+ With useState
+
+```jsx
+const [x, setX] = useState(10);
+
+function increase() {
+    setX(x + 1);
+}
+```
+
+`setX()` tells React:
+
+> "The state has changed. Please render the component again."
+
+---
+
+ Step 5: Show What Happens During Re-render
+
+```jsx
+import { useState } from "react";
+
+function App() {
+  console.log("Component Rendered");
+
+  const [x, setX] = useState(10);
+
+  function increase() {
+    console.log("Button Clicked");
+    setX(x + 1);
+  }
+
+  return (
+    <>
+      <h1>{x}</h1>
+
+      <button onClick={increase}>
+        Increase
+      </button>
+    </>
+  );
+}
+
+export default App;
+```
+
+ Console
+
+```
+Component Rendered
+
+Button Clicked
+Component Rendered
+
+Button Clicked
+Component Rendered
+
+Button Clicked
+Component Rendered
+```
+
+This demonstrates that **calling `setX()` causes React to render the component again**, which updates the UI.
+
+---
+
+ Teaching Summary
+
+| Normal Variable                              | useState                                    |
+| -------------------------------------------- | ------------------------------------------- |
+| React does not track changes                 | React tracks state changes                  |
+| Updating the variable does not update the UI | Updating state automatically updates the UI |
+| No re-render                                 | Triggers a re-render                        |
+| Used for temporary/local calculations        | Used for data that affects the UI           |
+
+A simple rule your students can remember is:
+
+> **Use a normal variable for values that don't need to appear or update in the UI. Use `useState` for values that affect what the user sees, because updating state tells React to re-render the component.**
