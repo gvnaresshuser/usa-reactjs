@@ -1,202 +1,150 @@
-// All-in-one.jsx
-
 import React from "react";
-import { add } from "./utils"; // Named import with {}
-import minus from "./utils"; // Default import without {}
-import UserCardProps from "./UserCardProps";
+import "./App.css";
+//============= SASSY CSS ===================
+//import './App.scss';
+//SASSY CSS
+//npm install -D sass-embedded
+//============= SASSY CSS ===================
+
+// Sample function to be used as a prop
+const greetUser = () => {
+  alert("Hello, welcome to React!");
+};
 
 function App() {
-  //========== PROPS OBJECT ===========
-  // User object
+  // Primitive data types - let and const - typecoercion
+  const name = "React Learner"; // string
+  const age = 21; // number
+  const isLoggedIn = true; // boolean
+
+  // Non-primitive data types
+  const hobbies = ["Coding", "Reading", "Gaming"]; // array
+  /*   hobbies.push("Hiking"); // Adding a new hobby
+    hobbies[4] = "Traveling"; // Modifying an existing hobby
+    //hobbies = ["Coding", "Reading", "Gaming"]; // Reassigning the array is not allowed as it's a constant
+   */
   const user = {
-    name: "Alice",
-    age: 25,
+    // object
+    id: 1,
+    email: "user@example.com",
+    password: "securepassword",
   };
 
-  // Arrow function with ternary operator
-  const getAgeStatus = (age) => (age >= 18 ? "Adult" : "Minor");
-  //========== PROPS OBJECT ===========
-  // ============================
-  // let and const
-  // ============================
-  let city = "Hyderabad";
-  city = "Bengaluru";
+  const users = [
+    { id: 1, name: "Alice", email: "user@example.com" },
+    { id: 2, name: "Bob", email: "user1@example.com" },
+  ];
+  console.log(users);
+  console.log(user);
 
-  const trainer = "GV Naressh";
-
-  // ============================
-  // Arrow Function
-  // ============================
-  const square = (num) => num * num;
-
-  // ============================
-  // Template Literals
-  // ============================
-  const message = `Hello ${trainer}.Welcome to ${city}!`;
-  const message1 = `Hello ${trainer}.
-This is for testing.
-Welcome to ${city}!`;
-
-  // ============================
-  // Destructuring - Array
-  // ============================
-  const colors = ["Red", "Green", "Blue"];
-
-  const [firstColor, secondColor, thirdColor] = colors;
-
-  // ============================
-  // Destructuring - Object
-  // ============================
-  const student = {
-    name: "John",
-    age: 22,
-    course: "ReactJS",
+  // Function type
+  const handleClick = () => {
+    console.log("Button clicked!");
   };
 
-  const { name, age, course } = student;
-
-  // ============================
-  // Spread Operator
-  // ============================
-  const numbers = [10, 20, 30];
-
-  const newNumbers = [...numbers, 40, 50];
-
-  const employee = {
-    id: 101,
-    designation: "Developer",
+  const handleClickParams = (a) => {
+    console.log("Button clicked! " + a);
   };
 
-  const newEmployee = {
-    ...employee,
-    salary: 75000,
-  };
-
-  // ============================
-  // Rest Operator
-  // ============================
-  const total = (...nums) => {
-    return nums.reduce((sum, num) => sum + num, 0);
-  };
-
-  // ============================
-  // Promise
-  // ============================
-  const promiseExample = () => {
-    //RESOLVE
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("Promise Completed Successfully");
-      }, 1000);
-    });
-
-    promise.then((result) => {
-      alert(result);
-    });
-  };
-  //----------------------------
-  /*   const promiseExample = () => {//REJECT
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        reject("Something went wrong!");
-      }, 1000);
-    });
-
-    promise
-      .then((result) => {
-        alert(result);
-      })
-      .catch((error) => {
-        alert(error);
-      });
-  }; */
-  //--------------------------------
-  /* const promiseExample = () => {
-    //RESOLVE / REJECT
-    const promise = new Promise((resolve, reject) => {
-      const isSuccess = true; // Change to false
-
-      setTimeout(() => {
-        if (isSuccess) {
-          resolve("Promise Completed Successfully");
-        } else {
-          reject("Promise Failed!");
-        }
-      }, 1000);
-    });
-
-    promise
-      .then((result) => {
-        alert(result);
-      })
-      .catch((error) => {
-        alert(error);
-      });
-  }; */
-  //------------------------------
-
-  // ============================
-  // Async / Await
-  // ============================
-  const asyncExample = async () => {
-    const promise = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve("Data received using Async/Await");
-      }, 1000);
-    });
-
-    const result = await promise;
-
-    alert(result);
-  };
+  // JSX (ReactNode) as a variable
+  const welcomeMessage = <h2>Welcome to React JS!</h2>;
 
   return (
-    <div style={{ margin: "30px" }}>
-      <h1>ES6 Features in React</h1>
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+      <h1>React JS Data Types Demo</h1>
 
-      <h2>let & const</h2>
-      <p>City : {city}</p>
-      <p>Trainer : {trainer}</p>
+      {/* String */}
+      <p>
+        <strong>Name:</strong> {name}
+      </p>
 
-      <h2>Arrow Function</h2>
-      <p>Square of 8 : {square(8)}</p>
+      {/* Number */}
+      <p>
+        <strong>Age:</strong> {age}
+      </p>
 
-      <h2>Template Literals</h2>
-      <p>{message}</p>
+      <p>
+        <strong>isLoggedIn:</strong> {isLoggedIn}
+      </p>
 
-      <h2>Destructuring - Array</h2>
-      <p>{firstColor}</p>
-      <p>{secondColor}</p>
-      <p>{thirdColor}</p>
+      <p>
+        <strong>isLoggedIn:</strong> {String(isLoggedIn)}
+      </p>
+      <p>
+        <strong>isLoggedIn:</strong> {isLoggedIn.toString()}
+      </p>
 
-      <h2>Destructuring - Object</h2>
-      <p>Name : {name}</p>
-      <p>Age : {age}</p>
-      <p>Course : {course}</p>
+      {/* Boolean (used in conditional rendering) */}
+      <p>
+        <strong>Status:</strong> {isLoggedIn ? "Logged In" : "Guest"}
+      </p>
 
-      <h2>Spread Operator</h2>
-      <p>{JSON.stringify(newNumbers)}</p>
-      <p>{JSON.stringify(newEmployee, null, 2)}</p>
+      {/* Array (using map) */}
+      <p>
+        <strong>Hobbies:</strong>
+      </p>
 
-      <h2>Rest Operator</h2>
-      <p>Total : {total(10, 20, 30, 40, 50)}</p>
+      {/* <ul>
+        {hobbies.map((hobby, index) => (
+          <li key={index}>{hobby}</li>
+        ))}
+      </ul> */}
+      <ol>
+        {hobbies.map(
+          //loop run
+          (hobby, index) => (
+            <li key={index}>{hobby}</li>
+          )
+        )}
+      </ol>
 
-      <h2>Modules (Import/Export)</h2>
-      <p>10 + 20 = {add(10, 20)}</p>
-      <p>10 - 20 = {minus(10, 20)}</p>
+      <p>
+        <strong>Users:</strong>
+      </p>
+      <ul>
+        {users.map((user, index) => (
+          <li key={index}>
+            {user.id}-{user.name}-{user.email}
+          </li>
+        ))}
+      </ul>
 
-      <h2>Promises</h2>
-      <button onClick={promiseExample}>Run Promise Example</button>
+      {/* Object */}
+      <p>
+        <strong>User Email:</strong> {user.password}
+      </p>
 
-      <br />
-      <br />
+      {/* Function */}
+      <button onClick={handleClick}>Click Me</button>
+      <button onClick={() => handleClick()}>Click Me 1</button>
+      <button onClick={() => handleClickParams(20000)}>Click Me 2</button>
 
-      <h2>Async / Await</h2>
-      <button onClick={asyncExample}>Run Async/Await Example</button>
-      <p style={{ whiteSpace: "pre-line" }}>{message1}</p>
+      {/* <button onClick={handleClickParams(200)}>Click Me</button> */}
 
-      <p>UserCardProps</p>
-      <UserCardProps user={user} ageStatus={getAgeStatus(user.age)} />
+      {/* JSX element as variable */}
+      <div>{welcomeMessage}</div>
+
+      {isLoggedIn && <p>Welcome back, {name}!</p>}
+
+      {/* External function passed */}
+      <button onClick={greetUser} style={{ marginTop: "10px" }}>
+        Greet
+      </button>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 }

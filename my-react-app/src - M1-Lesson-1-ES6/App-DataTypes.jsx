@@ -91,10 +91,6 @@ function App() {
 
       {/* <button onClick={handleClickParams(200)}>Click Me</button> */}
 
-
-
-
-
       {/* JSX element as variable */}
       <div>{welcomeMessage}</div>
 
