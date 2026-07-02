@@ -16,12 +16,19 @@ div{
     text-align: center;
 }
 //===================== MIXINS ==========================
+/*
+A mixin in SCSS is a reusable block of CSS code that can accept parameters 
+and be included wherever needed. 
+Mixin: A reusable group of CSS styles that can accept parameters and be 
+included in multiple places using @include.
+*/
 @mixin rounded($radius) {
     border-radius: $radius;
+    background-color: $tertiary-color;
 }
 
 button {
-    @include rounded(25px);
+    @include rounded(15px);
 }
 //===================== NESTED SELECTORS ==========================
 nav {
@@ -38,11 +45,14 @@ nav {
             margin-right: 1rem;
 
             a {
+                display: inline-block;
                 color: $my-color;
                 text-decoration: none;
+                transition: transform 0.3s ease;
 
                 &:hover {
                     text-decoration: underline;
+                    transform: scale(1.2);
                 }
             }
         }
