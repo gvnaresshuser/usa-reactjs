@@ -408,7 +408,80 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'my-react-app/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ES6/App-DataTypes.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ES6/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-1-basics/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-1-basics/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-1-basics/index.css', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   STEPS
+        modified:   my-react-app/package-lock.json
+        modified:   my-react-app/src - M1-Lesson-1-ES6/App-DataTypes.jsx
+        modified:   my-react-app/src - M1-Lesson-1-ES6/App.jsx
+        modified:   my-react-app/src - M1-Lesson-1-ES6/App.scss
+        modified:   my-react-app/src-Lesson-1-basics/App.css
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "02-07-2026"
+[main d9a8f99] 02-07-2026
+ 6 files changed, 96 insertions(+), 194 deletions(-)
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 21, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 1.83 KiB | 935.00 KiB/s, done.
+Total 11 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 9 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   035b39c..d9a8f99  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+
 =====================================================================
 =====================================================================
 =====================================================================
