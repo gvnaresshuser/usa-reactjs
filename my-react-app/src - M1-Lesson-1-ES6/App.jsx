@@ -3,7 +3,7 @@
 import React from "react";
 import "./App.css";
 //============= SASSY CSS ===================
-import './App.scss';
+import "./App.scss";
 //SASSY CSS
 //npm install -D sass-embedded
 //============= SASSY CSS ===================
@@ -49,7 +49,21 @@ function App() {
   };
 
   // JSX (ReactNode) as a variable
-  const welcomeMessage = <h2>Welcome to React JS!</h2>;
+  //const welcomeMessage = <h2>Welcome to React JS!</h2>;
+  const welcomeMessage = `Welcome to React JS!`;
+  const welcomeMessage1 = (
+    <h2>
+      Welcome to React JS!
+      <br />
+      Happy Learning!
+      <br />
+      Let's Build Amazing Apps!
+    </h2>
+  );
+
+  const message = `Welcome to React JS again!
+Happy Learning!
+Let's Build Amazing Apps!`;
 
   //--------- LOGICAL OPERATORS AND(&&) OR(||)----------------
   function getName(name) {
@@ -57,7 +71,6 @@ function App() {
   }
   const a = true;
   const b = false;
-
 
   //truthy falsy values
 
@@ -162,6 +175,8 @@ function App() {
       {/* <button onClick={handleClickParams(200)}>Click Me</button> */}
       {/* JSX element as variable */}
       <div>{welcomeMessage}</div>
+      <div>{welcomeMessage1}</div>
+      <div style={{ whiteSpace: "pre-line" }}>{message}</div>
       {/* Logical AND operator */}
       {isLoggedIn && <p>Welcome back, {name}!</p>}
       {/* //--------- LOGICAL OPERATORS AND(&&) OR(||)---------------- */}

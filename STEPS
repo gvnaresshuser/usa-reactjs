@@ -451,6 +451,45 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'my-react-app/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ES6/App-DataTypes.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ES6/App.jsx', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    .gitignore
+        modified:   STEPS
+        modified:   my-react-app/src - M1-Lesson-1-ES6/App-DataTypes.jsx
+        modified:   my-react-app/src - M1-Lesson-1-ES6/App.jsx
+        modified:   my-react-app/src - M1-Lesson-1-ES6/App.scss
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "20-07-2026 added"
+[main c92961c] 20-07-2026 added
+ 5 files changed, 281 insertions(+), 96 deletions(-)
+ delete mode 100644 .gitignore
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.13 KiB | 1.07 MiB/s, done.
+Total 8 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 6 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   d9a8f99..c92961c  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
 =====================================================================
 =====================================================================
