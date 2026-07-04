@@ -4,14 +4,20 @@
 //This is an arrow function with an implicit return.ES6 module export
 export const add = (x, y) => x + y; //import with {}
 
+export const add1 = (x, y) => {
+  return x + y;
+};
+
 const minus = (x, y) => x - y;
 export default minus; //import directly without {}
+
 
 // Example class (ES6)
 export class Person {
   constructor(name) {
     this.name = name;
   }
+
 
   greet() {
     return `Hello, ${this.name}`;

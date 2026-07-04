@@ -1,216 +1,81 @@
-//App-DataTypes.jsx
+//App-ES6.jsx
 
 import React from "react";
 import "./App.css";
-//============= SASSY CSS ===================
-import "./App.scss";
-//SASSY CSS
-//npm install -D sass-embedded
-//============= SASSY CSS ===================
+import UserCard from "./UserCard.jsx";
+import { add,add1 } from "./utils.js";
 
-// Sample function to be used as a prop
-const greetUser = () => {
-  alert("Hello, welcome to React!");
-};
+//CALLING Person CLASS FROM utils.js
+import { Person } from "./utils.js";
+import UserCardAssignment from "./UserCardAssignment.jsx";
+
+const user = new Person("Bob");
+console.log(user.greet()); // Hello, Bob
+//CALLING Person CLASS FROM utils.js
+
+const books = ["Harry Porter", "The Lord of the Rings", "The Hobbit"];
+const books_id = [
+  { name: "Harry Porter", id: 1 },
+  { name: "The Lord of the Rings", id: 2 },
+  { name: "The Hobbit", id: 3 },
+];
+
+// Array and map (ES6)
+const users = [
+  { name: "Alice", age: 17 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 30 },
+  { name: "Tom", age: 15 },
+];
+
+// Arrow function & ternary operator (ES6)
+const getAgeStatus = (age) => (age >= 18 ? "Adult" : "Minor");
+/* const getAgeStatus = (age) => {
+  if (age >= 18) {
+    return "Adult";
+  } else {
+    return "Minor";
+  }
+}; */
+
+//const getAgeStatus = (age) => age >= 18 ? 'Adult' : 'Minor';
+//const getAgeStatus = (age,another) => age >= 18 ? 'Adult' : 'Minor';
 
 function App() {
-  // Primitive data types - let and const - typecoercion
-  const name = "React Learner"; // string
-  const age = 21; // number
-  const isLoggedIn = true; // boolean
-
-  // Non-primitive data types
-  const hobbies = ["Coding", "Reading", "Gaming"]; // array
-  /*   hobbies.push("Hiking"); // Adding a new hobby
-    hobbies[4] = "Traveling"; // Modifying an existing hobby
-    //hobbies = ["Coding", "Reading", "Gaming"]; // Reassigning the array is not allowed as it's a constant
-   */
-  const user = {
-    // object
-    id: 1,
-    email: "user@example.com",
-    password: "securepassword",
-  };
-
-  const users = [
-    { id: 1, name: "Alice", email: "user@example.com" },
-    { id: 2, name: "Bob", email: "user1@example.com" },
-  ];
-  console.log(users);
-  console.log(user);
-
-  // Function type
-  const handleClick = () => {
-    console.log("Button clicked!");
-  };
-
-  const handleClickParams = (a) => {
-    console.log("Button clicked! " + a);
-  };
-
-  // JSX (ReactNode) as a variable
-  //const welcomeMessage = <h2>Welcome to React JS!</h2>;
-  const welcomeMessage = `Welcome to React JS!`;
-  const welcomeMessage1 = (
-    <h2>
-      Welcome to React JS!
-      <br />
-      Happy Learning!
-      <br />
-      Let's Build Amazing Apps!
-    </h2>
-  );
-
-  const message = `Welcome to React JS again!
-Happy Learning!
-Let's Build Amazing Apps!`;
-
-  //--------- LOGICAL OPERATORS AND(&&) OR(||)----------------
-  function getName(name) {
-    return name;
-  }
-  const a = true;
-  const b = false;
-
-  //truthy falsy values
-
-  // If first value is true, second value is executed
-  const logicalAnd1 = a && getName("Naressh Gudimetla");
-  // If first value is false, second value is not executed
-  const logicalAnd2 = b && getName("Naressh Gudimetla"); //String(logicalAnd2)
-
-  // If first value is true, second value is not executed
-  const logicalOr1 = a || getName("Naressh Gudimetla"); //String(logicalOr1)
-  // If first value is false, second value is executed
-  const logicalOr2 = b || getName("Naressh 123");
-  //--------- LOGICAL OPERATORS AND(&&) OR(||)----------------
-
+  //const App = () => {
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>React JS Data Types Demo</h1>
-      {/* String */}
-      <p>
-        <strong>Name:</strong> {name}
-      </p>
-      {/* Number */}
-      <p>
-        <strong>Age:</strong> {age}
-      </p>
-      <p>
-        <strong>isLoggedIn:</strong> {isLoggedIn}
-      </p>
-      <p>
-        <strong>isLoggedIn:</strong> {String(isLoggedIn)}
-      </p>
-      <p>
-        <strong>isLoggedIn:</strong> {isLoggedIn.toString()}
-      </p>
-      {/* Boolean (used in conditional rendering) */}
-      <p>
-        <strong>Status:</strong> {isLoggedIn ? "Logged In" : "Guest"}
-      </p>
-      {/* Array (using map) */}
-      <p>
-        <strong>Hobbies:</strong>
-      </p>
-      {/* <ul style={{ color: "red" }}>
-        {hobbies.map((hobby, index) => (
-          <li key={index}>{hobby}</li>
-        ))}
-      </ul> */}
-      {/* <ul>
-        {hobbies.map((hobby, index) => (
-          <li key={index}>{hobby}</li>
-        ))}
-      </ul> */}
-      {/*  <ol>
-        {hobbies.map(
-          //loop run
-          (hobby, index) => (
-            <li key={index}>{hobby}</li>
-          )
-        )}
-      </ol> */}
-      {/* 
-      ASI = JavaScript Automatic Semicolon Insertion (ASI) issue. 
-      return <div key={index}>
-      */}
-      <div style={{ listStyleType: "none", padding: 0 }}>
-        {hobbies.map((hobby, index) => {
-          return (
-            <div key={index}>
-              {index + 1}.{hobby}
-            </div>
-          );
-        })}
-      </div>
-      <p>
-        <strong>Users:</strong>
-      </p>
+    <div style={{ marginLeft: "60px" }}>
+      <h1>ES6 in React</h1>
+      <p>hello</p>
+      <p>15 + 13 = {add(15, 13)}</p>
+      <p>25 + 23 = {add1(25, 23)}</p>
+      <p>{user.age ? "true" : "false"}</p>
+      <p>{user.age ? "true" : String(user.age)}</p>
+      {getAgeStatus(user.age)}
+
+       {books.map((book, index) => (
+        <p key={index}>{book}</p>
+      ))}
+
+       {books_id.map((book) => (
+        <p key={book.id}>{book.id} - {book.name}</p>
+      ))}
+
       <ul>
         {users.map((user, index) => (
           <li key={index}>
-            {user.id}-{user.name}-{user.email}
+            {user.name}-{user.age}
           </li>
         ))}
       </ul>
-      {/* BETTER - using key property WITH unique value (user.id) instead of index 
-      - to avoid potential issues with reordering or filtering the list. */}
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            {user.id} - {user.name} - {user.email}
-          </li>
-        ))}
-      </ul>
-      {/* Object */}
-      <p>
-        <strong>User Email:</strong> {user.password}
-      </p>
-      {/* Function */}
-      <button onClick={handleClick}>Click Me</button>
-      <button onClick={() => handleClick()}>Click Me 1</button>
-      <button onClick={() => handleClickParams(20000)}>Click Me 2</button>
-      {/* WILL NOT WORK */}
-      {/* <button onClick={handleClickParams(200)}>Click Me</button> */}
-      {/* JSX element as variable */}
-      <div>{welcomeMessage}</div>
-      <div>{welcomeMessage1}</div>
-      <div style={{ whiteSpace: "pre-line" }}>{message}</div>
-      {/* Logical AND operator */}
-      {isLoggedIn && <p>Welcome back, {name}!</p>}
-      {/* //--------- LOGICAL OPERATORS AND(&&) OR(||)---------------- */}
-      <div className="cardx">
-        <h2>Logical AND (&&)</h2>
-        <p>{logicalAnd1}</p>
-        <p>{String(logicalAnd2)}</p>
-      </div>
-      <div className="cardx">
-        <h2>Logical OR (||)</h2>
-        <p>{String(logicalOr1)}</p>
-        <p>{logicalOr2}</p>
-      </div>
-      {/* //--------- LOGICAL OPERATORS AND(&&) OR(||)---------------- */}
-      {/* External function passed */}
-      <button onClick={greetUser} style={{ marginTop: "10px" }}>
-        Greet
-      </button>
-      <div>
-        {/* TO DEMONSTRATE USE OF SASSY CSS */}
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+
+       {/* {users.map((user, index) => (
+        <UserCard key={index} user={user} ageStatus={getAgeStatus(user.age)} /> 
+      ))} */}
+
+       {users.map((user, index) => (
+        <UserCardAssignment key={index} user={user} ageStatus={getAgeStatus(user.age)} />
+      ))}
     </div>
   );
 }
