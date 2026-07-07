@@ -491,6 +491,40 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ES6/App.jsx', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   my-react-app/src - M1-Lesson-1-ES6/App.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ES6/SCREENS/CSS Shorthand Properties - or CSS Shorthand Syntax.png
+        modified:   my-react-app/src - M1-Lesson-1-ES6/utils.js
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "04-07-2026"
+[main 07a99ba] 04-07-2026
+ 3 files changed, 65 insertions(+), 194 deletions(-)
+ create mode 100644 my-react-app/src - M1-Lesson-1-ES6/SCREENS/CSS Shorthand Properties - or CSS Shorthand Syntax.png
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 275.20 KiB | 19.66 MiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   a33333d..07a99ba  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
 =====================================================================
 =====================================================================
