@@ -1,0 +1,116 @@
+
+
+.responsive-title {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    /* Default (mobile) */
+}
+
+/* Tablet (≥600px) */
+@media (min-width: 600px) {
+    .responsive-title {
+        font-size: 2rem;
+    }
+}
+
+/* Desktop (≥992px) */
+@media (min-width: 992px) {
+    .responsive-title {
+        font-size: 2.5rem;
+    }
+}
+
+.gradient-bg {
+    background: linear-gradient(135deg, #6a11cb, #2575fc, #00c9a7);
+    /* Purple to Blue to Teal */
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    max-width: 150px;
+    margin: 4px auto;
+    display: block;
+}
+
+.btn-view {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+}
+
+.btn-view:hover {
+    background-color: navy;
+    color: #fff;
+}
+
+.btn-edit {
+    /* background-color: #28a745; */
+    background: linear-gradient(135deg, #6a11cb, #2575fc, cyan);
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background: linear-gradient(135deg, cyan, #2575fc, #6a11cb);
+    border: 1px solid navy;
+}
+
+/* Parent row container */
+.image-text-section {
+    display: flex;
+    flex-wrap: wrap;
+    /* Wrap on small screens */
+}
+
+/* Vertically center image on md and lg devices */
+.image-text-section .image-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Optional: Prevent image from stretching too large */
+.image-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive fix: stack content on small screens */
+@media (max-width: 767.98px) {
+    .image-text-section {
+        flex-direction: column;
+    }
+}
+
+.rating-stars {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.star {
+    font-size: 24px;
+    color: navy;
+    /* gold/yellow */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}

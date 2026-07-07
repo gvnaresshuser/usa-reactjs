@@ -1,0 +1,30 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px;
+    background-color: #eef2f5;
+    min-height: 100vh;
+    border: 1px solid red;
+}
+
+.box {
+    border: 1px solid red;
+    background-color: #4a90e2;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    flex: 1 1 100px;
+    /* grow, shrink, base size */
+   /*  min-width: 150px;
+    max-width: 250px; */
+}
+
+/* 
+FOR MORE DETAILS ON FLEX AND FLEX-WRAP VISIT
+https: //www.w3.org/TR/css-flexbox-1/ 
+*/
