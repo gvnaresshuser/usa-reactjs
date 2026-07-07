@@ -526,6 +526,210 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Basic CSS for 12-Grid System.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Basic.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Flexbox1.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Flexbox2.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Original.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System TAILWINDCSS.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System2.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Sample.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-BOOTSTRAP-V-5-3-7.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-PURE-CSS.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/index copy.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-1-Default Export from Another File.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-2-Named Export from Another File.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-3-Both Default and Named Exports in the Same File.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-4-Renaming During Import (Aliasing).jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-5-Import All as Namespace.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-6-Exporting and Importing React Components.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-7-Combining Exports from an Index File (Barrel Export) copy.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-7-Combining Exports from an Index File (Barrel Export).jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/main.jsx', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Basic CSS for 12-Grid System.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Basic.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Flexbox1.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Flexbox2.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Important-Note.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Original.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System TAILWINDCSS.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System2.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-Sample.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-TAILWIND-CSS1.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-TAILWIND-CSS2.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-BOOTSTRAP-V-5-3-7.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-PURE-CSS.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-TAILWIND-CSS.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/1.Responsive 12-Column Grid System.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/2.Flexbox.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/3.Website-Layout.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/4.flex and flex-wrap property.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/5.Responsive 12-Column Grid System.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/6.Tailwind CSS Installation.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/7.flex-1.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/8.CODE_EXPLANATION-App-WEBSITE-TAILWIND-CSS-jsx.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/Flex-Properties.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/Flexbox Vs Responsive Web Design (RWD).png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/IMPORTANT.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/assets/1.jpg
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/assets/1.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/assets/2.jpg
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/assets/2.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/assets/3.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/assets/4.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/assets/react.svg
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/flexbox1.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/flexbox2.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/grid-basic.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/grid-responsive.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/grid.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/grid1.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/index copy.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/index.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/main.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/test.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/test1.css
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App-1-Default Export from Another File.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App-2-Named Export from Another File.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App-3-Both Default and Named Exports in the Same File.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App-4-Renaming During Import (Aliasing).jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App-5-Import All as Namespace.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App-6-Exporting and Importing React Components.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App-7-Combining Exports from an Index File (Barrel Export) copy.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App-7-Combining Exports from an Index File (Barrel Export).jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App.css
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/App.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/Footer.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/Header.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/MyComponent.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/SCREENS.zip
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/SCREENS/1.import-export.png
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/SCREENS/2.Important Note.png
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/assets/react.svg
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/assets/rose.jpg
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/helpers.js
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/index.css
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/main.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/mathUtils.js
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/myFunctions.js
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/utils.js
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/utils/greet.js
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/utils/index.js
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/utils/math.js
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/utils/sayHello.js
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "07-07-2026"
+[main 2b330ee] 07-07-2026
+ 74 files changed, 2457 insertions(+)
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Basic CSS for 12-Grid System.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Basic.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Flexbox1.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Flexbox2.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Important-Note.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Original.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System TAILWINDCSS.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System2.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-Sample.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-TAILWIND-CSS1.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-TAILWIND-CSS2.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-BOOTSTRAP-V-5-3-7.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-PURE-CSS.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-TAILWIND-CSS.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/1.Responsive 12-Column Grid System.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/2.Flexbox.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/3.Website-Layout.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/4.flex and flex-wrap property.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/5.Responsive 12-Column Grid System.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/6.Tailwind CSS Installation.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/7.flex-1.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/8.CODE_EXPLANATION-App-WEBSITE-TAILWIND-CSS-jsx.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/Flex-Properties.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/Flexbox Vs Responsive Web Design (RWD).png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/IMPORTANT.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/assets/1.jpg
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/assets/1.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/assets/2.jpg
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/assets/2.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/assets/3.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/assets/4.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/assets/react.svg
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/flexbox1.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/flexbox2.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/grid-basic.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/grid-responsive.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/grid.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/grid1.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/index copy.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/index.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/main.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/test.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/test1.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App-1-Default Export from Another File.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App-2-Named Export from Another File.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App-3-Both Default and Named Exports in the Same File.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App-4-Renaming During Import (Aliasing).jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App-5-Import All as Namespace.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App-6-Exporting and Importing React Components.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App-7-Combining Exports from an Index File (Barrel Export) copy.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App-7-Combining Exports from an Index File (Barrel Export).jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/App.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/Footer.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/Header.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/MyComponent.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/SCREENS.zip
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/SCREENS/1.import-export.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/SCREENS/2.Important Note.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/assets/react.svg
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/assets/rose.jpg
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/helpers.js
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/index.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/main.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/mathUtils.js
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/myFunctions.js
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/utils.js
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/utils/greet.js
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/utils/index.js
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/utils/math.js
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/utils/sayHello.js
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 83, done.
+Counting objects: 100% (83/83), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (80/80), done.
+Writing objects: 100% (81/81), 34.69 MiB | 1.44 MiB/s, done.
+Total 81 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 2 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   93ccd3f..2b330ee  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
 =====================================================================
 =====================================================================
