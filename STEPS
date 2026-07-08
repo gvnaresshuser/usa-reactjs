@@ -16,15 +16,10 @@ git branch -M main
 git push -u origin main
 
 
-======================================================
-=====================================================================
-Microsoft Windows [Version 10.0.26100.8246]
+=====================================================================Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ES6/App-ES6.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ES6/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ES6/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -32,32 +27,25 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   my-react-app/src - M1-Lesson-1-ES6/App-ES6.jsx
-        modified:   my-react-app/src - M1-Lesson-1-ES6/App.css
-        modified:   my-react-app/src - M1-Lesson-1-ES6/App.jsx
-        new file:   my-react-app/src - M1-Lesson-1-ES6/SCREENS/Promise.png
-        new file:   my-react-app/src - M1-Lesson-1-ES6/SCREENS/Understanding JavaScript's Single-Threaded Nature.png
-        modified:   my-react-app/src - M1-Lesson-1-ES6/UserCard.jsx
-        modified:   my-react-app/src - M1-Lesson-1-ES6/UserCardAssignment.css
-        modified:   my-react-app/src - M1-Lesson-1-ES6/UserCardAssignment.jsx
+        modified:   STEPS
+        new file:   my-react-app/src - M1-Lesson-1-ES6/SCREENS/Exception Handling in Asynchronous JavaScript.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "08-07-2026"
-[main fa4d894] 08-07-2026
- 8 files changed, 297 insertions(+), 107 deletions(-)
- create mode 100644 my-react-app/src - M1-Lesson-1-ES6/SCREENS/Promise.png
- create mode 100644 my-react-app/src - M1-Lesson-1-ES6/SCREENS/Understanding JavaScript's Single-Threaded Nature.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "asynchronous javascript"
+[main b7e8d4e] asynchronous javascript
+ 2 files changed, 19 insertions(+), 756 deletions(-)
+ create mode 100644 my-react-app/src - M1-Lesson-1-ES6/SCREENS/Exception Handling in Asynchronous JavaScript.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 23, done.
-Counting objects: 100% (23/23), done.
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (13/13), done.
-Writing objects: 100% (13/13), 2.05 MiB | 835.00 KiB/s, done.
-Total 13 (delta 9), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (9/9), completed with 9 local objects.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.03 MiB | 608.00 KiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   b7e36a8..fa4d894  main -> main
+   fa4d894..b7e8d4e  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
