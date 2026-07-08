@@ -24,27 +24,27 @@ const UserCardAssignment = ({ user, ageStatus }) => {
         : "Senior Engineer";
 
   return (
-    <div className="user-card">
-      <div className="user-card-header">
-        <h3 className="user-name">{extendedUser.name}</h3>
-        <span
-          className={`status-badge ${extendedUser.status === "Adult" ? "adult" : "minor"}`}
-        >
-          {extendedUser.status}
-        </span>
+      <div className="user-card">
+        <div className="user-card-header">
+          <h3 className="user-name">{extendedUser.name}</h3>
+          <span
+            className={`status-badge ${extendedUser.status === "Adult" ? "adult" : "minor"}`}
+          >
+            {extendedUser.status}
+          </span>
+        </div>
+        <div className="user-details">
+          <p>
+            <strong>Age:</strong> {extendedUser.age}
+          </p>
+          <p>
+            <strong>Experience:</strong> {experience}
+          </p>
+          <p>
+            <strong>Profession:</strong> {profession}
+          </p>
+        </div>
       </div>
-      <div className="user-details">
-        <p>
-          <strong>Age:</strong> {extendedUser.age}
-        </p>
-        <p>
-          <strong>Experience:</strong> {experience}
-        </p>
-        <p>
-          <strong>Profession:</strong> {profession}
-        </p>
-      </div>
-    </div>
   );
 };
 

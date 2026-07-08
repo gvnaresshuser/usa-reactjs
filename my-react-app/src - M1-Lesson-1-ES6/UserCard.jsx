@@ -7,7 +7,7 @@ const UserCard = ({ user, ageStatus }) => {
     console.log(extendedUser);
 
     return (
-        <div style={{ border: '1px solid gray', padding: '10px', margin: '10px' }}>
+        <div style={{ border: '1px solid red', padding: '10px', margin: '10px' }}>
             <h3>{extendedUser.name}</h3>
             <p>Age: {extendedUser.age}</p>
             <p>Status: {extendedUser.status}</p>

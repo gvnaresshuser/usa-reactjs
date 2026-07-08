@@ -3,13 +3,13 @@
 import React from "react";
 import "./App.css";
 import UserCard from "./UserCard.jsx";
-import { add } from "./utils.js";
+import { add, add1 } from "./utils.js";
 
 //CALLING Person CLASS FROM utils.js
 import { Person } from "./utils.js";
 import UserCardAssignment from "./UserCardAssignment.jsx";
 
-const user = new Person("Bob");
+const user = new Person("Bob"); //user.name
 console.log(user.greet()); // Hello, Bob
 //CALLING Person CLASS FROM utils.js
 
@@ -45,22 +45,25 @@ function App() {
   //const App = () => {
   return (
     <div style={{ marginLeft: "60px" }}>
-      <h1>ES6 in React</h1>
+      {/*  <h1>ES6 in React</h1>
       <p>hello</p>
       <p>15 + 13 = {add(15, 13)}</p>
-      {/*    <p>{user.age ? "true" : "false"}</p>
+      <p>25 + 23 = {add1(25, 23)}</p>
+      <p>{user.age ? "true" : "false"}</p>
       <p>{user.age ? "true" : String(user.age)}</p>
-      {getAgeStatus(user.age)} */}
+      {getAgeStatus(user.age)}
 
-      {/*  {books.map((book, index) => (
+      {books.map((book, index) => (
         <p key={index}>{book}</p>
-      ))} */}
+      ))}
 
-      {/*  {books_id.map((book) => (
-        <p key={book.id}>{book.id} - {book.name}</p>
-      ))} */}
+      {books_id.map((book) => (
+        <p key={book.id}>
+          {book.id} - {book.name}
+        </p>
+      ))}
 
-      {/* <ul>
+      <ul>
         {users.map((user, index) => (
           <li key={index}>
             {user.name}-{user.age}
@@ -69,13 +72,23 @@ function App() {
       </ul> */}
 
       {/*  {users.map((user, index) => (
-        <UserCard key={index} user={user} ageStatus={getAgeStatus(user.age)} /> 
+        <UserCard key={index} user={user} ageStatus={getAgeStatus(user.age)} />
       ))} */}
 
       {/*  {users.map((user, index) => (
         <UserCardAssignment key={index} user={user} ageStatus={getAgeStatus(user.age)} />
       ))} */}
+
+      {/* <div className="user-card-container"> */}
+      {users.map((user, index) => (
+        <UserCardAssignment
+          key={index}
+          user={user}
+          ageStatus={getAgeStatus(user.age)}
+        />
+      ))}
     </div>
+    /* </div> */
   );
 }
 
