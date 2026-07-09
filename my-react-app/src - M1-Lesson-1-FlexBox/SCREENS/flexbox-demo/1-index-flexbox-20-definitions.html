@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete CSS Flexbox Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- http://localhost:8080 -->
+<h1>Complete CSS Flexbox Demonstration</h1>
+
+<!-- ================= FLEX DIRECTION ================= -->
+
+<section>
+    <h2>1. flex-direction: row (Default)</h2>
+
+    <div class="container row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>2. flex-direction: row-reverse</h2>
+
+    <div class="container row-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>3. flex-direction: column</h2>
+
+    <div class="container column">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>4. flex-direction: column-reverse</h2>
+
+    <div class="container column-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<!-- ================= JUSTIFY CONTENT ================= -->
+
+<section>
+    <h2>5. justify-content: flex-start</h2>
+
+    <div class="container justify-start">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>6. justify-content: center</h2>
+
+    <div class="container justify-center">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>7. justify-content: flex-end</h2>
+
+    <div class="container justify-end">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>8. justify-content: space-between</h2>
+
+    <div class="container space-between">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>9. justify-content: space-around</h2>
+
+    <div class="container space-around">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>10. justify-content: space-evenly</h2>
+
+    <div class="container space-evenly">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<!-- ================= ALIGN ITEMS ================= -->
+
+<section>
+    <h2>11. align-items: flex-start</h2>
+
+    <div class="container tall align-start">
+        <div class="box small">1</div>
+        <div class="box medium">2</div>
+        <div class="box large">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>12. align-items: center</h2>
+
+    <div class="container tall align-center">
+        <div class="box small">1</div>
+        <div class="box medium">2</div>
+        <div class="box large">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>13. align-items: flex-end</h2>
+
+    <div class="container tall align-end">
+        <div class="box small">1</div>
+        <div class="box medium">2</div>
+        <div class="box large">3</div>
+    </div>
+</section>
+
+<section>
+    <h2>14. align-items: stretch</h2>
+
+    <div class="container tall stretch">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<!-- ================= FLEX WRAP ================= -->
+
+<section>
+    <h2>15. flex-wrap</h2>
+
+    <div class="container wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+</section>
+
+<!-- ================= GAP ================= -->
+
+<section>
+    <h2>16. gap</h2>
+
+    <div class="container gap-demo">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+<!-- ================= ORDER ================= -->
+
+<section>
+    <h2>17. order</h2>
+
+    <div class="container">
+        <div class="box order3">1</div>
+        <div class="box order1">2</div>
+        <div class="box order2">3</div>
+    </div>
+</section>
+
+<!-- ================= FLEX GROW ================= -->
+
+<section>
+    <h2>18. flex-grow</h2>
+
+    <div class="container">
+        <div class="box grow1">1</div>
+        <div class="box grow2">2</div>
+        <div class="box grow1">3</div>
+    </div>
+</section>
+
+<!-- ================= FLEX SHRINK ================= -->
+
+<section>
+    <h2>19. flex-shrink</h2>
+
+    <div class="container shrink-demo">
+        <div class="box shrink0">No Shrink</div>
+        <div class="box shrink1">Shrink</div>
+        <div class="box shrink1">Shrink</div>
+    </div>
+</section>
+
+<!-- ================= ALIGN SELF ================= -->
+
+<section>
+    <h2>20. align-self</h2>
+
+    <div class="container tall align-center">
+        <div class="box">1</div>
+        <div class="box self-end">2</div>
+        <div class="box">3</div>
+    </div>
+</section>
+
+</body>
+</html>

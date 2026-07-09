@@ -17,8 +17,14 @@ git push -u origin main
 
 
 =====================================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Basic.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System2.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-BOOTSTRAP-V-5-3-7.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/index.css', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -26,24 +32,47 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
-        modified:   my-react-app/src - M1-Lesson-1-ES6/SCREENS/Coding Patterns to Remember.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App copy.jsx
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App-Basic.jsx
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App-Responsive 12-Column Grid System2.jsx
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-BOOTSTRAP-V-5-3-7.jsx
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/Flexbox.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/Flexbox.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/ResponsiveFlexbox.css
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/ResponsiveFlexbox.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/GOOGLE-PAGE.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/Responsive Web Design (RWD) using Flexbox.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/What is a Grid System.png
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/rem and em.png
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/grid.css
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/grid1.css
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/index.css
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "more"
-[main 8066cc1] more
- 2 files changed, 15 insertions(+), 12 deletions(-)
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "flexbox"
+[main 9f9dc28] flexbox
+ 16 files changed, 597 insertions(+), 136 deletions(-)
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App copy.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/Flexbox.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/Flexbox.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/ResponsiveFlexbox.css
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/ResponsiveFlexbox.jsx
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/GOOGLE-PAGE.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/Responsive Web Design (RWD) using Flexbox.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/What is a Grid System.png
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/rem and em.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 13, done.
-Counting objects: 100% (13/13), done.
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (7/7), 948.35 KiB | 23.13 MiB/s, done.
-Total 7 (delta 5), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (20/20), 3.63 MiB | 1.25 MiB/s, done.
+Total 20 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 8 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   106f75d..8066cc1  main -> main
+   93cc9ee..9f9dc28  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================

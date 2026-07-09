@@ -1,0 +1,22 @@
+| No.    | Property                         | Short Explanation                                                                                                        |
+| ------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **1**  | `flex-direction: row`            | Arranges flex items horizontally from **left to right**. This is the **default** direction.                              |
+| **2**  | `flex-direction: row-reverse`    | Arranges items horizontally from **right to left**.                                                                      |
+| **3**  | `flex-direction: column`         | Arranges items vertically from **top to bottom**.                                                                        |
+| **4**  | `flex-direction: column-reverse` | Arranges items vertically from **bottom to top**.                                                                        |
+| **5**  | `justify-content: flex-start`    | Places all items at the **beginning of the main axis** (left in a row layout).                                           |
+| **6**  | `justify-content: center`        | Centers all items along the **main axis**.                                                                               |
+| **7**  | `justify-content: flex-end`      | Places all items at the **end of the main axis** (right in a row layout).                                                |
+| **8**  | `justify-content: space-between` | Places the **first item at the start**, the **last item at the end**, and distributes the remaining space between items. |
+| **9**  | `justify-content: space-around`  | Gives **equal space around every item**, so each item has space on both sides.                                           |
+| **10** | `justify-content: space-evenly`  | Distributes items so that **all spaces**, including the edges, are exactly equal.                                        |
+| **11** | `align-items: flex-start`        | Aligns all items to the **top** of the container (cross axis).                                                           |
+| **12** | `align-items: center`            | Vertically centers all items inside the container (cross axis).                                                          |
+| **13** | `align-items: flex-end`          | Aligns all items to the **bottom** of the container.                                                                     |
+| **14** | `align-items: stretch`           | Stretches items to fill the container's height (if they don't have a fixed height).                                      |
+| **15** | `flex-wrap: wrap`                | Allows items to move to the **next line** when there isn't enough horizontal space.                                      |
+| **16** | `gap`                            | Adds uniform spacing **between flex items** without using margins.                                                       |
+| **17** | `order`                          | Changes the **display order** of items without changing the HTML. Smaller `order` values appear first.                   |
+| **18** | `flex-grow`                      | Allows an item to **grow and occupy available space**. Larger values grow more than smaller values.                      |
+| **19** | `flex-shrink`                    | Allows an item to **shrink** when there isn't enough space. `0` means the item will not shrink.                          |
+| **20** | `align-self`                     | Overrides `align-items` for **one specific flex item**, allowing it to have a different alignment from the others.       |

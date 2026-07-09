@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: #f4f4f4;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.container {
+    display: flex;
+    border: 3px solid steelblue;
+    background: white;
+    padding: 10px;
+    min-height: 120px;
+    margin-bottom: 10px;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    background: tomato;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+/*======================
+FLEX DIRECTION
+=======================*/
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+/*======================
+JUSTIFY CONTENT
+=======================*/
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+/*======================
+ALIGN ITEMS
+=======================*/
+
+.tall {
+    height: 220px;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.stretch {
+    align-items: stretch;
+}
+
+.stretch .box {
+    height: auto;
+}
+
+.small {
+    height: 50px;
+}
+
+.medium {
+    height: 100px;
+}
+
+.large {
+    height: 150px;
+}
+
+/*======================
+WRAP
+=======================*/
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+/*======================
+GAP
+=======================*/
+
+.gap-demo {
+    gap: 30px;
+}
+
+/*======================
+ORDER
+=======================*/
+
+.order1 {
+    order: 1;
+}
+
+.order2 {
+    order: 2;
+}
+
+.order3 {
+    order: 3;
+}
+
+/*======================
+FLEX GROW
+=======================*/
+
+.grow1 {
+    flex-grow: 1;
+}
+
+.grow2 {
+    flex-grow: 2;
+}
+
+/*======================
+FLEX SHRINK
+=======================*/
+
+.shrink-demo {
+    width: 450px;
+}
+
+.shrink-demo .box {
+    width: 200px;
+}
+
+.shrink0 {
+    flex-shrink: 0;
+}
+
+.shrink1 {
+    flex-shrink: 1;
+}
+
+/*======================
+ALIGN SELF
+=======================*/
+
+.self-end {
+    align-self: flex-end;
+}
