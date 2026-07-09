@@ -1,243 +1,238 @@
-// All-in-one.jsx
-
 import React from "react";
-import { add } from "./utils"; // Named import with {}
-import minus from "./utils"; // Default import without {}
-import UserCardProps from "./UserCardProps";
 import "./App.css";
 
+//App-Html-ReactJS-Events.jsx
+
+//https://www.w3schools.com/tags/ref_eventattributes.asp
+
 function App() {
-  //========== PROPS OBJECT ===========
-  // User object
-  const user = {
-    name: "Alice",
-    age: 25,
+  const handleClick = () => {
+    alert("Button clicked!");
   };
-
-  // Arrow function with ternary operator
-  const getAgeStatus = (age) => (age >= 18 ? "Adult" : "Minor");
-  //========== PROPS OBJECT ===========
-  // ============================
-  // let and const - ES6 feature
-  // ============================
-  let city = "Hyderabad";
-  city = "Bengaluru";
-  //const used for object,arrays and functions are mutable but primitive data types are immutable
-  const trainer = "GV Naressh";
-  const PI = 3.14;
-
-  // ============================
-  // Arrow Function
-  // ============================
-  const square = (num) => num * num;
-
-  // ============================
-  // Template Literals - ES6 feature - backticks `` are used instead of single or double quotes
-  // ============================
-  const message2 = "Hello .Welcome to !";
-  const message = `Hello ${trainer}.Welcome to ${city}!`;
-  const messagex = "Hello " + trainer + ".Welcome to " + city + "!";
-
-  const message1 = `Hello ${trainer}.
-This is for testing.
-Welcome to ${city}!`;
-
-  // ============================
-  // Destructuring - Array
-  // ============================
-  const colors = ["Red", "Green", "Blue"];
-
-  const [firstColor, secondColor, thirdColor] = colors;
-
-  // ============================
-  // Destructuring - Object
-  // ============================
-  const student = {
-    name: "John",
-    age: 22,
-    course: "ReactJS",
+  const handleChange = (e) => {
+    console.log(e);
+    console.log("Input changed:", e.target.value);
   };
+  const handleMouseOver = () => console.log("Mouse over!");
+  const handleKeyDown = (e) => console.log("Key pressed:", e.key);
 
-  const { name, age, course } = student;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(e); // Logs the value as user types
+    //FormData is a built-in JavaScript object that makes it easy to collect form data
+    //and send it to a server,
+    // Option 1: Using FormData
+    const formData = new FormData(e.target);
+    const name = formData.get("name"); // "name" is input's name attribute
+    const age = formData.get("age"); // "age" is input's name attribute
+    console.log("Input value using FormData:", name, age);
+    //-----------------------
+    const user1 = {
+      name: formData.get("name"),
+      age: formData.get("age"),
+    };
 
-  // ============================
-  // Spread Operator
-  // ============================
-  const numbers = [10, 20, 30];
+    console.log(user1);
+    //-----------------------
+    const formData1 = new FormData(e.target);
+    const user2 = Object.fromEntries(formData1.entries());
+    console.log(user2);
+    //-----------------------
 
-  const newNumbers = [...numbers, 40, 50];
+    // Option 2: Using e.target.elements
+    const name2 = e.target.elements.name.value;
+    const age2 = e.target.elements.age.value;
+    console.log("Input value using elements:", name2, age2);
 
-  const employee = {
-    id: 101,
-    designation: "Developer",
-  };
+    //alert(`Hello, ${name}`);
+    //-------------- Loop thru all elements in the form -------------------
+    console.log(e);
+    const elements = e.target.elements;
+    const formDataNew = {};
 
-  const newEmployee = {
-    ...employee,
-    salary: 75000,
-  };
+    for (let i = 0; i < elements.length; i++) {
+      const el = elements[i];
+      if (el.name) {
+        formDataNew[el.name] = el.value;
+      }
+    }
+    console.log("Form Data:", formDataNew);
+    //alert(JSON.stringify(formDataNew, null, 2));
+    console.log(JSON.stringify(formDataNew));
+    console.log(JSON.stringify(formDataNew, null, 2));
+    /*
+    JSON.stringify(formDataNew, null, 2)
+    formDataNew → The object being converted to JSON.
+    null → Don't filter or modify any properties. Include them all.
+    2 → Indent each level by 2 spaces.
+    */
+    const student = {
+      name: "John",
+      age: 22,
+      city: "Hyderabad",
+    };
 
-  // ============================
-  // Rest Operator
-  // ============================
-  const total = (...nums) => {
-    return nums.reduce((sum, num) => sum + num, 0);
-  };
-
-  // ============================
-  // Promise
-  // ============================
-  const promiseExample = () => {
-    //RESOLVE
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve("Promise Completed Successfully");
-      }, 1000);
-    });
-
-    promise.then((result) => {
-      alert(result);
-    });
-  };
-  //----------------------------
-  /*   const promiseExample = () => {//REJECT
-    const promise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        reject("Something went wrong!");
-      }, 1000);
-    });
-
-    promise
-      .then((result) => {
-        alert(result);
-      })
-      .catch((error) => {
-        alert(error);
-      });
-  }; */
-  //--------------------------------
-  /* const promiseExample = () => {
-    //RESOLVE / REJECT
-    const promise = new Promise((resolve, reject) => {
-      const isSuccess = true; // Change to false
-
-      setTimeout(() => {
-        if (isSuccess) {
-          resolve("Promise Completed Successfully");
-        } else {
-          reject("Promise Failed!");
+    const json = JSON.stringify(
+      student,
+      (key, value) => {
+        if (key === "age") {
+          return 25; // Modify age
         }
-      }, 1000);
-    });
+        return value;
+      },
+      2,
+    );
 
-    promise
-      .then((result) => {
-        alert(result);
-      })
-      .catch((error) => {
-        alert(error);
-      });
-  }; */
-  //------------------------------
-
-  // ============================
-  // Async / Await
-  // ============================
-  const asyncExample = async () => {
-    const promise = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve("Data received using Async/Await");
-      }, 1000);
-    });
-
-    const result = await promise;
-
-    alert(result);
+    console.log(json);
   };
 
   return (
-    <div style={{ margin: "30px" }}>
-      <h1>ES6 Features in React</h1>
+    <div
+      style={{
+        padding: "30px",
+        fontFamily: "Segoe UI, sans-serif",
+        backgroundColor: "#f4f7fa",
+        borderRadius: "12px",
+        maxWidth: "500px",
+        display: "flex",
+        flexDirection: "column",
+        margin: "40px auto",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+      }}
+    >
+      <h2 style={{ textAlign: "center", color: "#333" }}>React Events Demo</h2>
 
-      <h2>let & const</h2>
-      <p>City : {city}</p>
-      <p>Trainer : {trainer}</p>
-      <p>PI : {PI}</p>
+      {/* onClick */}
+      <button
+        onClick={handleClick}
+        style={{
+          padding: "10px 20px",
+          backgroundColor: "#007bff",
+          color: "#fff",
+          border: "none",
+          borderRadius: "6px",
+          cursor: "pointer",
+          marginBottom: "15px",
+        }}
+      >
+        Click Me
+      </button>
 
-      <h2>Arrow Function</h2>
-      <p>Square of 8 : {square(8)}</p>
+      {/* onChange */}
+      <input
+        type="text"
+        onChange={handleChange}
+        placeholder="Type something"
+        style={{
+          padding: "10px",
+          width: "100%",
+          border: "1px solid #ccc",
+          borderRadius: "6px",
+          marginBottom: "15px",
+        }}
+      />
 
-      <h2>Template Literals</h2>
-      <p>{message}</p>
-      <p style={{ whiteSpace: "pre-line" }}>{message1}</p>
+      {/* onMouseOver */}
+      <div
+        onMouseOver={handleMouseOver}
+        style={{
+          padding: "10px",
+          backgroundColor: "#e9ecef",
+          borderRadius: "6px",
+          marginBottom: "15px",
+          textAlign: "center",
+          cursor: "default",
+        }}
+      >
+        Hover over this text
+      </div>
 
-      <h2>Destructuring - Array</h2>
-      <p>{firstColor}</p>
-      <p>{secondColor}</p>
-      <p>{thirdColor}</p>
+      {/* onKeyDown */}
+      <input
+        type="text"
+        onKeyDown={handleKeyDown}
+        placeholder="Press a key"
+        style={{
+          padding: "10px",
+          width: "100%",
+          border: "1px solid #ccc",
+          borderRadius: "6px",
+          marginBottom: "15px",
+        }}
+      />
 
-      <h2>Destructuring - Object</h2>
-      <p>Name : {name}</p>
-      <p>Age : {age}</p>
-      <p>Course : {course}</p>
-
-      <h2>Spread Operator</h2>
-      <p>{JSON.stringify(newNumbers)}</p>
-      <p>{JSON.stringify(newEmployee, null, 2)}</p>
-
-      <h2>Rest Operator</h2>
-      <p>Total : {total(10, 20, 30, 40, 50)}</p>
-
-      <h2>Modules (Import/Export)</h2>
-      <p>10 + 20 = {add(10, 20)}</p>
-      <p>10 - 20 = {minus(10, 20)}</p>
-
-      <h2>Promises</h2>
-      <button onClick={promiseExample}>Run Promise Example</button>
-
-      <br />
-      <br />
-
-      <h2>Async / Await</h2>
-      <button onClick={asyncExample}>Run Async/Await Example</button>
-      <p style={{ whiteSpace: "pre-line" }}>{message1}</p>
-
-      <p>UserCardProps</p>
-      <UserCardProps user={user} ageStatus={getAgeStatus(user.age)} />
+      {/* onSubmit */}
+      <form onSubmit={handleSubmit} style={{ marginTop: 10 }}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name"
+          style={{
+            padding: "10px",
+            width: "100%",
+            border: "1px solid #ccc",
+            borderRadius: "6px",
+            marginBottom: "10px",
+          }}
+        />
+        <input
+          type="number"
+          name="age"
+          placeholder="Your age"
+          style={{
+            padding: "10px",
+            width: "100%",
+            border: "1px solid #ccc",
+            borderRadius: "6px",
+            marginBottom: "10px",
+          }}
+        />
+        <button
+          type="submit"
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#28a745",
+            color: "#fff",
+            border: "none",
+            borderRadius: "6px",
+            cursor: "pointer",
+          }}
+        >
+          Submit
+        </button>
+      </form>
+      <div
+        onTouchStart={() => console.log("Touch started")}
+        onTouchMove={() => console.log("Touch moving")}
+        onTouchEnd={() => console.log("Touch ended")}
+        style={{
+          padding: "20px",
+          backgroundColor: "#ffeeba",
+          textAlign: "center",
+          borderRadius: "6px",
+          marginTop: "15px",
+          border: "1px solid #f0ad4e",
+        }}
+      >
+        Touch this area on a mobile device
+      </div>
     </div>
   );
 }
 
 export default App;
-
 /*
-const promise = new Promise(...)
+FormData:
+---------
+//https://developer.mozilla.org/en-US/docs/Web/API/FormData
+It’s a special object built into the browser.
+Doesn’t look like a plain JS object — you use methods to read it:
+.get(name) → get a single field
+.getAll(name) → get multiple values (checkboxes, multi-selects)
+.entries() → iterate over all fields
+Commonly used for:
+Sending form data via fetch/axios (body: formData)
+Uploading files
 
-          │
-
-      Pending
-
-          │
-
-      Decision
-
-     /          \
-
-resolve()     reject()
-
-   │              │
-
-Fulfilled      Rejected
-
-   │              │
-
-then()         catch()
-
-Promise States Summary
-| State       | What it Means                    | Function Called  | Handler    |
-| ----------- | -------------------------------- | ---------------- | ---------- |
-| Pending ⏳   | Operation is still running       | None             | Waiting    |
-| Fulfilled ✅ | Operation completed successfully | `resolve(value)` | `.then()`  |
-| Rejected ❌  | Operation failed                 | `reject(error)`  | `.catch()` |
-
+https://www.w3schools.com/jsref/prop_pushbutton_type.asp
 */

@@ -19,17 +19,32 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e); // Logs the value as user types
-    //FormData is a built-in JavaScript object that makes it easy to collect form data and send it to a server,
+    //FormData is a built-in JavaScript object that makes it easy to collect form data
+    //and send it to a server,
     // Option 1: Using FormData
     const formData = new FormData(e.target);
     const name = formData.get("name"); // "name" is input's name attribute
-    console.log("Input value using FormData:", name);
+    const age = formData.get("age"); // "age" is input's name attribute
+    console.log("Input value using FormData:", name, age);
+    //-----------------------
+    const user1 = {
+      name: formData.get("name"),
+      age: formData.get("age"),
+    };
+
+    console.log(user1);
+    //-----------------------
+    const formData1 = new FormData(e.target);
+    const user2 = Object.fromEntries(formData1.entries());
+    console.log(user2);
+    //-----------------------
 
     // Option 2: Using e.target.elements
     const name2 = e.target.elements.name.value;
-    console.log("Input value using elements:", name2);
+    const age2 = e.target.elements.age.value;
+    console.log("Input value using elements:", name2, age2);
 
-    alert(`Hello, ${name}`);
+    //alert(`Hello, ${name}`);
     //-------------- Loop thru all elements in the form -------------------
     console.log(e);
     const elements = e.target.elements;
@@ -42,7 +57,7 @@ function App() {
       }
     }
     console.log("Form Data:", formDataNew);
-    alert(JSON.stringify(formDataNew, null, 2));
+    //alert(JSON.stringify(formDataNew, null, 2));
     console.log(JSON.stringify(formDataNew));
     console.log(JSON.stringify(formDataNew, null, 2));
     /*

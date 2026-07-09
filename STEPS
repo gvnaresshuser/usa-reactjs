@@ -17,8 +17,6 @@ git push -u origin main
 
 
 =====================================================================
-Microsoft Windows [Version 10.0.26100.8246]
-(c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
 
@@ -29,26 +27,23 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   my-react-app/src - M1-Lesson-1-ES6/SCREENS/Coding Patterns to Remember.png
-        new file:   my-react-app/src - M1-Lesson-1-ES6/SCREENS/Receiving - Promise, fetch, and axios..png
+        modified:   my-react-app/src - M1-Lesson-1-ES6/SCREENS/Coding Patterns to Remember.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "promise fetch axios"
-[main 106f75d] promise fetch axios
- 3 files changed, 14 insertions(+), 26 deletions(-)
- create mode 100644 my-react-app/src - M1-Lesson-1-ES6/SCREENS/Coding Patterns to Remember.png
- create mode 100644 my-react-app/src - M1-Lesson-1-ES6/SCREENS/Receiving - Promise, fetch, and axios..png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "more"
+[main 8066cc1] more
+ 2 files changed, 15 insertions(+), 12 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
 Enumerating objects: 13, done.
 Counting objects: 100% (13/13), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 1.38 MiB | 1000.00 KiB/s, done.
-Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 948.35 KiB | 23.13 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   b7e8d4e..106f75d  main -> main
+   106f75d..8066cc1  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
