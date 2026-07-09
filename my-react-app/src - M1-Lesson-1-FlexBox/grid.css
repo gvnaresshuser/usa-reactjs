@@ -2,7 +2,7 @@
     max-width: 1140px;
     margin: 0 auto;
     padding: 0 15px;
-    /* border: 1px solid red; */
+    border: 1px solid orange;
 }
 /* Base row and column setup */
 .row {
@@ -10,13 +10,13 @@
     flex-wrap: wrap;
     margin-left: -10px;
     margin-right: -10px;
-    /* border:1px solid navy; */
+    border:1px solid navy;
 }
 
 .col {
     padding: 10px;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 /* Mobile First: Full width columns (stacked) */
