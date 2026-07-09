@@ -1,15 +1,13 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 //import './grid1.css';
 
-//>npm install bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
+//>npm install bootstrap@5.3.7
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       {/*  <div class="container">
@@ -27,7 +25,7 @@ function App() {
       </div> */}
 
       {/* USING BOOTSTRAP CLASS FROM 
-      npm install bootstrap & 
+      npm install bootstrap@5.3.7 & 
       import 'bootstrap/dist/css/bootstrap.min.css';*/}
       <div className="container mt-4">
         <div className="row">
@@ -42,7 +40,6 @@ function App() {
           </div>
         </div>
       </div>
-
     </>
   );
 }

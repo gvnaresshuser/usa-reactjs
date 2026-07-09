@@ -1,24 +1,23 @@
 import React from "react";
 //COMMENT AND UNCOMMNET TO TEST BOOTSTRAP [ "version": "5.3.7" ] IN ACTION
+//npm install bootstrap@5.3.7
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./test1.css"; // Include any additional styling here
 
-import banner from './assets/1.jpg';
-import banner2 from './assets/2.jpg';
+import banner from "./assets/1.jpg";
+import banner2 from "./assets/2.jpg";
 import img1 from "./assets/1.png";
 import img2 from "./assets/2.png";
 import img3 from "./assets/3.png";
 import img4 from "./assets/4.png";
 
-//npm install bootstrap
-
+//npm install bootstrap@5.3.7
 
 const images = [img1, img2, img3, img4];
 
 function App() {
   return (
     <div className="container py-4">
-
       {/* 🔵 Row 1: Banner */}
       <div className="row mb-4">
         <div className="col-12 text-center">
@@ -45,12 +44,14 @@ function App() {
         <div className="col-md-6">
           <h3 className="responsive-title">Our Guarantee</h3>
           <p className="fst-italic text-center text-muted">
-            This is a description section where you can put some text about the image or the content. It adjusts on all screen sizes.
+            This is a description section where you can put some text about the
+            image or the content. It adjusts on all screen sizes.
           </p>
           <div className="p-3 bg-light rounded">
             <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry...
-              Lorem Ipsum has been the industry's standard dummy text ever since the 1500s...
+              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+              printing and typesetting industry... Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s...
             </p>
           </div>
         </div>
@@ -78,7 +79,7 @@ function App() {
                       height: "120px",
                       objectFit: "cover",
                       border: "3px solid #fff",
-                      boxShadow: "0 2px 6px rgba(0,0,0,0.2)"
+                      boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
                     }}
                   />
                   <h5 className="card-title">Image {index + 1}</h5>
