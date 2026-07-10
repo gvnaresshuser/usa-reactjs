@@ -1,5 +1,5 @@
-import React from 'react';
-import './flexbox2.css';
+import React from "react";
+import "./flexbox2.css";
 //https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout
 function App() {
   return (

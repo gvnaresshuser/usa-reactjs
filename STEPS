@@ -21,10 +21,7 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/2-index-flexbox-website.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/2-styles-flexbox-website.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/3-index-CSS-Grid-Examples.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/5-index-Responsive-Web-Design.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/index.css', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -33,62 +30,28 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/1-index-flexbox-20-definitions.html
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/1-styles-flexbox-20-definitions.css
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/2-index-flexbox-website.html
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/2-styles-flexbox-website.css
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/3-index-CSS-Grid-Examples.html
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/3-styles-CSS-Grid-Examples.css
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/4-index-Responsive-CSS-Grid-Examples.html
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/4-styles-Responsive-CSS-Grid-Examples.css
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/5-index-Responsive-Web-Design.html
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/5-styles-Responsive-Web-Design.css
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/6-index-Responsive-Web-Design-LIGHT-DARK.html.html
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/6-styles-Responsive-Web-Design-LIGHT-DARK.css
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/CSS Grid - Responsive Design-NOTES.png
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/NOTES
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/Responsive Web Design.png
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/Understanding CSS Flexbox.png
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/index.html
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/styles.css
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/xtra/index copy.html
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/xtra/styles copy.css
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-TAILWIND-CSS.jsx
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App.jsx
+        new file:   my-react-app/src - M1-Lesson-1-FlexBox/TailwindResponsiveGridDemo.jsx
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/grid.css
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/index.css
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "flexbox html"
-[main f464972] flexbox html
- 21 files changed, 4150 insertions(+), 12 deletions(-)
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/1-index-flexbox-20-definitions.html
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/1-styles-flexbox-20-definitions.css
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/2-index-flexbox-website.html
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/2-styles-flexbox-website.css
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/3-index-CSS-Grid-Examples.html
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/3-styles-CSS-Grid-Examples.css
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/4-index-Responsive-CSS-Grid-Examples.html
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/4-styles-Responsive-CSS-Grid-Examples.css
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/5-index-Responsive-Web-Design.html
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/5-styles-Responsive-Web-Design.css
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/6-index-Responsive-Web-Design-LIGHT-DARK.html.html
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/6-styles-Responsive-Web-Design-LIGHT-DARK.css
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/CSS Grid - Responsive Design-NOTES.png
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/NOTES
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/Responsive Web Design.png
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/Understanding CSS Flexbox.png
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/index.html
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/styles.css
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/xtra/index copy.html
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/flexbox-demo/xtra/styles copy.css
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "flexbox"
+[main ae5384f] flexbox
+ 6 files changed, 335 insertions(+), 157 deletions(-)
+ create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/TailwindResponsiveGridDemo.jsx
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 32, done.
-Counting objects: 100% (32/32), done.
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (27/27), done.
-Writing objects: 100% (27/27), 2.81 MiB | 891.00 KiB/s, done.
-Total 27 (delta 12), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (12/12), completed with 5 local objects.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 3.61 KiB | 1.20 MiB/s, done.
+Total 10 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   9f9dc28..f464972  main -> main
+   f464972..ae5384f  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================

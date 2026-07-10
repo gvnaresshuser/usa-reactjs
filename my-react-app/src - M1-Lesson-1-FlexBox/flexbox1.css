@@ -1,11 +1,12 @@
 /* https: //developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout */
 .flex-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: row;/*row or column */
     /* center horizontally */
-    align-items: center;
+    justify-content: space-evenly;/*flex-start, flex-end, center, space-between, space-around, space-evenly */
     /* center vertically */
+    align-items: center; /*flex-start, flex-end, center, baseline, stretch */
+   
     height: 100vh;
     gap: 20px;
     background-color: #f5f5f5;
@@ -18,3 +19,6 @@
     border-radius: 8px;
     font-size: 1.2rem;
 }
+/*
+https: //developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/justify-content
+*/

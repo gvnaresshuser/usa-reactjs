@@ -88,10 +88,10 @@
     height: auto;
 }
 
-/* Responsive fix: stack content on small screens */
+/* Responsive fix: stack content on small screens - for testing change background color */
 @media (max-width: 767.98px) {
     .image-text-section {
-        flex-direction: column;
+        /* background-color: yellow; */
     }
 }
 
@@ -113,4 +113,29 @@
 
 .star:hover {
     transform: scale(1.2);
+}
+
+/* ================================================== */
+/* Mobile (default: less than 768px) */
+/* 
+📱 Mobile → ✍️ Pacifico (handwritten/script) 
+📱 Tablet → 📖 Playfair Display (classic newspaper/book style) 
+💻 Desktop → 🏢 Anton (bold, condensed, poster-style) */
+/* Mobile */
+.legendary-title {
+    font-family: "Pacifico", cursive;
+}
+
+/* Tablet */
+@media (min-width:768px) and (max-width:991.98px) {
+    .legendary-title {
+        font-family: "Playfair Display", serif;
+    }
+}
+
+/* Desktop */
+@media (min-width:992px) {
+    .legendary-title {
+        font-family: "Anton", sans-serif;
+    }
 }

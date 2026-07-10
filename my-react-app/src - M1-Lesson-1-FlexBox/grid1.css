@@ -22,6 +22,14 @@
 Mobile-first typically assumes screens less than 600px wide.
  0px – 599px
  These are smartphones in portrait mode.
+ [class^="col-"] The ^=means: Starts with the given text. Syntax [class^="col-"]
+ [class*="col-"] The *=means: Contains the given text anywhere in the attribute value. 
+ Syntax: [class*="text"] means Select every element whose class attribute contains "text" .
+  Example 
+  <div class="col-sm-6"></div>
+  <div class="my-col-lg-4"></div>
+  <div class="abc col-md-6 xyz"></div>
+  <div class="container"></div>
 */
 [class*="col-"] {
     width: 100%;

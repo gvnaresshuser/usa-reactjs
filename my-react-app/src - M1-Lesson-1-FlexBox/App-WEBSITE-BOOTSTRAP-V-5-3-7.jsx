@@ -73,7 +73,7 @@ function App() {
                   <img
                     src={image}
                     alt={`Card ${index + 1}`}
-                    className="rounded-circle mb-3"
+                    className="rounded-circle mb-3 d-block mx-auto"
                     style={{
                       width: "120px",
                       height: "120px",
@@ -82,6 +82,20 @@ function App() {
                       boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
                     }}
                   />
+                  {/* <div className="d-flex justify-content-center mb-3">
+                    <img
+                      src={image}
+                      alt={`Card ${index + 1}`}
+                      className="rounded-circle"
+                      style={{
+                        width: "120px",
+                        height: "120px",
+                        objectFit: "cover",
+                        border: "3px solid #fff",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+                      }}
+                    />
+                  </div> */}
                   <h5 className="card-title">Image {index + 1}</h5>
                   <p className="card-text text-muted">
                     Some professional content related to image {index + 1}.

@@ -1,7 +1,7 @@
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 20px;
     padding: 40px;
@@ -17,8 +17,8 @@
     padding: 40px 20px;
     text-align: center;
     font-size: 1.2rem;
-    border-radius: 10px;
-    flex: 1 1 100px;
+    border-radius: 10px;    
+    flex: 1 1 300px;/* grow, shrink, base size - auto */
     /* grow, shrink, base size */
    /*  min-width: 150px;
     max-width: 250px; */
