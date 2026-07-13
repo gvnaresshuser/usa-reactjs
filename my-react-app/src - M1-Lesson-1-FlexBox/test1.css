@@ -131,3 +131,62 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* ==================== CHANGE COLORS USING MEDIA QUERIES ==================== */
+.box {
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: gray;
+}
+
+/* 📱 Mobile */
+@media (max-width: 575.98px) {
+    .box {
+        background-color: red;
+        /* font-family: 'Pacifico', cursive; */
+        /* font-family: 'Great Vibes', cursive; */
+        /* font-family: "Yuyu Short", sans-serif; */
+        font-family: "Dancing Script", cursive;
+           
+    }
+}
+
+/* 📱 Small Devices */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .box {
+        background-color: blue;
+        /* font-family: 'Courier Prime', monospace; */
+        font-family: 'Great Vibes', cursive;
+    }
+}
+
+/* 📱 Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .box {
+        background-color: green;
+        font-family: 'Playfair Display', serif;
+    }
+}
+
+/* 💻 Laptops */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .box {
+        background-color: orange;
+        font-family: 'Anton', sans-serif;
+    }
+}
+
+/* 🖥️ Large Desktops */
+@media (min-width: 1200px) {
+    .box {
+        background-color: purple;
+        /* font-family: 'Bebas Neue', sans-serif; */
+        font-family: "Yuyu Short", sans-serif;
+    }
+}
+/* ==================== CHANGE COLORS USING MEDIA QUERIES ==================== */

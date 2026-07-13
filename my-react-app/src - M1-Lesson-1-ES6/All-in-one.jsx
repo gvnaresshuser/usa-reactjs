@@ -4,6 +4,7 @@ import React from "react";
 import { add } from "./utils"; // Named import with {}
 import minus from "./utils"; // Default import without {}
 import UserCardProps from "./UserCardProps";
+import "./App.css";
 
 function App() {
   //========== PROPS OBJECT ===========
@@ -17,12 +18,13 @@ function App() {
   const getAgeStatus = (age) => (age >= 18 ? "Adult" : "Minor");
   //========== PROPS OBJECT ===========
   // ============================
-  // let and const
+  // let and const - ES6 feature
   // ============================
   let city = "Hyderabad";
   city = "Bengaluru";
-
+  //const used for object,arrays and functions are mutable but primitive data types are immutable
   const trainer = "GV Naressh";
+  const PI = 3.14;
 
   // ============================
   // Arrow Function
@@ -30,9 +32,12 @@ function App() {
   const square = (num) => num * num;
 
   // ============================
-  // Template Literals
+  // Template Literals - ES6 feature - backticks `` are used instead of single or double quotes
   // ============================
+  const message2 = "Hello .Welcome to !";
   const message = `Hello ${trainer}.Welcome to ${city}!`;
+  const messagex = "Hello " + trainer + ".Welcome to " + city + "!";
+
   const message1 = `Hello ${trainer}.
 This is for testing.
 Welcome to ${city}!`;
@@ -82,7 +87,7 @@ Welcome to ${city}!`;
   // ============================
   // Promise
   // ============================
-  const promiseExample = () => {
+  /*   const promiseExample = () => {
     //RESOLVE
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -93,9 +98,10 @@ Welcome to ${city}!`;
     promise.then((result) => {
       alert(result);
     });
-  };
+  }; */
   //----------------------------
-  /*   const promiseExample = () => {//REJECT
+ /*  const promiseExample = () => {
+    //REJECT
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => {
         reject("Something went wrong!");
@@ -157,12 +163,14 @@ Welcome to ${city}!`;
       <h2>let & const</h2>
       <p>City : {city}</p>
       <p>Trainer : {trainer}</p>
+      <p>PI : {PI}</p>
 
       <h2>Arrow Function</h2>
       <p>Square of 8 : {square(8)}</p>
 
       <h2>Template Literals</h2>
       <p>{message}</p>
+      <p style={{ whiteSpace: "pre-line" }}>{message1}</p>
 
       <h2>Destructuring - Array</h2>
       <p>{firstColor}</p>
@@ -202,3 +210,35 @@ Welcome to ${city}!`;
 }
 
 export default App;
+
+/*
+const promise = new Promise(...)
+
+          │
+
+      Pending
+
+          │
+
+      Decision
+
+     /          \
+
+resolve()     reject()
+
+   │              │
+
+Fulfilled      Rejected
+
+   │              │
+
+then()         catch()
+
+Promise States Summary
+| State       | What it Means                    | Function Called  | Handler    |
+| ----------- | -------------------------------- | ---------------- | ---------- |
+| Pending ⏳   | Operation is still running       | None             | Waiting    |
+| Fulfilled ✅ | Operation completed successfully | `resolve(value)` | `.then()`  |
+| Rejected ❌  | Operation failed                 | `reject(error)`  | `.catch()` |
+
+*/

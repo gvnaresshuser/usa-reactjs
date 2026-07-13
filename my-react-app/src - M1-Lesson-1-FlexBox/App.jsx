@@ -1,9 +1,5 @@
 import React from "react";
-//COMMENT AND UNCOMMNET TO TEST BOOTSTRAP [ "version": "5.3.7" ] IN ACTION
-//npm install bootstrap@5.3.7
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./test1.css"; // Include any additional styling here
-
+import "./index.css"; // Make sure Tailwind is configured here
 import banner from "./assets/1.jpg";
 import banner2 from "./assets/2.jpg";
 import img1 from "./assets/1.png";
@@ -11,117 +7,187 @@ import img2 from "./assets/2.png";
 import img3 from "./assets/3.png";
 import img4 from "./assets/4.png";
 
-//npm install bootstrap@5.3.7
-
 const images = [img1, img2, img3, img4];
-
+const globalDivStyle = `
+  div {
+    border: 1px solid navy;
+  }
+`;
 function App() {
   return (
-    <div className="container py-4">
-      {/* 🔵 Row 1: Banner */}
-      <div className="row mb-4">
-        <div className="col-12 text-center">
-          <h2 className="responsive-title gradient-bg">Legendary Website</h2>
+    <>
+      {/*  <style>{globalDivStyle}</style> */}
+      <div className="max-w-screen-xl mx-auto px-4 py-8">
+        {/* 🔵 Row 1: Banner */}
+        <div className="mb-8 text-center">
+          <div
+            className="inline-block border-4 border-purple-500 rounded-lg px-4 py-1 sm:px-6 sm:py-2 
+                bg-red-200
+                sm:bg-green-200
+                md:bg-blue-200
+                lg:bg-orange-200
+                shadow-lg mb-6"
+          >
+            <h2
+              className="p-2 text-3xl sm:text-4xl md:text-5xl 
+            font-bold text-transparent bg-clip-text 
+            bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"
+            >
+              Legendary Website
+            </h2>
+          </div>
           <img
             src={banner}
             alt="Banner"
-            className="img-fluid"
-            style={{ height: "300px", objectFit: "cover", width: "100%" }}
+            className="w-full h-[300px] object-cover rounded-lg shadow-md mt-4"
           />
         </div>
-      </div>
 
-      {/* 🔵 Row 2: Image and Text Side by Side */}
-      <div className="row align-items-center mb-5">
-        <div className="col-md-6 text-center">
-          <img
-            src={banner2}
-            alt="Side"
-            className="img-fluid"
-            style={{ maxWidth: "400px" }}
-          />
-        </div>
-        <div className="col-md-6">
-          <h3 className="responsive-title">Our Guarantee</h3>
-          <p className="fst-italic text-center text-muted">
-            This is a description section where you can put some text about the
-            image or the content. It adjusts on all screen sizes.
-          </p>
-          <div className="p-3 bg-light rounded">
-            <p>
-              What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry... Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s...
+        {/* 🔵 Row 2: Image and Text Side by Side */}
+        <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
+          <div className="flex-1 text-center">
+            <img
+              src={banner2}
+              alt="Side"
+              className="mx-auto max-w-xs rounded-lg shadow"
+            />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-3xl font-semibold mb-2 text-gray-800">
+              Our Guarantee
+            </h3>
+            <p className="italic text-center text-gray-500 mb-4">
+              This is a description section where you can put some text about
+              the image or the content. It adjusts on all screen sizes.
             </p>
+            <div className="bg-gray-100 p-4 rounded shadow">
+              <p>
+                What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry... Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s...
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* 🔵 Row 3: Four Cards */}
-      <div className="row g-4 mb-5">
-        {images.map((image, index) => {
-          const colors = ["#f5f7fa", "#e0e7ff", "#fef3c7", "#e2f0cb"];
-          const bgColor = colors[index % colors.length];
+        {/* 🔵 Row 3: Four Cards */}
+        <div
+          className="
+        grid 
+        grid-cols-1 
+        sm:grid-cols-2 
+        md:grid-cols-3
+        lg:grid-cols-4
+        
+        bg-green-900
+        sm:bg-blue-900
+        md:bg-red-900
+        lg:bg-amber-300
 
-          return (
-            <div className="col-lg-3 col-md-6" key={index}>
+        gap-6 
+        mb-12"
+        >
+          {images.map((image, index) => {
+            const colors = [
+              "bg-gray-100",
+              "bg-indigo-100",
+              "bg-yellow-100",
+              "bg-lime-100",
+            ];
+            const bgClass = colors[index % colors.length];
+
+            return (
               <div
-                className="card h-100 text-center shadow-sm"
-                style={{ backgroundColor: bgColor, borderRadius: "12px" }}
+                key={index}
+                className={`rounded-xl shadow-md ${bgClass} p-4 text-center`}
               >
-                <div className="card-body">
-                  <img
-                    src={image}
-                    alt={`Card ${index + 1}`}
-                    className="rounded-circle mb-3 d-block mx-auto"
-                    style={{
-                      width: "120px",
-                      height: "120px",
-                      objectFit: "cover",
-                      border: "3px solid #fff",
-                      boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-                    }}
-                  />
-                  {/* <div className="d-flex justify-content-center mb-3">
-                    <img
-                      src={image}
-                      alt={`Card ${index + 1}`}
-                      className="rounded-circle"
-                      style={{
-                        width: "120px",
-                        height: "120px",
-                        objectFit: "cover",
-                        border: "3px solid #fff",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
-                      }}
-                    />
-                  </div> */}
-                  <h5 className="card-title">Image {index + 1}</h5>
-                  <p className="card-text text-muted">
-                    Some professional content related to image {index + 1}.
-                  </p>
-                  <div className="d-flex justify-content-center gap-2 mb-2">
-                    <button className="btn btn-primary btn-sm">View</button>
-                    <button className="btn btn-warning btn-sm">Edit</button>
-                  </div>
-                  <div className="text-warning">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <span key={star}>&#9733;</span>
-                    ))}
-                  </div>
+                <img
+                  src={image}
+                  alt={`Card ${index + 1}`}
+                  className="w-28 h-28 mx-auto rounded-full object-cover border-4 border-white shadow-md mb-4"
+                />
+                <h5 className="text-lg font-bold mb-1">Image {index + 1}</h5>
+                <p className="text-gray-600 mb-3">
+                  Some professional content related to image {index + 1}.
+                </p>
+                <div className="flex justify-center gap-2 mb-2">
+                  <button className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600">
+                    View
+                  </button>
+                  <button className="px-3 py-1 bg-yellow-400 text-white rounded text-sm hover:bg-yellow-500">
+                    Edit
+                  </button>
+                </div>
+                <div className="text-yellow-500">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <span key={star}>&#9733;</span>
+                  ))}
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
 
-      {/* 🔵 Row 4: Footer */}
-      <footer className="text-center py-3 bg-dark text-white rounded">
-        © 2025 5datainc.com. All rights reserved.
-      </footer>
-    </div>
+        {/*    <div
+          className="
+    text-sm
+    sm:text-2xl
+    md:text-4xl
+    lg:text-5xl
+    xl:text-6xl
+
+    sm:text-amber-500
+    md:text-pink-500
+    lg:text-blue-500
+    xl:text-green-500
+    ">
+         
+          Hello
+        </div> */}
+
+        {/* 🔵 Row 4: Footer */}
+        <footer className="text-center py-4 bg-gray-800 text-white rounded">
+          © 2025 5datainc.com. All rights reserved.
+        </footer>
+      </div>
+    </>
   );
 }
 
 export default App;
+/*
+TAILWIND CSS INSTALLATION
+FOLLOW SETTINGS FROM TAILWIND VITE TAB
+https://tailwindcss.com/docs/installation/using-vite
+npm install tailwindcss @tailwindcss/vite
+
+E:\MURALI\REACT-JS-TRAINING\my-react-app>npm install tailwindcss @tailwindcss/vite
+added 22 packages, and audited 561 packages in 12s
+92 packages are looking for funding
+  run `npm fund` for details
+found 0 vulnerabilities
+
+*/
+/*
+Default Tailwind CSS breakpoints:
+| Prefix | Min Width |
+| ------ | --------- |
+| `sm`   | `640px`   |
+| `md`   | `768px`   |
+| `lg`   | `1024px`  |
+| `xl`   | `1280px`  |
+| `2xl`  | `1536px`  |
+*/
+/* How Tailwind interprets this
+Screen Width	Background Color
+< 640px	🟢 bg-green-500 (default)
+≥ 640px (sm)	🔵 bg-blue-900
+≥ 768px (md)	🔴 bg-red-900
+≥ 1024px (lg)	🟡 bg-amber-300
+
+The key point is:
+
+There is no xs: prefix in Tailwind by default.
+
+For screens smaller than sm (640px), you simply use the class without any prefix.
+ */

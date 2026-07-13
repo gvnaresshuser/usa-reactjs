@@ -29,8 +29,12 @@ function App() {
             style={{ height: "300px", objectFit: "cover", width: "100%" }}
           />
         </div>
-      </div>
 
+        {/* ======= CHANGE COLORS USING MEDIA QUERIES ============== */}
+
+        <div className="box mt-5">Hello. This is a box for testing FONTS.</div>
+        {/* ======= CHANGE COLORS USING MEDIA QUERIES ============== */}
+      </div>
       {/* 🔵 Row 2: Image and Text Side by Side */}
       <div className="row align-items-center mb-5">
         <div className="col-md-6 text-center">
@@ -56,12 +60,16 @@ function App() {
           </div>
         </div>
       </div>
-
       {/* 🔵 Row 3: Four Cards */}
       <div className="row g-4 mb-5">
         {images.map((image, index) => {
           const colors = ["#f5f7fa", "#e0e7ff", "#fef3c7", "#e2f0cb"];
           const bgColor = colors[index % colors.length];
+
+          {
+            /* <div className="col-lg-3 col-md-6" key={index}> 
+                        <div className="col-lg-6 col-md-6" key={index}> */
+          }
 
           return (
             <div className="col-lg-3 col-md-6" key={index}>
@@ -125,3 +133,13 @@ function App() {
 }
 
 export default App;
+/*
+| Class       | Width | Cards per Row |
+| ----------- | ----: | ------------: |
+| `col-lg-12` | 12/12 |             1 |
+| `col-lg-6`  |  6/12 |       **2** ✅ |
+| `col-lg-4`  |  4/12 |             3 |
+| `col-lg-3`  |  3/12 |             4 |
+| `col-lg-2`  |  2/12 |             6 |
+
+*/

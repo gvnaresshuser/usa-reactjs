@@ -1,12 +1,27 @@
-//5. Import All as Namespace
-import * as MathUtils from './mathUtils';
+//7. Combining Exports from an Index File (Barrel Export)
+import { sayHello, greet, add } from './utils/index';//importing as named export via index.js
+
+//INDIVIDUAL IMPORTS
+/* import sayHello from "./utils/sayHello"; //importing as default export
+import { greet } from "./utils/greet";
+import { add } from "./utils/math"; */
+
 import "./App.css";
 function App() {
   return (
     <div>
-      <p>4 + 2 = {MathUtils.add(4, 2)}</p>
-      <p>4 - 2 = {MathUtils.subtract(4, 2)}</p>
+      <h1>Utility Demo</h1>
+      <button onClick={sayHello}>Say Hello</button>
+      <button onClick={() => sayHello()}>Say Hello</button>
+      {/* NEVER CALL THE FUNCTION() */}
+      <button onClick={sayHello()}>Say Hello</button>
+
+      <button onClick={() => greet("Murali")}>Greet Murali</button>
+      {/* NEVER CALL THE FUNCTION() */}
+      <button onClick={greet("Murali")}>Greet Murali</button>
+      <p>Sum: {add(1, 2)}</p>
     </div>
   );
 }
+
 export default App;

@@ -75,8 +75,15 @@ function App() {
           className="
         grid 
         grid-cols-1 
-        sm:grid-cols-2
+        sm:grid-cols-2 
+        md:grid-cols-3
         lg:grid-cols-4 
+        
+        bg-green-900
+        sm:bg-blue-900
+        md:bg-red-900
+        lg:bg-amber-300
+
         gap-6 
         mb-12"
         >
@@ -171,3 +178,16 @@ Default Tailwind CSS breakpoints:
 | `xl`   | `1280px`  |
 | `2xl`  | `1536px`  |
 */
+/* How Tailwind interprets this
+Screen Width	Background Color
+< 640px	🟢 bg-green-500 (default)
+≥ 640px (sm)	🔵 bg-blue-900
+≥ 768px (md)	🔴 bg-red-900
+≥ 1024px (lg)	🟡 bg-amber-300
+
+The key point is:
+
+There is no xs: prefix in Tailwind by default.
+
+For screens smaller than sm (640px), you simply use the class without any prefix.
+ */
