@@ -7,12 +7,11 @@ import shipImg from '/ship.png';
 import StylingCard from "./StylingCard";
 import ProfileCard from './ProfileCard';
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>      
-      {/* <StylingCard /> */}
-      <ProfileCard/>
+       <StylingCard /> 
+      {/* <ProfileCard/> */}
     </>
   );
 }

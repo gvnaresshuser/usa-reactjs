@@ -129,7 +129,21 @@ const StylingCard = () => {
         <Button>Click Me</Button>&nbsp;
         <Button1>Button 1</Button1>&nbsp;
         <Button1 $primary>Button 1</Button1>&nbsp;
-        <Button2 name="saveBtn" $primary size="large" onClick={handleClick}>
+        {/* <Button2 name="saveBtn" $primary={false} size="large" onClick={handleClick}>Submit</Button2> */}
+        {/* <Button2
+          name="saveBtn"
+          $primary={false}
+          size="large"
+          onClick={handleClick}
+        >
+          Submit
+        </Button2> */}
+        <Button2
+          name="saveBtn"
+          $primary
+          size="large"
+          onClick={handleClick}
+        >
           Save
         </Button2>
         &nbsp;
@@ -156,4 +170,41 @@ export default StylingCard;
 | `<Button1 $primary={true} />`  | `true`           | True branch  |
 | `<Button1 $primary={false} />` | `false`          | False branch |
 
+*/
+/*
+CSS Padding Shorthand Rules
+
+padding: 20px;
+
+Top = 20px
+Right = 20px
+Bottom = 20px
+Left = 20px
+
+padding: 10px 30px;
+
+Top = 10px
+Bottom = 10px
+Left = 30px
+Right = 30px
+
+padding: 10px 20px 30px;
+
+Top = 10px
+Left = Right = 20px
+Bottom = 30px
+
+padding: 10px 20px 30px 40px;
+
+Top = 10px
+Right = 20px
+Bottom = 30px
+Left = 40px
+
+Memory Trick
+
+1 value → All sides
+2 values → Top/Bottom | Left/Right
+3 values → Top | Left/Right | Bottom
+4 values → Top | Right | Bottom | Left (clockwise)
 */

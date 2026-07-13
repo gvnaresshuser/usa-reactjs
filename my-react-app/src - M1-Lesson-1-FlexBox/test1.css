@@ -162,6 +162,7 @@
         background-color: blue;
         /* font-family: 'Courier Prime', monospace; */
         font-family: 'Great Vibes', cursive;
+        font-size: 10px;
     }
 }
 
@@ -170,6 +171,7 @@
     .box {
         background-color: green;
         font-family: 'Playfair Display', serif;
+        font-size: 10px;
     }
 }
 
@@ -177,7 +179,9 @@
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .box {
         background-color: orange;
-        font-family: 'Anton', sans-serif;
+        /* font-family: 'Anton', sans-serif; */
+        font-family: "Archivo Black", sans-serif;
+        font-size: 10px;
     }
 }
 
@@ -187,6 +191,14 @@
         background-color: purple;
         /* font-family: 'Bebas Neue', sans-serif; */
         font-family: "Yuyu Short", sans-serif;
+        font-size: 20px;
     }
 }
 /* ==================== CHANGE COLORS USING MEDIA QUERIES ==================== */
+
+
+.archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-style: italic;
+    background-color: red;
+}
