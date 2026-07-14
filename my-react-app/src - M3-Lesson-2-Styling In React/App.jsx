@@ -8,7 +8,7 @@ import StylingCard from "./StylingCard";
 import ProfileCard from "./ProfileCard";
 function App() {
   return (
-    <>
+    <>    
       <StylingCard />
       {/* <ProfileCard/> */}
     </>

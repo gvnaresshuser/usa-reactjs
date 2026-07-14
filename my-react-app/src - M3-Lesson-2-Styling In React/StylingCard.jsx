@@ -104,10 +104,10 @@ const StylingCard = () => {
 
   return (
     <div>
-      <h1 className="gradient-heading">Styling in React JS</h1>
+      <h1 className="gradient-heading">Styling in React JS - index.css</h1>
       {/* a) Inline Styling */}
       <h1 style={{ color: "orange", fontSize: "24px", textAlign: "center" }}>
-        1.Inline Styling in React
+        1.Inline Styling in React - camel case - not snake case
       </h1>
       <h1 style={headingStyle}>1.Inline Styling in React</h1>
       <hr />
@@ -125,7 +125,7 @@ const StylingCard = () => {
       <hr />
       {/* d) Styled Components */}
       <div>
-        <Heading>4.Styled Components in React</Heading>
+        <Heading>4.Styled Components in React - External Component</Heading>
         <Button>Click Me</Button>&nbsp;
         <Button1>Button 1</Button1>&nbsp;
         <Button1 $primary>Button 1</Button1>&nbsp;
@@ -138,12 +138,7 @@ const StylingCard = () => {
         >
           Submit
         </Button2> */}
-        <Button2
-          name="saveBtn"
-          $primary
-          size="large"
-          onClick={handleClick}
-        >
+        <Button2 name="saveBtn" $primary size="large" onClick={handleClick}>
           Save
         </Button2>
         &nbsp;
