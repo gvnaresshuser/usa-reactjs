@@ -21,9 +21,11 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-Flexbox2.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-BOOTSTRAP-V-5-3-7.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/package-lock.json', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M3-Lesson-2-Styling In React/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/vite.config.js', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -31,35 +33,30 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App-Flexbox2.jsx
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App-WEBSITE-BOOTSTRAP-V-5-3-7.jsx
-        new file:   my-react-app/src - M1-Lesson-1-FlexBox/App-different-fonts.jsx
+        modified:   my-react-app/index.html
         modified:   my-react-app/src - M1-Lesson-1-FlexBox/App.jsx
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/SCREENS/What is a Grid System.png
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/flexbox1.css
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/flexbox2.css
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/grid-responsive.css
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/grid1.css
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/index.css
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/test.css
+        modified:   my-react-app/src - M1-Lesson-1-FlexBox/test1.css
+        modified:   my-react-app/src - M3-Lesson-2-Styling In React/App.jsx
+        new file:   my-react-app/src - M3-Lesson-2-Styling In React/SCREENS/CSS Padding Shorthand Rules.png
+        modified:   my-react-app/src - M3-Lesson-2-Styling In React/StylingCard.jsx
+        modified:   my-react-app/vite.config.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "10-07-2027"
-[main 136e33e] 10-07-2027
- 12 files changed, 390 insertions(+), 100 deletions(-)
- create mode 100644 my-react-app/src - M1-Lesson-1-FlexBox/App-different-fonts.jsx
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "13-07-2026"
+[main d7bfff2] 13-07-2026
+ 7 files changed, 75 insertions(+), 10 deletions(-)
+ create mode 100644 my-react-app/src - M3-Lesson-2-Styling In React/SCREENS/CSS Padding Shorthand Rules.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 30, done.
-Counting objects: 100% (30/30), done.
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 1.22 MiB | 850.00 KiB/s, done.
-Total 16 (delta 12), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (12/12), completed with 12 local objects.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 131.33 KiB | 14.59 MiB/s, done.
+Total 12 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 10 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   ae5384f..136e33e  main -> main
+   d6d48ff..d7bfff2  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
