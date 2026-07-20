@@ -50,6 +50,9 @@ const Button2 = styled.button`
 const BaseButton = ({ className, children }) => (
   <button className={className}>{children}</button>
 );
+/* const BaseButton = ({  children }) => (
+  <button>{children}</button>
+); */
 
 const StyledBaseButton = styled(BaseButton)`
   background: linear-gradient(135deg, #ff7e5f, #feb47b);

@@ -21,11 +21,7 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-FlexBox/index.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src - M3-Lesson-2-Styling In React/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/vite.config.js', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -33,30 +29,24 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   my-react-app/index.html
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/App.jsx
-        modified:   my-react-app/src - M1-Lesson-1-FlexBox/test1.css
         modified:   my-react-app/src - M3-Lesson-2-Styling In React/App.jsx
-        new file:   my-react-app/src - M3-Lesson-2-Styling In React/SCREENS/CSS Padding Shorthand Rules.png
         modified:   my-react-app/src - M3-Lesson-2-Styling In React/StylingCard.jsx
-        modified:   my-react-app/vite.config.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "13-07-2026"
-[main d7bfff2] 13-07-2026
- 7 files changed, 75 insertions(+), 10 deletions(-)
- create mode 100644 my-react-app/src - M3-Lesson-2-Styling In React/SCREENS/CSS Padding Shorthand Rules.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "updated 14-07-2026"
+[main 3be2a85] updated 14-07-2026
+ 2 files changed, 5 insertions(+), 10 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 22, done.
-Counting objects: 100% (22/22), done.
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (12/12), done.
-Writing objects: 100% (12/12), 131.33 KiB | 14.59 MiB/s, done.
-Total 12 (delta 10), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (10/10), completed with 10 local objects.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 580 bytes | 580.00 KiB/s, done.
+Total 6 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   d6d48ff..d7bfff2  main -> main
+   cb044eb..3be2a85  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
