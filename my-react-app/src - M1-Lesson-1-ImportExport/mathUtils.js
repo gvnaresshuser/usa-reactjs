@@ -6,3 +6,8 @@ export function add(a, b) {
 export function subtract(a, b) {
     return a - b;
 }
+
+// Default Export
+export default function multiply(a, b) {
+    return a * b;
+}
