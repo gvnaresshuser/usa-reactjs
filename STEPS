@@ -21,7 +21,8 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src - M3-Lesson-2-Styling In React/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App-5-Import All as Namespace.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -29,24 +30,27 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   my-react-app/src - M3-Lesson-2-Styling In React/App.jsx
-        modified:   my-react-app/src - M3-Lesson-2-Styling In React/StylingCard.jsx
+        modified:   my-react-app/src - M1-Lesson-1-ImportExport/App-5-Import All as Namespace.jsx
+        modified:   my-react-app/src - M1-Lesson-1-ImportExport/App.jsx
+        new file:   my-react-app/src - M1-Lesson-1-ImportExport/SCREENS/JavaScript module can have only one default export.png
+        modified:   my-react-app/src - M1-Lesson-1-ImportExport/mathUtils.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "updated 14-07-2026"
-[main 3be2a85] updated 14-07-2026
- 2 files changed, 5 insertions(+), 10 deletions(-)
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "default module notes"
+[main b589e0a] default module notes
+ 4 files changed, 17 insertions(+), 23 deletions(-)
+ create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/SCREENS/JavaScript module can have only one default export.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 11, done.
-Counting objects: 100% (11/11), done.
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 580 bytes | 580.00 KiB/s, done.
-Total 6 (delta 5), reused 0 (delta 0), pack-reused 0
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 580.85 KiB | 20.74 MiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   cb044eb..3be2a85  main -> main
+   92ec123..b589e0a  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================

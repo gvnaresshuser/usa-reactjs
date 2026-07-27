@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles-test.css";
 import styles from "./StylingCard.module.css"; //NAMING IMPORTANT
-import styled from "styled-components"; // npm install styled-components
+import styled from "styled-components"; // npm install styled-components - from root project folder
 
 import "./StylingCard.css";
-//------------------- styled-components ----------------------
+//------------------- styled-components ----------------------'' "" `` below esc button ~~ ``
 const Heading = styled.h1`
   color: red;
   font-size: 30px;
@@ -35,7 +35,7 @@ const Button1 = styled.button`
 const Button2 = styled.button`
   background-color: ${(props) => (props.$primary ? "red" : "green")};
   color: white;
-  padding: ${(props) => (props.size === "large" ? "10px 50px" : "10px 10px")};
+  padding: ${(props) => (props.size === "large" ? "10px 50px" : "50px 10px")};
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -155,6 +155,7 @@ const StylingCard = () => {
       <StyledBaseButton>Style Custom Components</StyledBaseButton>&nbsp;
       <SecondaryBaseButton>Style Custom Components</SecondaryBaseButton>&nbsp;
       <BaseButtonNew>Style Custom Components</BaseButtonNew>
+      
     </div>
   );
 };
