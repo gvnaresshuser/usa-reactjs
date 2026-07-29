@@ -155,7 +155,6 @@ const StylingCard = () => {
       <StyledBaseButton>Style Custom Components</StyledBaseButton>&nbsp;
       <SecondaryBaseButton>Style Custom Components</SecondaryBaseButton>&nbsp;
       <BaseButtonNew>Style Custom Components</BaseButtonNew>
-      
     </div>
   );
 };
@@ -206,4 +205,9 @@ Memory Trick
 2 values → Top/Bottom | Left/Right
 3 values → Top | Left/Right | Bottom
 4 values → Top | Right | Bottom | Left (clockwise)
+*/
+/*
+& is called the Parent Selector.
+:hover is called a Pseudo-class.
+This technique is called Selector Nesting.
 */

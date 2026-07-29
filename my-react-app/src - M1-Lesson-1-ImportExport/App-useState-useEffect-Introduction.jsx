@@ -48,11 +48,6 @@ Adding or removing event listeners
 Updating the document title
 Working with localStorage or sessionStorage
 Connecting to WebSockets
-
-setCount((count) => count + 1);
-setCount(count => count + 1);
-setCount((prev) => prev + 1);
-setCount((prevCount) => prevCount + 1);
 */
 //useState = "Store data and update the UI when the data changes."
 //useEffect = "After rendering, do something."

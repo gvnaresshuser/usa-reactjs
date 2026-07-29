@@ -11,3 +11,10 @@ export function subtract(a, b) {
 export default function multiply(a, b) {
     return a * b;
 }
+/*
+{
+    add: add,
+    subtract: subtract,
+    default: multiply,
+}
+*/
