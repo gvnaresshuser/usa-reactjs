@@ -8,6 +8,7 @@ const LiveCharCounter = () => {
 
     // Handle input change
     const handleChange = (e) => {
+        
         setInput(e.target.value);
         setLastTypedTime(new Date().toLocaleTimeString());
         setShowWarning(false); // Reset warning if user types

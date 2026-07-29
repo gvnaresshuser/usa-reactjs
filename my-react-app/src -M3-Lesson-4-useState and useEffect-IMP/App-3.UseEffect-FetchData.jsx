@@ -16,10 +16,10 @@ function App() {
       console.error("Error fetching data:", error);
     }
   };
-  //fetchData();
+  fetchData();
   //Runs infinitely if we call fetchData() directly inside your component:
   useEffect(() => {
-    fetchData();
+    //fetchData();
   }, []);
 
   return (

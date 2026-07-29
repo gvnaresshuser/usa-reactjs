@@ -1,28 +1,37 @@
+import { useState, useEffect } from 'react';
 import './App.css';
-import Counter from './Counter';//useState
-import Timer from './Timer';//useEffect
-
-import CounterMessage from './CounterMessage';//Assignment on useState
-import LiveCharCounter from './LiveCharCounter';//Assignment on useEffect
 
 function App() {
+  const [data, setData] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("https://jsonplaceholder.typicode.com/users");
+      console.log(response);
+      if (!response.ok) throw new Error("Network response was not ok");
+      const datax = await response.json();
+      console.log(datax);
+      setData(datax);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  //fetchData();
+  //Runs infinitely if we call fetchData() directly inside your component:
+  useEffect(() => {
+    //fetchData();
+  }, []);
 
   return (
     <>
-      <div className="App">
-        {/*  USE STATE DEMO */}
-        {/* <Counter /> */}
-
-        {/* USE EFFECT DEMO */}
-        {/* <Timer /> */}
-
-        {/* ASSIGNMENT ON USE STATE */}
-        <CounterMessage />
-
-        {/* ASSIGNMENT ON USE EFFECT */}
-        {/* <LiveCharCounter /> */}
-
-      </div>
+      <h2>Fetched Data</h2>
+      <ul>
+        {data.map((user) => (
+          <li key={user.id}>
+            {user.name} - {user.email}
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

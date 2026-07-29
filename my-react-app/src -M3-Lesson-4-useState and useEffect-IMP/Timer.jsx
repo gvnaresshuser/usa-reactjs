@@ -12,15 +12,15 @@ const Timer = () => {
     };
 
     //-----------------1111111111111111------------------------
-   /*  useEffect(() => {
+    useEffect(() => {
         console.log('useEffect called : ' + count);       
-    //}, []);
-    }, [count]); */
+    }, []);
+    //});
 
     //------------------22222222222222-----------------------
 
     // useEffect runs after the component renders
-    useEffect(() => {
+    /* useEffect(() => {
         console.log('Component mounted or count updated');
 
         const timer = setInterval(() => {            
@@ -32,7 +32,7 @@ const Timer = () => {
             clearInterval(timer);
             console.log('Timer cleared');
         };
-        }, []); //--> 1.Runs only once on mount because the dependency array is empty
+        }, []);  *///--> 1.Runs only once on mount because the dependency array is empty
     //}, [count]); //--> 2.Runs on specific state change
     //});//--> 3.Run on every render (not recommended) 
     //-------------------------------------------------------------------
