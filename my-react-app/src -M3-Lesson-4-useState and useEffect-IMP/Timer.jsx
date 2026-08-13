@@ -19,15 +19,15 @@ const Timer = () => {
         ✅ Every prop change
         ✅ Every re-render
     */
-  useEffect(() => {
+/*   useEffect(() => {
     console.log("useEffect called : " + count);
     //}, []);
-  });
+  }); */
 
   //------------------22222222222222-----------------------
 
   // useEffect runs after the component renders
-  /* useEffect(() => {
+  useEffect(() => {
         console.log('Component mounted or count updated');
         const timer = setInterval(() => {            
             setCount(prevCount => prevCount + 1);
@@ -38,12 +38,12 @@ const Timer = () => {
             clearInterval(timer);
             console.log('Timer cleared');
         };
-        }, []);  */ //--> 1.Runs only once on mount because the dependency array is empty
-  //}, [count]); //--> 2.Runs after the initial render and whenever 'count' changes.
-  //});//--> 3.uns after every render (usually avoid unless needed). (not recommended)
+   //     }, []);  //--> 1.Runs only once on mount because the dependency array is empty
+  }, [count]); //--> 2.Runs after the initial render and whenever 'count' changes.
+  //});//--> 3.Runs after every render (usually avoid unless needed). (not recommended)
   //-------------------------------------------------------------------
   //------------------33333333333333333333-----------------------
-  /*  useEffect(() => {
+   /* useEffect(() => {
     console.log("Effect");
 
     const timer = setInterval(() => {
@@ -108,6 +108,7 @@ Runs:
 ✅ Every state change
 ✅ Every prop change
 ✅ Every re-render
+
 2. Empty dependency array
 useEffect(() => {
   console.log("Runs only once.");
@@ -116,6 +117,7 @@ useEffect(() => {
 Runs:
 
 ✅ Initial render only
+
 3. Specific dependency
 useEffect(() => {
   console.log("Count changed:", count);

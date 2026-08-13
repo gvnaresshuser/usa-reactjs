@@ -100,6 +100,38 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   STEPS
+        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/let vs const - useState - SINGLE SOURCE OF TRUTH.png
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "single source of truth"
+[main 3c9dc0c] single source of truth
+ 2 files changed, 45 insertions(+)
+ create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/let vs const - useState - SINGLE SOURCE OF TRUTH.png
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.00 MiB | 598.00 KiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   c8b72b7..3c9dc0c  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
 =====================================================================
 =====================================================================

@@ -33,31 +33,31 @@ const LiveCharCounter = () => {
     }, [input]);
 
     return (
-        <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-            <input
-                type="text"
-                placeholder="Type something..."
-                value={input}
-                onChange={handleChange}
-                style={{
-                    padding: '8px',
-                    width: '300px',
-                    border: input.length > 50 ? '2px solid red' : '1px solid #ccc',
-                }}
-            />
+      <div style={{ padding: "20px", fontFamily: "Arial" }}>
+        <input
+          type="text"
+          placeholder="Type something..."
+          value={input}
+          onChange={handleChange}
+          style={{
+            padding: "8px",
+            width: "300px",
+            border: input.length > 50 ? "2px solid red" : "1px solid #ccc",
+          }}
+        />
 
-            <p style={{ color: input.length > 50 ? 'red' : 'black' }}>
-                Character count: {input.length}
-            </p>
+        <p style={{ color: input.length > 50 ? "red" : "black" }}>
+          Character count: {input.length}
+        </p>
 
-            {lastTypedTime && <p>Last typed at: {lastTypedTime}</p>}
+        {lastTypedTime && <p>Last typed at: {lastTypedTime}</p>}
 
-            {showWarning && (
-                <p style={{ color: 'orange', fontWeight: 'bold' }}>
-                    ⚠️ You haven’t typed anything in the last 10 seconds!
-                </p>
-            )}
-        </div>
+        {showWarning && (
+          <p style={{ color: "orange", fontWeight: "bold" }}>
+            ⚠️ You haven’t typed anything in the last 10 seconds!
+          </p>
+        )}
+      </div>
     );
 };
 
