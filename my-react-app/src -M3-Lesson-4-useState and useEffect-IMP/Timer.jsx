@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 //USE EFFECT HOOK EXAMPLE
 // This component demonstrates a simple timer using the useEffect hook
 const Timer = () => {
-  console.log("TIMER");
+  console.log("TIMER");  
   const [count, setCount] = useState(0);
 
   // Event handler to increment count

@@ -104,14 +104,9 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src - M1-Lesson-1-ImportExport/App.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-3.UseEffect-FetchData.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/main.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App copy.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-THIS-FIRST.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/index copy.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/MyComponent.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -120,48 +115,33 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   my-react-app/src - M1-Lesson-1-ImportExport/App.jsx
-        new file:   my-react-app/src - M1-Lesson-1-ImportExport/NAME
-        new file:   my-react-app/src - M3-Lesson-2-Styling In React/NAME
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App copy.jsx
         modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-3.UseEffect-FetchData.jsx
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-THIS-FIRST.jsx
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.css
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/LiveCharCounter.jsx
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/NAME
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/1.1.useState-ANATOMY.png
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/2.1..useEffect-ANATOMY.png
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/HOOKS.png
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/REACT-HOOKS.png
+        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-AllStateTypesDemo.jsx
+        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx
+        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/MyComponent.jsx
+        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/IMPORTANT-RELATIONSHIP.png
+        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/USE-EFFECT-3-SCENARIOS.png
+        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/What React can Display.png
         modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/Timer.jsx
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/index copy.css
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/index.css
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/main.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "13-08-2026"
-[main 22c7260] 13-08-2026
- 18 files changed, 284 insertions(+), 109 deletions(-)
- create mode 100644 my-react-app/src - M1-Lesson-1-ImportExport/NAME
- create mode 100644 my-react-app/src - M3-Lesson-2-Styling In React/NAME
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App copy.jsx
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-THIS-FIRST.jsx
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/NAME
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/1.1.useState-ANATOMY.png
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/2.1..useEffect-ANATOMY.png
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/HOOKS.png
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/index copy.css
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "14-08-2026"
+[main 4d83c8d] 14-08-2026
+ 9 files changed, 606 insertions(+), 147 deletions(-)
+ create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/IMPORTANT-RELATIONSHIP.png
+ create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/USE-EFFECT-3-SCENARIOS.png
+ create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/What React can Display.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 39, done.
-Counting objects: 100% (39/39), done.
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (20/20), done.
-Writing objects: 100% (24/24), 2.84 MiB | 903.00 KiB/s, done.
-Total 24 (delta 13), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (13/13), completed with 13 local objects.
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 2.87 MiB | 1.08 MiB/s, done.
+Total 14 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 9 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   3c9dc0c..22c7260  main -> main
+   22c7260..4d83c8d  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================

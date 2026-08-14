@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import './CounterMessage.css';
 
 const CounterMessage = () => {
+    let msg = '';//local variable
+    msg = 'hello';
     const [count, setCount] = useState(10);
-    const [message, setMessage] = useState('');
+    const [message, setMessage] = useState('naresh');//state variable
     const [inputValue, setInputValue] = useState('');
 
     const increment = () => setCount((prev) => prev + 1);
