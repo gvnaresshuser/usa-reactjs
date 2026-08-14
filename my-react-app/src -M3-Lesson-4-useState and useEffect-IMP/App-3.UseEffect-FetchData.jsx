@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
+  console.log("APP");
   const [data, setData] = useState([]);
 
   const fetchData = async () => {
+    console.log("FETCH DATA");
     try {
       const response = await fetch(
         "https://jsonplaceholder.typicode.com/users",
@@ -14,21 +16,24 @@ function App() {
       const datax = await response.json();
       console.log(datax);
       setData(datax);
+      console.log("SET DATA");
     } catch (error) {
       console.error("Error fetching data:", error);
     }
   };
   //Runs infinitely if we call fetchData() directly inside your component:
-  fetchData();
+  //fetchData();
 
   useEffect(() => {
-    //fetchData();
+    console.log("USE EFFECT");
+    fetchData();
   }, []);
 
   return (
     <>
       <h2>Fetched Data</h2>
       <ul>
+        {console.log("RENDERING")}
         {data.map((user) => (
           <li key={user.id}>
             {user.name} - {user.email}

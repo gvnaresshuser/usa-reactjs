@@ -19,8 +19,8 @@ function MyComponent() {
 /*   useEffect(() => {
     console.log('Count changed 22222:', count);
     console.log('Name changed 222222:', name);
-  }, [count, name]); */
-
+  }, [count, name]);
+ */
 
   // Effect that runs once (on mount)
   useEffect(() => {
@@ -28,7 +28,7 @@ function MyComponent() {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col gap-3">
       <p>Count: {count}</p>
       <p>Name: {name}</p>
       <button onClick={() => setCount(prev => prev + 1)}>Increment</button>
