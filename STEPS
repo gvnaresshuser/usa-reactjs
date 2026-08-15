@@ -100,13 +100,15 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-3.UseEffect-FetchData.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/MyComponent.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -115,35 +117,31 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-3.UseEffect-FetchData.jsx
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-AllStateTypesDemo.jsx
         modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/MyComponent.jsx
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/IMPORTANT-RELATIONSHIP.png
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/USE-EFFECT-3-SCENARIOS.png
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/What React can Display.png
+        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/CounterMessage.jsx
         modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/Timer.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "14-08-2026"
-[main 4d83c8d] 14-08-2026
- 9 files changed, 606 insertions(+), 147 deletions(-)
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/IMPORTANT-RELATIONSHIP.png
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/USE-EFFECT-3-SCENARIOS.png
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/What React can Display.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "new files 14-08-2026"
+[main 63d1afa] new files 14-08-2026
+ 4 files changed, 47 insertions(+), 282 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 24, done.
-Counting objects: 100% (24/24), done.
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (14/14), done.
-Writing objects: 100% (14/14), 2.87 MiB | 1.08 MiB/s, done.
-Total 14 (delta 10), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (10/10), completed with 9 local objects.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.28 KiB | 653.00 KiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   22c7260..4d83c8d  main -> main
+   4d83c8d..63d1afa  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
 =====================================================================
 =====================================================================
 =====================================================================
