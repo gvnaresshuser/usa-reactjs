@@ -118,24 +118,27 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
         modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/CounterMessage.jsx
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/Timer.jsx
+        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/Primitives - Objects-References - Object.is.png
 
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "new files 14-08-2026"
-[main 63d1afa] new files 14-08-2026
- 4 files changed, 47 insertions(+), 282 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 15, done.
-Counting objects: 100% (15/15), done.
+Everything up-to-date
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "15-08-2026"
+[main 8197676] 15-08-2026
+ 3 files changed, 70 insertions(+), 42 deletions(-)
+ create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/Primitives - Objects-References - Object.is.png
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 1.28 KiB | 653.00 KiB/s, done.
-Total 8 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+Writing objects: 100% (8/8), 723.29 KiB | 20.67 MiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   4d83c8d..63d1afa  main -> main
+   63d1afa..8197676  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
