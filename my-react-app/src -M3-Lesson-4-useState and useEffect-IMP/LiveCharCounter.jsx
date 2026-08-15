@@ -52,9 +52,14 @@ const LiveCharCounter = () => {
       {lastTypedTime && <p>Last typed at: {lastTypedTime}</p>}
 
       {showWarning && (
-        <p style={{ color: "orange", fontWeight: "bold" }}>
-          ⚠️ You haven’t typed anything in the last 10 seconds!
-        </p>
+        <>
+          <p style={{ color: "orange", fontWeight: "bold" }}>
+            ⚠️ You haven’t typed anything in the last 10 seconds!
+          </p>
+         {/*  <p style={{ color: "red", fontWeight: "bold" }}>
+            {new Date().toLocaleTimeString()}
+          </p> */}
+        </>
       )}
     </div>
   );

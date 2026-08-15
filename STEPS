@@ -104,10 +104,10 @@ E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Microsoft Windows [Version 10.0.26100.8246]
-(c) Microsoft Corporation. All rights reserved.
+
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-1.useState-useEffect-Counter-Timer.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
@@ -116,31 +116,27 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
         modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/Primitives - Objects-References - Object.is.png
+        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/LiveCharCounter.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Everything up-to-date
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "15-08-2026"
-[main 8197676] 15-08-2026
- 3 files changed, 70 insertions(+), 42 deletions(-)
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/SCREENS/Primitives - Objects-References - Object.is.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "char counter"
+[main 2450016] char counter
+ 2 files changed, 74 insertions(+), 99 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 14, done.
-Counting objects: 100% (14/14), done.
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 723.29 KiB | 20.67 MiB/s, done.
-Total 8 (delta 5), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.15 KiB | 1.15 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   63d1afa..8197676  main -> main
+   5b0c79e..2450016  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
