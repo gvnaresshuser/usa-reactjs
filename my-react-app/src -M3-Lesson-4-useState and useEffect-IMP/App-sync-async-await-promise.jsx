@@ -26,10 +26,18 @@ function App() {
   const handleAsyncWait = async () => {
     try {
       setMessage("⏳ Waiting 5 seconds asynchronously...");
-      await new Promise((resolve) => setTimeout(resolve, 5000));
-      setMessage("✅ Done (async/await). Smooth!");
+      //await new Promise((resolve) => setTimeout(resolve, 5000));
+      //------------------------------------------------------------
+      await new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve();
+          //---------------------------------------------------
+          //reject(new Error("handleAsyncWait - Something went wrong!"));
+        }, 5000);
+      });
+      setMessage("handleAsyncWait - ✅ Done (async/await). Smooth!");
     } catch (error) {
-      setMessage("❌ Something went wrong!");
+      setMessage("handleAsyncWait - ❌ Something went wrong!");
       console.error("Async error:", error);
     }
   };
@@ -39,19 +47,21 @@ function App() {
     setMessage("⏳ Waiting 5 seconds using Promise...");
     simulateAsyncTask()
       .then(() => {
-        setMessage("✅ Done (Promise). Smooth as well!");
+        setMessage("handlePromiseWait - ✅ Done (Promise). Smooth as well!");
       })
       .catch((error) => {
-        setMessage(`❌ Error: ${error.message}`);
+        setMessage(`handlePromiseWait - ❌ Error: ${error.message}`);
         console.error(error);
       });
   };
 
   // 👇 Simulated Promise-based function
   const simulateAsyncTask = () => {
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve();
+        //-----------------------------------
+        //reject(new Error("Something went wrong!"));
       }, 5000);
     });
   };
