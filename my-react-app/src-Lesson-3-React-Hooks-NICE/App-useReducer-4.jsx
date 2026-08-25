@@ -31,7 +31,6 @@ const reducer = (state, action) => {
       };
 
     case "INCREASE_AGE":
-      console.log("Current age:", state.age);
       return {
         ...state,
         age: state.age + 1,

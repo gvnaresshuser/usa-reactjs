@@ -31,10 +31,7 @@ const App = () => {
         color: navy;
         cursor: pointer;
       }
-
-      button:hover {
-        background-color: #dbefff;
-      }
+    
     `}
       </style>
       <h2>🧠 useState with All Data Types</h2>
