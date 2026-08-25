@@ -8,9 +8,16 @@ function App() {
   const fetchData = async () => {
     console.log("FETCH DATA");
     try {
-      const response = await fetch(
+     /*  const response = await fetch(
         "https://jsonplaceholder.typicode.com/users",
-      );
+      ); */
+       const response = await fetch(
+         "https://jsonplaceholder.typicode.com/users",
+         {
+           // Adding method type
+           method: "GET",
+         },
+       );;
       console.log(response);
       if (!response.ok) throw new Error("Network response was not ok");
       const datax = await response.json();

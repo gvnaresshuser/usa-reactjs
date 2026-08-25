@@ -110,7 +110,7 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-3.UseEffect-FetchData-Primitive-Reference.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.css', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -118,25 +118,23 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
-        new file:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-3.UseEffect-FetchData-Primitive-Reference.jsx
+        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.css
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "Primitive vs Reference"
-[main 2ce9a2f] Primitive vs Reference
- 2 files changed, 76 insertions(+), 10 deletions(-)
- create mode 100644 my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-3.UseEffect-FetchData-Primitive-Reference.jsx
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "25-08-2026"
+[main 1053568] 25-08-2026
+ 1 file changed, 8 insertions(+)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 10, done.
-Counting objects: 100% (10/10), done.
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 1.33 KiB | 453.00 KiB/s, done.
-Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 487 bytes | 487.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   40a19e7..2ce9a2f  main -> main
+   7d48fce..1053568  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 

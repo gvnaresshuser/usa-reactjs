@@ -16,10 +16,10 @@ function MyComponent() {
     console.log('Name changed:', name);
   }, [name]); */
 
-/*   useEffect(() => {
+  useEffect(() => {
     console.log('Count changed 22222:', count);
     console.log('Name changed 222222:', name);
-  }, [count, name]); */
+  }, [count, name]);
 
 
   // Effect that runs once (on mount)
@@ -27,12 +27,17 @@ function MyComponent() {
     console.log('Component mounted');
   }, []);
 
+    useEffect(() => {
+      console.log("Component ALWAYS");
+    });
+
   return (
     <div className="flex flex-col gap-3">
       <p>Count: {count}</p>
       <p>Name: {name}</p>
       <button onClick={() => setCount(prev => prev + 1)}>Increment</button>
-      <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter name" />
+      <input value={name} 
+      onChange={(e) => setName(e.target.value)} placeholder="Enter name" />
     </div>
   );
 }
