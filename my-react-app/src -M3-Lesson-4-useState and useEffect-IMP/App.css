@@ -67,3 +67,11 @@ button:hover{
   color: white;
   background-color: #054909;
 }
+h2{
+  color: #054909;
+  text-align: center;
+  font-weight: bold;
+  background-color: #82ec86;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
