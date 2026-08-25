@@ -30,8 +30,9 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div>
       <h2>Fetched Data</h2>
+      <br />
       <ul>
         {console.log("RENDERING")}
         {data.map((user) => (
@@ -40,7 +41,7 @@ function App() {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 

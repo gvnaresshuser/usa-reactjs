@@ -1,6 +1,6 @@
 // App.js
 import React, { useState, useEffect } from "react";
-import './App.css';
+import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,17 +24,27 @@ function App() {
 
   // ✅ Asynchronous using async/await
   const handleAsyncWait = async () => {
-    setMessage("⏳ Waiting 5 seconds asynchronously...");
-    await new Promise((resolve) => setTimeout(resolve, 5000));
-    setMessage("✅ Done (async/await). Smooth!");
+    try {
+      setMessage("⏳ Waiting 5 seconds asynchronously...");
+      await new Promise((resolve) => setTimeout(resolve, 5000));
+      setMessage("✅ Done (async/await). Smooth!");
+    } catch (error) {
+      setMessage("❌ Something went wrong!");
+      console.error("Async error:", error);
+    }
   };
 
   // ✅ Asynchronous using plain Promise
   const handlePromiseWait = () => {
     setMessage("⏳ Waiting 5 seconds using Promise...");
-    simulateAsyncTask().then(() => {
-      setMessage("✅ Done (Promise). Smooth as well!");
-    });
+    simulateAsyncTask()
+      .then(() => {
+        setMessage("✅ Done (Promise). Smooth as well!");
+      })
+      .catch((error) => {
+        setMessage(`❌ Error: ${error.message}`);
+        console.error(error);
+      });
   };
 
   // 👇 Simulated Promise-based function

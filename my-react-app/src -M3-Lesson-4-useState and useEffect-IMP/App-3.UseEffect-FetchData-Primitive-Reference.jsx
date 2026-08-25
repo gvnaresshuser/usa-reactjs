@@ -3,12 +3,12 @@ import "./App.css";
 
 function App() {
   console.log("APP");
-  const [data, setData] = useState([]);//state variable - REFERENCE DATA
-  const [count, setCount] = useState(0);//PRIMITIVE DATA - will rerender ONLY if data is CHANGED
+  const [data, setData] = useState([]); //state variable - REFERENCE DATA
+  const [count, setCount] = useState(0); //PRIMITIVE DATA - will rerender ONLY if data is CHANGED
 
   function handleClick() {
     //setCount((count)=>count+1);
-    setCount(11);//count is always 11
+    setCount(11); //count is always 11
   }
 
   const fetchData = async () => {
@@ -33,12 +33,12 @@ function App() {
   useEffect(() => {
     console.log("USE EFFECT");
     fetchData();
-  }, []);//calls only once
+  }, []); //calls only once
 
   return (
     <div>
       <h2>Fetched Data</h2>
-      <button onClick={fetchData}>REFRESH</button>
+      <button onClick={fetchData}>REFRESH</button>&nbsp;
       <button onClick={handleClick}>Increment</button>
       <p>Count: {count}</p>
       <ul>

@@ -45,7 +45,7 @@ const LiveCharCounter = () => {
         }}
       />
 
-      <p style={{ color: input.length > 50 ? "red" : "black" }}>
+      <p style={{ color: input.length > 25 ? "red" : "black" }}>
         Character count: {input.length}
       </p>
 
@@ -56,9 +56,9 @@ const LiveCharCounter = () => {
           <p style={{ color: "orange", fontWeight: "bold" }}>
             ⚠️ You haven’t typed anything in the last 10 seconds!
           </p>
-         {/*  <p style={{ color: "red", fontWeight: "bold" }}>
+          <p style={{ color: "red", fontWeight: "bold" }}>
             {new Date().toLocaleTimeString()}
-          </p> */}
+          </p>
         </>
       )}
     </div>
