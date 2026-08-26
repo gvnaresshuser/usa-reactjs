@@ -1,114 +1,48 @@
-import React, { useReducer } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import "./App.css";
 
-// INITIAL STATE
-const initialState = {
-  count: 0,
-  name: "Naressh",
-  age: 25,
-  isLoggedIn: false,
-};
-
-// REDUCER FUNCTION
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "INCREASE":
-      return {
-        ...state,
-        count: state.count + 1,
-      };
-
-    case "DECREASE":
-      return {
-        ...state,
-        count: state.count - 1,
-      };
-
-    case "CHANGE_NAME":
-      return {
-        ...state,
-        name: action.payload,
-      };
-
-    case "INCREASE_AGE":
-      console.log("Current age:", state.age);
-      return {
-        ...state,
-        age: state.age + 1,
-      };
-
-    case "LOGIN":
-      return {
-        ...state,
-        isLoggedIn: true,
-      };
-
-    case "LOGOUT":
-      return {
-        ...state,
-        isLoggedIn: false,
-      };
-
-    default:
-      return state;
-  }
-};
-
 function App() {
-  // useReducer
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [number, setNumber] = useState(0);
+  const [counter, setCounter] = useState(0);
 
+  function cubeNum(num) {
+    console.log("Calculation Done!");
+    return Math.pow(num, 3);
+  }
+
+  //const result = cubeNum(number);//WHEN WE CLICK COUNTER++ BUTTON AS THE COUNTER CHANGES IT RE-RENDERS THE COMPONENT
+  //SO cubeNum FUNCTION IS CALLED ALWAYS..TO AVOID THIS WE USE useMemo
+
+  //SYNTAX OF useMemo - useMemo(cb,[dependencies])
+  //const result = useMemo(() => { return cubeNum(number); }, [number]);
+  const result = useMemo(() => cubeNum(number), [number]); //cubeNum FUNCTION WILL EXECUTE ONLY WHEN number GETS CHANGED
   return (
-    <section id="center">
-      <h1>useReducer Hook</h1>
-
-      <hr />
-
-      {/* COUNT */}
-      <h2>Count: {state.count}</h2>
-
-      <button onClick={() => dispatch({ type: "INCREASE" })}>
-        Increase Count
-      </button>
-
-      <button onClick={() => dispatch({ type: "DECREASE" })}>
-        Decrease Count
-      </button>
-
-      <hr />
-
-      {/* NAME */}
-      <h2>Name: {state.name}</h2>
-
-      <button
-        onClick={() =>
-          dispatch({
-            type: "CHANGE_NAME",
-            payload: "React Student",
-          })
-        }
-      >
-        Change Name
-      </button>
-
-      <hr />
-
-      {/* AGE */}
-      <h2>Age: {state.age}</h2>
-
-      <button onClick={() => dispatch({ type: "INCREASE_AGE" })}>
-        Increase Age
-      </button>
-
-      <hr />
-
-      {/* LOGIN */}
-      <h2>Status: {state.isLoggedIn ? "Logged In" : "Logged Out"}</h2>
-
-      <button onClick={() => dispatch({ type: "LOGIN" })}>Login</button>
-
-      <button onClick={() => dispatch({ type: "LOGOUT" })}>Logout</button>
-    </section>
+    <>
+      <section id="center">
+        <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white p-6 rounded-xl shadow-lg text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-wide">
+            useMemo Hook
+          </h1>
+        </div>
+        <input
+          style={{ border: "1px solid green", textAlign: "center" }}
+          type="number"
+          vlaue={number}
+          onChange={(e) => {
+            setNumber(e.target.value);
+          }}
+        />
+        <h1>Cube of the number:{result}</h1>
+        <button
+          onClick={() => {
+            setCounter(counter + 1);
+          }}
+        >
+          Counter++
+        </button>
+        <h1>Counter:{counter}</h1>
+      </section>
+    </>
   );
 }
 

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
-
   //useEffect(cb,[d]) - cb = callback function, d = dependency array which is optional
   //------------------------------------------------------
   //3 types of usage
@@ -18,21 +17,21 @@ function App() {
     console.log(name);
   };
   //11111111111111111
-  /*   useEffect(() => {
+  /*     useEffect(() => {
       setTimeout(() => {
         setCount(count => count + 1);
       }, 2000);
     });//NO DEPENDENCY ARRAY 
     */
   //222222222222222
-  /* useEffect(() => {
+  /*   useEffect(() => {
     setTimeout(() => {
       setCount(count => count + 1);
     }, 2000);
   }, []);//EMPTY DEPENDENCY ARRAY */
 
   //3333333333333
- /*  useEffect(() => {
+  /* useEffect(() => {
     setTimeout(() => {
       setCount(count => count + 1);
     }, 2000);
@@ -40,27 +39,29 @@ function App() {
   // - whenever count changes it will again execute the callback function, also whenever the component is loaded first time
 
   //444444444444444
-  useEffect(() => {
+  /*   useEffect(() => {
     setTimeout(() => {
-      setCount(count => count + 1);
+      setCount((count) => count + 1);
     }, 2000);
-  }, [count,name]);//WITH MORE THAN ONE DEPENDENCIES IN DEPENDENCY ARRAY 
+  }, [count, name]); //WITH MORE THAN ONE DEPENDENCIES IN DEPENDENCY ARRAY */
 
   return (
     <>
       <section id="center">
         <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white p-6 rounded-xl shadow-lg text-center">
           <h1 className="text-3xl sm:text-4xl font-bold tracking-wide">
-            useEffect Hook 
+            useEffect Hook
           </h1>
         </div>
         {/* <h1>I've Rendered 0 times</h1> */}
         {/*  WE WILL SEE 0,2,3,4,5 AND SO ON AND NOT 1 as it is in StrictMode
         remove StrictMode in main.jsx file */}
         {/* <h1>I've Rendered {count} times</h1> */}
-        <h1>I've Rendered {count} times - {name}</h1>
+        <h1>
+          I've Rendered {count} times - {name}
+        </h1>
         {/* <button onClick={changeName}>Gudimetla</button> */}
-        <button onClick={()=>changeName()}>Gudimetla</button>
+        <button onClick={() => changeName()}>Gudimetla</button>
       </section>
     </>
   );

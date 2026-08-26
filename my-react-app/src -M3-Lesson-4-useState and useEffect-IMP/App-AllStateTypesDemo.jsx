@@ -150,6 +150,9 @@ const App = () => {
                 return 100;
               } else if (typeof item === "object" && item.key === "value") {
                 return { ...item, key: "updated value" };
+              } else if (typeof item === "object" && item.another === "item") {
+                console.log("here");
+                return { ...item, another: "Hello Naressh" };
               }
               return item; // leave others unchanged
             }),
