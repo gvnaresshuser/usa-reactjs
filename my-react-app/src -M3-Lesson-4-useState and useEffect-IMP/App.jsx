@@ -55,8 +55,8 @@ const App = () => {
       </button>
 
       {/* Array of Strings */}
-      <p>🧺 Fruits: {fruits.join()}</p>
-      {/*  <p>
+      {/* <p>🧺 Fruits: {fruits.join()}</p> */}
+       <p>
         🧺 Fruits:{" "}
         {fruits.map((fruit, index) => (
           <span key={index}>
@@ -75,7 +75,7 @@ const App = () => {
         {fruits.map((fruit, index) => (
           <span key={index}>{fruit} </span>
         ))}
-      </p> */}
+      </p>
       <button onClick={() => setFruits((prev) => [...prev, "Mango"])}>
         Add Fruit
       </button>
@@ -150,8 +150,7 @@ const App = () => {
                 return 100;
               } else if (typeof item === "object" && item.key === "value") {
                 return { ...item, key: "updated value" };
-              }
-              else if (typeof item === "object" && item.another === "item") {
+              } else if (typeof item === "object" && item.another === "item") {
                 console.log("here");
                 return { ...item, another: "Hello Naressh" };
               }

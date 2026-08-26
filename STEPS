@@ -110,10 +110,11 @@ Microsoft Windows [Version 10.0.26100.8246]
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
 warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useEffect.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useMemo-WITH.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-1.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-2.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRef-4.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -124,33 +125,29 @@ Changes to be committed:
         modified:   STEPS
         modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App-AllStateTypesDemo.jsx
         modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-1.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-2.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useEffect.jsx
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRef-4.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.css
         modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/5.5.png
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/Main advantage of useReducer.png
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/components/UseRefHtmlElements.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "25-08-2026 done"
-[main 3c7e2cf] 25-08-2026 done
- 9 files changed, 337 insertions(+), 52 deletions(-)
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-1.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-2.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/5.5.png
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/Main advantage of useReducer.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "26-08-2026"
+[main d252533] 26-08-2026
+ 8 files changed, 592 insertions(+), 165 deletions(-)
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRef-4.jsx
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/components/UseRefHtmlElements.jsx
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
 Enumerating objects: 23, done.
 Counting objects: 100% (23/23), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (14/14), done.
-Writing objects: 100% (14/14), 1.77 MiB | 801.00 KiB/s, done.
-Total 14 (delta 8), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (8/8), completed with 7 local objects.
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 3.67 KiB | 1.22 MiB/s, done.
+Total 13 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 9 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   151d8d4..3c7e2cf  main -> main
+   3c7e2cf..d252533  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 

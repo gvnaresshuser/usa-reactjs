@@ -27,9 +27,9 @@ function App() {
         <input
           style={{ border: "1px solid green", textAlign: "center" }}
           type="number"
-          vlaue={number}
+          value={number}
           onChange={(e) => {
-            setNumber(e.target.value);
+            setNumber(Number(e.target.value));
           }}
         />
         <h1>Cube of the number:{result}</h1>
