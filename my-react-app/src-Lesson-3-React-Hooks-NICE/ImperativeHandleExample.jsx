@@ -1,8 +1,9 @@
 import React, { useRef } from "react";
 import CustomInput from "./CustomInput";
+import "./ImperativeHandleExample.css";
 
 const ImperativeHandleExample = () => {
-  const ref = useRef();
+  const ref = useRef(); //PARENT
 
   const handleFocus = () => {
     ref.current.giveFocus();
@@ -20,6 +21,14 @@ const ImperativeHandleExample = () => {
     ref.current.changeFontStyle("italic");
   };
 
+  const handleChangeColor = () => {
+    ref.current.changeColor("cyan");
+  };
+
+    const handleDecoration = () => {
+      ref.current.changeTextDecoration("underline");
+    };
+
   return (
     <>
       <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white p-6 rounded-xl shadow-lg text-center">
@@ -28,19 +37,26 @@ const ImperativeHandleExample = () => {
         </h1>
       </div>
 
-      <br />
-
       <CustomInput ref={ref} />
 
-      <br />
-
-      <button onClick={handleFocus}>Focus</button>
-
-      <button onClick={handleBackground}>Change Background</button>
-
-      <button onClick={handleFontSize}>Increase Font Size</button>
-
-      <button onClick={handleFontStyle}>Italic Font</button>
+      <button className="action-btn" onClick={handleFocus}>
+        Focus
+      </button>
+      <button className="action-btn" onClick={handleBackground}>
+        Change Background
+      </button>
+      <button className="action-btn" onClick={handleChangeColor}>
+        Change Text Color
+      </button>
+      <button className="action-btn" onClick={handleDecoration}>
+        Change Decoration
+      </button>
+      <button className="action-btn" onClick={handleFontSize}>
+        Increase Font Size
+      </button>
+      <button className="action-btn" onClick={handleFontStyle}>
+        Italic Font
+      </button>
     </>
   );
 };

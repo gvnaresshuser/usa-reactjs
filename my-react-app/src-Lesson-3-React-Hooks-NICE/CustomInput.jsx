@@ -1,11 +1,12 @@
 import React, { useRef, useImperativeHandle, forwardRef } from "react";
 
 const CustomInput = forwardRef((props, ref) => {
-  const innerRef = useRef();
+  const innerRef = useRef();//CHILD
 
   useImperativeHandle(ref, () => ({
     // Focus the input
     giveFocus: () => {
+      console.log("CustomInput : giveFocus");
       innerRef.current.focus();
     },
 
@@ -26,6 +27,14 @@ const CustomInput = forwardRef((props, ref) => {
     // Change font style
     changeFontStyle: (style) => {
       innerRef.current.style.fontStyle = style;
+    },
+
+    changeColor: (color) => {
+      innerRef.current.style.color = color;
+    },
+
+    changeTextDecoration: (decoration) => {
+      innerRef.current.style.textDecoration = decoration;
     },
   }));
 
