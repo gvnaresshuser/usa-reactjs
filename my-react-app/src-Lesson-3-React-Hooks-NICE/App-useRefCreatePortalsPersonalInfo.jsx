@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import ModalPortalNew from "./ModalPortalNew";
 import "./App.css";
-import './App-modal.css';
+import "./App-modal.css";
+import "./App-useRefCreatePortalsPersonalInfo.css";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
@@ -26,6 +27,20 @@ const App = () => {
       nameInputRef.current.focus();
     }
   }, [showModal]);
+
+  const handleResetForm = () => {
+    setFormData({
+      fullName: "",
+      email: "",
+      phone: "",
+      city: "",
+      occupation: "",
+      age: "",
+    });
+
+    setSubmittedData(null);
+    setShowModal(false);
+  };
 
   // Handle input changes
   const handleChange = (e) => {
@@ -61,20 +76,16 @@ const App = () => {
       <header className="hero">
         <div className="hero-content">
           <span className="badge">React Portal Example</span>
-
           <h1>Personal Information</h1>
-
           <p>
             A beautiful example using React Portal, useRef, useEffect and
             useState.
           </p>
-
           <button className="open-btn" onClick={handleOpenModal}>
             ✨ Enter Your Details
           </button>
         </div>
       </header>
-
       {/* INFORMATION DISPLAY */}
       {submittedData && (
         <section className="result-section">
@@ -120,9 +131,15 @@ const App = () => {
               </div>
             </div>
 
-            <button className="edit-btn" onClick={handleOpenModal}>
-              ✏️ Edit Information
-            </button>
+            <div className="result-actions">
+              <button className="edit-btn" onClick={handleOpenModal}>
+                ✏️ Edit Information
+              </button>
+
+              <button className="reset-btn" onClick={handleResetForm}>
+                🔄 Reset Form
+              </button>
+            </div>
           </div>
         </section>
       )}

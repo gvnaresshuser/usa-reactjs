@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import './App.css';
-import './Modal.css';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import "./App.css";
+import "./Modal.css";
 
 //NOTE: FOR THIS TO WORK, YOU MUST ADD A DIV WITH ID "modal" IN index.html
 //<div id="modal"></div> <!-- ✅ Dedicated modal container -->
@@ -9,9 +9,9 @@ import './Modal.css';
 const Modal = ({ isOpen, onClose, children }) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden'; // Prevent background scroll
+      document.body.style.overflow = "hidden"; // Prevent background scroll
     } else {
-      document.body.style.overflow = 'auto'; // Restore scroll
+      document.body.style.overflow = "auto"; // Restore scroll
     }
   }, [isOpen]);
 
@@ -30,7 +30,7 @@ const Modal = ({ isOpen, onClose, children }) => {
         {children}
       </div>
     </div>,
-    document.getElementById('modal') // ⬅️ Mount inside #modal container
+    document.getElementById("modal"), // ⬅️ Mount inside #modal container - index.html
   );
 };
 
@@ -50,3 +50,67 @@ const App = () => {
 };
 
 export default App;
+/*
+overflow: hidden means:
+Don't allow the <body> to scroll.
+Without this code, the user could potentially scroll the background page behind the modal.
+
+When the modal is closed
+
+When:
+
+isOpen === false
+
+this executes:
+
+document.body.style.overflow = "auto";
+
+That means:
+
+Restore normal scrolling of the page.
+
+So:
+
+Modal opens
+     ↓
+overflow = hidden
+     ↓
+Background cannot scroll
+
+
+Modal closes
+     ↓
+overflow = auto
+     ↓
+Background can scroll again
+--------------------------------------
+Now the second line
+
+This is completely different:
+
+if (!isOpen) return null;
+
+This means:
+
+If the modal isn't open, don't render anything from the Modal component.
+
+Remember:
+
+!isOpen
+
+means:
+
+isOpen === false
+
+Therefore:
+
+if (!isOpen) return null;
+
+means:
+
+If modal is closed
+       ↓
+return null
+       ↓
+Modal renders nothing
+*/

@@ -222,7 +222,7 @@ body {
 ========================= */
 
 .edit-btn {
-    margin-top: 30px;
+    /* margin-top: 30px; */
 
     border: none;
 
@@ -234,6 +234,7 @@ body {
     color: #4f46e5;
 
     font-weight: 700;
+    border: 1px solid #4f46e5;
 
     cursor: pointer;
 }
