@@ -109,12 +109,10 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useMemo-WITH.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-Reusable-Modal-Component-In-body.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-Reusable-Modal-Component-In-modal-container.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRefCreatePortalsPersonalInfo.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4 copy.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRef-5.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -122,47 +120,28 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
-        modified:   my-react-app/src -M3-Lesson-4-useState and useEffect-IMP/App.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useMemo-WITH.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4 copy.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRef-5.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/CustomInput.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/ImperativeHandleExample.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/13.5-useRef-useImperativeHandle-forwardRef.png
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/18.5-useMemo-Explanation-.png
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/21.5-useCallback-Explanation.png
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/26.5-useContext-Explanation.png
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/30.5-useReducer-Explanation.png
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/components/Header.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/context/AppContext.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-Reusable-Modal-Component-In-body.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-Reusable-Modal-Component-In-modal-container.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-modal.css
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRefCreatePortalsPersonalInfo.css
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRefCreatePortalsPersonalInfo.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "26-08-2026 useRef"
-[main e532acc] 26-08-2026 useRef
- 16 files changed, 323 insertions(+), 85 deletions(-)
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4 copy.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRef-5.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/CustomInput.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/ImperativeHandleExample.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/13.5-useRef-useImperativeHandle-forwardRef.png
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/18.5-useMemo-Explanation-.png
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/21.5-useCallback-Explanation.png
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/26.5-useContext-Explanation.png
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/30.5-useReducer-Explanation.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "28-08-2026"
+[main 4a8baaf] 28-08-2026
+ 5 files changed, 240 insertions(+), 24 deletions(-)
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRefCreatePortalsPersonalInfo.css
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 35, done.
-Counting objects: 100% (35/35), done.
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (21/21), done.
-Writing objects: 100% (22/22), 5.00 MiB | 1.10 MiB/s, done.
-Total 22 (delta 12), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (12/12), completed with 12 local objects.
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.78 KiB | 1.39 MiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   d252533..e532acc  main -> main
+   8f7974a..4a8baaf  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 
