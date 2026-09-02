@@ -109,9 +109,6 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-Reusable-Modal-Component-In-body.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-Reusable-Modal-Component-In-modal-container.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRefCreatePortalsPersonalInfo.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
@@ -120,28 +117,24 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-Reusable-Modal-Component-In-body.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-Reusable-Modal-Component-In-modal-container.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-modal.css
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRefCreatePortalsPersonalInfo.css
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRefCreatePortalsPersonalInfo.jsx
+        modified:   STEPS
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "28-08-2026"
-[main 4a8baaf] 28-08-2026
- 5 files changed, 240 insertions(+), 24 deletions(-)
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useRefCreatePortalsPersonalInfo.css
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "02-09-2026"
+[main 5bd2390] 02-09-2026
+ 2 files changed, 44 insertions(+), 107 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 16, done.
-Counting objects: 100% (16/16), done.
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (9/9), done.
-Writing objects: 100% (9/9), 2.78 KiB | 1.39 MiB/s, done.
-Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 734 bytes | 56.00 KiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   8f7974a..4a8baaf  main -> main
+   4a8baaf..5bd2390  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 

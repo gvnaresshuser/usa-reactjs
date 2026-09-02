@@ -342,3 +342,14 @@ function App() {
 }
 
 export default App;
+/*
+| `useMemo`                            | `useEffect`                          |
+| ------------------------------------ | ------------------------------------ |
+| Calculates a value                   | Performs an effect                   |
+| Returns a value                      | Doesn't return a value for rendering |
+| Runs during rendering                | Runs after rendering                 |
+| Useful for expensive calculations    | Useful for side effects              |
+| Doesn't require another state update | Often updates state when needed      |
+| `const result = ...`                 | `setResult(...)`                     |
+
+*/
