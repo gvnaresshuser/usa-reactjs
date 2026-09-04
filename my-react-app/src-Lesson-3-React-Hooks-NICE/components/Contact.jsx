@@ -8,9 +8,11 @@ const Contact = () => {
   const { phone, name } = useContext(AppContext);
   return (
     <>
-      <div>Contact</div>
-      <h3>Phone:{phone}</h3>
-      <h3>Name:{name}</h3>
+      <div style={{ backgroundColor: "lightcyan", padding: "10px" ,border:"1px solid blue"}}>
+        <div>Contact</div>
+        <h3>Phone:{phone}</h3>
+        <h3>Name:{name}</h3>
+      </div>
     </>
   );
 };

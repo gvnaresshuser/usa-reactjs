@@ -6,9 +6,10 @@ export const AppContext = createContext();
 const ContextProvider = (props) => {
   const phone = "+1 123456789";
   const name = "Naressh";
+  const title = "© 2023 Test Company Ltd. All rights reserved.";
   return (
     /*  <AppContext.Provider value={phone}> */
-    <AppContext.Provider value={{ phone, name }}>
+    <AppContext.Provider value={{ phone, name, title }}>
       {props.children}
     </AppContext.Provider>
   );

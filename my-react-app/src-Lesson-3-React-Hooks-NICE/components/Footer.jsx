@@ -5,14 +5,16 @@ import { AppContext } from '../context/AppContext';
 const Footer = () => {
     //STEP 3 - CONSUMING THE CONTEXT DATA
     /* const phone = useContext(AppContext); */
-    const {phone,name} = useContext(AppContext);
+    const {phone,title} = useContext(AppContext);
   return (
     <>
-    <div>Footer</div>
-          <h3>Phone:{phone}</h3>
-          <h3>Name:{name}</h3>
-      </>
-  )
+      <div style={{width:"100%", backgroundColor: "lightgoldenrodyellow", padding: "10px" ,border:"1px solid navy"}}>
+        {/* <div>Footer</div> */}
+        <h3>{title}</h3>
+        <h3>Phone: {phone}</h3>
+      </div>
+    </>
+  );
 }
 
 export default Footer

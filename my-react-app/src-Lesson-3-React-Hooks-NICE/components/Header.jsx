@@ -13,5 +13,5 @@ const Header = ({ newFn }) => {
 };
 
 //export default Header
-//export default React.memo(Header);//THIS WILL NOT ALLOW TO RE-RENDER THE COMPONENT UNNECESSARILY
-export default memo(Header);//THIS WILL NOT ALLOW TO RE-RENDER THE COMPONENT UNNECESSARILY
+export default React.memo(Header);//THIS WILL NOT ALLOW TO RE-RENDER THE COMPONENT UNNECESSARILY
+//export default memo(Header);//THIS WILL NOT ALLOW TO RE-RENDER THE COMPONENT UNNECESSARILY
