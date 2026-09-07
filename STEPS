@@ -108,10 +108,8 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-2.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/main.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -120,35 +118,24 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-2.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-4.jsx
         modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles.css
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles1.css
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/useReducer-vs-useContext.png
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/components/Footer.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/components/Profile.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/context/AppContext.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/main.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "07-09-2026 hooks updated"
-[main fd06dee] 07-09-2026 hooks updated
- 11 files changed, 654 insertions(+), 176 deletions(-)
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles1.css
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/useReducer-vs-useContext.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "07-09-2026"
+[main 7ce1705] 07-09-2026
+ 3 files changed, 49 insertions(+), 93 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 30, done.
-Counting objects: 100% (30/30), done.
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (17/17), 684.93 KiB | 16.71 MiB/s, done.
-Total 17 (delta 12), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (12/12), completed with 11 local objects.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 1.34 KiB | 1.34 MiB/s, done.
+Total 7 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   771c55a..fd06dee  main -> main
+   fd06dee..7ce1705  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
