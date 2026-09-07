@@ -1,151 +1,54 @@
-import React, { useReducer } from "react";
-import "./App.css";
-import "./Mystyles.css";
+import { useEffect, useLayoutEffect, useState } from "react";
 
-// PRODUCTS
-const products = [
-  { id: 1, name: "Laptop", price: 75000 },
-  { id: 2, name: "Wireless Mouse", price: 1200 },
-  { id: 3, name: "Keyboard", price: 2500 },
-];
-
-// INITIAL STATE
-const initialState = { cart: [] };
-
-// REDUCER
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "add":
-      return {
-        ...state,
-        cart: [...state.cart, action.payload],
-      };
-
-    case "remove":
-      return {
-        ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload),
-      };
-    //filter() keeps elements for which the condition is true.
-
-    case "clear":
-      return {
-        ...state,
-        cart: [],
-      };
-
-    default:
-      return state;
-  }
-};
-
-// APP
 function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
-  const total = state.cart.reduce((sum, item) => sum + item.price, 0);
-  /*
-  reduce() processes each array element and combines them into a single final value. 
-  In our shopping cart example, we use it to calculate the total price.
-  */
+  const [width, setWidth] = useState(100);
+
+  useLayoutEffect(() => {
+    console.log("useLayoutEffect");
+    //setWidth(500);//IF WE SET THE WIDTH HERE - NO FLICKER
+  }, []);
+
+  useEffect(() => {
+    console.log("useEffect");
+    setWidth(500); //IF WE SET THE WIDTH HERE - IT FLICKERS
+  }, []);
 
   return (
-    <div className="app">
-      {/* HEADER */}
-      <header className="header">
-        <div>
-          <h1>ShopEasy</h1>
-          <p>Simple Shopping Application</p>
-        </div>
-        <div className="cart-badge">🛒 {state.cart.length}</div>
-      </header>
-
-      {/* MAIN */}
-      <main className="container">
-        {/* PRODUCTS */}
-        <section className="products">
-          <h2>Products</h2>
-          <div className="product-grid">
-            {products.map((product) => (
-              <div className="product-card" key={product.id}>
-                <div className="product-icon">🛍️</div>
-                <h3>{product.name}</h3>
-                <p className="price">
-                  ₹{product.price.toLocaleString("en-IN")}
-                </p>
-                <button
-                  onClick={() => dispatch({ type: "add", payload: product })}
-                >
-                  Add to Cart
-                </button>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CART */}
-        <section className="cart">
-          <div className="cart-header">
-            <h2>Your Cart</h2>
-            {state.cart.length > 0 && (
-              <button
-                className="clear-btn"
-                onClick={() => dispatch({ type: "clear" })}
-              >
-                Clear Cart
-              </button>
-            )}
-          </div>
-
-          {state.cart.length === 0 ? (
-            <div className="empty-cart">
-              <div>🛒</div>
-              <h3>Your cart is empty</h3>
-              <p>Add some products to get started.</p>
-            </div>
-          ) : (
-            <>
-              {/* CART ITEMS */}
-              <div className="cart-items">
-                {state.cart.map((item, index) => (
-                  <div className="cart-item" key={`${item.id}-${index}`}>
-                    <div>
-                      <h3>{item.name}</h3>
-                      <p>₹{item.price.toLocaleString("en-IN")}</p>
-                    </div>
-                    <button
-                      className="remove-btn"
-                      onClick={() =>
-                        dispatch({ type: "remove", payload: item.id })
-                      }
-                    >
-                      Remove
-                    </button>
-                  </div>
-                ))}
-              </div>
-
-              {/* TOTAL */}
-              <div className="total">
-                <span>Total</span>
-                <strong>₹{total.toLocaleString("en-IN")}</strong>
-              </div>
-
-              {/* CHECKOUT */}
-              <button className="checkout-btn">Proceed to Checkout</button>
-            </>
-          )}
-        </section>
-      </main>
+    <div
+      style={{
+        width: width,
+        height: 100,
+        background: "orange",
+      }}
+    >
+      Hello
     </div>
   );
 }
-
 export default App;
 /*
-The actual data/information that you want to send along with the action.
+Main benefit
+useLayoutEffect runs after React updates the DOM but BEFORE the browser paints the 
+updated UI on the screen.
+Because of this, if you make a DOM-related change inside useLayoutEffect, 
+the user generally doesn't see the intermediate state, so you can avoid visual flickering.
 
-reduce() processes each array element and combines them into a single final value. 
-In our shopping cart example, we use it to calculate the total price.
+| `useEffect`                                              | `useLayoutEffect`                                          |
+| -------------------------------------------------------- | ---------------------------------------------------------- |
+| Runs **after browser paint**                             | Runs **before browser paint**                              |
+| User may see intermediate UI                             | Helps prevent intermediate UI from being visible           |
+| Can cause visual flickering for DOM measurements/changes | Useful when you need to adjust DOM before the user sees it |
+| Doesn't block painting                                   | Can block painting briefly                                 |
+| Preferred for most side effects                          | Use when the effect must happen before paint               |
 
-filter() keeps elements for which the condition is true.
+Typical use cases
+
+useLayoutEffect is particularly useful when you need to:
+
+Measure an element's width/height
+Read its position
+Calculate where something should appear
+Position a tooltip/popover
+Adjust layout before it becomes visible
+Prevent a visual jump/flicker
 */

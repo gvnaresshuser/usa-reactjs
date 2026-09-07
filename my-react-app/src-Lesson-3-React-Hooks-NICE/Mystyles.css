@@ -54,6 +54,7 @@ body {
     gap: 30px;
 }
 /*
+First section=2 parts Second section=1 part Total=3 parts
 fr means fraction of the available space.
 Use Grid,
 create two columns where Products gets twice the space of Cart,
@@ -277,3 +278,32 @@ section h2::after {
     }
 
 }
+
+/*
+grid-template-columns: repeat(3, 1fr);
+means: Create 3 equal-width columns in a CSS Grid. Breaking it down grid-template-columns: repeat(3, 1fr);
+1. repeat(3, ...) Means repeat the column definition 3 times. 2. 1fr fr means fraction of the available space. So: repeat(3, 1fr) is equivalent to: grid-template-columns: 1fr 1fr 1fr;
+
+Example .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+If the container is 900px wide: ┌────────────┬────────────┬────────────┐ │ Column 1 │ Column 2 │ Column 3 │ │ 300px │ 300px │ 300px │ └────────────┴────────────┴────────────┘ Each column gets 1 fraction,
+so the available width is divided equally. With a gap For: .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+Conceptually: 20px 20px ←────────→ ←────────→ ┌────────────┐ ┌────────────┐ ┌────────────┐ │ Column 1 │ │ Column 2 │ │ Column 3 │ └────────────┘ └────────────┘ └────────────┘ The remaining space after the gaps is divided into 3 equal fractions. Common patterns repeat(2, 1fr)
+ 2 equal columns 
+repeat(3, 1fr)
+ 3 equal columns 
+repeat(4, 1fr)
+ 4 equal columns 
+repeat(3, 2fr)
+3 columns, each 2 equal fractions 
+
+In one sentence: repeat(3, 1fr)="Make 3 columns and divide the available space equally among them."
+*/
