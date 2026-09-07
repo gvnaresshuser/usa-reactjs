@@ -93,7 +93,8 @@ function App() {
         onChange={(e) =>
           dispatch({
             type: "SET_COUNT",
-            payload: Number(e.target.value),
+            //payload: Number(e.target.value),
+            payload: e.target.value === "" ? 0 : Number(e.target.value),
           })
         }
       />

@@ -108,16 +108,10 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useMemo-WITH.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-2.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-1. Example WITHOUT Context (Prop Drilling).jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-2. Example WITH Context(No Prop Drilling).jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-Example 1-Sharing Data WITHOUT Context Provider.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-Example 2-Sharing Data WITH Context Provider.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/index.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -126,48 +120,35 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-1. Example WITHOUT Context (Prop Drilling).jsx
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-2. Example WITH Context(No Prop Drilling).jsx
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-Example 1-Sharing Data WITHOUT Context Provider.jsx
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-Example 2-Sharing Data WITH Context Provider.jsx
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App.css
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App.jsx
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/SCREENS/Prop Drilling Vs React Context and Provider.png
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/SCREENS/Prop Drilling.png
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/assets/react.svg
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/assets/rose.jpg
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/index.css
-        new file:   my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/main.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useMemo-WITH.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-2.jsx
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx
         modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles.css
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles1.css
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/useReducer-vs-useContext.png
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/components/Footer.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/components/Profile.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/context/AppContext.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/main.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "03-09-2026"
-[main f348be0] 03-09-2026
- 15 files changed, 613 insertions(+), 294 deletions(-)
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-1. Example WITHOUT Context (Prop Drilling).jsx
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-2. Example WITH Context(No Prop Drilling).jsx
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-Example 1-Sharing Data WITHOUT Context Provider.jsx
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App-Example 2-Sharing Data WITH Context Provider.jsx
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App.css
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/App.jsx
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/SCREENS/Prop Drilling Vs React Context and Provider.png
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/SCREENS/Prop Drilling.png
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/assets/react.svg
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/assets/rose.jpg
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/index.css
- create mode 100644 my-react-app/src - M10-Lesson-3-Prop-Drilling-useContext() Hook/main.jsx
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "07-09-2026 hooks updated"
+[main fd06dee] 07-09-2026 hooks updated
+ 11 files changed, 654 insertions(+), 176 deletions(-)
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles1.css
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/useReducer-vs-useContext.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 26, done.
-Counting objects: 100% (26/26), done.
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (21/21), done.
-Writing objects: 100% (21/21), 734.53 KiB | 14.69 MiB/s, done.
-Total 21 (delta 7), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (7/7), completed with 4 local objects.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (17/17), 684.93 KiB | 16.71 MiB/s, done.
+Total 17 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 11 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   3ddd261..f348be0  main -> main
+   771c55a..fd06dee  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
