@@ -52,8 +52,8 @@ function PostList({ posts }) {
 
       {posts.slice(0, 5).map((post) => (
         <div className="user-card" key={post.id}>
-          <h3>{post.title}</h3>
-
+          <h3>{post.id}</h3>
+          <h3 style={{ color: "red" }}>{post.title}</h3>
           <div className="user-info">
             <p>{post.body}</p>
           </div>
@@ -125,7 +125,7 @@ function App() {
   return (
     <>
       {" "}
-      <h1>User Management</h1>
+      <h1>User / Posts Management</h1>
       <div className="app">
         <UserListWithLoading
           loading={userLoading}

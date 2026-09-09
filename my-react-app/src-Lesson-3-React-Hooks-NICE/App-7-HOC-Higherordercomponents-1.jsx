@@ -14,6 +14,7 @@ function withLoading(Component) {
     return <Component {...props} />;
   };
 }
+//This is the React component that I'm receiving and enhancing.
 
 // --------------------------------------------------
 // 2. HOC: withAuth
