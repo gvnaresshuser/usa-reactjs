@@ -1,105 +1,54 @@
-import React, { useEffect, useState } from "react";
-import "./App.css";
-import "./Hoc.css";
+import { useEffect, useLayoutEffect, useState } from "react";
 
-// -----------------------------------------
-// HOC: withLoading
-// -----------------------------------------
-function withLoading(Component) {
-  return function EnhancedComponent({ loading, ...props }) {
-    if (loading) {
-      return (
-        <div className="spinner-container">
-          <div className="spinner"></div>
-          <p>Loading users...</p>
-        </div>
-      );
-    }
-
-    return <Component {...props} />;
-  };
-}
-
-// -----------------------------------------
-// Normal component
-// Only responsible for displaying users
-// -----------------------------------------
-function UserList({ users }) {
-  return (
-    <div>
-      <h2>Users</h2>
-
-      {users.map((user) => (
-        <div className="user-card" key={user.id}>
-          <h3>{user.name}</h3>
-          <p>📧 {user.email}</p>
-          <p>🏢 {user.company.name}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-// -----------------------------------------
-// Enhance UserList using HOC
-// -----------------------------------------
-const UserListWithLoading = withLoading(UserList);
-
-// -----------------------------------------
-// App component
-// -----------------------------------------
 function App() {
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [width, setWidth] = useState(100);
+
+  useLayoutEffect(() => {
+    console.log("useLayoutEffect");
+    //setWidth(500);//IF WE SET THE WIDTH HERE - NO FLICKER
+  }, []);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/users")
-      .then((response) => response.json())
-      .then((data) => {
-        setUsers(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        setLoading(false);
-      });
+    console.log("useEffect");
+    setWidth(500); //IF WE SET THE WIDTH HERE - IT FLICKERS
   }, []);
 
   return (
-    <div className="app">
-      <h1>User Management</h1>
-
-      <UserListWithLoading loading={loading} users={users} />
+    <div
+      style={{
+        width: width,
+        height: 100,
+        background: "orange",
+      }}
+    >
+      Hello
     </div>
   );
 }
-
 export default App;
 /*
-The complete flow
-App
- │
- │ fetch()
- ↓
-JSONPlaceholder
- │
- │ users data
- ↓
-setUsers(data)
- │
- ↓
-setLoading(false)
- │
- ↓
-UserListWithLoading
- │
- ├── loading === true
- │       ↓
- │    🔄 Spinner
- │
- └── loading === false
-         ↓
-      UserList
-         ↓
-      Display users
+Main benefit
+useLayoutEffect runs after React updates the DOM but BEFORE the browser paints the 
+updated UI on the screen.
+Because of this, if you make a DOM-related change inside useLayoutEffect, 
+the user generally doesn't see the intermediate state, so you can avoid visual flickering.
+
+| `useEffect`                                              | `useLayoutEffect`                                          |
+| -------------------------------------------------------- | ---------------------------------------------------------- |
+| Runs **after browser paint**                             | Runs **before browser paint**                              |
+| User may see intermediate UI                             | Helps prevent intermediate UI from being visible           |
+| Can cause visual flickering for DOM measurements/changes | Useful when you need to adjust DOM before the user sees it |
+| Doesn't block painting                                   | Can block painting briefly                                 |
+| Preferred for most side effects                          | Use when the effect must happen before paint               |
+
+Typical use cases
+
+useLayoutEffect is particularly useful when you need to:
+
+Measure an element's width/height
+Read its position
+Calculate where something should appear
+Position a tooltip/popover
+Adjust layout before it becomes visible
+Prevent a visual jump/flicker
 */

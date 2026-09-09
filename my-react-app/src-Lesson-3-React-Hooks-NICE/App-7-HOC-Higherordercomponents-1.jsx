@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import "./Hoc.css";
+import "./Hoc1.css";
 // --------------------------------------------------
 // 1. HOC: withLoading
 // Adds loading behavior to any component

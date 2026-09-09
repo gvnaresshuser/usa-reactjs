@@ -1,27 +1,34 @@
 import React, { useEffect, useState } from "react";
+import "./App.css";
 import "./Hoc.css";
 
 // -----------------------------------------
 // HOC: withLoading
 // -----------------------------------------
 function withLoading(Component) {
-  return ({ loading, ...props }) => {
+
+  return function EnhancedComponent({ loading, ...props }) {      
     if (loading) {
       return (
         <div className="flex flex-col items-center justify-center h-[400px]">
-          <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-purple-600"></div>
+          <div
+            className="h-12 w-12 animate-spin rounded-full 
+      border-4 border-gray-200 border-t-purple-600"
+          ></div>
           <p className="mt-4 text-sm font-medium text-gray-600">
             Loading users...
           </p>
         </div>
-      );
+      );      
     }
+
     return <Component {...props} />;
   };
 }
 
 // -----------------------------------------
-// UserList component
+// Normal component
+// Only responsible for displaying users
 // -----------------------------------------
 function UserList({ users }) {
   return (
@@ -31,7 +38,6 @@ function UserList({ users }) {
       {users.map((user) => (
         <div className="user-card" key={user.id}>
           <h3>{user.name}</h3>
-
           <div className="user-info">
             <p>📧 {user.email}</p>
             <p>🏢 {user.company.name}</p>
@@ -43,7 +49,7 @@ function UserList({ users }) {
 }
 
 // -----------------------------------------
-// Send UserList to HOC
+// Enhance UserList using HOC
 // -----------------------------------------
 const UserListWithLoading = withLoading(UserList);
 
@@ -59,11 +65,12 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setUsers(data);
-
-        // Keep spinner visible for 3 seconds
+        //setLoading(false);
+        //-------------------------
         setTimeout(() => {
           setLoading(false);
         }, 3000);
+        //-------------------------
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -72,12 +79,10 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="app">
       <h1>User Management</h1>
-      <div className="app">
-        <UserListWithLoading loading={loading} users={users} />
-      </div>
-    </>
+      <UserListWithLoading loading={loading} users={users} />
+    </div>
   );
 }
 

@@ -140,15 +140,20 @@ button:hover {
 
 .cart-header {
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 }
 
 .clear-btn {
-    background: #dc8e35;
-
+    border:1px solid navy!important;
+    background: white!important;
+    color:red;
+    font-size: 12px;
+}
+.clear-btn:hover {
+    border: 1px solid navy !important;
+    background: red !important;
+    color: white;
     font-size: 12px;
 }
 

@@ -1,9 +1,4 @@
-
-import React, {
-  createContext,
-  useContext,
-  useReducer,
-} from "react";
+import React, { createContext, useContext, useReducer } from "react";
 
 import "./Mystyles1.css";
 
@@ -37,12 +32,15 @@ const reducer = (state, action) => {
         cart: [...state.cart, action.payload],
       };
 
+    /* case "remove":
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload),
+      }; */
     case "remove":
       return {
         ...state,
-        cart: state.cart.filter(
-          (item) => item.id !== action.payload
-        ),
+        cart: state.cart.filter((_, index) => index !== action.payload),
       };
 
     case "clear":
@@ -76,9 +74,7 @@ function Header() {
         <p>useReducer + useContext</p>
       </div>
 
-      <div className="cart-badge">
-        🛒 {state.cart.length}
-      </div>
+      <div className="cart-badge">🛒 {state.cart.length}</div>
     </header>
   );
 }
@@ -101,9 +97,7 @@ function Products() {
 
             <h3>{product.name}</h3>
 
-            <p className="price">
-              ₹{product.price.toLocaleString("en-IN")}
-            </p>
+            <p className="price">₹{product.price.toLocaleString("en-IN")}</p>
 
             <button
               onClick={() =>
@@ -130,23 +124,17 @@ function Cart() {
   const { state, dispatch } = useContext(CartContext);
 
   // Calculate total
-  const total = state.cart.reduce(
-    (sum, item) => sum + item.price,
-    0
-  );
+  const total = state.cart.reduce((sum, item) => sum + item.price, 0);
 
   return (
     <section className="cart">
-
       <div className="cart-header">
         <h2>Your Cart</h2>
 
         {state.cart.length > 0 && (
           <button
             className="clear-btn"
-            onClick={() =>
-              dispatch({ type: "clear" })
-            }
+            onClick={() => dispatch({ type: "clear" })}
           >
             Clear Cart
           </button>
@@ -168,18 +156,12 @@ function Cart() {
           {/* CART ITEMS */}
 
           <div className="cart-items">
-
             {state.cart.map((item, index) => (
-              <div
-                className="cart-item"
-                key={`${item.id}-${index}`}
-              >
+              <div className="cart-item" key={`${item.id}-${index}`}>
                 <div>
                   <h3>{item.name}</h3>
 
-                  <p>
-                    ₹{item.price.toLocaleString("en-IN")}
-                  </p>
+                  <p>₹{item.price.toLocaleString("en-IN")}</p>
                 </div>
 
                 <button
@@ -187,7 +169,8 @@ function Cart() {
                   onClick={() =>
                     dispatch({
                       type: "remove",
-                      payload: item.id,
+                      //payload: item.id,
+                      payload: index,
                     })
                   }
                 >
@@ -195,7 +178,6 @@ function Cart() {
                 </button>
               </div>
             ))}
-
           </div>
 
           {/* TOTAL */}
@@ -203,16 +185,12 @@ function Cart() {
           <div className="total">
             <span>Total</span>
 
-            <strong>
-              ₹{total.toLocaleString("en-IN")}
-            </strong>
+            <strong>₹{total.toLocaleString("en-IN")}</strong>
           </div>
 
           {/* CHECKOUT */}
 
-          <button className="checkout-btn">
-            Proceed to Checkout
-          </button>
+          <button className="checkout-btn">Proceed to Checkout</button>
         </>
       )}
     </section>
@@ -224,38 +202,27 @@ function Cart() {
 // =====================================================
 
 function App() {
-
   // useReducer manages the state
-  const [state, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div className="app">
-
       {/* 
         Context Provider shares state and dispatch
         with Header, Products and Cart
       */}
 
       <CartContext.Provider value={{ state, dispatch }}>
-
         <Header />
 
         <main className="container">
-
           <Products />
 
           <Cart />
-
         </main>
-
       </CartContext.Provider>
-
     </div>
   );
 }
 
 export default App;
-

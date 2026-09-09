@@ -21,12 +21,21 @@ const reducer = (state, action) => {
         cart: [...state.cart, action.payload],
       };
 
-    case "remove":
+    /*  case "remove":
       return {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload),
+      }; */
+    case "remove":
+      return {
+        ...state,
+        cart: state.cart.filter((_, index) => index !== action.payload),
       };
     //filter() keeps elements for which the condition is true.
+    //OR - filter() removes elements for which the condition is false.
+    //filter() gives us two values - array.filter((item, index) => ...)
+    //I know the first parameter is available, but I'm intentionally not using it.
+    //underscore means - I receive this value, but I don't need to use it.
 
     case "clear":
       return {
@@ -112,10 +121,18 @@ function App() {
                       <h3>{item.name}</h3>
                       <p>₹{item.price.toLocaleString("en-IN")}</p>
                     </div>
-                    <button
+                    {/*   <button
                       className="remove-btn"
                       onClick={() =>
                         dispatch({ type: "remove", payload: item.id })
+                      }
+                    >
+                      Remove
+                    </button> */}
+                    <button
+                      className="remove-btn"
+                      onClick={() =>
+                        dispatch({ type: "remove", payload: index })
                       }
                     >
                       Remove
