@@ -103,13 +103,16 @@ E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-1.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-1.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-5-EXAMPLE.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App copy.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -118,39 +121,37 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-6-Controlled-Component.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-6-Uncontrolled-Component.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-1.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-2.jsx
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App copy.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-1.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-2.jsx
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-3.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useLayoutEffect-1.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-5-EXAMPLE.jsx
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx
         modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/Hoc.css
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/Controlled - Uncontrolled-Component.png
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/HOC - High Order Component.png
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/HOC-High-Order-Component.png
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/Hoc.css
+        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/Hoc1.css
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles.css
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles1.css
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "07-09-2026"
-[main 3d0e3a5] 07-09-2026
- 10 files changed, 443 insertions(+), 44 deletions(-)
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-6-Controlled-Component.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-6-Uncontrolled-Component.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-1.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-2.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/Hoc.css
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/Controlled - Uncontrolled-Component.png
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/HOC - High Order Component.png
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/SCREENS/HOC-High-Order-Component.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "09-09-2026"
+[main f1ed5d3] 09-09-2026
+ 13 files changed, 737 insertions(+), 216 deletions(-)
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App copy.jsx
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-3.jsx
+ create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/Hoc1.css
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 21, done.
-Counting objects: 100% (21/21), done.
+Enumerating objects: 28, done.
+Counting objects: 100% (28/28), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (15/15), 3.00 MiB | 805.00 KiB/s, done.
-Total 15 (delta 7), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (7/7), completed with 5 local objects.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 6.16 KiB | 1.54 MiB/s, done.
+Total 16 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 9 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   7ce1705..3d0e3a5  main -> main
+   3d0e3a5..f1ed5d3  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

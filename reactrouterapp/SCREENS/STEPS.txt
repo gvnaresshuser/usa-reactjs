@@ -1,0 +1,161 @@
+
+npm create vite@latest reactrouterapp
+cd reactrouterapp
+
+https://tailwindcss.com/docs/installation/using-vite
+npm install tailwindcss @tailwindcss/vite
+
+npm run dev
+
+npm install react-router-dom
+
+src-1-OLD-Routing-Method
+src-2 -Link
+src-3-NavLink
+src-4-useNavigateHook
+src-5-NestedRoutes
+src-6-404-Page
+src-7-ReactRouterLoader - to fetch data for a router before it is rendered
+[JobsLayout.jsx,Jobs.jsx]
+-------------------------------------------------
+jobs
+assets/data.json
+
+to start sample testing api
+run from assets folder
+E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK\reactrouterapp\src\assets>
+npx json-server --watch data.json -- port 5000
+------------------------
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK\reactrouterapp\src\assets>npx json-server --watch data.json -- port 3000
+
+E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK\reactrouterapp\src\assets>npx json-server --watch data.json -- port 3000
+
+  \{^_^}/ hi!
+
+  Loading data.json
+  Done
+
+  Resources
+  http://localhost:3000/jobs
+
+  Home
+  http://localhost:3000
+
+  Type s + enter at any time to create a snapshot of the database
+  Watching...
+
+------------------------
+http://localhost:3000/jobs
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer",
+    "salary": "$50,000",
+    "location": "Lodon UK"
+  },
+  {
+    "id": 2,
+    "title": "Backend Developer",
+    "salary": "$75,000",
+    "location": "San Francisco US"
+  },
+  {
+    "id": 3,
+    "title": "Fullstack Developer",
+    "salary": "$100,000",
+    "location": "Remote"
+  },
+  {
+    "id": 4,
+    "title": "Frontend Developer",
+    "salary": "$50,000",
+    "location": "Lodon UK"
+  },
+  {
+    "id": 5,
+    "title": "Backend Developer",
+    "salary": "$75,000",
+    "location": "San Francisco US"
+  },
+  {
+    "id": 6,
+    "title": "Fullstack Developer",
+    "salary": "$100,000",
+    "location": "Remote"
+  }
+]
+-------------------------------------------------
+src-8-RouteParameters
+components/JobDetails.jsx
+
+src-9-ReactRouterErrorElement
+http://localhost:5173/jobs/50 - this does not exist
+components/Error.jsx
+
+
+
+============================================================================
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK>npm create vite@latest reactrouterapp
+Need to install the following packages:
+create-vite@9.1.2
+Ok to proceed? (y) y
+
+> npx
+> create-vite reactrouterapp
+
+|
+o  Select a framework:
+|  React
+|
+o  Select a variant:
+|  JavaScript
+|
+o  Which linter to use?
+|  ESLint
+|
+o  Install with npm and start now?
+|  Yes
+|
+o  Scaffolding project in E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK\reactrouterapp...
+|
+o  Installing dependencies with npm...
+
+added 135 packages, and audited 136 packages in 35s
+
+31 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+|
+o  Starting dev server...
+
+> reactrouterapp@0.0.0 dev
+> vite
+
+
+  VITE v8.2.1  ready in 2072 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK>cd reactrouterapp
+
+E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK\reactrouterapp>npm install tailwindcss @tailwindcss/vite
+
+added 12 packages, and audited 148 packages in 8s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK\reactrouterapp>code .
+
+E:\MURALI\PERN-ADVANCED-APPLICATION-GREAT-STACK\reactrouterapp>

@@ -1,0 +1,40 @@
+{
+    "jobs":[
+        {
+            "id":1,
+            "title":"Frontend Developer",
+            "salary":"$50,000",
+            "location":"Lodon UK"
+        },
+        {
+            "id":2,
+            "title":"Backend Developer",
+            "salary":"$75,000",
+            "location":"San Francisco US"
+        },
+        {
+            "id":3,
+            "title":"Fullstack Developer",
+            "salary":"$100,000",
+            "location":"Remote"
+        }, 
+        {
+            "id":4,
+            "title":"Frontend Developer",
+            "salary":"$50,000",
+            "location":"Lodon UK"
+        },
+        {
+            "id":5,
+            "title":"Backend Developer",
+            "salary":"$75,000",
+            "location":"San Francisco US"
+        },
+        {
+            "id":6,
+            "title":"Fullstack Developer",
+            "salary":"$100,000",
+            "location":"Remote"
+        }
+    ]
+}
