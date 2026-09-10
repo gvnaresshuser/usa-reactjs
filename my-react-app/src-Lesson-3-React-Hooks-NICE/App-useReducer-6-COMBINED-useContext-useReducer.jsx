@@ -32,16 +32,12 @@ const reducer = (state, action) => {
         cart: [...state.cart, action.payload],
       };
 
-    /* case "remove":
-      return {
-        ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload),
-      }; */
     case "remove":
       return {
         ...state,
         cart: state.cart.filter((_, index) => index !== action.payload),
       };
+    //filter() keeps elements for which the condition is true.
 
     case "clear":
       return {
@@ -226,3 +222,18 @@ function App() {
 }
 
 export default App;
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+//filter() keeps elements for which the condition is true.
+/* 
+  case "remove":
+    return {
+      ...state,
+      cart: state.cart.filter((item) => item.id !== action.payload),
+    }; 
+*/
+/*
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+const result = words.filter((word) => word.length > 6);
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+*/
