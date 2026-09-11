@@ -1,35 +1,15 @@
-import React, { useState } from "react";
-import useDebounce from "./hooks/useDebounce";
-import './App.css';
-
-//ASSIGNMENT - Create a search box that uses the useDebounce hook to delay the search input processing by 1 second.
-
+import React from "react";
+import useCounter from "./useCounter";
+import "./App.css";
 function App() {
-  const [text, setText] = useState("");
-  const debouncedText = useDebounce(text, 2000); // 1 second delay
+  const { count, increment, decrement, reset } = useCounter(10);
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h2>Search Box with Debounce</h2>
-      <input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Type something..."
-        style={{
-          padding: "10px",
-          fontSize: "16px",
-          width: "250px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-        }}
-      />
-      <p>
-        <strong>Immediate Value:</strong> {text}
-      </p>
-      <p>
-        <strong>Debounced Value:</strong> {debouncedText}
-      </p>
+    <div>
+      <h2>Count: {count}</h2>
+      <button onClick={increment}>➕</button>
+      <button onClick={decrement}>➖</button>
+      <button onClick={reset}>🔁</button>
     </div>
   );
 }
