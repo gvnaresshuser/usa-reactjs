@@ -24,3 +24,4 @@ function PostsList() {
 }
 
 export default PostsList;
+//slice(0, 15) is used to display only the first 15 posts from the data array.

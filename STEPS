@@ -100,15 +100,43 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
 
-
+LATEST COMMIT
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M10-Lesson-4-Custom Hooks/App.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-1-TryCatchExample.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-2-1-useErrorBoundaryHook.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-2-ErrorBoundary.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-3-useEffectWithTryCatch.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-4-CustomErrorHandlingusinguseReducer.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-5-FormValidationExample.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-6-GlobalErrorHandlingwithAxiosInterceptors.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-7-BoundaryForSuspenseLazyLoading.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App-Assignment.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M15-Lesson-1-ErrorHandling/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-1/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-1/assets/vite.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-1/index copy.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-1/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-10-PrivateProtectedRoutes/App copy.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-10-PrivateProtectedRoutes/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-10-PrivateProtectedRoutes/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-10-PrivateProtectedRoutes/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-10-PrivateProtectedRoutes/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-11-Redirects/App-1.React-Redirects-Simple.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-11-Redirects/App-2.Redirect-Nested.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-11-Redirects/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-11-Redirects/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-11-Redirects/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'reactrouterapp/src-11-Redirects/main.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -117,24 +145,254 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/App.jsx
+        new file:   my-react-app/src - M10-Lesson-4-Custom Hooks/Counter-WITH-FUNCTION.jsx
+        new file:   my-react-app/src - M10-Lesson-4-Custom Hooks/Counter-WITHOUT-FUNCTION.jsx
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/Counter.jsx
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/useCounter.js
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-1-TryCatchExample.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-2-1-useErrorBoundaryHook.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-2-ErrorBoundary.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-3-useEffectWithTryCatch.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-4-CustomErrorHandlingusinguseReducer.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-5-FormValidationExample.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-6-GlobalErrorHandlingwithAxiosInterceptors.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-7-BoundaryForSuspenseLazyLoading.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App-Assignment.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App.css
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/App.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/FunctionalErrorBoundary.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/HomePage-with-Toast.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/HomePage-without-Toast.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/HomePage.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/HomePageAssignment.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/LazyComponent.jsx
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/1.Axios in React.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/2-1.CODE-EXPLANATION-App-2-1-ErrorBoundary-jsx.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/2.CODE-EXPLANATION-App-2-ErrorBoundary-jsx.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/3.CODE-EXPLANATION-App-4-CustomErrorHandlingusinguseReducer-jsx.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/4.CODE-EXPLANATION-App-6-GlobalErrorHandlingwithAxiosInterceptors-jsx-HomePage-jsx.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/5.CODE-EXPLANATION-App-7-BoundaryForSuspenseLazyLoading-jsx.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/5.CODE-EXPLANATION-FunctionalErrorBoundary-jsx.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/Assignment- Global Error Handling with Axios + Retry Logic.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/Axios.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/CODE-EXPLANATION-axios-js.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/CODE-EXPLANATION-axiosInstance-js.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/ErrorBoundary ,FallbackComponent,onReset and resetKeys.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/React.lazy, React.Suspense and react-error-boundary.png
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/TryCatchExample.jsx
+        renamed:    reactrouterapp/src/assets/react.svg -> my-react-app/src - M15-Lesson-1-ErrorHandling/assets/react.svg
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/axios.js
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/axios1.js
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/axiosInstance.js
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/index.css
+        new file:   my-react-app/src - M15-Lesson-1-ErrorHandling/main.jsx
         modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
+        deleted:    reactrouterapp/reactrouterapp-GREAT-STACK-15-08-2026.zip
+        renamed:    reactrouterapp/src/App.jsx -> reactrouterapp/src-1/App.jsx
+        renamed:    reactrouterapp/src/assets/data.json -> reactrouterapp/src-1/assets/data.json
+        renamed:    reactrouterapp/src/assets/hero.png -> reactrouterapp/src-1/assets/hero.png
+        renamed:    reactrouterapp/src/assets/logo.png -> reactrouterapp/src-1/assets/logo.png
+        new file:   reactrouterapp/src-1/assets/react.svg
+        renamed:    reactrouterapp/src/assets/vite.svg -> reactrouterapp/src-1/assets/vite.svg
+        renamed:    reactrouterapp/src/components/ContactForm.css -> reactrouterapp/src-1/components/ContactForm.css
+        renamed:    reactrouterapp/src/components/ContactForm.jsx -> reactrouterapp/src-1/components/ContactForm.jsx
+        renamed:    reactrouterapp/src/components/ContactInfo.jsx -> reactrouterapp/src-1/components/ContactInfo.jsx
+        renamed:    reactrouterapp/src/components/Error.jsx -> reactrouterapp/src-1/components/Error.jsx
+        renamed:    reactrouterapp/src/components/JobDetails.jsx -> reactrouterapp/src-1/components/JobDetails.jsx
+        renamed:    reactrouterapp/src/components/Navbar.jsx -> reactrouterapp/src-1/components/Navbar.jsx
+        renamed:    reactrouterapp/src/components/NotFound.jsx -> reactrouterapp/src-1/components/NotFound.jsx
+        renamed:    reactrouterapp/src/index copy.css -> reactrouterapp/src-1/index copy.css
+        renamed:    reactrouterapp/src/index.css -> reactrouterapp/src-1/index.css
+        renamed:    reactrouterapp/src/layout/ContactLayout.jsx -> reactrouterapp/src-1/layout/ContactLayout.jsx
+        renamed:    reactrouterapp/src/layout/JobsLayout.jsx -> reactrouterapp/src-1/layout/JobsLayout.jsx
+        renamed:    reactrouterapp/src/layout/RootLayout.jsx -> reactrouterapp/src-1/layout/RootLayout.jsx
+        renamed:    reactrouterapp/src/main.jsx -> reactrouterapp/src-1/main.jsx
+        renamed:    reactrouterapp/src/pages/About.jsx -> reactrouterapp/src-1/pages/About.jsx
+        renamed:    reactrouterapp/src/pages/Contact.jsx -> reactrouterapp/src-1/pages/Contact.jsx
+        renamed:    reactrouterapp/src/pages/Home.jsx -> reactrouterapp/src-1/pages/Home.jsx
+        renamed:    reactrouterapp/src/pages/Jobs.jsx -> reactrouterapp/src-1/pages/Jobs.jsx
+        renamed:    reactrouterapp/src/pages/Products.jsx -> reactrouterapp/src-1/pages/Products.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/About.css
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/About.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/AdminDashboard.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/AdminLogin.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/AllRoutes.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/App copy.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/App.css
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/App.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Contact.css
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Contact.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Crud.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Dashboard.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Home.css
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Home.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Login.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Navbar.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Page1.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Page2.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/Privateroute.jsx
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/SCREENS/Code Explanation (Page2.jsx).png
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/SCREENS/TERMS IN ROUTING.png
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/assets/react.svg
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/assets/rose.jpg
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/index.css
+        new file:   reactrouterapp/src-10-PrivateProtectedRoutes/main.jsx
+        new file:   reactrouterapp/src-11-Redirects/About.jsx
+        new file:   reactrouterapp/src-11-Redirects/App-1.React-Redirects-Simple.jsx
+        new file:   reactrouterapp/src-11-Redirects/App-2.Redirect-Nested.jsx
+        new file:   reactrouterapp/src-11-Redirects/App.css
+        new file:   reactrouterapp/src-11-Redirects/App.jsx
+        new file:   reactrouterapp/src-11-Redirects/Contact.jsx
+        new file:   reactrouterapp/src-11-Redirects/Home.jsx
+        new file:   reactrouterapp/src-11-Redirects/NotFound.jsx
+        new file:   reactrouterapp/src-11-Redirects/SCREENS/1.React Redirects.png
+        new file:   reactrouterapp/src-11-Redirects/SCREENS/2.Code-Details.png
+        new file:   reactrouterapp/src-11-Redirects/SCREENS/TERMS IN ROUTING.png
+        new file:   reactrouterapp/src-11-Redirects/assets/react.svg
+        new file:   reactrouterapp/src-11-Redirects/components/LogoutPage.jsx
+        new file:   reactrouterapp/src-11-Redirects/components/Navbar.css
+        new file:   reactrouterapp/src-11-Redirects/components/Navbar.jsx
+        new file:   reactrouterapp/src-11-Redirects/components/PrivateRoute.jsx
+        new file:   reactrouterapp/src-11-Redirects/index.css
+        new file:   reactrouterapp/src-11-Redirects/main.jsx
+        new file:   reactrouterapp/src-11-Redirects/pages/About.jsx
+        new file:   reactrouterapp/src-11-Redirects/pages/Contact.jsx
+        new file:   reactrouterapp/src-11-Redirects/pages/Dashboard.jsx
+        new file:   reactrouterapp/src-11-Redirects/pages/Home.jsx
+        new file:   reactrouterapp/src-11-Redirects/pages/Login.jsx
+        new file:   reactrouterapp/src-11-Redirects/pages/NotFound.jsx
+        new file:   reactrouterapp/src-11-Redirects/test.css
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "10-09-2026"
-[main 82c9abe] 10-09-2026
- 3 files changed, 271 insertions(+), 558 deletions(-)
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "11-09-2026"
+[main 3243a21] 11-09-2026
+ 119 files changed, 2539 insertions(+), 318 deletions(-)
+ create mode 100644 my-react-app/src - M10-Lesson-4-Custom Hooks/Counter-WITH-FUNCTION.jsx
+ create mode 100644 my-react-app/src - M10-Lesson-4-Custom Hooks/Counter-WITHOUT-FUNCTION.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-1-TryCatchExample.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-2-1-useErrorBoundaryHook.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-2-ErrorBoundary.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-3-useEffectWithTryCatch.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-4-CustomErrorHandlingusinguseReducer.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-5-FormValidationExample.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-6-GlobalErrorHandlingwithAxiosInterceptors.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-7-BoundaryForSuspenseLazyLoading.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App-Assignment.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App.css
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/App.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/FunctionalErrorBoundary.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/HomePage-with-Toast.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/HomePage-without-Toast.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/HomePage.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/HomePageAssignment.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/LazyComponent.jsx
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/1.Axios in React.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/2-1.CODE-EXPLANATION-App-2-1-ErrorBoundary-jsx.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/2.CODE-EXPLANATION-App-2-ErrorBoundary-jsx.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/3.CODE-EXPLANATION-App-4-CustomErrorHandlingusinguseReducer-jsx.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/4.CODE-EXPLANATION-App-6-GlobalErrorHandlingwithAxiosInterceptors-jsx-HomePage-jsx.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/5.CODE-EXPLANATION-App-7-BoundaryForSuspenseLazyLoading-jsx.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/5.CODE-EXPLANATION-FunctionalErrorBoundary-jsx.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/Assignment- Global Error Handling with Axios + Retry Logic.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/Axios.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/CODE-EXPLANATION-axios-js.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/CODE-EXPLANATION-axiosInstance-js.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/ErrorBoundary ,FallbackComponent,onReset and resetKeys.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/SCREENS/React.lazy, React.Suspense and react-error-boundary.png
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/TryCatchExample.jsx
+ rename {reactrouterapp/src => my-react-app/src - M15-Lesson-1-ErrorHandling}/assets/react.svg (100%)
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/axios.js
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/axios1.js
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/axiosInstance.js
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/index.css
+ create mode 100644 my-react-app/src - M15-Lesson-1-ErrorHandling/main.jsx
+ delete mode 100644 reactrouterapp/reactrouterapp-GREAT-STACK-15-08-2026.zip
+ rename reactrouterapp/{src => src-1}/App.jsx (100%)
+ rename reactrouterapp/{src => src-1}/assets/data.json (100%)
+ rename reactrouterapp/{src => src-1}/assets/hero.png (100%)
+ rename reactrouterapp/{src => src-1}/assets/logo.png (100%)
+ create mode 100644 reactrouterapp/src-1/assets/react.svg
+ rename reactrouterapp/{src => src-1}/assets/vite.svg (100%)
+ rename reactrouterapp/{src => src-1}/components/ContactForm.css (100%)
+ rename reactrouterapp/{src => src-1}/components/ContactForm.jsx (100%)
+ rename reactrouterapp/{src => src-1}/components/ContactInfo.jsx (100%)
+ rename reactrouterapp/{src => src-1}/components/Error.jsx (100%)
+ rename reactrouterapp/{src => src-1}/components/JobDetails.jsx (100%)
+ rename reactrouterapp/{src => src-1}/components/Navbar.jsx (100%)
+ rename reactrouterapp/{src => src-1}/components/NotFound.jsx (100%)
+ rename reactrouterapp/{src => src-1}/index copy.css (100%)
+ rename reactrouterapp/{src => src-1}/index.css (100%)
+ rename reactrouterapp/{src => src-1}/layout/ContactLayout.jsx (100%)
+ rename reactrouterapp/{src => src-1}/layout/JobsLayout.jsx (100%)
+ rename reactrouterapp/{src => src-1}/layout/RootLayout.jsx (100%)
+ rename reactrouterapp/{src => src-1}/main.jsx (100%)
+ rename reactrouterapp/{src => src-1}/pages/About.jsx (100%)
+ rename reactrouterapp/{src => src-1}/pages/Contact.jsx (100%)
+ rename reactrouterapp/{src => src-1}/pages/Home.jsx (100%)
+ rename reactrouterapp/{src => src-1}/pages/Jobs.jsx (100%)
+ rename reactrouterapp/{src => src-1}/pages/Products.jsx (100%)
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/About.css
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/About.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/AdminDashboard.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/AdminLogin.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/AllRoutes.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/App copy.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/App.css
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/App.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Contact.css
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Contact.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Crud.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Dashboard.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Home.css
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Home.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Login.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Navbar.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Page1.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Page2.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/Privateroute.jsx
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/SCREENS/Code Explanation (Page2.jsx).png
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/SCREENS/TERMS IN ROUTING.png
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/assets/react.svg
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/assets/rose.jpg
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/index.css
+ create mode 100644 reactrouterapp/src-10-PrivateProtectedRoutes/main.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/About.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/App-1.React-Redirects-Simple.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/App-2.Redirect-Nested.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/App.css
+ create mode 100644 reactrouterapp/src-11-Redirects/App.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/Contact.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/Home.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/NotFound.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/SCREENS/1.React Redirects.png
+ create mode 100644 reactrouterapp/src-11-Redirects/SCREENS/2.Code-Details.png
+ create mode 100644 reactrouterapp/src-11-Redirects/SCREENS/TERMS IN ROUTING.png
+ create mode 100644 reactrouterapp/src-11-Redirects/assets/react.svg
+ create mode 100644 reactrouterapp/src-11-Redirects/components/LogoutPage.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/components/Navbar.css
+ create mode 100644 reactrouterapp/src-11-Redirects/components/Navbar.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/components/PrivateRoute.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/index.css
+ create mode 100644 reactrouterapp/src-11-Redirects/main.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/pages/About.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/pages/Contact.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/pages/Dashboard.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/pages/Home.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/pages/Login.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/pages/NotFound.jsx
+ create mode 100644 reactrouterapp/src-11-Redirects/test.css
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 11, done.
-Counting objects: 100% (11/11), done.
+Enumerating objects: 108, done.
+Counting objects: 100% (108/108), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 1.06 KiB | 544.00 KiB/s, done.
-Total 6 (delta 5), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+Compressing objects: 100% (99/99), done.
+Writing objects: 100% (99/99), 11.60 MiB | 1.25 MiB/s, done.
+Total 99 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (14/14), completed with 7 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   9c64708..82c9abe  main -> main
+   82c9abe..3243a21  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

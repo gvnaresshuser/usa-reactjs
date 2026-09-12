@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 
 function useCounter(initialValue = 0) {
+  console.log(initialValue);
   const [count, setCount] = useState(initialValue);
   const initialRef = useRef(initialValue); // ✅ This always holds the original value
 
