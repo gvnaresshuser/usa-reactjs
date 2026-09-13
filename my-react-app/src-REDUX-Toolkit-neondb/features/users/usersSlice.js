@@ -101,9 +101,6 @@ export const deleteUser = createAsyncThunk(
         throw new Error("Failed to delete user");
       }
 
-      // Temporary delay to see the spinner
-      ////await new Promise((resolve) => setTimeout(resolve, 2000));
-
       return id;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -120,6 +117,8 @@ const usersSlice = createSlice({
 
   initialState: {
     users: [],
+    userCount: 0, // ← NEW
+
     loading: false,
     adding: false,
     updating: false,
@@ -127,7 +126,13 @@ const usersSlice = createSlice({
     error: null,
   },
 
-  reducers: {},
+  //reducers: {},
+  reducers: {
+    clearUsers: (state) => {
+      state.users = [];
+      state.userCount = 0;
+    },
+  },
 
   extraReducers: (builder) => {
     builder
@@ -144,6 +149,7 @@ const usersSlice = createSlice({
       .addCase(fetchUsers.fulfilled, (state, action) => {
         state.loading = false;
         state.users = action.payload;
+        state.userCount = action.payload.length; // ← NEW
       })
 
       .addCase(fetchUsers.rejected, (state, action) => {
@@ -164,6 +170,7 @@ const usersSlice = createSlice({
         state.adding = false;
 
         state.users.push(action.payload);
+        state.userCount = state.users.length; // ← NEW
       })
 
       .addCase(addUser.rejected, (state, action) => {
@@ -210,6 +217,8 @@ const usersSlice = createSlice({
         state.deletingId = null;
 
         state.users = state.users.filter((user) => user.id !== action.payload);
+
+        state.userCount = state.users.length; // ← NEW
       })
 
       .addCase(deleteUser.rejected, (state, action) => {
@@ -218,5 +227,5 @@ const usersSlice = createSlice({
       });
   },
 });
-
+export const { clearUsers } = usersSlice.actions;
 export default usersSlice.reducer;

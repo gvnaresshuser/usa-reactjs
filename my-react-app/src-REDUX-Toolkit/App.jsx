@@ -11,6 +11,7 @@ import {
   addUser,
   updateUser,
   deleteUser,
+  clearUsers,  
 } from "./features/users/usersSlice";
 
 import "./App.css";
@@ -73,31 +74,37 @@ function App() {
   // CREATE / UPDATE
   // =========================
 
-  const handleSubmit = () => {
-    if (!form.name.trim() || !form.email.trim()) {
-      return;
-    }
+ const handleSubmit = () => {
+   if (!form.name.trim()) {
+     alert("Please enter the user's name.");
+     return;
+   }
 
-    if (editingId !== null) {
-      // UPDATE
-      dispatch(
-        updateUser({
-          id: editingId,
-          ...form,
-        }),
-      );
-    } else {
-      // CREATE
-      dispatch(addUser(form));
-    }
+   if (!form.email.trim()) {
+     alert("Please enter the user's email.");
+     return;
+   }
 
-    setForm({
-      name: "",
-      email: "",
-    });
+   if (editingId !== null) {
+     // UPDATE
+     dispatch(
+       updateUser({
+         id: editingId,
+         ...form,
+       }),
+     );
+   } else {
+     // CREATE
+     dispatch(addUser(form));
+   }
 
-    setEditingId(null);
-  };
+   setForm({
+     name: "",
+     email: "",
+   });
+
+   setEditingId(null);
+ };
 
   // =========================
   // EDIT
@@ -137,9 +144,7 @@ function App() {
     <div className="app">
       <header className="header">
         <div>
-          <p className="eyebrow">
-            React + Redux Toolkit
-          </p>
+          <p className="eyebrow">React + Redux Toolkit</p>
 
           <h1>Redux Toolkit CRUD</h1>
 
@@ -150,7 +155,6 @@ function App() {
       </header>
 
       <main className="container">
-
         {/* =========================
             COUNTER
         ========================= */}
@@ -158,16 +162,12 @@ function App() {
         <section className="card counter-card">
           <div className="section-heading">
             <div>
-              <p className="section-label">
-                STATE MANAGEMENT
-              </p>
+              <p className="section-label">STATE MANAGEMENT</p>
 
               <h2>Counter</h2>
             </div>
 
-            <div className="count-badge">
-              {count}
-            </div>
+            <div className="count-badge">{count}</div>
           </div>
 
           <div className="counter-display">
@@ -198,18 +198,31 @@ function App() {
         ========================= */}
 
         <section className="card">
-
           <div className="section-heading">
             <div>
-              <p className="section-label">
-                ASYNC STATE MANAGEMENT
-              </p>
+              <p className="section-label">ASYNC STATE MANAGEMENT</p>
 
               <h2>Users</h2>
             </div>
 
-            <div className="user-count">
-              {users.length} Users
+            <div className="button-row">
+              <div className="user-count">{users.length} Users</div>
+
+              <button
+                className="btn btn-primary"
+                onClick={() => dispatch(fetchUsers())}
+                disabled={loading}
+              >
+                {loading ? "Loading..." : "Load Users"}
+              </button>
+
+              <button
+                className="btn btn-danger"
+                onClick={() => dispatch(clearUsers())}
+                disabled={users.length === 0}
+              >
+                Clear Users
+              </button>
             </div>
           </div>
 
@@ -224,24 +237,15 @@ function App() {
 
           {/* Error */}
 
-          {error && (
-            <div className="status error">
-              ❌ {error}
-            </div>
-          )}
+          {error && <div className="status error">❌ {error}</div>}
 
           {/* =========================
               ADD / UPDATE FORM
           ========================= */}
 
           <div className="add-user">
-
             <div>
-              <h3>
-                {editingId !== null
-                  ? "Edit User"
-                  : "Add New User"}
-              </h3>
+              <h3>{editingId !== null ? "Edit User" : "Add New User"}</h3>
 
               <p>
                 {editingId !== null
@@ -251,7 +255,6 @@ function App() {
             </div>
 
             <div className="form-row">
-
               <input
                 type="text"
                 name="name"
@@ -301,7 +304,6 @@ function App() {
                   Cancel
                 </button>
               )}
-
             </div>
           </div>
 
@@ -311,49 +313,32 @@ function App() {
 
           {!loading && users.length > 0 && (
             <div className="user-list">
-
               <div className="list-header">
                 <span>User</span>
                 <span>Actions</span>
               </div>
 
               {users.map((user) => (
-                <div
-                  className="user-row"
-                  key={user.id}
-                >
-
+                <div className="user-row" key={user.id}>
                   <div className="user-info">
-
                     <div className="avatar">
-                      {user.name
-                        .charAt(0)
-                        .toUpperCase()}
+                      {user.name.charAt(0).toUpperCase()}
                     </div>
 
                     <div>
-                      <strong>
-                        {user.name}
-                      </strong>
+                      <strong>{user.name}</strong>
 
-                      <span>
-                        {user.email}
-                      </span>
+                      <span>{user.email}</span>
                     </div>
-
                   </div>
 
                   <div className="actions">
-
                     {/* UPDATE */}
 
                     <button
                       className="btn btn-warning"
                       onClick={() => handleEdit(user)}
-                      disabled={
-                        updatingId !== null ||
-                        deletingId !== null
-                      }
+                      disabled={updatingId !== null || deletingId !== null}
                     >
                       ✎ Update
                     </button>
@@ -362,13 +347,8 @@ function App() {
 
                     <button
                       className="btn btn-danger"
-                      onClick={() =>
-                        handleDelete(user.id)
-                      }
-                      disabled={
-                        deletingId !== null ||
-                        updatingId !== null
-                      }
+                      onClick={() => handleDelete(user.id)}
+                      disabled={deletingId !== null || updatingId !== null}
                     >
                       {deletingId === user.id ? (
                         <>
@@ -379,34 +359,23 @@ function App() {
                         "🗑 Delete"
                       )}
                     </button>
-
                   </div>
                 </div>
               ))}
-
             </div>
           )}
 
           {/* Empty State */}
 
-          {!loading &&
-            users.length === 0 &&
-            !error && (
-              <div className="empty-state">
+          {!loading && users.length === 0 && !error && (
+            <div className="empty-state">
+              <div className="empty-icon">👥</div>
 
-                <div className="empty-icon">
-                  👥
-                </div>
+              <h3>No users yet</h3>
 
-                <h3>No users yet</h3>
-
-                <p>
-                  Add your first user above.
-                </p>
-
-              </div>
-            )}
-
+              <p>Add your first user above.</p>
+            </div>
+          )}
         </section>
       </main>
     </div>

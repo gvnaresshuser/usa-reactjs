@@ -12,6 +12,7 @@ import {
   addUser,
   updateUser,
   deleteUser,
+  clearUsers,
 } from "./features/users/usersSlice";
 
 import "./App.css";
@@ -38,9 +39,8 @@ function App() {
   // Users
   // =========================
 
-const { users, loading, adding, updating, deletingId, error } = useSelector(
-  (state) => state.users,
-);
+const { users, userCount, loading, adding, updating, deletingId, error } =
+  useSelector((state) => state.users);
 
   const [form, setForm] = useState(initialForm);
   const [editingId, setEditingId] = useState(null);
@@ -199,11 +199,27 @@ const { users, loading, adding, updating, deletingId, error } = useSelector(
           <div className="section-heading">
             <div>
               <p className="section-label">CRUD OPERATIONS</p>
-
               <h2>Users</h2>
             </div>
 
-            <div className="user-count">{users.length} Users</div>
+            <div className="button-row">
+              <div className="user-count">{userCount} Users</div>
+
+              <button
+                className="btn btn-primary"
+                onClick={() => dispatch(fetchUsers())}
+                disabled={loading}
+              >
+                {loading ? "Loading..." : "↻ Load Users"}
+              </button>
+
+              <button
+                className="btn btn-danger"
+                onClick={() => dispatch(clearUsers())}
+              >
+                Clear Users
+              </button>
+            </div>
           </div>
 
           {/* =================================
