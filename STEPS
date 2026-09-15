@@ -106,17 +106,10 @@ LATEST COMMIT
 Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>code .
-
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-REDUX-Toolkit/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'backend-rtk/package copy.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'backend-rtk/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'backend-rtk/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'users-api/package copy.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'users-api/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'users-api/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M10-Lesson-4-Custom Hooks/App-5.useHttp-CRUDCustomHooks.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M10-Lesson-4-Custom Hooks/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -124,75 +117,28 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        new file:   .gitignore
-        new file:   backend-rtk/SCREENS/notes.txt
-        new file:   backend-rtk/package copy.json
-        new file:   backend-rtk/package-lock.json
-        new file:   backend-rtk/package.json
-        new file:   backend-rtk/server-1-simple-endpoint.js
-        new file:   backend-rtk/server-2-users-endpoints.js
-        new file:   backend-rtk/server.js
-        modified:   my-react-app/src-REDUX-Toolkit-neondb/App.jsx
-        modified:   my-react-app/src-REDUX-Toolkit-neondb/features/users/usersSlice.js
-        modified:   my-react-app/src-REDUX-Toolkit/App.jsx
-        new file:   my-react-app/src-REDUX-Toolkit/SCREENS/CHROME-EXTENSIONS-REACT.png
-        new file:   my-react-app/src-REDUX-Toolkit/SCREENS/CHROME-EXTENSIONS-REDUX.png
-        new file:   my-react-app/src-REDUX-Toolkit/SCREENS/REDUX-TOOLKIT.png
-        new file:   my-react-app/src-REDUX-Toolkit/SCREENS/ReduxDataFlowDiagram.gif
-        new file:   my-react-app/src-REDUX-Toolkit/SCREENS/createAsyncThunk-CODE-EXPLANATION.png
-        new file:   my-react-app/src-REDUX-Toolkit/SCREENS/redux-toolkit.jfif
-        modified:   my-react-app/src-REDUX-Toolkit/features/counter/counterSlice.js
-        modified:   my-react-app/src-REDUX-Toolkit/features/users/usersSlice.js
-        new file:   users-api/.gitignore
-        new file:   users-api/SCREENS/notes.txt
-        new file:   users-api/package copy.json
-        new file:   users-api/package-lock.json
-        new file:   users-api/package.json
-        new file:   users-api/src/config/db.js
-        new file:   users-api/src/controllers/userController.js
-        new file:   users-api/src/models/userModel.js
-        new file:   users-api/src/routes/userRoutes.js
-        new file:   users-api/src/server.js
+        modified:   STEPS
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/App-5.useHttp-CRUDCustomHooks.jsx
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/App.jsx
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/Counter.jsx
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/hooks/useHttp.js
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "REDUX-TOOLKIT 13-09-2026"
-[main 0f16ced] REDUX-TOOLKIT 13-09-2026
- 29 files changed, 3480 insertions(+), 232 deletions(-)
- create mode 100644 .gitignore
- create mode 100644 backend-rtk/SCREENS/notes.txt
- create mode 100644 backend-rtk/package copy.json
- create mode 100644 backend-rtk/package-lock.json
- create mode 100644 backend-rtk/package.json
- create mode 100644 backend-rtk/server-1-simple-endpoint.js
- create mode 100644 backend-rtk/server-2-users-endpoints.js
- create mode 100644 backend-rtk/server.js
- create mode 100644 my-react-app/src-REDUX-Toolkit/SCREENS/CHROME-EXTENSIONS-REACT.png
- create mode 100644 my-react-app/src-REDUX-Toolkit/SCREENS/CHROME-EXTENSIONS-REDUX.png
- create mode 100644 my-react-app/src-REDUX-Toolkit/SCREENS/REDUX-TOOLKIT.png
- create mode 100644 my-react-app/src-REDUX-Toolkit/SCREENS/ReduxDataFlowDiagram.gif
- create mode 100644 my-react-app/src-REDUX-Toolkit/SCREENS/createAsyncThunk-CODE-EXPLANATION.png
- create mode 100644 my-react-app/src-REDUX-Toolkit/SCREENS/redux-toolkit.jfif
- create mode 100644 users-api/.gitignore
- create mode 100644 users-api/SCREENS/notes.txt
- create mode 100644 users-api/package copy.json
- create mode 100644 users-api/package-lock.json
- create mode 100644 users-api/package.json
- create mode 100644 users-api/src/config/db.js
- create mode 100644 users-api/src/controllers/userController.js
- create mode 100644 users-api/src/models/userModel.js
- create mode 100644 users-api/src/routes/userRoutes.js
- create mode 100644 users-api/src/server.js
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "15-09-2026"
+[main 9a7d844] 15-09-2026
+ 6 files changed, 324 insertions(+), 387 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 61, done.
-Counting objects: 100% (61/61), done.
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (37/37), done.
-Writing objects: 100% (48/48), 9.66 MiB | 1.22 MiB/s, done.
-Total 48 (delta 17), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (17/17), completed with 9 local objects.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 2.08 KiB | 711.00 KiB/s, done.
+Total 11 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 9 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   8cc0172..0f16ced  main -> main
+   0f16ced..9a7d844  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

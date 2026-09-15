@@ -245,7 +245,6 @@ button:hover {
 
     .container {
         grid-template-columns: 1fr;
-
         margin: 20px auto;
     }
 

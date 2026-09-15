@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer } from "react";
-
+//createContext - provider value to share state and dispatch
 import "./Mystyles1.css";
 
 // =====================================================
@@ -10,6 +10,8 @@ const products = [
   { id: 1, name: "Laptop", price: 75000 },
   { id: 2, name: "Wireless Mouse", price: 1200 },
   { id: 3, name: "Keyboard", price: 2500 },
+  { id: 4, name: "mouse", price: 1000 },
+  { id: 5, name: "wire", price: 500 },
 ];
 
 // =====================================================
@@ -35,7 +37,9 @@ const reducer = (state, action) => {
     case "remove":
       return {
         ...state,
-        cart: state.cart.filter((_, index) => index !== action.payload),
+        //cart: state.cart.filter((_, index) => index !== action.payload),
+        cart: state.cart.filter((item, index) => index !== action.payload),
+        //underscore means - I receive this value, but I don't need to use it.
       };
     //filter() keeps elements for which the condition is true.
 
