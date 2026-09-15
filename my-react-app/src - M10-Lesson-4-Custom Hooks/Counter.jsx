@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-//WITHOUT-FUNCTION
-
 // Custom hook for storing and retrieving data from local storage
 const useLocalStorage = (key, initialValue) => {
   const [name, setName] = useState(

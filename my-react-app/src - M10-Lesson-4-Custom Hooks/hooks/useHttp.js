@@ -9,7 +9,6 @@ function useHttp() {
     async ({ url, method = "GET", body = null, headers = {} }) => {
       setLoading(true);
       setError(null);
-
       try {
         const options = {
           method,
@@ -18,18 +17,14 @@ function useHttp() {
             ...headers,
           },
         };
-
         if (body) {
           options.body = JSON.stringify(body);
         }
-
         const response = await fetch(url, options);
         console.log(response);
-
         if (!response.ok) {
           throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
-
         const responseData = await response.json();
         setData(responseData);
       } catch (err) {

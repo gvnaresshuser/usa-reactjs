@@ -1,78 +1,36 @@
-import React, { useState } from "react";
-import useDebounce from "./hooks/useDebounce";
 import "./App.css";
 
-//ASSIGNMENT - Create a search box that uses the useDebounce hook to delay the search input processing by 1 second.
+import Counter from "./Counter";
 
 function App() {
-  const [text, setText] = useState("");
-  const debouncedText = useDebounce(text, 1000); // 1 second delay
-
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h2>Search Box with Debounce</h2>
-      <input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Type something..."
-        style={{
-          padding: "10px",
-          fontSize: "16px",
-          width: "250px",
-          borderRadius: "6px",
-          border: "1px solid #ccc",
-        }}
-      />
-      <p>
-        <strong>Immediate Value:</strong> {text}
-      </p>
-      <p>
-        <strong>Debounced Value:</strong> {debouncedText}
-      </p>
+    <div className="App">
+      <Counter />
     </div>
   );
 }
 
 export default App;
 /*
-Where is this useful in real applications?
+A simple example demonstrating a custom hook called useLocalStorage for storing 
+and retrieving data from local storage:
 
-The most common example is search boxes.
+In this example:
 
-Instead of:
+We define a custom hook called useLocalStorage which takes a key (to identify the data 
+  in local storage) and an initialValue.
+Inside the custom hook, we use useState to manage the state and local storage to 
+persist the data.
+The useLocalStorage hook returns an array with the current value and a function to 
+update the value.
+We use the useLocalStorage hook inside the Counter component to manage the count state. 
+The count value is stored and retrieved from local storage with the key 'count'.
+When the increment button is clicked, the count is updated and stored in local storage.
+This example demonstrates how to create and use a custom hook to encapsulate logic for 
+interacting with browser APIs like local storage.
 
-User types "javascript"
 
-j       → API
-ja      → API
-jav     → API
-java    → API
-javas   → API
-javasc  → API
-javascr → API
-javascri → API
-javascrip → API
-javascript → API
 
-you do:
 
-User types "javascript"
-        ↓
-wait until user stops
-        ↓
-1 second
-        ↓
-API request
-        ↓
-Search "javascript"
 
-This is especially useful for:
-
-🔎 Search/autocomplete
-🌐 API calls
-📍 Location/address search
-🛒 Product search
-📊 Filtering large datasets
-💡 Suggestions while typing
 */

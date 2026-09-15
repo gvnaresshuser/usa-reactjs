@@ -1,6 +1,4 @@
 
-
-
 import React, { useState } from 'react';
 import useHttp from './hooks/useHttp';
 import './App.css';
