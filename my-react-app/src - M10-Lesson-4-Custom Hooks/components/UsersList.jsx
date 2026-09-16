@@ -9,21 +9,24 @@ function UsersList() {
     };
 
     return (
-        <div style={{ padding: '20px' }}>
-            <h2>Users List</h2>
-            <button onClick={fetchUsers} disabled={loading}>
+      <div style={{ padding: "20px"}}>
+        <h2>Users List</h2>
+         <button onClick={fetchUsers} disabled={loading}>
                 {loading ? 'Loading...' : 'Fetch Users'}
             </button>
+      
 
-            {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-            {data && (
-                <ul>
-                    {data.map(user => (
-                        <li key={user.id}>{user.id}-{user.name}</li>
-                    ))}
-                </ul>
-            )}
-        </div>
+        {error && <p style={{ color: "red" }}>Error: {error}</p>}
+        {data && (
+          <ul>
+            {data.map((user) => (
+              <li key={user.id}>
+                {user.id}-{user.name}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     );
 }
 
