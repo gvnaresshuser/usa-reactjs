@@ -3,12 +3,12 @@ import { useState, useRef } from "react";
 function useCounter(initialValue = 0) {
   console.log(initialValue);
   const [count, setCount] = useState(initialValue);
-  const initialRef = useRef(initialValue); // ✅ This always holds the original value
+  //const initialRef = useRef(initialValue); // ✅ This always holds the original value
 
   const increment = () => setCount((c) => c + 1);
   const decrement = () => setCount((c) => c - 1);
-  //const reset = () => setCount(initialValue);
-  const reset = () => setCount(initialRef.current); // ✅ Use the ref to preserve the original initial value across renders
+  const reset = () => setCount(initialValue);
+  //const reset = () => setCount(initialRef.current); // ✅ Use the ref to preserve the original initial value across renders
 
   return { count, increment, decrement, reset };
 }

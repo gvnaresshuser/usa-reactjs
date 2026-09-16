@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 // Custom hook for storing and retrieving data from local storage
+
 const useLocalStorage = (key, initialValue) => {
   const [name, setName] = useState(
-    localStorage.getItem(key) ? localStorage.getItem(key) : initialValue,
+    localStorage.getItem(key) ? Number(localStorage.getItem(key)) : initialValue,
   );
   useEffect(() => {
     localStorage.setItem(key, name);

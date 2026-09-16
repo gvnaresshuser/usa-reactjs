@@ -107,8 +107,11 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App-useReducer-6-COMBINED-useContext-useReducer.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M10-Lesson-4-Custom Hooks/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M10-Lesson-4-Custom Hooks/index.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M10-Lesson-4-Custom Hooks/App-Assignment-SearchBox-USAGE.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M10-Lesson-4-Custom Hooks/index copy.css', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -117,24 +120,29 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/Mystyles1.css
+        new file:   my-react-app/src - M10-Lesson-4-Custom Hooks/App-Assignment-SearchBox-USAGE.jsx
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/App.jsx
+        modified:   my-react-app/src - M10-Lesson-4-Custom Hooks/components/UsersList.jsx
+        new file:   my-react-app/src - M10-Lesson-4-Custom Hooks/index copy.css
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "15-09-2026 updated"
-[main f4764bf] 15-09-2026 updated
- 3 files changed, 27 insertions(+), 78 deletions(-)
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "16-09-2026"
+[main b8ac9b3] 16-09-2026
+ 5 files changed, 263 insertions(+), 52 deletions(-)
+ create mode 100644 my-react-app/src - M10-Lesson-4-Custom Hooks/App-Assignment-SearchBox-USAGE.jsx
+ create mode 100644 my-react-app/src - M10-Lesson-4-Custom Hooks/index copy.css
+
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 13, done.
-Counting objects: 100% (13/13), done.
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (7/7), 1.05 KiB | 1.05 MiB/s, done.
-Total 7 (delta 6), reused 0 (delta 0), pack-reused 0
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.82 KiB | 932.00 KiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   9a7d844..f4764bf  main -> main
+   f4764bf..b8ac9b3  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
