@@ -2,7 +2,7 @@ import React from 'react';
 import useFetch from '../hooks/useFetch';
 
 function PostsList() {
-    const { data, loading, error, refetch } = useFetch('https://jsonplaceholder.typicode.com/posts');
+    const { data, loading, error, refetch } = useFetch('https://jsonplaceholder123.typicode.com/posts');
     //const { data, loading, error, refetch } = useFetch('https://jsonplaceholder.typicode.com/users');
 
     if (loading) return <p>Loading posts...</p>;

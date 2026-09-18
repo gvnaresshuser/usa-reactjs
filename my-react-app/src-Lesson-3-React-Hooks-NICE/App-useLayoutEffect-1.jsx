@@ -59,6 +59,7 @@ gives approximately:
 useLayoutEffect
 useLayoutEffect(() => {
   // runs after DOM update
+  // before the browser paints
 }, []);
 
 It runs synchronously after React has updated the DOM but before the 

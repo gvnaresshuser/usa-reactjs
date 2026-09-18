@@ -1,117 +1,122 @@
-import React from "react";
-import "./App.css";
+import React, { useEffect, useState } from "react";
 import "./Hoc1.css";
-// --------------------------------------------------
+
+// ==================================================
 // 1. HOC: withLoading
-// Adds loading behavior to any component
-// --------------------------------------------------
+// ==================================================
+// This HOC adds loading behavior to any component.
+//
+// Component = the component we want to enhance
+// loading   = loading status
+// props     = all remaining props
+// ==================================================
 function withLoading(Component) {
   return function EnhancedComponent({ loading, ...props }) {
     if (loading) {
-      return <h2>Loading...</h2>;
+      return (
+        <div className="flex min-h-[250px] flex-col items-center justify-center gap-4">
+          {/* Spinner */}
+          <div className="h-12 w-12 animate-spin rounded-full border-4 border-gray-200 border-t-blue-600"></div>
+
+          {/* Loading text */}
+          <p className="text-lg font-medium text-gray-600">Loading users...</p>
+        </div>
+      );
     }
 
     return <Component {...props} />;
   };
 }
-//This is the React component that I'm receiving and enhancing.
+// ==================================================
+// 2. Normal Component
+// ==================================================
+// This component only knows how to DISPLAY users.
+// It does NOT know anything about loading.
+// ==================================================
+function UserList({ users }) {
+  return (
+    <div className="user-list">
+      <h2>Users</h2>
 
-// --------------------------------------------------
-// 2. HOC: withAuth
-// Allows content only when the user is logged in
-// --------------------------------------------------
-function withAuth(Component) {
-  return function AuthenticatedComponent({ isLoggedIn, ...props }) {
-    if (!isLoggedIn) {
-      return <h2>Please login first</h2>;
-    }
-
-    return <Component {...props} />;
-  };
+      {users.length === 0 ? (
+        <p>No users found.</p>
+      ) : (
+        users.map((user) => (
+          <div className="user-card" key={user.id}>
+            <h3>👤 {user.name}</h3>
+            <p>📧 {user.email}</p>
+            <p>🏢 {user.company.name}</p>
+          </div>
+        ))
+      )}
+    </div>
+  );
 }
-
-// --------------------------------------------------
-// 3. HOC: withLogger
-// Logs whenever the enhanced component renders
-// --------------------------------------------------
-function withLogger(Component) {
-  return function LoggedComponent(props) {
-    console.log("Component rendered:", Component.name);
-
-    return <Component {...props} />;
-  };
-}
-
-// --------------------------------------------------
-// Normal components
-// --------------------------------------------------
-function User({ name }) {
-  return <h3>👤 User: {name}</h3>;
-}
-
-function Products() {
-  return <h3>🛍️ Product Data Loaded</h3>;
-}
-
-function Dashboard() {
-  return <h3>📊 Welcome to Dashboard</h3>;
-}
-
-// --------------------------------------------------
-// Create enhanced components
-// --------------------------------------------------
-const UserWithLoading = withLoading(User);
-const ProductsWithLoading = withLoading(Products);
-const ProtectedDashboard = withAuth(Dashboard);
-const UserWithLogger = withLogger(User);
-
-// --------------------------------------------------
-// App
-// --------------------------------------------------
+// ==================================================
+// 3. Create Enhanced Component
+// ==================================================
+// withLoading() takes UserList and returns a NEW
+// enhanced component.
+//
+// UserList
+//    ↓
+// withLoading(UserList)
+//    ↓
+// UserListWithLoading
+// ==================================================
+const UserListWithLoading = withLoading(UserList);
+// ==================================================
+// 4. App Component
+// ==================================================
 function App() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  // ==================================================
+  // Fetch users from API
+  // ==================================================
+  useEffect(() => {
+    setLoading(true);
+    fetch("https://jsonplaceholder.typicode.com/users")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch users");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setUsers(data);
+        ////setLoading(false);
+        //------------------------------------
+        // Stop loading after 3 seconds
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 1500);
+        // Cleanup timer
+        return () => clearTimeout(timer);
+        //------------------------------------
+      })
+      .catch((error) => {
+        console.error(error);
+        setLoading(false);
+      }); /* .finally(() => {
+        setLoading(false);
+      }) */
+  }, []);
+  // ==================================================
+  // UI
+  // ==================================================
   return (
     <div className="app">
-      <h1>Higher-Order Components (HOC)</h1>
+      <h1>Higher-Order Component (HOC)</h1>
 
+      <p className="description">
+        Real-world example: Adding loading behavior to a UserList component.
+      </p>
       <section>
-        <h2>1. withLoading HOC</h2>
-
-        <UserWithLoading loading={false} name="Naressh" />
-
-        <ProductsWithLoading loading={true} />
-      </section>
-
-      <section>
-        <h2>2. withAuth HOC</h2>
-
-        <ProtectedDashboard isLoggedIn={true} />
-      </section>
-
-      <section>
-        <h2>3. withLogger HOC</h2>
-
-        <UserWithLogger name="Naressh" />
-
-        <p className="note">Open the browser console to see the logger.</p>
-      </section>
-
-      <section>
-        <h2>HOC Pattern</h2>
-
-        <pre>
-          {`function withSomething(Component) {
-  return function EnhancedComponent(props) {
-    // Extra behavior
-
-    return <Component {...props} />;
-  };
-}
-
-const Enhanced = withSomething(MyComponent);`}
-        </pre>
+        <UserListWithLoading loading={loading} users={users} />
+        {/* <UserList users={users} /> */}
       </section>
     </div>
   );
 }
-
 export default App;

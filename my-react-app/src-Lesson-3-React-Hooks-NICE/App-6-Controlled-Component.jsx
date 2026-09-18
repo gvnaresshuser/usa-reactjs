@@ -5,7 +5,7 @@ A controlled component is an input whose value is controlled by React state.
 import { useState } from "react";
 import "./App.css";
 function App() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState(""); //CONTROLLED COMPONENT
 
   return (
     <div>
