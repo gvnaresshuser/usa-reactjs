@@ -35,3 +35,23 @@ function App() {
 }
 
 export default App;
+/*
+App
+ │
+ ├── Login
+ ├── Logout
+ │
+ └── ProtectedDashboard
+          │
+          ↓
+      withAuth()
+          │
+     authentication
+          │
+     ┌────┴────┐
+     ↓         ↓
+  No Token   Token
+     ↓         ↓
+ Access      Dashboard
+ Denied      displayed
+*/
