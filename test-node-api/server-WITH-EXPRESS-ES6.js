@@ -66,3 +66,49 @@ export                         export
      ↓                            ↓
 ES Modules                    ES Modules
 */
+/*
+const app = express(); creates the Express application object, 
+and this app object provides methods for handling all the major HTTP operations.
+| HTTP Method | Express method | Example                         |
+| ----------- | -------------- | ------------------------------- |
+| GET         | `app.get()`    | `app.get("/users", ...)`        |
+| POST        | `app.post()`   | `app.post("/users", ...)`       |
+| PUT         | `app.put()`    | `app.put("/users/:id", ...)`    |
+| PATCH       | `app.patch()`  | `app.patch("/users/:id", ...)`  |
+| DELETE      | `app.delete()` | `app.delete("/users/:id", ...)` |
+
+const express = require("express");
+
+const app = express();
+
+app.use(express.json());
+
+// GET
+app.get("/api/users", (req, res) => {
+  res.json({ message: "GET - Fetch users" });
+});
+
+// POST
+app.post("/api/users", (req, res) => {
+  res.json({ message: "POST - Create user" });
+});
+
+// PUT
+app.put("/api/users/:id", (req, res) => {
+  res.json({ message: "PUT - Replace user" });
+});
+
+// PATCH
+app.patch("/api/users/:id", (req, res) => {
+  res.json({ message: "PATCH - Update part of user" });
+});
+
+// DELETE
+app.delete("/api/users/:id", (req, res) => {
+  res.json({ message: "DELETE - Delete user" });
+});
+
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
+});
+*/

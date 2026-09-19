@@ -107,10 +107,6 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'test-node-api/package-COMMON-JS.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'test-node-api/package-ES6.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'test-node-api/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'test-node-api/package.json', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -119,46 +115,23 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   test-node-api/middleware/logger.js
-        new file:   test-node-api/package-COMMON-JS.json
-        new file:   test-node-api/package-ES6.json
-        new file:   test-node-api/package-SCRIPTS.json
-        new file:   test-node-api/package-lock.json
-        new file:   test-node-api/package.json
-        new file:   test-node-api/server-SCRIPTS.js
-        new file:   test-node-api/server-WITH-EXPRESS-COMMONJS.js
-        new file:   test-node-api/server-WITH-EXPRESS-ES6-MIDDLEWARE.js
-        new file:   test-node-api/server-WITH-EXPRESS-ES6.js
-        new file:   test-node-api/server-WITHOUT-EXPRESS.js
-        new file:   test-node-api/server.js
+        modified:   test-node-api/server-WITH-EXPRESS-ES6.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "EXPRESS JS INTRODUCTION 19-09-2026"
-[main e1246f9] EXPRESS JS INTRODUCTION 19-09-2026
- 13 files changed, 1628 insertions(+), 12 deletions(-)
- create mode 100644 test-node-api/middleware/logger.js
- create mode 100644 test-node-api/package-COMMON-JS.json
- create mode 100644 test-node-api/package-ES6.json
- create mode 100644 test-node-api/package-SCRIPTS.json
- create mode 100644 test-node-api/package-lock.json
- create mode 100644 test-node-api/package.json
- create mode 100644 test-node-api/server-SCRIPTS.js
- create mode 100644 test-node-api/server-WITH-EXPRESS-COMMONJS.js
- create mode 100644 test-node-api/server-WITH-EXPRESS-ES6-MIDDLEWARE.js
- create mode 100644 test-node-api/server-WITH-EXPRESS-ES6.js
- create mode 100644 test-node-api/server-WITHOUT-EXPRESS.js
- create mode 100644 test-node-api/server.js
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "19-05-2026"
+[main 7c63eea] 19-05-2026
+ 2 files changed, 63 insertions(+), 29 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 19, done.
-Counting objects: 100% (19/19), done.
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (17/17), 13.73 KiB | 2.75 MiB/s, done.
-Total 17 (delta 8), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.70 KiB | 872.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   d24bcb8..e1246f9  main -> main
+   e1246f9..7c63eea  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
