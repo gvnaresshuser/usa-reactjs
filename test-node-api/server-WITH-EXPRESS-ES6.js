@@ -42,3 +42,27 @@ app.use((req, res) => {
 }); 
 ------------------------------------------
 */
+/*
+ES Modules (import/export) are the modern standardized JavaScript module system, 
+while CommonJS (require/module.exports) is Node.js's older, traditional module system.
+| Feature                 | ES Module                         | CommonJS                         |
+| ----------------------- | --------------------------------- | -------------------------------- |
+| package.json            | `"type": "module"`                | `"type": "commonjs"`             |
+| Import                  | `import`                          | `require()`                      |
+| Export                  | `export`                          | `module.exports`                 |
+| Standard                | Modern JS standard                | Node.js traditional system       |
+| React/Vite similarity   | ⭐⭐⭐⭐⭐                             | ⭐⭐                               |
+| Modern Node.js          | ✅                                 | ✅                                |
+| Dynamic loading         | `import()`                        | `require()`                      |
+| File extension behavior | Often `.js` explicitly in imports | Usually extension can be omitted |
+| Older Node.js code      | Less common                       | Very common                      |
+
+Frontend                     Backend
+────────────────────────────────────────
+React/Vite                   Node/Express
+     ↓                            ↓
+import                         import
+export                         export
+     ↓                            ↓
+ES Modules                    ES Modules
+*/
