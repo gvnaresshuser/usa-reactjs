@@ -28,7 +28,7 @@ app.get("/api/hai", logger, (req, res) => {
   });
 }); */
 //----------------------------------------------------------------
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   console.log("Middleware 1 executed");
   next();
 });
@@ -38,7 +38,7 @@ app.use((req, res) => {
   res.status(404).json({
     message: "Route not found",
   });
-});
+}); */
 //----------------------------------------------------------------
 // Start server
 app.listen(PORT, () => {

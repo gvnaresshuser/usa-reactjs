@@ -48,7 +48,7 @@ Database: Testproj
 | `salary`     | NUMERIC(10,2) | Salary            |
 | `created_at` | TIMESTAMP     | Registration date |
 ******************************************************************************************
-CREATE TABLE users (
+CREATE TABLE users_new (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(150) UNIQUE NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ******************************************************************************************
-INSERT INTO users
+INSERT INTO users_new
 (name, email, mobile, city, occupation, salary)
 VALUES
 ('Ravi Kumar', 'ravi@gmail.com', '9876543210', 'Hyderabad', 'Software Engineer', 75000),

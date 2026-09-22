@@ -1,5 +1,5 @@
 import express from "express";
-import cors from "cors";
+import cors from "cors";//npm i cors
 
 const app = express();
 
@@ -12,6 +12,8 @@ const API_URL = "https://jsonplaceholder.typicode.com/users";
 
 app.use(cors());
 app.use(express.json());
+//If the incoming request contains JSON,
+//parse it and put the resulting JavaScript object into req.body.
 
 // =========================
 // Home
@@ -34,6 +36,7 @@ app.get("/api/users", async (req, res) => {
     }
 
     const users = await response.json();
+    console.log(users);
 
     res.json(users);
   } catch (error) {
@@ -48,9 +51,17 @@ app.get("/api/users", async (req, res) => {
 // =========================
 // POST - Add User
 // =========================
-
+//http://localhost:5000/api/users
+/*
+BODY
+{
+  "name":"naressh",
+  "email":"gvnaressh@gmail.com"
+}
+*/
 app.post("/api/users", async (req, res) => {
   try {
+    console.log(req.body);
     const response = await fetch(API_URL, {
       method: "POST",
 
@@ -66,6 +77,7 @@ app.post("/api/users", async (req, res) => {
     }
 
     const user = await response.json();
+    console.log(user);
 
     res.status(201).json(user);
   } catch (error) {
@@ -84,6 +96,8 @@ app.post("/api/users", async (req, res) => {
 app.put("/api/users/:id", async (req, res) => {
   try {
     const { id } = req.params;
+    console.log('PUT ID:'+id);
+    console.log(req.body);
 
     const response = await fetch(`${API_URL}/${id}`, {
       method: "PUT",
@@ -118,6 +132,7 @@ app.put("/api/users/:id", async (req, res) => {
 app.delete("/api/users/:id", async (req, res) => {
   try {
     const { id } = req.params;
+    console.log("PUT ID:" + id);
 
     const response = await fetch(`${API_URL}/${id}`, {
       method: "DELETE",
@@ -146,6 +161,29 @@ app.delete("/api/users/:id", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
+/*
+              CLIENT
+                 |
+                 | JSON request
+                 ↓
+        ┌─────────────────┐
+        │ express.json()  │
+        └─────────────────┘
+                 |
+                 ↓
+              req.body
+          JavaScript object
+                 |
+                 ↓
+          Your route logic
+                 |
+                 ↓
+              res.json()
+                 |
+                 | JSON response
+                 ↓
+              CLIENT
+*/
 
 /*
 There is another important consequence
@@ -203,4 +241,25 @@ your state gets replaced with the original JSONPlaceholder users:
 state.users = action.payload;
 
 and Gaming Laptop disappears.
+*/
+/*
+cors() stands for Cross-Origin Resource Sharing.
+
+It allows your frontend and backend running on different origins to communicate with each other.
+
+For example:
+
+Frontend: http://localhost:5173
+Backend:  http://localhost:5000
+
+Since the ports are different, they are considered different origins. Without CORS, the browser may block requests from the frontend to the backend.
+
+What does this do?
+app.use(cors());
+
+It tells Express:
+
+"Allow requests coming from other origins."
+
+It is middleware, so it applies to requests handled after it is registered.
 */

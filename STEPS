@@ -107,34 +107,32 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-5-WITHAUTH.jsx
-        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/components/Dashboard.jsx
-        new file:   my-react-app/src-Lesson-3-React-Hooks-NICE/hocs/withAuth.jsx
-
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "HOC withAuth 19-09-2026"
-[main 89a4079] HOC withAuth 19-09-2026
- 5 files changed, 195 insertions(+), 34 deletions(-)
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-5-WITHAUTH.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/components/Dashboard.jsx
- create mode 100644 my-react-app/src-Lesson-3-React-Hooks-NICE/hocs/withAuth.jsx
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit
 On branch main
 Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 
-nothing to commit, working tree clean
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   STEPS
+        modified:   my-react-app/src-Lesson-3-React-Hooks-NICE/App-7-HOC-Higherordercomponents-5-WITHAUTH.jsx
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "withAuth"
+[main 7b96560] withAuth
+ 2 files changed, 37 insertions(+), 14 deletions(-)
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (17/17), 3.59 KiB | 734.00 KiB/s, done.
+Total 17 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 5 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   b476548..7b96560  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
