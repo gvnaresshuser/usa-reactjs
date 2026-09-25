@@ -5,7 +5,9 @@ const API_URL = "http://localhost:5000/api/users";
 // ========================================
 // READ - Fetch Users
 // ========================================
-
+//rejectWithValue is a special function provided by Redux Toolkit's createAsyncThunk
+// that lets you send a custom error value to the Redux slice when the
+// asynchronous operation fails.
 export const fetchUsers = createAsyncThunk(
   "users/fetchUsers",
 

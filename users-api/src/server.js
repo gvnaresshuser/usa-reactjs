@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-
+//>npm i nodemon -D
 import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
