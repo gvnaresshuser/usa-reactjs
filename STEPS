@@ -107,17 +107,7 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'users-api/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'users-api/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-USERS.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITHOUT-SWEETALERT-ICONS.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -126,58 +116,26 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx
-        new file:   my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx
-        new file:   my-react-app/src-REDUX-Toolkit-neondb/App-USERS.jsx
-        modified:   my-react-app/src-REDUX-Toolkit-neondb/App.jsx
-        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Counter-Slice.png
-        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Users-Slice.png
-        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/rejectWithValue.png
-        modified:   my-react-app/src-REDUX-Toolkit-neondb/features/counter/counterSlice.js
-        modified:   my-react-app/src-REDUX-Toolkit-neondb/features/users/usersSlice.js
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS.jsx
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITHOUT-SWEETALERT-ICONS.jsx
-        modified:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.css
-        modified:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.jsx
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/dependencies vs devDependencies.png
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/what was changed for responsiveness.png
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/sweetalert.css
-        new file:   users-api/SCREENS/ABOUT-WHEN-TO-PROCURE-CA-cert.txt
-        new file:   users-api/SCREENS/rejectUnauthorized.png
-        modified:   users-api/package.json
-        modified:   users-api/src/config/db.js
-        modified:   users-api/src/server.js
+        deleted:    my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx
+        deleted:    my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/what was changed for responsiveness.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "25-09-2026"
-[main 06ca478] 25-09-2026
- 23 files changed, 3401 insertions(+), 403 deletions(-)
- create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx
- create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx
- create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/App-USERS.jsx
- create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Counter-Slice.png
- create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Users-Slice.png
- create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/rejectWithValue.png
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS.jsx
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITHOUT-SWEETALERT-ICONS.jsx
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/dependencies vs devDependencies.png
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/what was changed for responsiveness.png
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/sweetalert.css
- create mode 100644 users-api/SCREENS/ABOUT-WHEN-TO-PROCURE-CA-cert.txt
- create mode 100644 users-api/SCREENS/rejectUnauthorized.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "26-09-2026"
+[main ea8e3e8] 26-09-2026
+ 3 files changed, 57 insertions(+), 1110 deletions(-)
+ delete mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx
+ delete mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/what was changed for responsiveness.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 53, done.
-Counting objects: 100% (53/53), done.
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (32/32), done.
-Writing objects: 100% (35/35), 6.85 MiB | 1.02 MiB/s, done.
-Total 35 (delta 14), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (14/14), completed with 10 local objects.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.20 KiB | 613.00 KiB/s, done.
+Total 6 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   cc7e320..06ca478  main -> main
+   06ca478..ea8e3e8  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

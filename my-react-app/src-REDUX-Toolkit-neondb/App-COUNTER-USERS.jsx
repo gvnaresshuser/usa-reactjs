@@ -172,17 +172,16 @@ function App() {
 
           <div className="button-row">
             <button
-              className="btn btn-primary"
-              onClick={() => dispatch(increment())}
-            >
-              + Increment
-            </button>
-
-            <button
               className="btn btn-secondary"
               onClick={() => dispatch(decrement())}
             >
               − Decrement
+            </button>
+            <button
+              className="btn btn-primary"
+              onClick={() => dispatch(increment())}
+            >
+              + Increment
             </button>
           </div>
         </section>
