@@ -107,27 +107,17 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'backend-rtk/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'backend-rtk/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'test-node-api/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-ReduxToolkitMultiSlices/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-ReduxToolkitMultiSlices/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-ReduxToolkitMultiSlices/index.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-ReduxToolkitMultiSlices/main.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App copy.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App.jsx', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.css', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/index copy.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/main.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Zustand-neondb/App copy.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Zustand-neondb/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Zustand-neondb/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Zustand-neondb/index copy.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-Zustand-neondb/main.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-backendapi/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-backendapi/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-backendapi/index copy.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-backendapi/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'users-api/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'users-api/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-USERS.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITHOUT-SWEETALERT-ICONS.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -136,155 +126,58 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   backend-rtk/SCREENS/THUNDER-CLIENT-VS-CODE-EXTENSION.png
-        new file:   backend-rtk/SCREENS/THUNDER-CLIENT.png
-        new file:   backend-rtk/SCREENS/cors.png
-        new file:   backend-rtk/SCREENS/express-json.png
-        new file:   backend-rtk/SCREENS/nodemon.png
-        modified:   backend-rtk/SCREENS/notes.txt
-        new file:   backend-rtk/THUNDER-CLIENT-TEST-SCRIPTS.txt
-        modified:   backend-rtk/package-lock.json
-        modified:   backend-rtk/package.json
-        modified:   backend-rtk/server-1-simple-endpoint.js
-        modified:   backend-rtk/server-2-users-endpoints.js
-        modified:   backend-rtk/server.js
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/App.css
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/App.jsx
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/SCREENS/Immer.png
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/SCREENS/Redux-Workflow.png
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/SCREENS/fetch vs axios.png
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/SCREENS/redux-data-flow.ab0c08be.gif
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/SCREENS/redux.gif
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/SCREENS/redux.png
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/app/store.js
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/assets/react.svg
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/Dashboard.jsx
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/HealthStatus.jsx
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/InventoryCRUD.jsx
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/ProductCRUD.jsx
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/ProductInventory.jsx
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/UserCRUD.jsx
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/inventory.css
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/product.css
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/productInventory.css
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/components/user.css
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/features/inventorySlice.js
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/features/productInventorySlice.js
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/features/productsSlice.js
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/features/userSlice.js
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/index.css
-        new file:   my-react-app/src-ReduxToolkitMultiSlices/main.jsx
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App copy.jsx
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.css
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.jsx
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/assets/react.svg
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/index copy.css
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/index.css
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/main.jsx
-        new file:   my-react-app/src-Zustand-neondb/App copy.jsx
-        new file:   my-react-app/src-Zustand-neondb/App.css
-        new file:   my-react-app/src-Zustand-neondb/App.jsx
-        new file:   my-react-app/src-Zustand-neondb/SCREENS/NOTES.txt
-        new file:   my-react-app/src-Zustand-neondb/SCREENS/Zustand.png
-        new file:   my-react-app/src-Zustand-neondb/api/userApi.js
-        new file:   my-react-app/src-Zustand-neondb/assets/react.svg
-        new file:   my-react-app/src-Zustand-neondb/components/UserForm.jsx
-        new file:   my-react-app/src-Zustand-neondb/components/UserList.jsx
-        new file:   my-react-app/src-Zustand-neondb/index copy.css
-        new file:   my-react-app/src-Zustand-neondb/index.css
-        new file:   my-react-app/src-Zustand-neondb/main.jsx
-        new file:   my-react-app/src-Zustand-neondb/store/userStore.js
-        new file:   my-react-app/src-backendapi/App.css
-        new file:   my-react-app/src-backendapi/App.jsx
-        new file:   my-react-app/src-backendapi/assets/react.svg
-        new file:   my-react-app/src-backendapi/index copy.css
-        new file:   my-react-app/src-backendapi/index.css
-        new file:   my-react-app/src-backendapi/main.jsx
-        modified:   test-node-api/server.js
-        new file:   users-api/SCREENS/NEON-1.png
-        new file:   users-api/SCREENS/NEON-2.png
-        new file:   users-api/SCREENS/NEON-3.png
-        new file:   users-api/SCREENS/NEON-4.png
-        modified:   users-api/SCREENS/notes.txt
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/App-USERS.jsx
+        modified:   my-react-app/src-REDUX-Toolkit-neondb/App.jsx
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Counter-Slice.png
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Users-Slice.png
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/rejectWithValue.png
+        modified:   my-react-app/src-REDUX-Toolkit-neondb/features/counter/counterSlice.js
+        modified:   my-react-app/src-REDUX-Toolkit-neondb/features/users/usersSlice.js
+        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx
+        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS.jsx
+        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITHOUT-SWEETALERT-ICONS.jsx
+        modified:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.css
+        modified:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.jsx
+        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/dependencies vs devDependencies.png
+        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/what was changed for responsiveness.png
+        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/sweetalert.css
+        new file:   users-api/SCREENS/ABOUT-WHEN-TO-PROCURE-CA-cert.txt
+        new file:   users-api/SCREENS/rejectUnauthorized.png
+        modified:   users-api/package.json
+        modified:   users-api/src/config/db.js
+        modified:   users-api/src/server.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "22-09-2026"
-[main cc7e320] 22-09-2026
- 71 files changed, 4177 insertions(+), 33 deletions(-)
- create mode 100644 backend-rtk/SCREENS/THUNDER-CLIENT-VS-CODE-EXTENSION.png
- create mode 100644 backend-rtk/SCREENS/THUNDER-CLIENT.png
- create mode 100644 backend-rtk/SCREENS/cors.png
- create mode 100644 backend-rtk/SCREENS/express-json.png
- create mode 100644 backend-rtk/SCREENS/nodemon.png
- create mode 100644 backend-rtk/THUNDER-CLIENT-TEST-SCRIPTS.txt
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/App.css
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/App.jsx
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/SCREENS/Immer.png
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/SCREENS/Redux-Workflow.png
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/SCREENS/fetch vs axios.png
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/SCREENS/redux-data-flow.ab0c08be.gif
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/SCREENS/redux.gif
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/SCREENS/redux.png
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/app/store.js
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/assets/react.svg
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/Dashboard.jsx
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/HealthStatus.jsx
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/InventoryCRUD.jsx
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/ProductCRUD.jsx
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/ProductInventory.jsx
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/UserCRUD.jsx
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/inventory.css
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/product.css
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/productInventory.css
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/components/user.css
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/features/inventorySlice.js
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/features/productInventorySlice.js
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/features/productsSlice.js
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/features/userSlice.js
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/index.css
- create mode 100644 my-react-app/src-ReduxToolkitMultiSlices/main.jsx
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App copy.jsx
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.css
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.jsx
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/assets/react.svg
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/index copy.css
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/index.css
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/main.jsx
- create mode 100644 my-react-app/src-Zustand-neondb/App copy.jsx
- create mode 100644 my-react-app/src-Zustand-neondb/App.css
- create mode 100644 my-react-app/src-Zustand-neondb/App.jsx
- create mode 100644 my-react-app/src-Zustand-neondb/SCREENS/NOTES.txt
- create mode 100644 my-react-app/src-Zustand-neondb/SCREENS/Zustand.png
- create mode 100644 my-react-app/src-Zustand-neondb/api/userApi.js
- create mode 100644 my-react-app/src-Zustand-neondb/assets/react.svg
- create mode 100644 my-react-app/src-Zustand-neondb/components/UserForm.jsx
- create mode 100644 my-react-app/src-Zustand-neondb/components/UserList.jsx
- create mode 100644 my-react-app/src-Zustand-neondb/index copy.css
- create mode 100644 my-react-app/src-Zustand-neondb/index.css
- create mode 100644 my-react-app/src-Zustand-neondb/main.jsx
- create mode 100644 my-react-app/src-Zustand-neondb/store/userStore.js
- create mode 100644 my-react-app/src-backendapi/App.css
- create mode 100644 my-react-app/src-backendapi/App.jsx
- create mode 100644 my-react-app/src-backendapi/assets/react.svg
- create mode 100644 my-react-app/src-backendapi/index copy.css
- create mode 100644 my-react-app/src-backendapi/index.css
- create mode 100644 my-react-app/src-backendapi/main.jsx
- create mode 100644 users-api/SCREENS/NEON-1.png
- create mode 100644 users-api/SCREENS/NEON-2.png
- create mode 100644 users-api/SCREENS/NEON-3.png
- create mode 100644 users-api/SCREENS/NEON-4.png
-
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "25-09-2026"
+[main 06ca478] 25-09-2026
+ 23 files changed, 3401 insertions(+), 403 deletions(-)
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/App-USERS.jsx
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Counter-Slice.png
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Users-Slice.png
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/rejectWithValue.png
+ create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx
+ create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS.jsx
+ create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITHOUT-SWEETALERT-ICONS.jsx
+ create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/dependencies vs devDependencies.png
+ create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/what was changed for responsiveness.png
+ create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/sweetalert.css
+ create mode 100644 users-api/SCREENS/ABOUT-WHEN-TO-PROCURE-CA-cert.txt
+ create mode 100644 users-api/SCREENS/rejectUnauthorized.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 95, done.
-Counting objects: 100% (94/94), done.
+Enumerating objects: 53, done.
+Counting objects: 100% (53/53), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (75/75), done.
-Writing objects: 100% (80/80), 10.56 MiB | 719.00 KiB/s, done.
-Total 80 (delta 21), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (21/21), completed with 10 local objects.
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (35/35), 6.85 MiB | 1.02 MiB/s, done.
+Total 35 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (14/14), completed with 10 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   7b96560..cc7e320  main -> main
+   cc7e320..06ca478  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
