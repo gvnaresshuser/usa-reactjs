@@ -107,7 +107,8 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -116,26 +117,50 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        deleted:    my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx
-        deleted:    my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/what was changed for responsiveness.png
+        modified:   my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx
+        modified:   my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/1.Styling in ReactJS.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/2.Advantages of StylingCard.module.css in React.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/3.Advantages of styled-components.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/4.Styled-Components - Transient Props ($).png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Assignment-Styling Practice in React.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/CSS Padding Shorthand Rules.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/NOTES.txt
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Styled-Custom-Buttons.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/What are Styled Components.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/setState-DirectUpdate-FunctionalUpdate.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/useEffect.png
+        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/useState.png
+        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/CA-CERT-PEM-RELATIONSHIP.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "26-09-2026"
-[main ea8e3e8] 26-09-2026
- 3 files changed, 57 insertions(+), 1110 deletions(-)
- delete mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/App-WITH-SWEETALERT-ICONS-RESPONSIVE.jsx
- delete mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/what was changed for responsiveness.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "CA"
+[main 0515ae7] CA
+ 16 files changed, 28 insertions(+), 142 deletions(-)
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/1.Styling in ReactJS.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/2.Advantages of StylingCard.module.css in React.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/3.Advantages of styled-components.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/4.Styled-Components - Transient Props ($).png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Assignment-Styling Practice in React.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/CSS Padding Shorthand Rules.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/NOTES.txt
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Styled-Custom-Buttons.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/What are Styled Components.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/setState-DirectUpdate-FunctionalUpdate.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/useEffect.png
+ delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/useState.png
+ create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/CA-CERT-PEM-RELATIONSHIP.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 11, done.
-Counting objects: 100% (11/11), done.
+Enumerating objects: 18, done.
+Counting objects: 100% (18/18), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 1.20 KiB | 613.00 KiB/s, done.
-Total 6 (delta 5), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 1.76 MiB | 929.00 KiB/s, done.
+Total 11 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   06ca478..ea8e3e8  main -> main
+   ea8e3e8..0515ae7  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
