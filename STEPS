@@ -107,8 +107,29 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/eslint.config.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/public/icons.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-All-In-One/App copy.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-All-In-One/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-All-In-One/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-All-In-One/assets/vite.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-All-In-One/index copy.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-All-In-One/main.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-Production/App copy.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-Production/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-Production/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-Production/assets/vite.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-Production/index copy.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/src-Production/main.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/tsconfig.app.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/tsconfig.node.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'redux-typescript-crud/vite.config.ts', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -117,50 +138,114 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx
-        modified:   my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/1.Styling in ReactJS.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/2.Advantages of StylingCard.module.css in React.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/3.Advantages of styled-components.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/4.Styled-Components - Transient Props ($).png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Assignment-Styling Practice in React.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/CSS Padding Shorthand Rules.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/NOTES.txt
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Styled-Custom-Buttons.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/What are Styled Components.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/setState-DirectUpdate-FunctionalUpdate.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/useEffect.png
-        deleted:    my-react-app/src-REDUX-Toolkit-neondb/SCREENS/useState.png
-        new file:   my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/CA-CERT-PEM-RELATIONSHIP.png
+        new file:   redux-typescript-crud/.gitignore
+        new file:   redux-typescript-crud/README.md
+        new file:   redux-typescript-crud/SCREENS/General Rules for Writing TypeScript React Apps.png
+        new file:   redux-typescript-crud/SCREENS/IntelliSense-Help.png
+        new file:   "redux-typescript-crud/SCREENS/JSX-JS \342\206\222 TSX-TS Quick Gist.png"
+        new file:   redux-typescript-crud/SCREENS/STEPS.txt
+        new file:   redux-typescript-crud/eslint.config.js
+        new file:   redux-typescript-crud/index.html
+        new file:   redux-typescript-crud/package-lock.json
+        new file:   redux-typescript-crud/package.json
+        new file:   redux-typescript-crud/public/favicon.svg
+        new file:   redux-typescript-crud/public/icons.svg
+        new file:   redux-typescript-crud/src-All-In-One/App copy.tsx
+        new file:   redux-typescript-crud/src-All-In-One/App.css
+        new file:   redux-typescript-crud/src-All-In-One/App.tsx
+        new file:   redux-typescript-crud/src-All-In-One/app/hooks.ts
+        new file:   redux-typescript-crud/src-All-In-One/app/store.ts
+        new file:   redux-typescript-crud/src-All-In-One/assets/hero.png
+        new file:   redux-typescript-crud/src-All-In-One/assets/react.svg
+        new file:   redux-typescript-crud/src-All-In-One/assets/vite.svg
+        new file:   redux-typescript-crud/src-All-In-One/features/users/usersSlice.ts
+        new file:   redux-typescript-crud/src-All-In-One/index copy.css
+        new file:   redux-typescript-crud/src-All-In-One/index.css
+        new file:   redux-typescript-crud/src-All-In-One/main.tsx
+        new file:   redux-typescript-crud/src-Production/App copy.tsx
+        new file:   redux-typescript-crud/src-Production/App.css
+        new file:   redux-typescript-crud/src-Production/App.tsx
+        new file:   redux-typescript-crud/src-Production/NOTES.txt
+        new file:   redux-typescript-crud/src-Production/app/hooks.ts
+        new file:   redux-typescript-crud/src-Production/app/store.ts
+        new file:   redux-typescript-crud/src-Production/assets/hero.png
+        new file:   redux-typescript-crud/src-Production/assets/react.svg
+        new file:   redux-typescript-crud/src-Production/assets/vite.svg
+        new file:   redux-typescript-crud/src-Production/components/users/UserCard.tsx
+        new file:   redux-typescript-crud/src-Production/components/users/UserForm.tsx
+        new file:   redux-typescript-crud/src-Production/components/users/UserHeader.tsx
+        new file:   redux-typescript-crud/src-Production/components/users/UserList.tsx
+        new file:   redux-typescript-crud/src-Production/features/users/usersSlice.ts
+        new file:   redux-typescript-crud/src-Production/index copy.css
+        new file:   redux-typescript-crud/src-Production/index.css
+        new file:   redux-typescript-crud/src-Production/main.tsx
+        new file:   redux-typescript-crud/src-Production/types/user.types.ts
+        new file:   redux-typescript-crud/tsconfig.app.json
+        new file:   redux-typescript-crud/tsconfig.json
+        new file:   redux-typescript-crud/tsconfig.node.json
+        new file:   redux-typescript-crud/vite.config.ts
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "CA"
-[main 0515ae7] CA
- 16 files changed, 28 insertions(+), 142 deletions(-)
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/1.Styling in ReactJS.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/2.Advantages of StylingCard.module.css in React.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/3.Advantages of styled-components.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/4.Styled-Components - Transient Props ($).png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Assignment-Styling Practice in React.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/CSS Padding Shorthand Rules.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/NOTES.txt
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/Styled-Custom-Buttons.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/What are Styled Components.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/setState-DirectUpdate-FunctionalUpdate.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/useEffect.png
- delete mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/useState.png
- create mode 100644 my-react-app/src-WITHOUT-REDUX-Toolkit-neondb/SCREENS/CA-CERT-PEM-RELATIONSHIP.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "TYPESCRIPT APPLICATION"
+[main f4205f8] TYPESCRIPT APPLICATION
+ 47 files changed, 6974 insertions(+), 17 deletions(-)
+ create mode 100644 redux-typescript-crud/.gitignore
+ create mode 100644 redux-typescript-crud/README.md
+ create mode 100644 redux-typescript-crud/SCREENS/General Rules for Writing TypeScript React Apps.png
+ create mode 100644 redux-typescript-crud/SCREENS/IntelliSense-Help.png
+ create mode 100644 "redux-typescript-crud/SCREENS/JSX-JS \342\206\222 TSX-TS Quick Gist.png"
+ create mode 100644 redux-typescript-crud/SCREENS/STEPS.txt
+ create mode 100644 redux-typescript-crud/eslint.config.js
+ create mode 100644 redux-typescript-crud/index.html
+ create mode 100644 redux-typescript-crud/package-lock.json
+ create mode 100644 redux-typescript-crud/package.json
+ create mode 100644 redux-typescript-crud/public/favicon.svg
+ create mode 100644 redux-typescript-crud/public/icons.svg
+ create mode 100644 redux-typescript-crud/src-All-In-One/App copy.tsx
+ create mode 100644 redux-typescript-crud/src-All-In-One/App.css
+ create mode 100644 redux-typescript-crud/src-All-In-One/App.tsx
+ create mode 100644 redux-typescript-crud/src-All-In-One/app/hooks.ts
+ create mode 100644 redux-typescript-crud/src-All-In-One/app/store.ts
+ create mode 100644 redux-typescript-crud/src-All-In-One/assets/hero.png
+ create mode 100644 redux-typescript-crud/src-All-In-One/assets/react.svg
+ create mode 100644 redux-typescript-crud/src-All-In-One/assets/vite.svg
+ create mode 100644 redux-typescript-crud/src-All-In-One/features/users/usersSlice.ts
+ create mode 100644 redux-typescript-crud/src-All-In-One/index copy.css
+ create mode 100644 redux-typescript-crud/src-All-In-One/index.css
+ create mode 100644 redux-typescript-crud/src-All-In-One/main.tsx
+ create mode 100644 redux-typescript-crud/src-Production/App copy.tsx
+ create mode 100644 redux-typescript-crud/src-Production/App.css
+ create mode 100644 redux-typescript-crud/src-Production/App.tsx
+ create mode 100644 redux-typescript-crud/src-Production/NOTES.txt
+ create mode 100644 redux-typescript-crud/src-Production/app/hooks.ts
+ create mode 100644 redux-typescript-crud/src-Production/app/store.ts
+ create mode 100644 redux-typescript-crud/src-Production/assets/hero.png
+ create mode 100644 redux-typescript-crud/src-Production/assets/react.svg
+ create mode 100644 redux-typescript-crud/src-Production/assets/vite.svg
+ create mode 100644 redux-typescript-crud/src-Production/components/users/UserCard.tsx
+ create mode 100644 redux-typescript-crud/src-Production/components/users/UserForm.tsx
+ create mode 100644 redux-typescript-crud/src-Production/components/users/UserHeader.tsx
+ create mode 100644 redux-typescript-crud/src-Production/components/users/UserList.tsx
+ create mode 100644 redux-typescript-crud/src-Production/features/users/usersSlice.ts
+ create mode 100644 redux-typescript-crud/src-Production/index copy.css
+ create mode 100644 redux-typescript-crud/src-Production/index.css
+ create mode 100644 redux-typescript-crud/src-Production/main.tsx
+ create mode 100644 redux-typescript-crud/src-Production/types/user.types.ts
+ create mode 100644 redux-typescript-crud/tsconfig.app.json
+ create mode 100644 redux-typescript-crud/tsconfig.json
+ create mode 100644 redux-typescript-crud/tsconfig.node.json
+ create mode 100644 redux-typescript-crud/vite.config.ts
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 18, done.
-Counting objects: 100% (18/18), done.
+Enumerating objects: 55, done.
+Counting objects: 100% (55/55), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (11/11), done.
-Writing objects: 100% (11/11), 1.76 MiB | 929.00 KiB/s, done.
-Total 11 (delta 7), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+Compressing objects: 100% (46/46), done.
+Writing objects: 100% (53/53), 5.46 MiB | 1.02 MiB/s, done.
+Total 53 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   ea8e3e8..0515ae7  main -> main
+   0515ae7..f4205f8  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
