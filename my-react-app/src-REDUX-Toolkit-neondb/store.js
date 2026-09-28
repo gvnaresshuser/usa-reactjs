@@ -9,3 +9,5 @@ export const store = configureStore({
     users: usersReducer,
   },
 });
+//USE THIS STORE NAME FOR GETTING THE STATE FROM THE STORE
+// const count = useSelector((state) => state.counter.count);
