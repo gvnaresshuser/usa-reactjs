@@ -107,6 +107,9 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER-USERS.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App-COUNTER.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-REDUX-Toolkit-neondb/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -115,47 +118,31 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        deleted:    redux-typescript-crud/src-All-In-One/App copy.tsx
-        deleted:    redux-typescript-crud/src-All-In-One/App.css
-        deleted:    redux-typescript-crud/src-All-In-One/App.tsx
-        deleted:    redux-typescript-crud/src-All-In-One/app/hooks.ts
-        deleted:    redux-typescript-crud/src-All-In-One/app/store.ts
-        deleted:    redux-typescript-crud/src-All-In-One/assets/hero.png
-        deleted:    redux-typescript-crud/src-All-In-One/assets/react.svg
-        deleted:    redux-typescript-crud/src-All-In-One/assets/vite.svg
-        deleted:    redux-typescript-crud/src-All-In-One/features/users/usersSlice.ts
-        deleted:    redux-typescript-crud/src-All-In-One/index copy.css
-        deleted:    redux-typescript-crud/src-All-In-One/index.css
-        deleted:    redux-typescript-crud/src-All-In-One/main.tsx
+        modified:   my-react-app/src-REDUX-Toolkit-neondb/App.jsx
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/REACT-REDUX-DEV-TOOLS-EXTENSIONS-FOR-CHROME.png
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/slice-name.png
+        new file:   my-react-app/src-REDUX-Toolkit-neondb/SCREENS/store-name.png
+        modified:   my-react-app/src-REDUX-Toolkit-neondb/features/counter/counterSlice.js
+        modified:   my-react-app/src-REDUX-Toolkit-neondb/store.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "28-09-2026"
-[main e04fe96] 28-09-2026
- 13 files changed, 127 insertions(+), 1518 deletions(-)
- delete mode 100644 redux-typescript-crud/src-All-In-One/App copy.tsx
- delete mode 100644 redux-typescript-crud/src-All-In-One/App.css
- delete mode 100644 redux-typescript-crud/src-All-In-One/App.tsx
- delete mode 100644 redux-typescript-crud/src-All-In-One/app/hooks.ts
- delete mode 100644 redux-typescript-crud/src-All-In-One/app/store.ts
- delete mode 100644 redux-typescript-crud/src-All-In-One/assets/hero.png
- delete mode 100644 redux-typescript-crud/src-All-In-One/assets/react.svg
- delete mode 100644 redux-typescript-crud/src-All-In-One/assets/vite.svg
- delete mode 100644 redux-typescript-crud/src-All-In-One/features/users/usersSlice.ts
- delete mode 100644 redux-typescript-crud/src-All-In-One/index copy.css
- delete mode 100644 redux-typescript-crud/src-All-In-One/index.css
- delete mode 100644 redux-typescript-crud/src-All-In-One/main.tsx
-
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "redux"
+[main dde421d] redux
+ 7 files changed, 47 insertions(+), 133 deletions(-)
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/REACT-REDUX-DEV-TOOLS-EXTENSIONS-FOR-CHROME.png
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/slice-name.png
+ create mode 100644 my-react-app/src-REDUX-Toolkit-neondb/SCREENS/store-name.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 7, done.
-Counting objects: 100% (7/7), done.
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 1.51 KiB | 515.00 KiB/s, done.
-Total 4 (delta 3), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 1.30 MiB | 894.00 KiB/s, done.
+Total 13 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   f4205f8..e04fe96  main -> main
+   e04fe96..dde421d  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
