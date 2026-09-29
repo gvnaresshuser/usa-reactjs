@@ -87,6 +87,7 @@ function App() {
   // ========================================
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  
     e.preventDefault();
 
     if (!form.name.trim() || !form.email.trim()) {

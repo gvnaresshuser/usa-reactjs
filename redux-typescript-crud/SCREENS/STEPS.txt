@@ -211,3 +211,15 @@ components/
 App.tsx
     ↓
     Connect everything together
+
+
+--------------------------------------------------------------
+    1. .env
+
+Create .env in the project root:
+
+VITE_API_URL=http://localhost:5000/api/users
+2. Read it in React/TypeScript
+const API_URL = import.meta.env.VITE_API_URL;
+
+console.log(API_URL);

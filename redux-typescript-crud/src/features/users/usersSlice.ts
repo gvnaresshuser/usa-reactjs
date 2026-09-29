@@ -5,7 +5,12 @@ import {
 
 import type { User } from "../../types/user.types";
 
-const API_URL = "http://localhost:5000/api/users";
+//const API_URL = "http://localhost:5000/api/users";
+//----------------------------------------------
+//READ FROM ENVIRONMENT VARIABLES
+const API_URL = import.meta.env.VITE_API_URL;
+console.log("API_URL : "+API_URL);
+//----------------------------------------------
 
 interface UsersState {
   users: User[];
