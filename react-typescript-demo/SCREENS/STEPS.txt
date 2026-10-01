@@ -1,0 +1,24 @@
+TAILINWIND CSS INSTALLATION:
+----------------------------
+https://tailwindcss.com/docs/installation/using-vite
+
+npm install tailwindcss @tailwindcss/vite
+
+vite.config.ts
+
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+index.CSS
+@import "tailwindcss";
+
+TESTING
+
+<h1 className="text-3xl font-bold underline">
+    Hello world!
+  </h1>
