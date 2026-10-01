@@ -107,33 +107,6 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'react-typescript-demo/.gitignore', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/README.md', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/eslint.config.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/public/icons.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src-Installation/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src-Installation/App.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src-Installation/assets/vite.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src-Installation/index.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src-Installation/main.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-1-datatypes.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-2-Interfaces.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-3-useState.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-4-All-DataTypes-UsersList.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-4-ReactNode.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-Original.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/assets/vite.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/index copy.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/main.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/tsconfig.app.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/tsconfig.node.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/vite.config.ts', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -142,100 +115,24 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   react-typescript-demo/.gitignore
-        new file:   react-typescript-demo/README.md
-        new file:   react-typescript-demo/SCREENS/Data Types.png
-        new file:   react-typescript-demo/SCREENS/FILES AND FOLDERS.png
-        new file:   "react-typescript-demo/SCREENS/React JS + TypeScript Project \342\200\224 Beginner Guide.png"
-        new file:   react-typescript-demo/SCREENS/STEPS.txt
-        new file:   react-typescript-demo/eslint.config.js
-        new file:   react-typescript-demo/index.html
-        new file:   react-typescript-demo/package-lock.json
-        new file:   react-typescript-demo/package.json
-        new file:   react-typescript-demo/public/favicon.svg
-        new file:   react-typescript-demo/public/icons.svg
-        new file:   react-typescript-demo/src-Installation/App.css
-        new file:   react-typescript-demo/src-Installation/App.tsx
-        new file:   react-typescript-demo/src-Installation/assets/hero.png
-        new file:   react-typescript-demo/src-Installation/assets/react.svg
-        new file:   react-typescript-demo/src-Installation/assets/vite.svg
-        new file:   react-typescript-demo/src-Installation/index.css
-        new file:   react-typescript-demo/src-Installation/main.tsx
-        new file:   react-typescript-demo/src/App-1-datatypes.tsx
-        new file:   react-typescript-demo/src/App-2-Interfaces.tsx
-        new file:   react-typescript-demo/src/App-3-useState.tsx
-        new file:   react-typescript-demo/src/App-4-All-DataTypes-UsersList.tsx
-        new file:   react-typescript-demo/src/App-4-ReactNode.tsx
-        new file:   react-typescript-demo/src/App-Original.tsx
-        new file:   react-typescript-demo/src/App.css
-        new file:   react-typescript-demo/src/App.tsx
-        new file:   react-typescript-demo/src/Counter.tsx
-        new file:   react-typescript-demo/src/StudentCard.tsx
-        new file:   react-typescript-demo/src/assets/hero.png
-        new file:   react-typescript-demo/src/assets/react.svg
-        new file:   react-typescript-demo/src/assets/vite.svg
-        new file:   react-typescript-demo/src/index copy.css
-        new file:   react-typescript-demo/src/index.css
-        new file:   react-typescript-demo/src/main.tsx
-        new file:   react-typescript-demo/tsconfig.app.json
-        new file:   react-typescript-demo/tsconfig.json
-        new file:   react-typescript-demo/tsconfig.node.json
-        new file:   react-typescript-demo/vite.config.ts
+        new file:   react-typescript-demo/SCREENS/VS-CODE-EXTENSIONS-FOR-TYPESCRIPT-PROJECTS.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "TYPESCRIPT - INTRODUCTION 01-10-2026"
-[main 038aab7] TYPESCRIPT - INTRODUCTION 01-10-2026
- 40 files changed, 6177 insertions(+), 29 deletions(-)
- create mode 100644 react-typescript-demo/.gitignore
- create mode 100644 react-typescript-demo/README.md
- create mode 100644 react-typescript-demo/SCREENS/Data Types.png
- create mode 100644 react-typescript-demo/SCREENS/FILES AND FOLDERS.png
- create mode 100644 "react-typescript-demo/SCREENS/React JS + TypeScript Project \342\200\224 Beginner Guide.png"
- create mode 100644 react-typescript-demo/SCREENS/STEPS.txt
- create mode 100644 react-typescript-demo/eslint.config.js
- create mode 100644 react-typescript-demo/index.html
- create mode 100644 react-typescript-demo/package-lock.json
- create mode 100644 react-typescript-demo/package.json
- create mode 100644 react-typescript-demo/public/favicon.svg
- create mode 100644 react-typescript-demo/public/icons.svg
- create mode 100644 react-typescript-demo/src-Installation/App.css
- create mode 100644 react-typescript-demo/src-Installation/App.tsx
- create mode 100644 react-typescript-demo/src-Installation/assets/hero.png
- create mode 100644 react-typescript-demo/src-Installation/assets/react.svg
- create mode 100644 react-typescript-demo/src-Installation/assets/vite.svg
- create mode 100644 react-typescript-demo/src-Installation/index.css
- create mode 100644 react-typescript-demo/src-Installation/main.tsx
- create mode 100644 react-typescript-demo/src/App-1-datatypes.tsx
- create mode 100644 react-typescript-demo/src/App-2-Interfaces.tsx
- create mode 100644 react-typescript-demo/src/App-3-useState.tsx
- create mode 100644 react-typescript-demo/src/App-4-All-DataTypes-UsersList.tsx
- create mode 100644 react-typescript-demo/src/App-4-ReactNode.tsx
- create mode 100644 react-typescript-demo/src/App-Original.tsx
- create mode 100644 react-typescript-demo/src/App.css
- create mode 100644 react-typescript-demo/src/App.tsx
- create mode 100644 react-typescript-demo/src/Counter.tsx
- create mode 100644 react-typescript-demo/src/StudentCard.tsx
- create mode 100644 react-typescript-demo/src/assets/hero.png
- create mode 100644 react-typescript-demo/src/assets/react.svg
- create mode 100644 react-typescript-demo/src/assets/vite.svg
- create mode 100644 react-typescript-demo/src/index copy.css
- create mode 100644 react-typescript-demo/src/index.css
- create mode 100644 react-typescript-demo/src/main.tsx
- create mode 100644 react-typescript-demo/tsconfig.app.json
- create mode 100644 react-typescript-demo/tsconfig.json
- create mode 100644 react-typescript-demo/tsconfig.node.json
- create mode 100644 react-typescript-demo/vite.config.ts
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "01-10-2026"
+[main 2d0fb6e] 01-10-2026
+ 2 files changed, 117 insertions(+), 92 deletions(-)
+ create mode 100644 react-typescript-demo/SCREENS/VS-CODE-EXTENSIONS-FOR-TYPESCRIPT-PROJECTS.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 43, done.
-Counting objects: 100% (43/43), done.
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (40/40), done.
-Writing objects: 100% (41/41), 5.72 MiB | 1.08 MiB/s, done.
-Total 41 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 616.66 KiB | 16.67 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   c305378..038aab7  main -> main
+   038aab7..2d0fb6e  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
