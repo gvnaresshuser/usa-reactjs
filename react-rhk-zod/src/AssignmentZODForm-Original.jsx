@@ -4,6 +4,17 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import "./Styles.css";
 
+//-------------------------------------------------------
+//INSTALL -> react-hook-form, @hookform/resolvers and zod
+//-------------------------------------------------------
+//https://react-hook-form.com/
+//https://react-hook-form.com/docs/useform/formstate
+//npm install react-hook-form
+//npm install @hookform/resolvers
+
+//https://zod.dev/basics
+//npm install zod
+
 // --------------------------------------
 // ZOD SCHEMA
 // --------------------------------------
@@ -42,7 +53,7 @@ const schema = z
     ),
 
     // Department
-    department: z.enum(["HR", "FINANCE", "SALES", "IT"], {
+    department: z.enum(["HR", "FINANCE", "SALES", "IT", "XX"], {
       errorMap: () => ({
         message: "Please select a valid department",
       }),
@@ -156,7 +167,7 @@ export default function AssignmentZODForm() {
   // --------------------------------------
 
   const fillDummyData = () => {
-    setValue("username", "Murali", { shouldValidate: true });
+    setValue("username", "Max", { shouldValidate: true });
     setValue("age", "28", { shouldValidate: true });
     setValue("salary", "25000", { shouldValidate: true });
     setValue("department", "IT", { shouldValidate: true });
@@ -520,3 +531,58 @@ export default function AssignmentZODForm() {
     </div>
   );
 }
+/*
+
+.regex(/^[A-Za-z]+$/
+
+| Part 			  | Meaning 
+|-----------	|---------
+| `/ ... /` 	| Start/end of regex 
+| `^` 			  | Start of the string 
+| `[A-Za-z]` 	| Any letter from A–Z or a–z 
+| `+` 			  | One or more characters 
+| `$` 			  | End of the string 
+*/
+/*
+With shouldValidate: true
+setValue("username", "Murali", {
+  shouldValidate: true
+});
+
+means:
+Set value
+   ↓
+Run validation
+   ↓
+Update errors
+   ↓
+Update form validity
+
+So if "Murali" satisfies your Zod rules:
+z.string()
+  .min(3)
+  .regex(/^[A-Za-z]+$/)
+
+the validation error for username will be cleared.
+-----------------------------------------------------
+Fill Dummy Data
+      ↓
+Values are changed
+      ↓
+But validation is not explicitly triggered by setValue()
+      ↓
+errors / isValid may not immediately reflect those new values
+
+With:
+{ shouldValidate: true }
+
+you are saying:
+"Set this value and immediately validate it."
+
+One important distinction
+Your form also has:
+mode: "onChange"
+
+   Pasted markdown
+That controls validation when the user changes form fields through normal interaction.
+*/

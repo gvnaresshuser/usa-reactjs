@@ -103,8 +103,17 @@ E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 LATEST COMMIT
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'react-typescript-demo/src/App-1-datatypes.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/src/App-2-Interfaces.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/src/App-4-All-DataTypes-UsersList.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/tsconfig.app.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/tsconfig.node.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/src/App-5-EventTypes.tsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -113,23 +122,37 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   react-typescript-demo/SCREENS/FILES AND FOLDERS.png
+        new file:   react-typescript-demo/SCREENS/React Event Types.png
+        new file:   react-typescript-demo/SCREENS/crossorigin and CORS.txt
+        new file:   react-typescript-demo/SCREENS/npm-run-build-COMMAND.png
+        modified:   react-typescript-demo/src/App-1-datatypes.tsx
+        modified:   react-typescript-demo/src/App-2-Interfaces.tsx
+        modified:   react-typescript-demo/src/App-4-All-DataTypes-UsersList.tsx
+        new file:   react-typescript-demo/src/App-5-EventTypes.tsx
+        modified:   react-typescript-demo/src/App.tsx
+        modified:   react-typescript-demo/src/Counter.tsx
+        modified:   react-typescript-demo/tsconfig.app.json
+        modified:   react-typescript-demo/tsconfig.node.json
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "01-10-2026 again"
-[main 177053e] 01-10-2026 again
- 2 files changed, 14 insertions(+), 117 deletions(-)
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "Typescript related"
+[main a792bb9] Typescript related
+ 12 files changed, 1270 insertions(+), 160 deletions(-)
+ create mode 100644 react-typescript-demo/SCREENS/React Event Types.png
+ create mode 100644 react-typescript-demo/SCREENS/crossorigin and CORS.txt
+ create mode 100644 react-typescript-demo/SCREENS/npm-run-build-COMMAND.png
+ create mode 100644 react-typescript-demo/src/App-5-EventTypes.tsx
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 11, done.
-Counting objects: 100% (11/11), done.
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 2.27 MiB | 845.00 KiB/s, done.
-Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (16/16), 1.30 MiB | 581.00 KiB/s, done.
+Total 16 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 11 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   2d0fb6e..177053e  main -> main
+   177053e..a792bb9  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
