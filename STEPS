@@ -103,8 +103,6 @@ E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 LATEST COMMIT
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Microsoft Windows [Version 10.0.26100.8246]
-(c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
 
@@ -115,24 +113,23 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   react-typescript-demo/SCREENS/VS-CODE-EXTENSIONS-FOR-TYPESCRIPT-PROJECTS.png
+        modified:   react-typescript-demo/SCREENS/FILES AND FOLDERS.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "01-10-2026"
-[main 2d0fb6e] 01-10-2026
- 2 files changed, 117 insertions(+), 92 deletions(-)
- create mode 100644 react-typescript-demo/SCREENS/VS-CODE-EXTENSIONS-FOR-TYPESCRIPT-PROJECTS.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "01-10-2026 again"
+[main 177053e] 01-10-2026 again
+ 2 files changed, 14 insertions(+), 117 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 10, done.
-Counting objects: 100% (10/10), done.
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (6/6), done.
-Writing objects: 100% (6/6), 616.66 KiB | 16.67 MiB/s, done.
+Writing objects: 100% (6/6), 2.27 MiB | 845.00 KiB/s, done.
 Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   038aab7..2d0fb6e  main -> main
+   2d0fb6e..177053e  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -1,0 +1,179 @@
+crossorigin and CORS are related, but they are not the same thing
+
+---------------------------------------------------------------------------------------
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>react-typescript-demo</title>
+    <script type="module" crossorigin src="/assets/index-B_tezffO.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Bx7harcF.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+---------------------------------------------------------------------------------------
+
+ 1. The server sends a CORS header
+
+For example, suppose your React app is running at:
+
+```text
+http://localhost:5173
+```
+
+and your backend is running at:
+
+```text
+http://localhost:5000
+```
+
+These are different origins because the ports are different.
+
+Your React app sends:
+
+```http
+GET http://localhost:5000/api/users
+Origin: http://localhost:5173
+```
+
+The backend can respond with:
+
+```http
+Access-Control-Allow-Origin: http://localhost:5173
+```
+
+That is one of the main CORS rules.
+
+---
+
+ 2. In Express, you usually configure it like this
+
+```bash
+npm install cors
+```
+
+Then:
+
+```ts
+import cors from "cors";
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
+```
+
+This causes the backend to send something like:
+
+```http
+Access-Control-Allow-Origin: http://localhost:5173
+```
+
+to the browser.
+
+---
+
+ 3. You can actually see it in Chrome
+
+Open:
+
+Chrome → F12 → Network → make your API request → Headers
+
+You may see:
+
+```text
+Request Headers
+
+Origin: http://localhost:5173
+```
+
+and under the response:
+
+```text
+Response Headers
+
+Access-Control-Allow-Origin: http://localhost:5173
+```
+
+So the flow is basically:
+
+```text
+React
+localhost:5173
+      │
+      │ Origin: localhost:5173
+      ▼
+Backend
+localhost:5000
+      │
+      │ Access-Control-Allow-Origin:
+      │ localhost:5173
+      ▼
+Browser
+```
+
+ 4. There are several CORS headers
+
+You may eventually see headers such as:
+
+```http
+Access-Control-Allow-Origin: http://localhost:5173
+Access-Control-Allow-Methods: GET, POST, PUT, DELETE
+Access-Control-Allow-Headers: Content-Type, Authorization
+Access-Control-Allow-Credentials: true
+```
+
+For a preflight request, the browser may first send:
+
+```http
+OPTIONS /api/users
+
+Origin: http://localhost:5173
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: Content-Type
+```
+
+The server can answer:
+
+```http
+Access-Control-Allow-Origin: http://localhost:5173
+Access-Control-Allow-Methods: POST
+Access-Control-Allow-Headers: Content-Type
+```
+
+The browser then knows whether it is permitted to make the actual request.
+
+ The important distinction
+
+Think of it this way:
+
+```text
+crossorigin
+     ↓
+Browser instruction
+"Handle this resource using CORS rules"
+
+CORS headers
+     ↓
+Server response
+"These origins/methods/headers are allowed"
+```
+
+So `crossorigin` and CORS are related, but they are not the same thing.
+-------------------------------------
+React App
+http://localhost:5173
+       │
+       │ Origin: http://localhost:5173
+       ▼
+     Server
+       │
+       │ Access-Control-Allow-Origin: *
+       ▼
+    Browser
+

@@ -8,6 +8,11 @@
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
 
+    /* Strict Type Checking */
+    /*This is a TypeScript compiler option. 
+    It tells TypeScript to enable a group of strict type-checking rules.*/
+    "strict": true,
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

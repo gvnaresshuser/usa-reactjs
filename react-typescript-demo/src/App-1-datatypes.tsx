@@ -20,7 +20,31 @@ interface Student {
 
 type Status = "Active" | "Inactive" | "Pending";
 
-type ButtonVariant = "primary" | "secondary" | "success";
+type ButtonVariant = "primary" | "secondary" | "success" | "danger";
+
+interface ButtonProps {
+  label: string;
+  variant: ButtonVariant;
+  onClick: () => void;
+}
+
+function Button({ label, variant, onClick }: ButtonProps) {
+  const styles: Record<ButtonVariant, string> = {
+    primary: "bg-indigo-600 hover:bg-indigo-700",
+    secondary: "bg-slate-600 hover:bg-slate-700",
+    success: "bg-emerald-600 hover:bg-emerald-700",
+    danger: "bg-red-600 hover:bg-red-700",
+  };
+
+  return (
+    <button
+      onClick={onClick}
+      className={`rounded-lg px-6 py-3 font-semibold text-white transition ${styles[variant]}`}
+    >
+      {label}
+    </button>
+  );
+}
 
 // --------------------------------------------------
 // 3. FUNCTION TYPE
@@ -92,6 +116,7 @@ function App() {
     isActive: true,
     skills: ["React", "TypeScript"],
     // address is optional
+    //address: "123 Main St, Anytown, USA",
   };
 
   // ------------------------------------------------
@@ -322,6 +347,12 @@ function App() {
               >
                 Say Hello
               </button>
+
+              <Button
+                label="Say Hai"
+                variant="success"
+                onClick={handleSubmit}
+              />
             </div>
 
             {name && (
@@ -347,3 +378,50 @@ function App() {
 }
 
 export default App;
+/*
+{student.address ?? "Address not provided"}
+Use student.address if it has a value; otherwise use "Address not provided" 
+when the value is null or undefined.
+*/
+/*
+What does ReactNode mean?
+Think of ReactNode as:
+"Anything that React can render."
+
+const a: ReactNode = "Hello";
+const b: ReactNode = 100;
+const c: ReactNode = <h1>Hello</h1>;
+const d: ReactNode = <button>Click Me</button>;
+const e: ReactNode = null;
+
+ReactNode is significant because it tells TypeScript that a variable can hold 
+something that React can render.
+
+Why would we use it?
+It becomes especially useful when creating reusable React components.
+
+interface CardProps {
+  title: string;
+  children: ReactNode;
+}
+
+   Pasted markdown
+This means:
+title must be a string, but children can be any valid React content.
+
+So all of these are valid:
+<Card title="Student">
+  <p>Rahul</p>
+</Card>
+
+<Card title="Message">
+  <strong>Hello!</strong>
+</Card>
+
+<Card title="Information">
+  <div>
+    <h3>React</h3>
+    <p>TypeScript</p>
+  </div>
+</Card>
+*/

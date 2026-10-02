@@ -8,12 +8,12 @@ function Counter() {
   const count: number = "10";
  */
   const increment = (): void => {
-    setCount(count + 1);
+    setCount((count)=> count + 1);
     //setCount("Hello"); //Argument of type 'string' is not assignable to parameter of type 'SetStateAction<number>'.
   };
 
   const decrement = (): void => {
-    setCount(count - 1);
+    setCount((count)=> count - 1);
   };
 
   const reset = (): void => {

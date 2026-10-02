@@ -10,7 +10,7 @@ interface User {
   name: string;
   email: string;
   age: number;
-  isActive: boolean;
+  status: Status;
   skills: string[];
   phone?: string; // Optional property
 }
@@ -33,7 +33,7 @@ const users: User[] = [
     name: "Naresh",
     email: "naresh@example.com",
     age: 30,
-    isActive: true,
+    status: "Inactive",
     skills: ["React", "TypeScript", "JavaScript"],
     phone: "9876543210",
   },
@@ -42,7 +42,7 @@ const users: User[] = [
     name: "Ravi",
     email: "ravi@example.com",
     age: 28,
-    isActive: false,
+    status: "Inactive",
     skills: ["Node.js", "Express", "PostgreSQL"],
   },
 ];
@@ -54,7 +54,7 @@ const users: User[] = [
 type UserFilter = (user: User) => boolean;
 
 const isActiveUser: UserFilter = (user) => {
-  return user.isActive;
+  return user.status === "Active";
 };
 
 /* ---------------------------------
@@ -154,12 +154,12 @@ function App() {
                 <strong>Status:</strong>{" "}
                 <span
                   className={
-                    user.isActive
+                    user.status === "Active"
                       ? "font-semibold text-green-600"
                       : "font-semibold text-red-600"
                   }
                 >
-                  {user.isActive ? "Active" : "Inactive"}
+                  {user.status}
                 </span>
               </p>
 
@@ -317,4 +317,8 @@ Function Type
 Event Type
    ↓
 ReactNode
+*/
+/*
+crossorigin tells the browser to handle a resource using cross-origin/CORS rules 
+when the resource comes from a different origin.
 */

@@ -1,200 +1,324 @@
-import type { ReactNode } from "react";
+import { useState } from "react";
+import type { ChangeEvent, MouseEvent, ReactNode } from "react";
+
+/* ---------------------------------
+   1. Interface
+---------------------------------- */
+
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  age: number;
+  status: Status;
+  skills: string[];
+  phone?: string; // Optional property
+}
+
+/* ---------------------------------
+   2. Type
+---------------------------------- */
+
+type UserRole = "Admin" | "Trainer" | "Student";
+
+type Status = "Active" | "Inactive";
+
+/* ---------------------------------
+   3. Object + Interface
+---------------------------------- */
+
+const users: User[] = [
+  {
+    id: 1,
+    name: "Naresh",
+    email: "naresh@example.com",
+    age: 30,
+    status: "Inactive",
+    skills: ["React", "TypeScript", "JavaScript"],
+    phone: "9876543210",
+  },
+  {
+    id: 2,
+    name: "Ravi",
+    email: "ravi@example.com",
+    age: 28,
+    status: "Inactive",
+    skills: ["Node.js", "Express", "PostgreSQL"],
+  },
+];
+
+/* ---------------------------------
+   4. Function Type
+---------------------------------- */
+
+type UserFilter = (user: User) => boolean;
+
+const isActiveUser: UserFilter = (user) => {
+  return user.status === "Active";
+};
+
+/* ---------------------------------
+   5. ReactNode
+---------------------------------- */
 
 interface CardProps {
   title: string;
-  icon: ReactNode;
   children: ReactNode;
 }
 
-function Card({ title, icon, children }: CardProps) {
+function Card({ title, children }: CardProps) {
   return (
-    <div className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl">
-      {/* Card Header */}
-      <div className="flex items-center gap-4 border-b border-slate-100 bg-gradient-to-r from-slate-50 to-white px-6 py-5">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-100 text-2xl text-indigo-600">
-          {icon}
-        </div>
+    <div className="rounded-2xl bg-white p-6 shadow-xl">
+      <h2 className="mb-4 text-xl font-bold text-slate-800">{title}</h2>
 
-        <h2 className="text-xl font-bold text-slate-800">{title}</h2>
-      </div>
-
-      {/* Card Content */}
-      <div className="p-6">{children}</div>
+      {children}
     </div>
   );
 }
 
+/* ---------------------------------
+   6. Main Component
+---------------------------------- */
+
 function App() {
+  /* ---------------------------------
+     Union Type
+  ---------------------------------- */
+
+  const [selectedRole, setSelectedRole] = useState<UserRole>("Student");
+
+  /* ---------------------------------
+     Event Type
+  ---------------------------------- */
+
+  const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
+    console.log(event.target.value);
+  };
+
+  /* ---------------------------------
+     Mouse Event Type
+  ---------------------------------- */
+
+  const handleButtonClick = (event: MouseEvent<HTMLButtonElement>): void => {
+    console.log("Button clicked");
+    console.log(event.currentTarget);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-900 px-6 py-12">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-400/10 px-4 py-2 text-sm font-medium text-indigo-300">
-            <span>⚛️</span>
-            React + TypeScript
+
+        <div className="mb-10 text-center">
+          <div className="mb-4 inline-flex rounded-full border border-indigo-400/30 bg-indigo-400/10 px-4 py-2 text-sm font-medium text-indigo-300">
+            Exercise 03 • React + TypeScript
           </div>
 
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            Understanding ReactNode
-          </h1>
+          <h1 className="text-4xl font-extrabold text-white">User List</h1>
 
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-400">
-            A reusable Card component that accepts different types of React
-            content through the{" "}
-            <code className="text-indigo-300">children</code> prop.
+          <p className="mt-3 text-slate-400">
+            TypeScript types, interfaces, unions, functions, events and
+            ReactNode
           </p>
         </div>
 
-        {/* ReactNode Explanation */}
-        <div className="mb-8 rounded-3xl border border-indigo-400/20 bg-indigo-500/10 p-6">
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/20 text-3xl">
-              🧩
-            </div>
+        {/* Search */}
 
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-indigo-300">
-                ReactNode
+        <Card title="Search Users">
+          <input
+            type="text"
+            placeholder="Search users..."
+            onChange={handleSearch}
+            className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-indigo-500"
+          />
+        </Card>
+
+        {/* Users */}
+
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {users.map((user) => (
+            <Card key={user.id} title={user.name}>
+              {/* String */}
+
+              <p className="text-slate-500">{user.email}</p>
+
+              {/* Number */}
+
+              <p className="mt-3 text-slate-700">
+                <strong>Age:</strong> {user.age}
               </p>
 
-              <p className="mt-1 text-lg font-semibold text-white">
-                Anything that React can render can be passed as children.
-              </p>
+              {/* Boolean + Union */}
 
-              <code className="mt-2 block text-sm text-indigo-300">
-                children: ReactNode;
-              </code>
-            </div>
-          </div>
-        </div>
-
-        {/* Cards */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {/* Card 1 */}
-          <Card title="Student Information" icon="👨‍🎓">
-            <div className="space-y-4">
-              <div className="rounded-2xl bg-slate-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                  Name
-                </p>
-
-                <p className="mt-1 text-lg font-bold text-slate-800">Naresh</p>
-              </div>
-
-              <div className="rounded-2xl bg-slate-50 p-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                  Course
-                </p>
-
-                <p className="mt-1 text-lg font-bold text-slate-800">
-                  React + TypeScript
-                </p>
-              </div>
-            </div>
-          </Card>
-
-          {/* Card 2 */}
-          <Card title="Skills" icon="🚀">
-            <div className="flex flex-wrap gap-3">
-              <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
-                React
-              </span>
-
-              <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700">
-                TypeScript
-              </span>
-
-              <span className="rounded-full bg-yellow-100 px-4 py-2 text-sm font-semibold text-yellow-700">
-                JavaScript
-              </span>
-
-              <span className="rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
-                Vite
-              </span>
-            </div>
-          </Card>
-
-          {/* Card 3 */}
-          <Card title="Message" icon="💬">
-            <div className="rounded-2xl bg-gradient-to-r from-indigo-50 to-purple-50 p-5">
-              <p className="mb-4 text-slate-600">
-                Welcome to the world of
-                <span className="font-bold text-indigo-600">
-                  {" "}
-                  React + TypeScript!
+              <p className="mt-2">
+                <strong>Status:</strong>{" "}
+                <span
+                  className={
+                    user.status === "Active"
+                      ? "font-semibold text-green-600"
+                      : "font-semibold text-red-600"
+                  }
+                >
+                  {user.status}
                 </span>
               </p>
 
-              <button className="rounded-xl bg-indigo-600 px-5 py-3 font-semibold text-white shadow-md transition hover:bg-indigo-700 hover:shadow-lg active:scale-95"
-                onClick={()=> alert("Let's start learning React + TypeScript!")}>
-                Start Learning 🚀
-              </button>
-            </div>
-          </Card>
+              {/* Array */}
 
-          {/* Card 4 */}
-          <Card title="ReactNode Demo" icon="🧩">
-            <div className="space-y-4">
-              <div className="rounded-xl border border-dashed border-indigo-300 bg-indigo-50 p-4">
-                <p className="text-sm text-slate-500">ReactNode can contain:</p>
+              <div className="mt-4">
+                <p className="mb-2 font-semibold text-slate-700">Skills</p>
 
-                <div className="mt-3 space-y-2 text-sm font-medium text-slate-700">
-                  <p>✅ Text</p>
-                  <p>✅ JSX Elements</p>
-                  <p>✅ Components</p>
-                  <p>✅ Lists</p>
-                  <p>✅ Buttons</p>
+                <div className="flex flex-wrap gap-2">
+                  {user.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-full bg-indigo-100 px-3 py-1 text-sm text-indigo-700"
+                    >
+                      {skill}
+                    </span>
+                  ))}
                 </div>
               </div>
 
-              <code className="block rounded-xl bg-slate-900 p-4 text-sm text-indigo-300">
-                children: ReactNode;
-              </code>
+              {/* Optional Property */}
+
+              {user.phone && (
+                <p className="mt-4 text-slate-600">
+                  <strong>Phone:</strong> {user.phone}
+                </p>
+              )}
+            </Card>
+          ))}
+        </div>
+
+        {/* Union Type Demo */}
+
+        <div className="mt-8">
+          <Card title="Union Type">
+            <p className="mb-4 text-slate-600">
+              Selected Role:
+              <strong className="ml-2 text-indigo-600">{selectedRole}</strong>
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <button
+                onClick={() => setSelectedRole("Admin")}
+                className="rounded-lg bg-red-500 px-4 py-2 font-semibold text-white"
+              >
+                Admin
+              </button>
+
+              <button
+                onClick={() => setSelectedRole("Trainer")}
+                className="rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white"
+              >
+                Trainer
+              </button>
+
+              <button
+                onClick={() => setSelectedRole("Student")}
+                className="rounded-lg bg-green-500 px-4 py-2 font-semibold text-white"
+              >
+                Student
+              </button>
             </div>
           </Card>
         </div>
 
-        {/* Flow */}
-        <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-8">
-          <h2 className="text-center text-xl font-bold text-white">
-            How ReactNode Works
-          </h2>
+        {/* Function Type */}
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 text-center md:flex-row">
-            <div className="rounded-2xl bg-white/10 px-6 py-4">
-              <p className="text-sm text-slate-400">Card Component</p>
+        <div className="mt-8">
+          <Card title="Function Type">
+            <p className="text-slate-600">
+              Active Users:
+              <strong className="ml-2 text-indigo-600">
+                {users.filter(isActiveUser).length}
+              </strong>
+            </p>
 
-              <code className="mt-1 block text-indigo-300">
-                children: ReactNode
-              </code>
-            </div>
-
-            <div className="text-2xl text-indigo-400">→</div>
-
-            <div className="rounded-2xl bg-white/10 px-6 py-4">
-              <p className="text-sm text-slate-400">Different Content</p>
-
-              <p className="mt-1 text-white">JSX • Text • Button • List</p>
-            </div>
-
-            <div className="text-2xl text-indigo-400">→</div>
-
-            <div className="rounded-2xl bg-white/10 px-6 py-4">
-              <p className="text-sm text-slate-400">React Renders</p>
-
-              <p className="mt-1 font-semibold text-green-400">Beautiful UI</p>
-            </div>
-          </div>
+            <button
+              onClick={handleButtonClick}
+              className="mt-4 rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white hover:bg-indigo-700"
+            >
+              Click Me
+            </button>
+          </Card>
         </div>
 
-        {/* Footer */}
-        <p className="mt-10 text-center text-sm text-slate-500">
-          React + TypeScript • ReactNode • children • Reusable Components
-        </p>
+        {/* Concepts */}
+
+        <div className="mt-8">
+          <Card title="TypeScript Concepts Covered">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              <p>🔤 string</p>
+
+              <p>🔢 number</p>
+
+              <p>✅ boolean</p>
+
+              <p>📋 array</p>
+
+              <p>📦 object</p>
+
+              <p>🧩 interface</p>
+
+              <p>🏷️ type</p>
+
+              <p>🔀 union</p>
+
+              <p>❓ optional property</p>
+
+              <p>⚙️ function type</p>
+
+              <p>🖱️ event type</p>
+
+              <p>⚛️ ReactNode</p>
+            </div>
+          </Card>
+        </div>
       </div>
     </div>
   );
 }
 
 export default App;
+/*
+| Concept | Where we demonstrate it |
+|---|---|
+| `string` | `name`, `email` |
+| `number` | `id`, `age` |
+| `boolean` | `isActive` |
+| Array | `skills: string[]` |
+| Object | Each user object |
+| Interface | `interface User` |
+| Type | `type UserRole` |
+| Union | `"Admin" \| "Trainer" \| "Student"` |
+| Optional property | `phone?: string` |
+| Function type | `type UserFilter = (...) => boolean` |
+| Event type | `ChangeEvent`, `MouseEvent` |
+| ReactNode | `children: ReactNode` |
+--------------------------------------------------------
+Basic Types
+   ↓
+string / number / boolean
+   ↓
+Arrays & Objects
+   ↓
+Interface
+   ↓
+Type
+   ↓
+Union
+   ↓
+Optional Property
+   ↓
+Function Type
+   ↓
+Event Type
+   ↓
+ReactNode
+*/
+/*
+crossorigin tells the browser to handle a resource using cross-origin/CORS rules 
+when the resource comes from a different origin.
+*/

@@ -5,7 +5,7 @@ function App() {
     name: "Naresh",
     age: 30, //"30" - error: Type 'string' is not assignable to type 'number'.
     course: "React + TypeScript",
-    experience: "Beginner",
+    experience: "Beginner", //experience: "Beginner", OR experience: 20, - gives error
   };
 
   return (
