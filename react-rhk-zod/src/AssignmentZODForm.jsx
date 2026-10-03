@@ -22,12 +22,15 @@ import "./Styles.css";
 const schema = z
   .object({
     // Username
+    //z.string() - The value must be a string.
     username: z
       .string()
       .min(3, "Username must be at least 3 characters")
       .regex(/^[A-Za-z]+$/, "Username must contain only alphabets"),
 
     // Age
+    //z.preprocess - Before validating the value, first transform/preprocess it
+    // into the form I want.
     age: z.preprocess(
       (val) => Number(val),
       z
@@ -40,6 +43,9 @@ const schema = z
     ),
 
     // Salary
+    //z.preprocess - Before validating the value, first transform/preprocess it
+    // into the form I want.
+    //z.refine - The value must pass a custom validation
     salary: z.preprocess(
       (val) => Number(val),
       z
@@ -53,7 +59,8 @@ const schema = z
     ),
 
     // Department
-    department: z.enum(["HR", "FINANCE", "SALES", "IT", "XX"], {
+    //z.enum - The value must be one of the specified choices.
+    department: z.enum(["HR", "FINANCE", "SALES", "IT"], {
       errorMap: () => ({
         message: "Please select a valid department",
       }),
@@ -81,7 +88,7 @@ const schema = z
     // --------------------------------------
     // CHECKBOXES
     // --------------------------------------
-
+    //z.array - The value must be an array.
     skills: z.array(z.string()).min(1, "Please select at least one skill"),
 
     // --------------------------------------
@@ -154,11 +161,8 @@ export default function AssignmentZODForm() {
 
   const onSubmit = (data) => {
     console.log("Submitted Data:", data);
-
     alert("Form submitted successfully! Check console.");
-
     setSubmittedData(data);
-
     reset();
   };
 
@@ -403,7 +407,7 @@ export default function AssignmentZODForm() {
           <input
             type="password"
             {...register("confirmPassword")}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 watchtriborder rounded"
             placeholder="Confirm password"
           />
 

@@ -107,13 +107,17 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'react-typescript-demo/src/App-1-datatypes.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-2-Interfaces.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-4-All-DataTypes-UsersList.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/tsconfig.app.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/tsconfig.node.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'react-typescript-demo/src/App-5-EventTypes.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/eslint.config.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/src/App copy.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/src/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/src/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-rhk-zod/vite.config.js', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -122,37 +126,112 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   react-typescript-demo/SCREENS/React Event Types.png
-        new file:   react-typescript-demo/SCREENS/crossorigin and CORS.txt
-        new file:   react-typescript-demo/SCREENS/npm-run-build-COMMAND.png
-        modified:   react-typescript-demo/src/App-1-datatypes.tsx
-        modified:   react-typescript-demo/src/App-2-Interfaces.tsx
-        modified:   react-typescript-demo/src/App-4-All-DataTypes-UsersList.tsx
-        new file:   react-typescript-demo/src/App-5-EventTypes.tsx
-        modified:   react-typescript-demo/src/App.tsx
-        modified:   react-typescript-demo/src/Counter.tsx
-        modified:   react-typescript-demo/tsconfig.app.json
-        modified:   react-typescript-demo/tsconfig.node.json
+        renamed:    react-zod-formik-app/.gitignore -> react-rhk-zod/.gitignore
+        renamed:    react-zod-formik-app/README.md -> react-rhk-zod/README.md
+        renamed:    react-zod-formik-app/SCREENS/1.Zod validation library.png -> react-rhk-zod/SCREENS/1.Zod validation library.png
+        renamed:    react-zod-formik-app/SCREENS/3.useForm and zodResolver.png -> react-rhk-zod/SCREENS/2.useForm and zodResolver.png
+        renamed:    react-zod-formik-app/SCREENS/Assignment (React Hook Form + Zod).png -> react-rhk-zod/SCREENS/Assignment (React Hook Form + Zod).png
+        renamed:    react-zod-formik-app/SCREENS/AssignmentZODForm-Pattern.png -> react-rhk-zod/SCREENS/AssignmentZODForm-Pattern.png
+        renamed:    react-zod-formik-app/SCREENS/Empty-Negative-Number Check.png -> react-rhk-zod/SCREENS/Empty-Negative-Number Check.png
+        new file:   react-rhk-zod/SCREENS/React form-validation example using React Hook Form + Zod.png
+        renamed:    react-zod-formik-app/SCREENS/STEPS.txt -> react-rhk-zod/SCREENS/STEPS.txt
+        renamed:    react-zod-formik-app/eslint.config.js -> react-rhk-zod/eslint.config.js
+        renamed:    react-zod-formik-app/index.html -> react-rhk-zod/index.html
+        renamed:    react-zod-formik-app/package-lock.json -> react-rhk-zod/package-lock.json
+        renamed:    react-zod-formik-app/package.json -> react-rhk-zod/package.json
+        renamed:    react-zod-formik-app/public/vite.svg -> react-rhk-zod/public/vite.svg
+        new file:   react-rhk-zod/react-rhk-zod.zip
+        renamed:    react-zod-formik-app/react-zod-app.zip -> react-rhk-zod/react-zod-app.zip
+        renamed:    react-zod-formik-app/src/App copy.jsx -> react-rhk-zod/src/App copy.jsx
+        renamed:    react-zod-formik-app/src/App.css -> react-rhk-zod/src/App.css
+        new file:   react-rhk-zod/src/App.jsx
+        new file:   react-rhk-zod/src/AssignmentZODForm-Beautified.jsx
+        new file:   react-rhk-zod/src/AssignmentZODForm-Original.jsx
+        renamed:    react-zod-formik-app/src/AssignmentZODForm.jsx -> react-rhk-zod/src/AssignmentZODForm.jsx
+        renamed:    react-zod-formik-app/src/Styles.css -> react-rhk-zod/src/Styles.css
+        renamed:    react-zod-formik-app/src/assets/react.svg -> react-rhk-zod/src/assets/react.svg
+        renamed:    react-zod-formik-app/src/index.css -> react-rhk-zod/src/index.css
+        renamed:    react-zod-formik-app/src/main.jsx -> react-rhk-zod/src/main.jsx
+        renamed:    react-zod-formik-app/vite.config.js -> react-rhk-zod/vite.config.js
+        deleted:    react-zod-formik-app/SCREENS/2.CODE-EXPLANATION-FormikFormDemo-jsx.png
+        deleted:    react-zod-formik-app/SCREENS/2.CODE-EXPLANATION-ProductForm-jsx.png
+        deleted:    react-zod-formik-app/SCREENS/2.CODE-EXPLANATION-SmallFormikDemo-jsx.png
+        deleted:    react-zod-formik-app/SCREENS/4.CODE-EXPLANATION-DemoForm-jsx.png
+        deleted:    react-zod-formik-app/SCREENS/5.CODE-EXPLANATION-DemoFormWithZOD-jsx.png
+        deleted:    react-zod-formik-app/SCREENS/DemoForm Vs DemoFormWithZOD.png
+        deleted:    react-zod-formik-app/SCREENS/React Hook Form - Formik + Yup.png
+        deleted:    react-zod-formik-app/src/App.jsx
+        deleted:    react-zod-formik-app/src/AssignmentZODForm copy.jsx
+        deleted:    react-zod-formik-app/src/DemoForm.jsx
+        deleted:    react-zod-formik-app/src/DemoFormWithZOD.jsx
+        deleted:    react-zod-formik-app/src/DemoFormWithZODPasswordsCrossFldVald.jsx
+        deleted:    react-zod-formik-app/src/FormikFormDemo-1.jsx
+        deleted:    react-zod-formik-app/src/FormikFormDemo-2.jsx
+        deleted:    react-zod-formik-app/src/FormikFormDemo.jsx
+        deleted:    react-zod-formik-app/src/ProductForm-Extra-Styling.jsx
+        deleted:    react-zod-formik-app/src/ProductForm-Normal.jsx
+        deleted:    react-zod-formik-app/src/ProductForm.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "Typescript related"
-[main a792bb9] Typescript related
- 12 files changed, 1270 insertions(+), 160 deletions(-)
- create mode 100644 react-typescript-demo/SCREENS/React Event Types.png
- create mode 100644 react-typescript-demo/SCREENS/crossorigin and CORS.txt
- create mode 100644 react-typescript-demo/SCREENS/npm-run-build-COMMAND.png
- create mode 100644 react-typescript-demo/src/App-5-EventTypes.tsx
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "RHK-ZOD 02-10-2026"
+[main e81b70e] RHK-ZOD 02-10-2026
+ 46 files changed, 1231 insertions(+), 2298 deletions(-)
+ rename {react-zod-formik-app => react-rhk-zod}/.gitignore (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/README.md (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/SCREENS/1.Zod validation library.png (100%)
+ rename react-zod-formik-app/SCREENS/3.useForm and zodResolver.png => react-rhk-zod/SCREENS/2.useForm and zodResolver.png (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/SCREENS/Assignment (React Hook Form + Zod).png (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/SCREENS/AssignmentZODForm-Pattern.png (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/SCREENS/Empty-Negative-Number Check.png (100%)
+ create mode 100644 react-rhk-zod/SCREENS/React form-validation example using React Hook Form + Zod.png
+ rename {react-zod-formik-app => react-rhk-zod}/SCREENS/STEPS.txt (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/eslint.config.js (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/index.html (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/package-lock.json (95%)
+ rename {react-zod-formik-app => react-rhk-zod}/package.json (94%)
+ rename {react-zod-formik-app => react-rhk-zod}/public/vite.svg (100%)
+ create mode 100644 react-rhk-zod/react-rhk-zod.zip
+ rename {react-zod-formik-app => react-rhk-zod}/react-zod-app.zip (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/src/App copy.jsx (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/src/App.css (100%)
+ create mode 100644 react-rhk-zod/src/App.jsx
+ create mode 100644 react-rhk-zod/src/AssignmentZODForm-Beautified.jsx
+ create mode 100644 react-rhk-zod/src/AssignmentZODForm-Original.jsx
+ rename {react-zod-formik-app => react-rhk-zod}/src/AssignmentZODForm.jsx (90%)
+ rename {react-zod-formik-app => react-rhk-zod}/src/Styles.css (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/src/assets/react.svg (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/src/index.css (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/src/main.jsx (100%)
+ rename {react-zod-formik-app => react-rhk-zod}/vite.config.js (100%)
+ delete mode 100644 react-zod-formik-app/SCREENS/2.CODE-EXPLANATION-FormikFormDemo-jsx.png
+ delete mode 100644 react-zod-formik-app/SCREENS/2.CODE-EXPLANATION-ProductForm-jsx.png
+ delete mode 100644 react-zod-formik-app/SCREENS/2.CODE-EXPLANATION-SmallFormikDemo-jsx.png
+ delete mode 100644 react-zod-formik-app/SCREENS/4.CODE-EXPLANATION-DemoForm-jsx.png
+ delete mode 100644 react-zod-formik-app/SCREENS/5.CODE-EXPLANATION-DemoFormWithZOD-jsx.png
+ delete mode 100644 react-zod-formik-app/SCREENS/DemoForm Vs DemoFormWithZOD.png
+ delete mode 100644 react-zod-formik-app/SCREENS/React Hook Form - Formik + Yup.png
+ delete mode 100644 react-zod-formik-app/src/App.jsx
+ delete mode 100644 react-zod-formik-app/src/AssignmentZODForm copy.jsx
+ delete mode 100644 react-zod-formik-app/src/DemoForm.jsx
+ delete mode 100644 react-zod-formik-app/src/DemoFormWithZOD.jsx
+ delete mode 100644 react-zod-formik-app/src/DemoFormWithZODPasswordsCrossFldVald.jsx
+ delete mode 100644 react-zod-formik-app/src/FormikFormDemo-1.jsx
+ delete mode 100644 react-zod-formik-app/src/FormikFormDemo-2.jsx
+ delete mode 100644 react-zod-formik-app/src/FormikFormDemo.jsx
+ delete mode 100644 react-zod-formik-app/src/ProductForm-Extra-Styling.jsx
+ delete mode 100644 react-zod-formik-app/src/ProductForm-Normal.jsx
+ delete mode 100644 react-zod-formik-app/src/ProductForm.jsx
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 27, done.
-Counting objects: 100% (27/27), done.
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (16/16), done.
-Writing objects: 100% (16/16), 1.30 MiB | 581.00 KiB/s, done.
-Total 16 (delta 11), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (11/11), completed with 11 local objects.
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (34/34), 23.91 MiB | 1.09 MiB/s, done.
+Total 34 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   177053e..a792bb9  main -> main
+   a792bb9..e81b70e  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
