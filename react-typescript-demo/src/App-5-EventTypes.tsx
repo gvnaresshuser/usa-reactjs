@@ -10,22 +10,40 @@ import type {
   PointerEvent,
   TouchEvent,
   WheelEvent,
+  //SubmitEvent,
+  //FormEvent,
 } from "react";
 //import type { FormEvent } from "react";
 import type { SyntheticEvent } from "react";
+//https://legacy.reactjs.org/docs/events.html
+//https://react.dev/reference/react-dom/components/common#react-event-object
 
 function App() {
-  const [search, setSearch] = useState("");
+  /*   const [search, setSearch] = useState("");
   const [country, setCountry] = useState("India");
   const [agree, setAgree] = useState(false);
   const [submittedName, setSubmittedName] = useState("");
-  const [message, setMessage] = useState("Interact with the events below");
+  const [message, setMessage] = useState("Interact with the events below"); */
+  //-----------------------------------------------------------
+  const [search, setSearch] = useState<string>("");
+  const [country, setCountry] = useState<string>("India");
+  const [agree, setAgree] = useState<boolean>(false);
+  const [submittedName, setSubmittedName] = useState<string>("");
+  const [message, setMessage] = useState<string>(
+    "Interact with the events below",
+  );
+  //-----------------------------------------------------------
+  /*
+TypeScript automatically infers types from the initial value and expressions. 
+However, when defining React state, we can explicitly specify the type when we 
+want to make our intention clear and prevent accidental assignment of another type.
+*/
 
   /* ---------------------------------
      Change Event
   ---------------------------------- */
-
   const handleSearch = (event: ChangeEvent<HTMLInputElement>): void => {
+    //const handleSearch = (event)=> {//SEE BELOW FOR ANSWER - Implicit any type error
     console.log("Search:", event.target.value);
     setSearch(event.target.value);
     setMessage(`Input changed: ${event.target.value}`);
@@ -40,6 +58,17 @@ function App() {
     console.log(event.currentTarget);
     setMessage("Button clicked");
   };
+  /*
+  TypeScript understands:
+  handleButtonClick → () => void
+  Why does TypeScript know it is void?
+  Because your function doesn't return anything:
+  */
+  /* const handleButtonClick = () => {
+    console.log("Button clicked");
+    //console.log(event.currentTarget);
+    setMessage("Button clicked");
+  }; */
 
   /* ---------------------------------
      Mouse Event - Double Click
@@ -173,11 +202,14 @@ function App() {
 
   //const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
   //const handleSubmit = (event: SubmitEvent<HTMLFormElement>): void => {
+  //const handleSubmit = (event: SubmitEvent<HTMLFormElement>): void => {
+  //const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
   const handleSubmit = (event: SyntheticEvent<HTMLFormElement>): void => {
     event.preventDefault();
+    //console.log(event);
     setSubmittedName(search);
     setMessage("Form submitted successfully");
-    console.log("Form submitted");
+    //console.log("Form submitted");
   };
 
   /* ---------------------------------
@@ -214,7 +246,7 @@ function App() {
   };
 
   /* ---------------------------------
-     Clipboard - Copy
+     Clipboard - Copy - https://legacy.reactjs.org/docs/events.html
   ---------------------------------- */
 
   const handleCopy = (event: ClipboardEvent<HTMLInputElement>): void => {
@@ -593,7 +625,7 @@ function App() {
                 10. Clipboard Events
               </h2>
             </div>
-
+            {/* https://legacy.reactjs.org/docs/events.html#clipboard-events */}
             <input
               type="text"
               defaultValue="Copy or paste this text"
@@ -601,7 +633,6 @@ function App() {
               onPaste={handlePaste}
               className="w-full rounded-xl border border-slate-300 px-4 py-3 outline-none focus:border-sky-500 focus:ring-4 focus:ring-sky-100"
             />
-
             <p className="mt-3 text-sm text-slate-500">
               Try Ctrl+C and Ctrl+V.
             </p>
@@ -718,3 +749,132 @@ function App() {
 }
 
 export default App;
+/*
+SEE BELOW FOR ANSWER - Implicit any type error
+Why does this complain?
+When you write:
+const handleSearch = (event) => {
+  console.log("Search:", event.target.value);
+  setSearch(event.target.value);
+  setMessage(`Input changed: ${event.target.value}`);
+};
+
+TypeScript asks:
+What is the type of event?
+
+It cannot determine it from the function body.
+So event would effectively become:
+event → any
+
+With your strict: true setting, TypeScript has the rule:
+noImplicitAny
+
+which means:
+Don't allow a parameter to silently become any.
+
+Therefore you get an error such as:
+Parameter 'event' implicitly has an 'any' type.
+*/
+/*
+What is SyntheticEvent?
+SyntheticEvent is React's wrapper around the browser's native event.
+When you submit a React form:
+<form onSubmit={handleSubmit}>
+
+React gives your handler an event object.
+You can think of it like:
+Browser event
+      ↓
+React
+      ↓
+SyntheticEvent
+      ↓
+handleSubmit(event)
+
+So:
+event.preventDefault();
+
+works because React's SyntheticEvent provides the standard event methods.
+                 SyntheticEvent
+                       │
+       ┌───────────────┼────────────────┐
+       ↓               ↓                ↓
+ ChangeEvent       MouseEvent       FormEvent
+       │               │                │
+   <input>          <button>          <form>
+*/
+/*
+Every ChangeEvent is a SyntheticEvent, but not every SyntheticEvent is a ChangeEvent.
+
+This is the same idea as:
+Animal
+  ↑
+Dog
+
+Every Dog is an Animal, but not every Animal is a Dog.
+*/
+/*
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+index.d.ts --> global.d.ts --> interface InputEvent extends Event {}  --> Event --> preventDefault(): void;
+E:\react-typescript-demo\node_modules\@types\react\index.d.ts
+refers to 
+E:\react-typescript-demo\node_modules\@types\react\global.d.ts
+interface InputEvent extends Event {} 
+  
+  
+1. Your React global.d.ts
+You found:
+interface InputEvent extends Event {}
+
+This means:
+InputEvent
+    ↓ extends
+Event
+
+So InputEvent inherits everything that Event has.
+2. Now look at lib.dom.d.ts
+You'll find the Event interface there. Conceptually it contains:
+interface Event {
+    readonly type: string;
+    readonly target: EventTarget | null;
+    readonly currentTarget: EventTarget | null;
+
+    preventDefault(): void;
+    stopPropagation(): void;
+
+    ...
+}
+  E:\react-typescript-demo\node_modules\typescript\lib\lib.dom.d.ts
+  preventDefault(): void;
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CALLING THE EVENT IN BROWSER...CHECK LIKE THIS
+Open Chrome DevTools
+Press:
+F12 → Console
+Then run:
+document.querySelector("button").addEventListener("click", (event) => {
+    console.log(event);
+
+    console.log(event instanceof PointerEvent);
+    console.log(event instanceof MouseEvent);
+    console.log(event instanceof Event);
+});
+
+Now click the button on the page.
+You will see something like:
+PointerEvent {
+  isTrusted: true,
+  type: "click",
+  target: button,
+  currentTarget: button,
+  clientX: 450,
+  clientY: 320,
+  ...
+}
+  
+true
+true
+true
+  
+*/

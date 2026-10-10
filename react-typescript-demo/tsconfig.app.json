@@ -11,7 +11,9 @@
     /* Strict Type Checking */
     /*This is a TypeScript compiler option. 
     It tells TypeScript to enable a group of strict type-checking rules.*/
+
     "strict": true,
+
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -29,3 +31,8 @@
   },
   "include": ["src"]
 }
+/*
+TypeScript automatically infers types from the initial value and expressions. 
+However, when defining React state, we can explicitly specify the type when we 
+want to make our intention clear and prevent accidental assignment of another type.
+*/
