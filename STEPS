@@ -107,7 +107,9 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'react-rhk-zod/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/src/App-5-EventTypes.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'react-typescript-demo/tsconfig.app.json', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -116,34 +118,42 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   react-rhk-zod/SCREENS/3.ZOD-METHODS.png
-        new file:   react-rhk-zod/SCREENS/useForm() - Hook.png
-        deleted:    react-rhk-zod/react-rhk-zod.zip
-        deleted:    react-rhk-zod/react-zod-app.zip
-        modified:   react-rhk-zod/src/App.jsx
+        new file:   react-rhk-zod/SCREENS/IMPORTANT.png
+        new file:   react-rhk-zod/SCREENS/invalid_type_error.png
+        new file:   react-rhk-zod/react-rhk-zod.zip
+        new file:   react-rhk-zod/react-zod-app.zip
         modified:   react-rhk-zod/src/AssignmentZODForm.jsx
-        new file:   react-rhk-zod/src/DemoFormWithZOD.jsx
+        new file:   "react-typescript-demo/SCREENS/Hierarchy of HTML elements \342\206\222 React event handlers \342\206\222 TypeScript event types \342\206\222 SyntheticEvent.png"
+        new file:   react-typescript-demo/SCREENS/SyntheticEvent.png
+        new file:   react-typescript-demo/SCREENS/index-d-ts.png
+        new file:   react-typescript-demo/react-typescript-demo.zip
+        modified:   react-typescript-demo/src/App-5-EventTypes.tsx
+        modified:   react-typescript-demo/src/App.tsx
+        modified:   react-typescript-demo/tsconfig.app.json
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "03-10-2026 ZOD"
-[main fc8e665] 03-10-2026 ZOD
- 8 files changed, 352 insertions(+), 42 deletions(-)
- create mode 100644 react-rhk-zod/SCREENS/3.ZOD-METHODS.png
- create mode 100644 react-rhk-zod/SCREENS/useForm() - Hook.png
- delete mode 100644 react-rhk-zod/react-rhk-zod.zip
- delete mode 100644 react-rhk-zod/react-zod-app.zip
- create mode 100644 react-rhk-zod/src/DemoFormWithZOD.jsx
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "Events 10-10-2026"
+[main a9a0cfb] Events 10-10-2026
+ 13 files changed, 1021 insertions(+), 353 deletions(-)
+ create mode 100644 react-rhk-zod/SCREENS/IMPORTANT.png
+ create mode 100644 react-rhk-zod/SCREENS/invalid_type_error.png
+ create mode 100644 react-rhk-zod/react-rhk-zod.zip
+ create mode 100644 react-rhk-zod/react-zod-app.zip
+ create mode 100644 "react-typescript-demo/SCREENS/Hierarchy of HTML elements \342\206\222 React event handlers \342\206\222 TypeScript event types \342\206\222 SyntheticEvent.png"
+ create mode 100644 react-typescript-demo/SCREENS/SyntheticEvent.png
+ create mode 100644 react-typescript-demo/SCREENS/index-d-ts.png
+ create mode 100644 react-typescript-demo/react-typescript-demo.zip
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 18, done.
-Counting objects: 100% (18/18), done.
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (11/11), done.
-Writing objects: 100% (11/11), 1.83 MiB | 1.01 MiB/s, done.
-Total 11 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (21/21), 29.98 MiB | 727.00 KiB/s, done.
+Total 21 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 11 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   e81b70e..fc8e665  main -> main
+   fc8e665..a9a0cfb  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

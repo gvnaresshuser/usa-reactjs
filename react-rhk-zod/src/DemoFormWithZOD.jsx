@@ -2,22 +2,47 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import "./App.css";
+import { useState } from "react";
+//-------------------------------------------------------
+//INSTALL -> react-hook-form, @hookform/resolvers and zod
+//-------------------------------------------------------
+//https://react-hook-form.com/
+//https://react-hook-form.com/docs/useform/formstate
+//npm install react-hook-form
+//npm install @hookform/resolvers
+
+//https://zod.dev/basics
+//npm install zod
+//-------------------------------------------------------
 
 // ✅ Define schema with Zod
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
+  //For a string, .min(1) checks that the string contains at least one character.
   /* price: z
         .string()
         .min(1, "Price is required")
-        .refine((val) => !isNaN(val), { message: "Price must be a number" }), */
+        .refine((val) => !isNaN(val), { message: "Price must be a number" }), 
+  */
+  //.refine() Checks whether the string represents a number
+  //https://zod.dev/api#numbers
   price: z.coerce
     .number()
     .positive("Price must be positive")
     .gt(10, "Price must be greater than 10"),
+
+  //--------------------------------------------------------
+  //In Zod, coerce converts an input value from one data type to
+  //another before validation.
+  //z.coerce.number() converts the input value into a JavaScript number using the
+  //built-in Number() conversion.
+  //--------------------------------------------------------
+
   email: z.string().min(1, "Email is required").email("Invalid email format"),
 });
 
 export default function DemoFormWithZOD() {
+  const [submittedData, setSubmittedData] = useState(null);
   const {
     register,
     handleSubmit,
@@ -36,11 +61,15 @@ export default function DemoFormWithZOD() {
       email: "",
     },
   });
+  //In React Hook Form:
+  //- setValue() – Sets or updates the value of a specific form field programmatically.
+  //- getValues() – Retrieves the current value(s) of form fields without subscribing to changes.
 
   // Submit handler
   const onSubmit = (data) => {
     console.log("✅ Submitted:", data);
-    reset(); // clear form after submit
+    setSubmittedData(data); // Store submitted data
+    reset(); // Clear the form
   };
 
   // Fill dummy values - THOUGH WE FILL VALUES - SUBMIT BUTTON IS STILL DISABLED
@@ -62,6 +91,7 @@ export default function DemoFormWithZOD() {
     setValue("name", "Laptop", { shouldValidate: true });
     setValue("price", "1000", { shouldValidate: true });
     setValue("email", "demo@example.com", { shouldValidate: true });
+    setSubmittedData(null);
   };
 
   // Trigger validation only for price
@@ -191,6 +221,59 @@ export default function DemoFormWithZOD() {
           {isSubmitting ? "Submitting..." : "Submit"}
         </button>
       </form>
+
+      {/* Submitted Data Table */}
+      {submittedData && (
+        <div className="mt-8">
+          <h3 className="text-xl font-bold text-blue-600 mb-4">
+            Submitted Product Details
+          </h3>
+
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse border border-gray-300">
+              <thead className="bg-blue-100">
+                <tr>
+                  <th className="border border-gray-300 px-4 py-2 text-center">
+                    Field
+                  </th>
+                  <th className="border border-gray-300 px-4 py-2 text-center">
+                    Value
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">
+                    Name
+                  </td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    {submittedData.name}
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">
+                    Price
+                  </td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    {submittedData.price}
+                  </td>
+                </tr>
+
+                <tr>
+                  <td className="border border-gray-300 px-4 py-2 font-medium">
+                    Email
+                  </td>
+                  <td className="border border-gray-300 px-4 py-2">
+                    {submittedData.email}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -224,4 +307,17 @@ export default function DemoFormWithZOD() {
                     │
                     ▼
                   VALID
+*/
+/*
+Function/Property	 What it does	                                                               Example
+register	         Connects an input field to React Hook Form.	                               {...register("name")}
+handleSubmit	     Validates the form and calls the submit handler if valid.	                 handleSubmit(onSubmit)
+errors	           Stores validation errors for form fields.	                                 errors.name?.message
+isSubmitting	     Indicates whether form submission is in progress.	                         isSubmitting
+isValid	           Indicates whether the form is currently valid, based on validation.	       !isValid
+reset	             Resets the form values and form state.	                                     reset()
+watch	             Reads field values and re-renders the component when watched values change. watch("price")
+setValue	         Sets or updates a field value programmatically.	                           setValue("price", "1000")
+getValues	         Retrieves current form values without subscribing to changes.	             getValues()
+trigger	           Manually runs validation for the whole form or specific fields.	           trigger("price")
 */

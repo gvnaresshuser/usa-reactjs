@@ -1,0 +1,53 @@
+npm create vite@latest typescriptapp
+React
+Typescript
+Eslint
+Yes
+
+https://tailwindcss.com/docs/installation/using-vite
+
+*****************************************
+npm install tailwindcss @tailwindcss/vite
+*****************************************
+
+vite.config.ts
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+
+index.css
+@import "tailwindcss";
+
+App.tsx
+
+  <h1 className="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+---------------------------------------------------------------
+//INSTALL -> react-hook-form, @hookform/resolvers and zod
+//-------------------------------------------------------
+//https://react-hook-form.com/
+//https://react-hook-form.com/docs/useform/formstate
+npm install react-hook-form
+npm install @hookform/resolvers
+
+//https://zod.dev/basics
+npm install zod
+
+*******************************
+npm install react-hook-form
+npm install @hookform/resolvers
+npm install zod
+*******************************
+
+type FormInput = z.input<typeof schema>;
+type FormOutput = z.output<typeof schema>;
+z.input
+z.output
+SubmitHandler
+typeof data.price
