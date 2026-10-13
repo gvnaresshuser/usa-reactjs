@@ -15,6 +15,18 @@ import { useState } from "react";
 //npm install zod
 //-------------------------------------------------------
 
+//---------------------------------------------
+/*   
+const schema = z.object({
+  name: z.string().min(1, "Name is required"), 
+  price: z.coerce
+    .number()
+    .positive("Price must be positive")
+    .gt(10, "Price must be greater than 10"),
+  email: z.string().min(1, "Email is required").email("Invalid email format"),
+}); */
+//---------------------------------------------
+
 // ✅ Define schema with Zod
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -25,6 +37,8 @@ const schema = z.object({
         .refine((val) => !isNaN(val), { message: "Price must be a number" }), 
   */
   //.refine() Checks whether the string represents a number
+  //refine() is used to implement custom validation rules when built-in validators
+  // such as .min(), .max(), .positive(), and .email() are not sufficient.
   //https://zod.dev/api#numbers
   price: z.coerce
     .number()
@@ -40,6 +54,7 @@ const schema = z.object({
 
   email: z.string().min(1, "Email is required").email("Invalid email format"),
 });
+//https://zod.dev/api?id=emails#emails
 
 export default function DemoFormWithZOD() {
   const [submittedData, setSubmittedData] = useState(null);
@@ -279,6 +294,15 @@ export default function DemoFormWithZOD() {
 }
 
 /*
+refine((val) => !isNaN(val), {
+  message: "Price must be a number",
+})
+  --------------------------------------------------------------------
+val — the value passed to the validation function.
+isNaN(val) — checks whether val is NaN (Not a Number).
+!isNaN(val) — ! means NOT, so the condition passes when val is not NaN.
+message — the error message displayed if the condition returns false.
+-----------------------------------------------------------------------
 | Feature               | What it does with `price` 
 |---------------------- |--------------------------                        
 | `z.coerce.number()`   | Converts `"1000"` → `1000` 
