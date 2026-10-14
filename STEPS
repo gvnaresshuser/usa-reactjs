@@ -103,12 +103,11 @@ E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 LATEST COMMIT
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Microsoft Windows [Version 10.0.26100.8246]
+Microsoft Windows [Version 10.0.26200.9457]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'react-rhk-zod/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -117,24 +116,26 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   react-rhk-zod/SCREENS/IMPORTANT.png
+        modified:   react-rhk-zod/src/App.jsx
+        modified:   react-rhk-zod/src/AssignmentZODForm-Original.jsx
+        modified:   react-rhk-zod/src/AssignmentZODForm.jsx
         modified:   react-rhk-zod/src/DemoFormWithZOD.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "13-10-2026 ZOD"
-[main 4a44068] 13-10-2026 ZOD
- 3 files changed, 91 insertions(+), 466 deletions(-)
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "14-10-2026"
+[main f33b124] 14-10-2026
+ 5 files changed, 612 insertions(+), 444 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
 Enumerating objects: 15, done.
 Counting objects: 100% (15/15), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 846.19 KiB | 18.80 MiB/s, done.
-Total 8 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+Writing objects: 100% (8/8), 1.77 KiB | 452.00 KiB/s, done.
+Total 8 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 7 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   efcdd89..4a44068  main -> main
+   4a44068..f33b124  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
