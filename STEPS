@@ -107,11 +107,8 @@ Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src-ROUTING-Assignment/App copy.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-ROUTING-Assignment/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-ROUTING-Assignment/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-ROUTING-Assignment/index.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-ROUTING-Assignment/main.jsx', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -120,72 +117,24 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   my-react-app/src-ROUTING-Assignment/App copy.css
-        new file:   my-react-app/src-ROUTING-Assignment/App.css
-        new file:   my-react-app/src-ROUTING-Assignment/App.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/SCREENS/ROUTING ASSIGNMENT-CODE.txt
-        new file:   my-react-app/src-ROUTING-Assignment/SCREENS/ROUTING-Assignment.png
-        new file:   my-react-app/src-ROUTING-Assignment/assets/react.svg
-        new file:   my-react-app/src-ROUTING-Assignment/assets/rose.jpg
-        new file:   my-react-app/src-ROUTING-Assignment/components/Company.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/ContactUs.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/Dashboard.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/Details.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/HomePage.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/Layout.css
-        new file:   my-react-app/src-ROUTING-Assignment/components/Layout.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/Leadership.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/MobileApp.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/NotFound.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/Products.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/Profile.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/SearchResults.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/Vision.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/components/WebApp.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/context/AppContext.jsx
-        new file:   my-react-app/src-ROUTING-Assignment/index.css
-        new file:   my-react-app/src-ROUTING-Assignment/main.jsx
+        modified:   react-rhk-zod/SCREENS/IMPORTANT.png
+        modified:   react-rhk-zod/src/DemoFormWithZOD.jsx
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "routing assignment added 12-10-2026"
-[main efcdd89] routing assignment added 12-10-2026
- 26 files changed, 1111 insertions(+), 34 deletions(-)
- create mode 100644 my-react-app/src-ROUTING-Assignment/App copy.css
- create mode 100644 my-react-app/src-ROUTING-Assignment/App.css
- create mode 100644 my-react-app/src-ROUTING-Assignment/App.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/SCREENS/ROUTING ASSIGNMENT-CODE.txt
- create mode 100644 my-react-app/src-ROUTING-Assignment/SCREENS/ROUTING-Assignment.png
- create mode 100644 my-react-app/src-ROUTING-Assignment/assets/react.svg
- create mode 100644 my-react-app/src-ROUTING-Assignment/assets/rose.jpg
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Company.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/ContactUs.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Dashboard.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Details.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/HomePage.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Layout.css
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Layout.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Leadership.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/MobileApp.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/NotFound.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Products.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Profile.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/SearchResults.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/Vision.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/components/WebApp.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/context/AppContext.jsx
- create mode 100644 my-react-app/src-ROUTING-Assignment/index.css
- create mode 100644 my-react-app/src-ROUTING-Assignment/main.jsx
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "13-10-2026 ZOD"
+[main 4a44068] 13-10-2026 ZOD
+ 3 files changed, 91 insertions(+), 466 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 37, done.
-Counting objects: 100% (37/37), done.
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (33/33), done.
-Writing objects: 100% (34/34), 396.36 KiB | 11.01 MiB/s, done.
-Total 34 (delta 4), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 846.19 KiB | 18.80 MiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   ba672eb..efcdd89  main -> main
+   efcdd89..4a44068  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

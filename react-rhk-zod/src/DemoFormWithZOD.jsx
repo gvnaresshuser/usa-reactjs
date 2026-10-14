@@ -13,35 +13,25 @@ import { useState } from "react";
 
 //https://zod.dev/basics
 //npm install zod
+//npm instll react-hook-form @hookform/resolvers zod 
 //-------------------------------------------------------
 
-//---------------------------------------------
-/*   
-const schema = z.object({
-  name: z.string().min(1, "Name is required"), 
-  price: z.coerce
-    .number()
-    .positive("Price must be positive")
-    .gt(10, "Price must be greater than 10"),
-  email: z.string().min(1, "Email is required").email("Invalid email format"),
-}); */
-//---------------------------------------------
 
 // ✅ Define schema with Zod
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
   //For a string, .min(1) checks that the string contains at least one character.
-  /* price: z
+ /*  price: z
         .string()
         .min(1, "Price is required")
-        .refine((val) => !isNaN(val), { message: "Price must be a number" }), 
-  */
+        .refine((val) => !isNaN(val), { message: "Price must be a number" }),  */
+ 
   //.refine() Checks whether the string represents a number
   //refine() is used to implement custom validation rules when built-in validators
   // such as .min(), .max(), .positive(), and .email() are not sufficient.
   //https://zod.dev/api#numbers
   price: z.coerce
-    .number()
+    .number()    
     .positive("Price must be positive")
     .gt(10, "Price must be greater than 10"),
 
@@ -54,7 +44,7 @@ const schema = z.object({
 
   email: z.string().min(1, "Email is required").email("Invalid email format"),
 });
-//https://zod.dev/api?id=emails#emails
+//https://zod.dev/api?id=emails#emails  
 
 export default function DemoFormWithZOD() {
   const [submittedData, setSubmittedData] = useState(null);
@@ -103,7 +93,7 @@ export default function DemoFormWithZOD() {
   //{ shouldValidate: true } - TRIGGERS VALIDATION WHEN SETTING VALUES
   //SUBMIT BUTTON IS ENABLED AS isValid becomes true
   const fillDummyData = () => {
-    setValue("name", "Laptop", { shouldValidate: true });
+    setValue("name", "Any data", { shouldValidate: true });
     setValue("price", "1000", { shouldValidate: true });
     setValue("email", "demo@example.com", { shouldValidate: true });
     setSubmittedData(null);
@@ -113,10 +103,10 @@ export default function DemoFormWithZOD() {
   const validatePrice = async () => {
     //trigger - Run validation for the price field right now.
     const isValid = await trigger("price");
-    if (!isValid) {
-      alert("❌ Price validation failed!");
-    } else {
+    if (isValid) {
       alert("✅ Price is valid!");
+    } else {      
+      alert("❌ Price is invalid!");
     }
   };
 
@@ -130,7 +120,7 @@ export default function DemoFormWithZOD() {
         {/* Name */}
         <div>
           <label className="block mb-1 font-medium">Name</label>
-          <input
+          <input      
             {...register("name")}
             className={`w-full px-3 py-2 border rounded-lg outline-none focus:ring-2 transition ${
               errors.name
@@ -183,7 +173,7 @@ export default function DemoFormWithZOD() {
           {/* watch() is mainly for reading/reacting to the current value. 
             It does not manually trigger validation.
             */}
-          <strong>Live Price:</strong> {watch("price")}
+          <strong>Live Price:</strong> {watch("price")} 
         </p>
 
         {/* Action Buttons */}

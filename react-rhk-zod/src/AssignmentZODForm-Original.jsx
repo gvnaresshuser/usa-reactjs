@@ -39,6 +39,7 @@ const schema = z
         .number({
           invalid_type_error: "Age must be a number",
         })
+        //.number("Age must be a number")
         .int("Age must be an integer")
         .min(18, "Minimum age is 18")
         .max(60, "Maximum age is 60"),
@@ -114,12 +115,23 @@ const schema = z
     confirmPassword: z.string().min(1, "Please confirm your password"),
   })
   // --------------------------------------
-  // CROSS-FIELD VALIDATION
+  // CROSS-FIELD VALIDATION - refine is run on entire objet data - VERY IMPORTANT
   // --------------------------------------
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"],
   });
+//-----------------------------------------
+/*   .refine((data) => 
+    {
+      console.log(data);
+      data.password === data.confirmPassword
+    }, {
+      message: "Passwords do not match",
+      path: ["confirmPassword"],
+    }); 
+*/
+//-----------------------------------------
 /*
   How does it work?
 1. z.object() validates the individual fields.
@@ -181,6 +193,10 @@ export default function AssignmentZODForm() {
     alert("Form submitted successfully! Check console.");
     setSubmittedData(data);
     reset();
+     /* const text = "aBcD";
+     console.log(text.replace(/([A-Z])/g, "-$1")); */
+    /*  const text = "joiningDate";
+     console.log(text.replace(/([A-Z])/g, " $1")); */
   };
 
   // --------------------------------------
@@ -541,6 +557,10 @@ export default function AssignmentZODForm() {
               </h3>
             </div>
 
+            {/* <p className="text-sm text-gray-600">
+              Submitted Data: {JSON.stringify(submittedData)}
+            </p> */}
+
             <table className="w-full border border-green-300 rounded-lg overflow-hidden">
               <tbody>
                 {Object.entries(submittedData).map(([key, value]) => (
@@ -620,4 +640,24 @@ That controls validation when the user changes form fields through normal intera
 /*
 getValues() is a method provided by React Hook Form that retrieves the current values 
 of form fields without triggering validation or subscribing to changes.
+*/
+/*
+/([A-Z])/g
+
+
+- [A-Z] matches any uppercase English letter.
+- (...) captures the matched uppercase letter as a group.
+- g means to replace all matches, not just the first one.
+The replacement string:
+" $1"
+
+
+inserts a space followed by the first captured group. $1 refers to the uppercase letter that was matched.
+Examples:
+Original key	Displayed text
+firstName	first Name
+phoneNumber	phone Number
+
+The Tailwind classes style this cell:
+capitalize	Capitalizes the first letter of each word visually.
 */
