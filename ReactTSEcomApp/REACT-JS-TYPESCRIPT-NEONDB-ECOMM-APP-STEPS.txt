@@ -1,0 +1,2612 @@
+******************************
+npm install -D tsx
+npm install bcrypt
+npm install -D @types/bcrypt
+npm install jsonwebtoken
+npm install -D @types/jsonwebtoken
+npm install razorpay
+npm install lucide-react
+******************************
+
+
+| Feature                         | Included  |
+| ------------------------------- | --------- |
+| Register                        | ✅         |
+| Login                           | ✅         |
+| JWT authentication              | ✅         |
+| HTTP-only cookie                | ✅         |
+| Localhost cookie configuration  | ✅         |
+| Production cookie configuration | ✅         |
+| Products                        | ✅         |
+| Product search                  | ✅         |
+| Add to cart                     | ✅         |
+| Checkout                        | ✅         |
+| Modify quantity                 | ✅         |
+| Remove products                 | ✅         |
+| Razorpay Test Mode              | ✅         |
+| Orders                          | ✅         |
+| Admin orders                    | ✅         |
+| Update order status             | ✅         |
+| Pending                         | ✅         |
+| Cancelled                       | ✅         |
+| Packed                          | ✅         |
+| OutForDelivery                  | ✅         |
+| Delivered                       | ✅         |
+| Admin product CRUD              | ✅         |
+| PostgreSQL                      | ✅         |
+| Existing Neon connection pool   | ✅         |
+
+STEP 1 → PostgreSQL Tables
+STEP 2 → Express Backend Setup
+STEP 3 → Database Connection
+STEP 4 → Register API
+STEP 5 → Login API + JWT Cookie
+STEP 6 → Product APIs
+STEP 7 → Cart / Checkout APIs
+STEP 8 → Razorpay Test Mode
+STEP 9 → Orders APIs
+STEP 10 → Admin Order APIs
+STEP 11 → Admin Product CRUD
+STEP 12 → React + TypeScript Frontend
+
+ReactTSEcomApp
+│
+├── backend
+│   │
+│   ├── Express
+│   ├── TypeScript
+│   │
+│   └── PostgreSQL
+│          │
+│          ▼
+│       Neon DB
+│
+└── frontend
+
+backend/
+│
+├── src/
+│   ├── config/
+│   │   ├── env.ts
+│   │   └── db.ts
+│   │
+│   ├── app.ts
+│   └── server.ts
+│
+├── .env
+├── .env.example
+├── .gitignore
+├── package.json
+└── tsconfig.json
+
+
+
+8. Test TypeScript first
+
+Before starting the server:
+
+npx tsc --noEmit
+
+We want:
+
+E:\...\backend>
+
+with no errors.
+
+Then:
+
+npm run build
+
+Again, no errors.
+
+9. Start the backend
+npm run dev
+
+TO START BACKEND SERVER:
+-----------------------
+npx tsc --noEmit
+npm run build
+npm run dev
+----------------------
+
+--noEmit is a TypeScript compiler option that means:
+Check the TypeScript code for errors, but don't generate any JavaScript files.
+
+
+SELECT
+    column_name,
+    data_type
+FROM information_schema.columns
+WHERE table_name = 'users'
+ORDER BY ordinal_position;
+
+TEST REGISTER:
+--------------
+POST
+http://localhost:5000/api/auth/register
+BODY
+{
+    "name": "Naressh",
+    "email": "test@example.com",
+    "password": "123456"
+}
+RESPONSE
+{
+  "success": true,
+  "message": "User registered successfully",
+  "user": {
+    "id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "name": "Naressh",
+    "email": "test@example.com",
+    "role": "USER",
+    "created_at": "2026-08-27T08:31:59.596Z"
+  }
+}
+TEST LOGIN:
+-----------
+POST
+http://localhost:5000/api/auth/login
+BODY
+{
+    "email": "test@example.com",
+    "password": "123456"
+}
+RESPONSE
+{
+  "success": true,
+  "message": "Login successful",
+  "user": {
+    "id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "name": "Naressh",
+    "email": "test@example.com",
+    "role": "USER"
+  }
+}
+COOKIES:
+-------
+token
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5ZjA5MzEyMy01MjkyLTQyZDQtODdlYy0wYmQxMTJkN2Y4ZWUiLCJyb2xlIjoiVVNFUiIsImlhdCI6MTc4NzgyMDU2NCwiZXhwIjoxNzg3OTA2OTY0fQ.UjqpFkTVOkmY1yNYS2u8PXqvmeLYQ0eXHj4V0Mir1gY
+-------------------------
+Test wrong password:
+-------------------
+
+Try:
+
+{
+    "email": "test@example.com",
+    "password": "wrongpassword"
+}
+
+You should get:
+
+{
+    "success": false,
+    "message": "Invalid email or password"
+}
+
+Complete authentication routes
+
+We now have:
+
+POST /api/auth/register
+POST /api/auth/login
+GET  /api/auth/me
+
+The architecture is:
+
+                     AUTH
+                      │
+       ┌──────────────┼──────────────┐
+       ↓              ↓              ↓
+   register         login           me
+       │              │              │
+       ↓              ↓              ↓
+   create user     create JWT     middleware
+                      │              │
+                      ↓              ↓
+                  HttpOnly        verify JWT
+                   cookie            │
+                                     ↓
+                                  getMe()
+
+Test /me WITHOUT login:
+----------------------
+								  
+GET
+http://localhost:5000/api/auth/me	
+
+RESPONSE
+{
+  "success": true,
+  "user": {
+    "id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "role": "USER"
+  }
+}							  
+
+Login AGAIN:
+-----------
+
+Now perform your existing Login:
+
+POST
+http://localhost:5000/api/auth/login
+{
+    "email": "test@example.com",
+    "password": "123456"
+}
+The server creates:
+
+JWT
+ ↓
+HttpOnly cookie
+
+RESPONSE
+{
+  "success": true,
+  "message": "Login successful",
+  "user": {
+    "id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "name": "Naressh",
+    "email": "test@example.com",
+    "role": "USER"
+  }
+}
+
+
+								  
+GET
+http://localhost:5000/api/auth/me	
+{
+  "success": true,
+  "user": {
+    "id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "role": "USER"
+  }
+}
+
+Test GET Products:
+------------------
+
+In Postman:
+
+GET
+http://localhost:5000/api/products
+
+{
+  "success": true,
+  "products": [
+    {
+      "id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+      "name": "iPhone 15",
+      "description": "Apple iPhone 15 smartphone",
+      "price": "69999.00",
+      "image_url": "https://example.com/iphone15.jpg",
+      "stock": 10,
+      "category": "Mobiles",
+      "created_at": "2026-08-27T08:58:35.543Z",
+      "updated_at": "2026-08-27T08:58:35.543Z"
+    },
+    {
+      "id": "a6f87b05-e01e-4d8f-b9f6-3e03f1086553",
+      "name": "Samsung Galaxy S24",
+      "description": "Samsung Galaxy S24 smartphone",
+      "price": "64999.00",
+      "image_url": "https://example.com/s24.jpg",
+      "stock": 15,
+      "category": "Mobiles",
+      "created_at": "2026-08-27T08:58:35.543Z",
+      "updated_at": "2026-08-27T08:58:35.543Z"
+    },
+    {
+      "id": "b0bd9757-19ea-4420-8504-4b5e324844a6",
+      "name": "Sony Headphones",
+      "description": "Wireless noise cancelling headphones",
+      "price": "12999.00",
+      "image_url": "https://example.com/sony-headphones.jpg",
+      "stock": 20,
+      "category": "Audio",
+      "created_at": "2026-08-27T08:58:35.543Z",
+      "updated_at": "2026-08-27T08:58:35.543Z"
+    }
+  ]
+}
+
+5. Test without search
+GET
+http://localhost:5000/api/products
+
+You should get all products.
+
+6. Test with search
+
+Try:
+
+GET
+http://localhost:5000/api/products?search=iphone
+RESPONSE
+{
+  "success": true,
+  "products": [
+    {
+      "id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+      "name": "iPhone 15",
+      "description": "Apple iPhone 15 smartphone",
+      "price": "69999.00",
+      "image_url": "https://example.com/iphone15.jpg",
+      "stock": 10,
+      "category": "Mobiles",
+      "created_at": "2026-08-27T08:58:35.543Z",
+      "updated_at": "2026-08-27T08:58:35.543Z"
+    },
+    {
+      "id": "a6f87b05-e01e-4d8f-b9f6-3e03f1086553",
+      "name": "Samsung Galaxy S24",
+      "description": "Samsung Galaxy S24 smartphone",
+      "price": "64999.00",
+      "image_url": "https://example.com/s24.jpg",
+      "stock": 15,
+      "category": "Mobiles",
+      "created_at": "2026-08-27T08:58:35.543Z",
+      "updated_at": "2026-08-27T08:58:35.543Z"
+    }
+  ]
+}
+
+TEST WITH ACTUAL PRODUCT ID:
+---------------------------
+GET 
+http://localhost:5000/api/products/a6f87b05-e01e-4d8f-b9f6-3e03f1086553
+
+RESPONSE:
+{
+  "success": true,
+  "product": {
+    "id": "a6f87b05-e01e-4d8f-b9f6-3e03f1086553",
+    "name": "Samsung Galaxy S24",
+    "description": "Samsung Galaxy S24 smartphone",
+    "price": "64999.00",
+    "image_url": "https://example.com/s24.jpg",
+    "stock": 15,
+    "category": "Mobiles",
+    "created_at": "2026-08-27T08:58:35.543Z",
+    "updated_at": "2026-08-27T08:58:35.543Z"
+  }
+}
+
+
+select * from users
+
+UPDATE users
+SET role = 'ADMIN'
+WHERE email = 'test@example.com';
+
+
+UPDATE users
+SET role = 'USER'
+WHERE email = 'test@example.com';
+
+
+Login AGAIN:
+-----------
+
+Now perform your existing Login:
+
+POST
+http://localhost:5000/api/auth/login
+{
+    "email": "test@example.com",
+    "password": "123456"
+}
+RESPONSE:
+{
+  "success": true,
+  "message": "Login successful",
+  "user": {
+    "id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "name": "Naressh",
+    "email": "test@example.com",
+    "role": "ADMIN"
+  }
+}
+Then your request:
+
+POST 
+http://localhost:5000/api/products
+{
+    "name": "iPhone 15",
+    "description": "Apple iPhone 15 smartphone",
+    "price": 69999,
+    "imageUrl": "https://example.com/iphone15.jpg",
+    "stock": 20,
+    "category": "Mobiles"
+}
+RESPONSE:
+--------
+{
+  "success": true,
+  "message": "Product created successfully",
+  "product": {
+    "id": "f41a98a8-356e-4d58-b93f-5397edf6284b",
+    "name": "iPhone 15",
+    "description": "Apple iPhone 15 smartphone",
+    "price": "69999.00",
+    "image_url": "https://example.com/iphone15.jpg",
+    "stock": 20,
+    "category": "Mobiles",
+    "created_at": "2026-08-27T09:22:52.920Z",
+    "updated_at": "2026-08-27T09:22:52.920Z"
+  }
+}
+
+
+5. Test Update Product
+
+Use the product ID you just created:
+
+PUT
+http://localhost:5000/api/products/f41a98a8-356e-4d58-b93f-5397edf6284b
+Body
+{
+    "name": "iPhone 15",
+    "description": "Apple iPhone 15 - Updated Product",
+    "price": 67999,
+    "imageUrl": "https://example.com/iphone15-updated.jpg",
+    "stock": 25,
+    "category": "Mobiles"
+}
+RESPONSE:
+{
+  "success": true,
+  "message": "Product updated successfully",
+  "product": {
+    "id": "f41a98a8-356e-4d58-b93f-5397edf6284b",
+    "name": "iPhone 15",
+    "description": "Apple iPhone 15 - Updated Product",
+    "price": "67999.00",
+    "image_url": "https://example.com/iphone15-updated.jpg",
+    "stock": 25,
+    "category": "Mobiles",
+    "created_at": "2026-08-27T09:22:52.920Z",
+    "updated_at": "2026-08-27T09:25:25.987Z"
+  }
+}
+TRY NON EXISTING PRODUCT
+PUT
+http://localhost:5000/api/products/11111111-1111-1111-1111-111111111111
+RESPONSE
+{
+  "success": false,
+  "message": "Product not found"
+}
+
+5. Test DELETE
+
+You can use the iPhone product ID you created earlier:
+
+DELETE
+http://localhost:5000/api/products/f41a98a8-356e-4d58-b93f-5397edf6284b
+
+Because you're already logged in as ADMIN, your JWT cookie should be sent.
+
+Expected response:
+
+{
+  "success": true,
+  "message": "Product deleted successfully",
+  "product": {
+    "id": "f41a98a8-356e-4d58-b93f-5397edf6284b",
+    "name": "iPhone 15",
+    "description": "Apple iPhone 15 - Updated Product",
+    "price": "67999.00",
+    "image_url": "https://example.com/iphone15-updated.jpg",
+    "stock": 25,
+    "category": "Mobiles"
+  }
+}
+
+6. Verify the deletion
+
+Now call:
+
+GET
+http://localhost:5000/api/products/f41a98a8-356e-4d58-b93f-5397edf6284b
+
+You should get:
+
+{
+    "success": false,
+    "message": "Product not found"
+}
+
+with:
+
+404 Not Found
+
+Product CRUD COMPLETE!
+
+                    PRODUCT API
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+         GET            POST           PUT
+          │              │              │
+        READ           CREATE         UPDATE
+          │              │              │
+          │              └──────┬───────┘
+          │                     │
+          │                  ADMIN
+          │                     │
+          └──────────────┬──────┘
+                         │
+                       DELETE
+					   
+
+| Method | Endpoint            | Access | Status |
+| ------ | ------------------- | ------ | ------ |
+| GET    | `/api/products`     | Public | ✅      |
+| GET    | `/api/products/:id` | Public | ✅      |
+| POST   | `/api/products`     | ADMIN  | ✅      |
+| PUT    | `/api/products/:id` | ADMIN  | ✅      |
+| DELETE | `/api/products/:id` | ADMIN  | 🔜     |
+
+
+SELECT *
+FROM carts;
+
+SELECT *
+FROM cart_items;
+
+UPDATE users
+SET role = 'USER'
+WHERE email = 'test@example.com';
+
+TEST ADDING ITEMS TO CART:
+------------------------
+7. POST /api/cart
+
+In Postman:
+
+POST
+http://localhost:5000/api/cart
+
+Body:
+
+{
+    "productId": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 2
+}
+
+Because the route has:
+
+authMiddleware
+
+your login JWT cookie must be present.
+
+Expected response:
+
+{
+  "success": true,
+  "message": "Product added to cart",
+  "cartItem": {
+    "id": "e702860f-0bf1-496f-9c3a-b03fc6b87346",
+    "cart_id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 2,
+    "created_at": "2026-08-27T09:39:30.701Z",
+    "updated_at": "2026-08-27T09:39:30.701Z"
+  }
+}
+
+8. Test adding the same product again
+
+This is a particularly nice test.
+
+First:
+
+{
+    "productId": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 2
+}
+
+Then again:
+
+{
+    "productId": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 3
+}
+
+{
+  "success": true,
+  "message": "Product added to cart",
+  "cartItem": {
+    "id": "e702860f-0bf1-496f-9c3a-b03fc6b87346",
+    "cart_id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 7,
+    "created_at": "2026-08-27T09:39:30.701Z",
+    "updated_at": "2026-08-27T09:40:36.739Z"
+  }
+}
+
+But the resulting cart would become:
+
+4 + 3 = 7
+
+even though stock is only 5.
+
+So before we move further, we'll improve the cart model/controller to validate the total cart quantity against available stock.
+
+That's exactly the kind of business rule we want in a real e-commerce backend.
+
+
+TEST FOR TOTALS:
+---------------
+POST
+http://localhost:5000/api/cart
+
+Body:
+
+{
+    "productId": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 2
+}
+
+
+GET
+http://localhost:5000/api/cart
+
+{
+  "success": true,
+  "cart": {
+    "id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "items": [
+      {
+        "id": "e702860f-0bf1-496f-9c3a-b03fc6b87346",
+        "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+        "name": "iPhone 15",
+        "description": "Apple iPhone 15 smartphone",
+        "price": "69999.00",
+        "image_url": "https://example.com/iphone15.jpg",
+        "stock": 10,
+        "category": "Mobiles",
+        "quantity": 11,
+        "subtotal": "769989.00"
+      }
+    ],
+    "total": 769989
+  }
+}
+
+Now try:
+
+POST
+http://localhost:5000/api/cart
+{
+    "productId": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 1
+}
+
+You should now receive:
+
+{
+  "success": false,
+  "message": "Only 10 items available in stock. You already have 10 in your cart."
+}
+
+ANOTHER TEST
+PUT
+http://localhost:5000/api/cart/78a0d1ee-9ed1-4cda-bd22-177aed626527
+
+Body:
+
+{
+	"productId": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 8
+}
+RESPONSE:
+--------
+{
+  "success": true,
+  "message": "Cart quantity updated",
+  "cartItem": {
+    "id": "e702860f-0bf1-496f-9c3a-b03fc6b87346",
+    "cart_id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 8,
+    "created_at": "2026-08-27T09:39:30.701Z",
+    "updated_at": "2026-08-27T09:59:59.453Z"
+  }
+}
+Now try:
+
+POST
+http://localhost:5000/api/cart
+{
+    "productId": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 2
+}
+RESPONSE:
+---------
+{
+  "success": true,
+  "message": "Product added to cart",
+  "cartItem": {
+    "id": "e702860f-0bf1-496f-9c3a-b03fc6b87346",
+    "cart_id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 10,
+    "created_at": "2026-08-27T09:39:30.701Z",
+    "updated_at": "2026-08-27T10:00:30.365Z"
+  }
+}
+SHOULD SUCCEED....
+CHECK
+
+GET
+http://localhost:5000/api/cart
+{
+  "success": true,
+  "cart": {
+    "id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "items": [
+      {
+        "id": "e702860f-0bf1-496f-9c3a-b03fc6b87346",
+        "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+        "name": "iPhone 15",
+        "description": "Apple iPhone 15 smartphone",
+        "price": "69999.00",
+        "image_url": "https://example.com/iphone15.jpg",
+        "stock": 10,
+        "category": "Mobiles",
+        "quantity": 10,
+        "subtotal": "699990.00"
+      }
+    ],
+    "total": 699990
+  }
+}
+
+Our cart business logic is now much stronger
+
+                 POST /api/cart
+                       │
+                       ▼
+                Product exists?
+                       │
+                       ▼
+              Get existing quantity
+                       │
+                       ▼
+        existing + requested quantity
+                       │
+                       ▼
+             <= available stock?
+                /            \
+              YES             NO
+               ↓               ↓
+            Add/update       Reject
+               │
+               ▼
+          PostgreSQL
+
+
+STEP 16.9 — Remove from Cart 🛒
+
+DELETE
+http://localhost:5000/api/cart/78a0d1ee-9ed1-4cda-bd22-177aed626527
+
+5. Test DELETE in Postman
+
+First check your cart:
+
+GET http://localhost:5000/api/cart
+
+Suppose you have:
+
+iPhone 15
+quantity: 10
+
+Now:
+
+DELETE http://localhost:5000/api/cart/78a0d1ee-9ed1-4cda-bd22-177aed626527
+
+Expected response:
+
+{
+  "success": true,
+  "message": "Product removed from cart",
+  "cartItem": {
+    "id": "e702860f-0bf1-496f-9c3a-b03fc6b87346",
+    "cart_id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 10
+  }
+}
+6. Verify the cart
+
+Immediately call:
+
+GET http://localhost:5000/api/cart
+
+You should now get:
+
+{
+  "success": true,
+  "cart": {
+    "id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "items": [],
+    "total": 0
+  }
+}
+
+🎉 Your basic cart is now complete!
+
+
+
+🚀 Next: Orders & Checkout
+
+
+STEP 17 — Orders Database
+
+Our flow will eventually be:
+
+                 PRODUCTS
+                    ↓
+                  CART
+                    ↓
+                CHECKOUT
+                    ↓
+              ┌───────────┐
+              │  ORDERS   │
+              └───────────┘
+                    ↓
+             ORDER_ITEMS
+                    ↓
+          Reduce Product Stock
+                    ↓
+              Clear Cart
+
+
+Checkout must use a PostgreSQL transaction
+
+We'll use:
+
+pool.connect()
+      ↓
+BEGIN
+      ↓
+Get cart
+      ↓
+Get cart items + products
+      ↓
+Validate stock
+      ↓
+Create order
+      ↓
+Create order_items
+      ↓
+Reduce stock
+      ↓
+Clear cart
+      ↓
+COMMIT
+      ↓
+Release connection
+
+One thing we'll also handle
+
+We'll calculate the order total on the server from the database, rather than trusting a total sent from React:
+
+React
+  ↓
+"Checkout"
+  ↓
+Backend gets cart
+  ↓
+Backend calculates:
+price × quantity
+  ↓
+Backend creates order
+
+So a client cannot simply send:
+
+{
+  "total": 1
+}
+
+and purchase ₹1,00,000 worth of products for ₹1. 
+
+
+
+🔥 Understand the most important part
+
+The entire checkout is inside:
+BEGIN
+   ↓
+Get cart
+   ↓
+Get cart items
+   ↓
+Check stock
+   ↓
+Calculate total
+   ↓
+Create order
+   ↓
+Create order items
+   ↓
+Reduce stock
+   ↓
+Clear cart
+   ↓
+COMMIT
+
+If anything fails:
+
+BEGIN
+   ↓
+Something fails ❌
+   ↓
+ROLLBACK
+   ↓
+Database returns to previous state
+
+That's why we use:
+
+const client =
+    await pool.connect();
+
+instead of:
+
+pool.query(...)
+
+for the whole checkout operation.
+
+🔐 Why FOR UPDATE?
+
+This line is particularly important:
+
+FOR UPDATE OF p
+
+Imagine stock is:
+
+iPhone 15
+stock = 5
+
+Two customers try to buy the last 5 units at almost exactly the same time.
+
+The transaction locks the relevant product rows:
+
+Customer A
+    ↓
+locks product row
+    ↓
+checks stock
+    ↓
+updates stock
+
+Customer B has to wait for the lock.
+
+This helps prevent race conditions during checkout.
+
+💰 Another important point
+
+Notice that the client never sends:
+
+{
+    "totalAmount": 69999
+}
+
+Instead:
+
+Database
+   ↓
+Product price
+   ↓
+Cart quantity
+   ↓
+price × quantity
+   ↓
+Backend calculates total
+
+So the server remains authoritative.
+
+
+ORDER TESTING:
+=============
+STEP 17.6 — Prepare a test cart
+
+Before testing checkout, make sure the logged-in user has at least one product in the cart.
+
+For example:
+
+POST http://localhost:5000/api/cart
+
+Body:
+
+{
+    "productId": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 2
+}
+RESPONSE:
+--------
+{
+  "success": true,
+  "message": "Product added to cart",
+  "cartItem": {
+    "id": "741db146-8a8d-4498-b557-17150cdc6aa2",
+    "cart_id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "quantity": 2,
+    "created_at": "2026-08-27T10:15:09.219Z",
+    "updated_at": "2026-08-27T10:15:09.219Z"
+  }
+}
+
+Then verify:
+
+GET http://localhost:5000/api/cart
+RESPONSE:
+--------
+{
+  "success": true,
+  "cart": {
+    "id": "61e28fcc-8715-4f29-856e-bf3307a0bd15",
+    "items": [
+      {
+        "id": "741db146-8a8d-4498-b557-17150cdc6aa2",
+        "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+        "name": "iPhone 15",
+        "description": "Apple iPhone 15 smartphone",
+        "price": "69999.00",
+        "image_url": "https://example.com/iphone15.jpg",
+        "stock": 10,
+        "category": "Mobiles",
+        "quantity": 2,
+        "subtotal": "139998.00"
+      }
+    ],
+    "total": 139998
+  }
+}
+
+
+You should see something similar to:
+
+{
+    "success": true,
+    "cart": {
+        "items": [
+            {
+                "name": "iPhone 15",
+                "price": "69999.00",
+                "quantity": 2,
+                "subtotal": "139998.00"
+            }
+        ],
+        "total": 139998
+    }
+}
+
+🚀 STEP 17.7 — Create the first order
+
+Now call:
+
+POST http://localhost:5000/api/orders
+No body is required.
+
+That's intentional.
+
+We don't want React/Postman to tell our backend:
+
+{
+    "total": 139998
+}
+
+The backend gets the authenticated user from the JWT:
+
+RESPONSE:
+--------
+{
+  "success": true,
+  "message": "Order created successfully",
+  "order": {
+    "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+    "user_id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "total_amount": "139998.00",
+    "status": "Pending",
+    "payment_status": "Pending",
+    "created_at": "2026-08-27T10:16:34.379Z",
+    "updated_at": "2026-08-27T10:16:34.379Z"
+  }
+}
+
+🔥 Then perform TWO important checks
+Check 1 — Cart should be empty
+GET http://localhost:5000/api/cart
+
+Expected:
+
+{
+    "success": true,
+    "cart": {
+        "items": [],
+        "total": 0
+    }
+}
+
+Check 2 — Product stock should decrease
+
+Before checkout:
+
+Stock = 10
+Cart quantity = 2
+
+After checkout:
+
+Stock = 8
+
+So we have:
+
+Cart
+  │
+  │ quantity = 2
+  ▼
+Checkout
+  │
+  ├── Create Order
+  ├── Create Order Item
+  ├── Stock 10 → 8
+  └── Clear Cart
+       │
+       ▼
+     COMMIT
+
+That's our first complete checkout transaction. 🎉
+GET
+http://localhost:5000/api/products/78a0d1ee-9ed1-4cda-bd22-177aed626527
+RESPONSE:
+--------
+{
+  "success": true,
+  "product": {
+    "id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+    "name": "iPhone 15",
+    "description": "Apple iPhone 15 smartphone",
+    "price": "69999.00",
+    "image_url": "https://example.com/iphone15.jpg",
+    "stock": 8,
+    "category": "Mobiles",
+    "created_at": "2026-08-27T08:58:35.543Z",
+    "updated_at": "2026-08-27T10:16:34.379Z"
+  }
+}
+
+SELECT *
+FROM orders
+ORDER BY created_at DESC;
+
+Your database shows:
+
+Order ID       = 833f4231-9510-4201-8a94-67b297ba4f4f
+User ID        = 9f093123-5292-42d4-87ec-0bd112d7f8ee
+Total          = ₹139,998.00
+Status         = Pending
+Payment Status = Pending
+
+And importantly:
+
+razorpay_order_id   = NULL
+razorpay_payment_id = NULL
+razorpay_signature  = NULL
+
+That's exactly right at this stage. We haven't integrated Razorpay yet.
+
+Now verify order_items
+
+Run:
+
+SELECT *
+FROM order_items
+ORDER BY created_at DESC;
+
+Your order_items record confirms that the checkout transaction correctly captured the purchase:
+
+Order ID       = 833f4231-9510-4201-8a94-67b297ba4f4f
+Product        = iPhone 15
+Price          = ₹69,999.00
+Quantity       = 2
+Subtotal       = ₹139,998.00
+
+So now we have successfully verified both sides of the order:
+
+orders
+└── Order
+    ├── Total: ₹139,998
+    ├── Status: Pending
+    └── Payment: Pending
+            │
+            ▼
+order_items
+└── iPhone 15
+    ├── Price: ₹69,999
+    ├── Quantity: 2
+    └── Subtotal: ₹139,998
+
+And earlier we verified:
+
+Product stock
+10 → 8 ✅
+
+Cart
+2 × iPhone 15 → removed ✅
+
+Transaction
+COMMIT ✅
+
+
+
+🚀 STEP 17.8 — Order History
+
+Now let's give the customer a My Orders API.
+
+What does this do?
+
+The customer makes:
+
+GET /api/orders
+
+The backend:
+
+JWT
+ ↓
+userId
+ ↓
+Find orders belonging to THAT user
+ ↓
+Find order_items for each order
+ ↓
+Return complete order history
+
+Notice this:
+
+WHERE user_id = $1
+
+That is important.
+
+User A must never be able to retrieve User B's orders.
+
+Then test:
+
+GET http://localhost:5000/api/orders
+RESPOSE:
+-------
+{
+  "success": true,
+  "orders": [
+    {
+      "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+      "user_id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+      "total_amount": "139998.00",
+      "status": "Pending",
+      "payment_status": "Pending",
+      "razorpay_order_id": null,
+      "razorpay_payment_id": null,
+      "created_at": "2026-08-27T10:16:34.379Z",
+      "updated_at": "2026-08-27T10:16:34.379Z",
+      "items": [
+        {
+          "id": "c608116d-88da-4b47-949e-37ca87ff81ce",
+          "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+          "product_name": "iPhone 15",
+          "price": "69999.00",
+          "quantity": 2,
+          "subtotal": "139998.00",
+          "created_at": "2026-08-27T10:16:34.379Z"
+        }
+      ]
+    }
+  ]
+}
+
+Order History is working perfectly.
+
+Your response confirms that the entire chain is now working:
+
+User
+ ↓
+JWT authentication
+ ↓
+GET /api/orders
+ ↓
+Find user's orders
+ ↓
+Find order items
+ ↓
+Return complete order history
+
+And your actual data is consistent:
+
+Order Total
+₹139,998
+
+iPhone 15
+₹69,999 × 2
+= ₹139,998
+
+Stock
+10 → 8
+Current backend progress
+Authentication          ✅
+Registration            ✅
+Login / JWT             ✅
+Protected routes        ✅
+
+Products
+  ├── Get all           ✅
+  ├── Get by ID         ✅
+  └── Create            ✅
+
+Cart
+  ├── Get cart          ✅
+  ├── Add item          ✅
+  ├── Update quantity   ✅
+  └── Remove item       ✅
+
+Checkout
+  ├── Create order      ✅
+  ├── Create items      ✅
+  ├── Validate stock    ✅
+  ├── Reduce stock      ✅
+  └── Clear cart        ✅
+
+Orders
+  └── Order history     ✅
+  
+  
+🚀 STEP 17.11 — Get One Order
+
+The next useful API is:
+
+GET /api/orders/:id
+
+This allows the frontend's Order Details page to display one particular order.
+
+For example:
+
+GET http://localhost:5000/api/orders/833f4231-9510-4201-8a94-67b297ba4f4f
+
+And we should return:
+
+{
+  "success": true,
+  "order": {
+    "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+    "total_amount": "139998.00",
+    "status": "Pending",
+    "payment_status": "Pending",
+    "items": [
+      {
+        "product_name": "iPhone 15",
+        "price": "69999.00",
+        "quantity": 2,
+        "subtotal": "139998.00"
+      }
+    ]
+  }
+}
+🔐 And there's an important security rule
+
+We won't simply search by:
+
+WHERE id = $1
+
+We'll use:
+
+WHERE id = $1
+AND user_id = $2
+
+So if another customer somehow knows this order ID, they cannot see someone else's order.
+
+Customer A
+   ↓
+JWT → userId A
+   ↓
+Order ID
+   ↓
+Order belongs to A? ── YES → Return order
+                  └── NO  → 404
+
+That's the next small piece, and after that we'll be ready to work on admin order management and Razorpay. 🚀
+
+
+| Method | Endpoint          | Purpose                 |
+| ------ | ----------------- | ----------------------- |
+| GET    | `/api/orders`     | All user's orders       |
+| GET    | `/api/orders/:id` | One order               |
+| POST   | `/api/orders`     | Create order / checkout |
+
+Now test:
+
+GET http://localhost:5000/api/orders/833f4231-9510-4201-8a94-67b297ba4f4f
+RESPONSE:
+-------
+{
+  "success": true,
+  "order": {
+    "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+    "user_id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "total_amount": "139998.00",
+    "status": "Pending",
+    "payment_status": "Pending",
+    "razorpay_order_id": null,
+    "razorpay_payment_id": null,
+    "created_at": "2026-08-27T10:16:34.379Z",
+    "updated_at": "2026-08-27T10:16:34.379Z",
+    "items": [
+      {
+        "id": "c608116d-88da-4b47-949e-37ca87ff81ce",
+        "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+        "product_name": "iPhone 15",
+        "price": "69999.00",
+        "quantity": 2,
+        "subtotal": "139998.00",
+        "created_at": "2026-08-27T10:16:34.379Z"
+      }
+    ]
+  }
+}
+
+🔒 One security test I'd like you to perform
+
+Try using a fake/nonexistent order ID:
+
+GET http://localhost:5000/api/orders/00000000-0000-0000-0000-000000000000
+
+Expected:
+
+{
+  "success": false,
+  "message": "Order not found"
+}
+
+That confirms our lookup behaves correctly.
+
+🎯 After this test
+
+Our customer-side order functionality will be:
+
+                    ORDERS
+                       │
+          ┌────────────┼────────────┐
+          │            │            │
+          ▼            ▼            ▼
+     Create Order   All Orders   Order Details
+          │            │            │
+       POST /        GET /       GET /:id
+          │            │            │
+          └────────────┴────────────┘
+                       │
+                       ▼
+                  PostgreSQL
+				  
+				  
+				  
+Once this passes, the next major stage is Admin Order Management — allowing an administrator to change:
+
+Pending
+   ↓
+Packed
+   ↓
+OutForDelivery
+   ↓
+Delivered
+
+while customers remain restricted to viewing their own orders. 🚀				  
+				  
+
+AUTH
+ │
+ ▼
+PRODUCTS
+ │
+ ▼
+CART
+ │
+ ▼
+CHECKOUT
+ │
+ ▼
+ORDER
+ │
+ ├── Order Items
+ ├── Total
+ ├── Stock Reduction
+ └── Cart Cleared
+ │
+ ▼
+ORDER HISTORY
+ │
+ ▼
+ORDER DETAILS
+
+
+🚀 STEP 18 — Admin Order Management
+
+Now we'll switch to the admin side.
+
+The administrator should be able to:
+
+View all orders
+View a particular order
+Update order status
+
+For example:
+
+Pending
+   ↓
+Packed
+   ↓
+OutForDelivery
+   ↓
+Delivered
+
+And:
+
+Pending → Cancelled
+Important security
+
+We'll protect these APIs with both:
+
+authMiddleware
+      ↓
+adminMiddleware
+      ↓
+Admin Order API
+
+So:
+
+Normal User
+   ↓
+JWT valid ✅
+   ↓
+adminMiddleware ❌
+   ↓
+403 Forbidden
+
+But:
+
+Admin
+   ↓
+JWT valid ✅
+   ↓
+role = ADMIN ✅
+   ↓
+Admin Order API ✅
+
+
+STEP 18.1 — Admin: Get All Orders				 
+
+
+
+⚠️ Route ordering
+
+There's a small but important detail here.
+
+Keep:
+
+router.get(
+    "/admin/all",
+    authMiddleware,
+    adminMiddleware,
+    getAllOrdersAdmin
+);
+
+before:
+
+router.get(
+    "/:id",
+    authMiddleware,
+    getOrder
+);
+
+Like this:
+
+router.get(
+    "/",
+    authMiddleware,
+    getOrders
+);
+
+
+router.get(
+    "/admin/all",
+    authMiddleware,
+    adminMiddleware,
+    getAllOrdersAdmin
+);
+
+
+router.get(
+    "/:id",
+    authMiddleware,
+    getOrder
+);
+
+
+router.post(
+    "/",
+    authMiddleware,
+    createOrder
+);
+
+Otherwise /admin/all could potentially be interpreted as:
+
+/:id
+
+with:
+
+id = "admin"
+
+It's a good Express routing practice to put specific paths before parameter paths.
+
+
+🧪 STEP 18.4 — Test as ADMIN
+
+You already have your admin account.
+
+Because the JWT contains the role, make sure you have logged in again after changing the database role to ADMIN.
+
+Then call:
+
+GET http://localhost:5000/api/orders/admin/all
+RESPONSE:
+--------
+{
+  "success": true,
+  "orders": [
+    {
+      "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+      "user_id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+      "user_name": "Naressh",
+      "user_email": "test@example.com",
+      "total_amount": "139998.00",
+      "status": "Pending",
+      "payment_status": "Pending",
+      "razorpay_order_id": null,
+      "razorpay_payment_id": null,
+      "created_at": "2026-08-27T10:16:34.379Z",
+      "updated_at": "2026-08-27T10:16:34.379Z",
+      "items": [
+        {
+          "id": "c608116d-88da-4b47-949e-37ca87ff81ce",
+          "product_id": "78a0d1ee-9ed1-4cda-bd22-177aed626527",
+          "product_name": "iPhone 15",
+          "price": "69999.00",
+          "quantity": 2,
+          "subtotal": "139998.00",
+          "created_at": "2026-08-27T10:16:34.379Z"
+        }
+      ]
+    }
+  ]
+}
+
+🔐 Then test as a normal USER
+
+Later, log in as a regular user and make the same request:
+
+GET http://localhost:5000/api/orders/admin/all
+
+It should be rejected with:
+
+{
+  "success": false,
+  "message": "Admin access required"
+}
+
+select * from users; - USER ROLE
+
+Login AGAIN:
+-----------
+
+Now perform your existing Login:
+
+POST
+http://localhost:5000/api/auth/login
+{
+    "email": "test@example.com",
+    "password": "123456"
+}
+RESPONSE:
+--------
+{
+  "success": true,
+  "message": "Login successful",
+  "user": {
+    "id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "name": "Naressh",
+    "email": "test@example.com",
+    "role": "USER"
+  }
+}
+
+NOW TRY THIS
+GET
+http://localhost:5000/api/orders/admin/all
+
+{
+  "success": false,
+  "message": "Admin access required"
+}
+
+That gives us an important security test:
+                    /api/orders/admin/all
+                              │
+                              ▼
+                       authMiddleware
+                              │
+                         JWT valid?
+                         /        \
+                       NO          YES
+                       ↓             ↓
+                     401       adminMiddleware
+                                    │
+                              role = ADMIN?
+                              /          \
+                            NO            YES
+                            ↓              ↓
+                           403        getAllOrders
+
+
+
+That's exactly how role-based authorization should behave.
+
+STEP 18.5 — Admin Update Order Status
+
+We'll create:
+
+PATCH /api/orders/:id/status
+
+The admin will be able to change:
+
+Pending
+   ↓
+Packed
+   ↓
+OutForDelivery
+   ↓
+Delivered
+
+and also:
+
+Pending → Cancelled
+
+--------------------------------------
+Since test@example.com is currently USER, you can temporarily change it to ADMIN with an SQL UPDATE.
+
+1. Change the role
+
+Run this in Neon:
+
+UPDATE users
+SET role = 'ADMIN'
+WHERE email = 'test@example.com';
+2. Verify it
+SELECT
+    name,
+    email,
+    role
+FROM users
+WHERE email = 'test@example.com';
+
+You should get:
+
+name     | email             | role
+---------|-------------------|------
+Naressh  | test@example.com  | ADMIN
+⚠️ 3. Login again — very important
+
+You must log in again after changing the role.
+
+Your current JWT was created when:
+
+role = USER
+
+Changing the database doesn't modify that existing JWT.
+
+So:
+
+Old JWT
+role = USER ❌
+
+       ↓ logout/login
+
+New JWT
+role = ADMIN ✅
+
+Then retry:
+
+PATCH http://localhost:5000/api/orders/833f4231-9510-4201-8a94-67b297ba4f4f/status
+
+Body:
+
+{
+  "status": "Packed"
+}
+
+You should now get:
+
+{
+  "success": true,
+  "message": "Order status updated successfully"
+}
+After testing
+
+Once we're finished testing admin functionality, you can safely change the account back:
+
+UPDATE users
+SET role = 'USER'
+WHERE email = 'test@example.com';
+
+For our development/testing phase, using the same account and temporarily switching its role is perfectly fine.
+--------------------------------------
+
+
+🧪 STEP 18.6 — Test as ADMIN
+
+Make sure you have logged in again with the account whose database role is:
+
+ADMIN
+
+UPDATE users
+SET role = 'ADMIN'
+WHERE email = 'test@example.com';
+
+Login AGAIN:
+-----------
+
+Now perform your existing Login:
+
+POST
+http://localhost:5000/api/auth/login
+{
+    "email": "test@example.com",
+    "password": "123456"
+}
+RESPONSE:
+--------
+{
+  "success": true,
+  "message": "Login successful",
+  "user": {
+    "id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "name": "Naressh",
+    "email": "test@example.com",
+    "role": "ADMIN"
+  }
+}
+
+Then:
+
+PATCH
+PATCH http://localhost:5000/api/orders/833f4231-9510-4201-8a94-67b297ba4f4f/status
+Body
+{
+    "status": "Packed"
+}
+
+RESPONSE:
+
+{
+  "success": true,
+  "message": "Order status updated successfully",
+  "order": {
+    "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+    "user_id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "total_amount": "139998.00",
+    "status": "Packed",
+    "payment_status": "Pending",
+    "razorpay_order_id": null,
+    "razorpay_payment_id": null,
+    "created_at": "2026-08-27T10:16:34.379Z",
+    "updated_at": "2026-08-27T10:42:27.219Z"
+  }
+}
+
+our test confirms:
+
+Order
+833f4231-9510-4201-8a94-67b297ba4f4f
+        │
+        ▼
+Pending
+        │
+        ▼
+Packed ✅
+
+And the database timestamp changed as well:
+
+updated_at
+2026-08-27T10:42:27.219Z
+
+So the complete authorization + update flow is working:
+
+ADMIN LOGIN
+     ↓
+JWT contains role = ADMIN
+     ↓
+PATCH /api/orders/:id/status
+     ↓
+authMiddleware       ✅
+     ↓
+adminMiddleware      ✅
+     ↓
+Validate status      ✅
+     ↓
+UPDATE orders        ✅
+     ↓
+Return updated order ✅
+
+
+One more quick test
+
+Let's make sure the status progression works:
+
+1.
+PATCH
+PATCH http://localhost:5000/api/orders/833f4231-9510-4201-8a94-67b297ba4f4f/status
+Body
+{
+  "status": "OutForDelivery"
+}
+
+Expected:
+
+Packed → OutForDelivery ✅
+
+{
+  "success": true,
+  "message": "Order status updated successfully",
+  "order": {
+    "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+    "user_id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "total_amount": "139998.00",
+    "status": "OutForDelivery",
+    "payment_status": "Pending",
+    "razorpay_order_id": null,
+    "razorpay_payment_id": null,
+    "created_at": "2026-08-27T10:16:34.379Z",
+    "updated_at": "2026-08-27T10:44:45.352Z"
+  }
+}
+
+2.
+PATCH
+PATCH http://localhost:5000/api/orders/833f4231-9510-4201-8a94-67b297ba4f4f/status
+Body
+{
+  "status": "Delivered"
+}
+
+Expected:
+
+OutForDelivery → Delivered ✅
+
+{
+  "success": true,
+  "message": "Order status updated successfully",
+  "order": {
+    "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+    "user_id": "9f093123-5292-42d4-87ec-0bd112d7f8ee",
+    "total_amount": "139998.00",
+    "status": "Delivered",
+    "payment_status": "Pending",
+    "razorpay_order_id": null,
+    "razorpay_payment_id": null,
+    "created_at": "2026-08-27T10:16:34.379Z",
+    "updated_at": "2026-08-27T10:45:04.203Z"
+  }
+}
+
+3. Test invalid status
+PATCH
+PATCH http://localhost:5000/api/orders/833f4231-9510-4201-8a94-67b297ba4f4f/status
+Body
+{
+  "status": "ABC"
+}
+
+Expected:
+
+{
+  "success": false,
+  "message": "Invalid order status"
+}
+
+entire basic order-management system:
+
+Customer
+   │
+   ├── Products          ✅
+   ├── Cart              ✅
+   ├── Checkout          ✅
+   ├── Order History     ✅
+   └── Order Details     ✅
+   
+Admin
+   │
+   ├── View All Orders    ✅
+   └── Update Status      ✅
+   
+   
+Then the next major milestone is Razorpay integration:
+
+Cart
+ ↓
+Create Order
+ ↓
+Create Razorpay Order
+ ↓
+Payment
+ ↓
+Verify Signature
+ ↓
+Mark Payment = Paid
+ ↓
+Confirm Order
+
+That's where your razorpay_order_id, razorpay_payment_id, and razorpay_signature columns will finally come into use. 🚀
+
+
+🚀 STEP 19 — Razorpay Payment Integration
+
+This is where the payment columns we created earlier finally become useful:
+
+razorpay_order_id
+razorpay_payment_id
+razorpay_signature
+
+The flow will be:
+
+                    CUSTOMER
+                       │
+                       ▼
+                 Checkout Cart
+                       │
+                       ▼
+                 Create Order
+                       │
+                       ▼
+              Create Razorpay Order
+                       │
+                       ▼
+              Razorpay Checkout
+                       │
+                       ▼
+                  Customer Pays
+                       │
+                       ▼
+             Payment Successful
+                       │
+                       ▼
+             Verify Razorpay Signature
+                       │
+                       ▼
+              Mark Payment = Paid
+                       │
+                       ▼
+                 Order Confirmed
+Before we write code
+
+We'll do this in small, testable steps, just like we've done with authentication, products, cart and orders.
+
+STEP 19.1 — Install Razorpay
+
+From your backend folder run:
+
+npm install razorpay
+
+Then:
+
+npm install -D @types/razorpay -- NO NEED
+
+Why don't we need @types/razorpay?
+
+The current razorpay package provides its own TypeScript definitions, so we can use:
+
+import Razorpay from "razorpay";
+
+without installing a separate DefinitelyTyped package.
+
+   
+RAZORPAY:
+--------
+npm install razorpay
+
+Next step: configure Razorpay
+
+Let's proceed with your existing structure.
+
+First, in .env, add:
+
+RAZORPAY_KEY_ID=your_razorpay_key_id
+RAZORPAY_KEY_SECRET=your_razorpay_key_secret   
+   
+   
+.env
+ │
+ ├── PORT
+ ├── DATABASE_URL
+ ├── FRONTEND_URL
+ ├── JWT_SECRET
+ ├── RAZORPAY_KEY_ID       ← NEW
+ └── RAZORPAY_KEY_SECRET   ← NEW
+        │
+        ▼
+     env.ts
+        │
+        ▼
+  razorpay.ts
+        │
+        ▼
+ Razorpay Client
+
+
+
+🚀 STEP 19.5 — Create Razorpay Order
+
+Now we'll connect our existing database order with a Razorpay order.
+
+The important architecture is:
+
+Customer
+   ↓
+Checkout
+   ↓
+Database Order
+   ↓
+Razorpay Order
+   ↓
+Payment
+
+We already have:
+
+orders.total_amount
+orders.razorpay_order_id
+
+So we'll use those.
+
+1. Add Razorpay order creation to orderModel.ts
+   
+💡 Why multiply by 100?
+
+Razorpay expects the amount in the smallest currency unit.
+
+For Indian rupees:
+
+₹1 = 100 paise
+
+Therefore:
+
+₹139,998
+      × 100
+      ↓
+13,999,800 paise
+
+This is why we use:
+
+Math.round(
+    Number(order.total_amount) * 100
+)
+
+And importantly, we're getting the amount from:
+
+PostgreSQL orders.total_amount
+
+—not from the frontend. 🔐
+
+
+src
+├── config
+│   ├── db.ts
+│   ├── env.ts
+│   └── razorpay.ts
+│
+├── controllers
+│   ├── authController.ts
+│   ├── productController.ts
+│   ├── cartController.ts
+│   ├── orderController.ts
+│   └── paymentController.ts       ← NEW
+│
+├── middleware
+│   ├── authMiddleware.ts
+│   └── adminMiddleware.ts
+│
+├── models
+│   ├── userModel.ts
+│   ├── productModel.ts
+│   ├── cartModel.ts
+│   └── orderModel.ts
+│
+├── routes
+│   ├── authRoutes.ts
+│   ├── productRoutes.ts
+│   ├── cartRoutes.ts
+│   ├── orderRoutes.ts
+│   └── paymentRoutes.ts            ← NEW
+│
+├── app.ts
+└── server.ts
+
+
+RAZORPAY DASHBOARD
+venkatdada369@gmail.com
+Gvnaressh3695
+rzp_test_7loOYJatPLp2HD
+rzp_test_7loOYJatPLp2HD
+
+eUO2oYhFEu7XlbzOopp6UYGL
+eUO2oYhFEu7XlbzOopp6UYGL
+
+RAZORPAY_KEY_ID=rzp_test_7loOYJatPLp2HD
+RAZORPAY_SECRET_KEY=eUO2oYhFEu7XlbzOopp6UYGL
+
+Test
+
+Use your existing order:
+
+833f4231-9510-4201-8a94-67b297ba4f4f
+
+Send:
+
+POST http://localhost:5000/api/payments/create-order
+
+Body:
+
+{
+    "orderId": "833f4231-9510-4201-8a94-67b297ba4f4f"
+}
+
+Because this is protected by:
+
+authMiddleware
+
+your login cookie must be present.
+
+Expected response
+
+Something similar to:
+
+{
+  "success": true,
+  "order": {
+    "id": "833f4231-9510-4201-8a94-67b297ba4f4f",
+    "total_amount": "139998.00",
+    "razorpay_order_id": "order_TUmKMPl8cQBEkd"
+  }
+}
+
+Then check PostgreSQL:
+
+SELECT
+    id,
+    total_amount,
+    status,
+    payment_status,
+    razorpay_order_id
+FROM orders
+WHERE id = '833f4231-9510-4201-8a94-67b297ba4f4f';
+
+We want:
+
+total_amount       = 139998.00
+status             = Pending
+payment_status     = Pending
+razorpay_order_id  = order_XXXXXXXXXXXX
+
+
+Razorpay Order Creation is working perfectly!
+
+We now have a real Razorpay order:
+
+Database Order
+833f4231-9510-4201-8a94-67b297ba4f4f
+        │
+        │ ₹139,998
+        ▼
+Razorpay Order
+order_TUmKMPl8cQBEkd
+
+And PostgreSQL now has:
+
+total_amount      = 139998.00
+status            = Pending
+payment_status    = Pending
+razorpay_order_id = order_TUmKMPl8cQBEkd
+
+That's a major milestone. 🚀
+   
+SELECT
+    id,
+    total_amount,
+    status,
+    payment_status,
+    razorpay_order_id
+FROM orders
+WHERE id = '833f4231-9510-4201-8a94-67b297ba4f4f';   
+   
+  id	total_amount	status	payment_status	razorpay_order_id
+1	833f4231-9510-4201-8a94-67b297ba4f4f	139998.00	Delivered	Pending	order_TUmKMPl8cQBEkd
+   
+   
+STEP 19.7 — Payment Verification
+
+Now we need to handle the most important security part:
+
+Razorpay Payment
+       ↓
+payment_id
+       ↓
+signature
+       ↓
+Backend verifies signature
+       ↓
+✅ Valid
+       ↓
+payment_status = Paid
+
+We must not simply trust this from the frontend:
+
+{
+  "paymentId": "...",
+  "success": true
+}
+
+Instead, Razorpay gives us a cryptographic signature, and our backend verifies it using:
+
+RAZORPAY_KEY_SECRET
+1. Add signature verification
+
+In paymentController.ts, add:
+
+import crypto from "crypto";
+ 
+
+POST /api/payments/create-order
+              ↓
+       Create Razorpay Order
+
+
+POST /api/payments/verify
+              ↓
+       Verify Payment
+
+
+⚠️ Important: Don't test verification manually yet
+
+This endpoint requires a real Razorpay payment response, because we need:
+
+razorpay_order_id
+razorpay_payment_id
+razorpay_signature
+
+The signature must be generated by Razorpay.
+
+So our next stage will be:
+
+Backend
+   ↓
+Create Razorpay Order
+   ↓
+React Frontend
+   ↓
+Open Razorpay Checkout
+   ↓
+Customer completes payment
+   ↓
+Razorpay returns:
+   ├── razorpay_order_id
+   ├── razorpay_payment_id
+   └── razorpay_signature
+   ↓
+POST /api/payments/verify
+   ↓
+Backend verifies signature
+   ↓
+payment_status = Paid	   
+
+
+If both are clean, we'll connect the React frontend to Razorpay Checkout. That's the exciting part—your first complete React → Express → Razorpay → PostgreSQL payment flow. 💳🔥
+
+
+
+   
+
+TO START BACKEND SERVER:
+-----------------------
+npx tsc --noEmit
+npm run build
+npm run dev
+----------------------
+
+------ UPDATE - PENDING - STATUSES - WHICH WHERE FAILED ------
+Later we could run a cleanup job such as:
+
+UPDATE orders
+SET
+    status = 'Cancelled',
+    payment_status = 'Failed',
+    updated_at = NOW()
+WHERE
+    status = 'Pending'
+    AND payment_status = 'Pending'
+    AND created_at < NOW() - INTERVAL '30 minutes';
+	------ UPDATE - PENDING - STATUSES - WHICH WHERE FAILED ------
+
+
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>tree /src
+Invalid switch - /src
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>tree src
+Folder PATH listing for volume DATA
+Volume serial number is 0ED0-D3D0
+E:\MURALI\REACT-JS-CRASH-COURSE\REACTTSECOMAPP\BACKEND\SRC
+├───config
+├───controllers
+├───middleware
+├───models
+└───routes
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>tree /f src
+Folder PATH listing for volume DATA
+Volume serial number is 0ED0-D3D0
+E:\MURALI\REACT-JS-CRASH-COURSE\REACTTSECOMAPP\BACKEND\SRC
+│   app.ts
+│   server.ts
+│
+├───config
+│       db.ts
+│       env.ts
+│       razorpay.ts
+│
+├───controllers
+│       authController.ts
+│       cartController.ts
+│       orderController.ts
+│       paymentController.ts
+│       productController.ts
+│
+├───middleware
+│       adminMiddleware.ts
+│       authMiddleware.ts
+│
+├───models
+│       cartModel.ts
+│       orderModel.ts
+│       productModel.ts
+│       userModel.ts
+│
+└───routes
+        authRoutes.ts
+        cartRoutes.ts
+        orderRoutes.ts
+        paymentRoutes.ts
+        productRoutes.ts
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>
+
+
+---------------------------------
+ADMIN BACKEND:
+==============
+
+ADMIN BACKEND
+│
+├── 1. Admin authentication / authorization
+│
+├── 2. Product management
+│      ├── Create product
+│      ├── Get all products
+│      ├── Get product by ID
+│      ├── Update product
+│      └── Delete / deactivate product
+│
+├── 3. Order management
+│      ├── Get all orders
+│      ├── Get order details
+│      └── Update order status
+│
+└── 4. Dashboard statistics
+       ├── Total products
+       ├── Total orders
+       ├── Paid orders
+       ├── Pending orders
+       └── Revenue
+	   
+---------------------------------
+Let's build Admin Product CRUD
+
+| Operation    | Endpoint                         | Purpose                   |
+| ------------ | -------------------------------- | ------------------------- |
+| Get products | `GET /api/admin/products`        | List all products         |
+| Get one      | `GET /api/admin/products/:id`    | Product details           |
+| Create       | `POST /api/admin/products`       | Add product               |
+| Update       | `PUT /api/admin/products/:id`    | Edit product              |
+| Delete       | `DELETE /api/admin/products/:id` | Delete/deactivate product |
+
+---------------------------------
+| Method | Endpoint                  | Purpose            |
+| ------ | ------------------------- | ------------------ |
+| GET    | `/api/admin/products`     | Get all products   |
+| GET    | `/api/admin/products/:id` | Get one product    |
+| POST   | `/api/admin/products`     | Create product     |
+| PUT    | `/api/admin/products/:id` | Update product     |
+| DELETE | `/api/admin/products/:id` | Deactivate product |
+
+---------------------------------
+SELECT id, name, email, role
+FROM users;
+---------------------------------
+UPDATE users
+SET role = 'ADMIN'
+WHERE email = 'test@example.com';
+---------------------------------
+Admin Dashboard
+backend/src/models/adminDashboardModel.ts
+
+| Dashboard value  | Meaning                                 |
+| ---------------- | --------------------------------------- |
+| `total_products` | All products                            |
+| `total_orders`   | All orders                              |
+| `pending_orders` | Orders waiting for payment              |
+| `paid_orders`    | Successfully paid orders                |
+| `total_sales`    | Revenue from paid, non-cancelled orders |
+
+---------------------------------
+GET
+http://localhost:5000/api/admin/dashboard
+{
+  "success": true,
+  "dashboard": {
+    "total_products": "4",
+    "total_orders": "11",
+    "pending_orders": "0",
+    "paid_orders": "3",
+    "total_sales": "155996.00"
+  }
+}
+---------------------------------
+Normal user:
+
+Navbar
+-------------------------
+Home | Products | Cart | Orders
+-------------------------
+       User content
+
+Admin:
+
+Admin Panel
+-------------------------
+Dashboard
+Products
+Orders
+-------------------------
+       Admin content
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------
+---------------------------------

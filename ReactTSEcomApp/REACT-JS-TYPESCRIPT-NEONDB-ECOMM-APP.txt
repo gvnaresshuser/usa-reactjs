@@ -1,0 +1,182 @@
+I want to create typescript tsx ecommerce application in react js with the following:
+
+1. Register Page
+2. Login Page
+3. Dashboard Page - with products display - search facility - add to cart - checkout button
+4. Checkout page - alter selected products and qty - proceed to pay
+5. Razorpay payment - Test Mode
+6. Orders page - showing order details
+7. Navbar with NavLinks
+8. Admin page - Feature 1 - to show list or orders and be able to update status - Pending,Cancelled,Packed,OutForDelivery,Delivered
+9. Admin page - Feature 2 - to show list of products with add,update and delete new product features
+
+middleware is express js 
+should store jwt tokens in cookies with settings for both localhost and live deployment
+
+ALL postgres sql table scripts with indexes
+
+neon.com/login
+Google login
+gvnaressh@gmail.com
+Project Name : reactTSEcomApp
+postgresql
+WITH CONNECTION POOL - USE THIS
+postgresql://neondb_owner:npg_Gwrsz75fUNyo@ep-summer-bar-axi8uvlb-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+
+WITHOUT CONNECTION POOL
+postgresql://neondb_owner:npg_Gwrsz75fUNyo@ep-summer-bar-axi8uvlb.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+
+PORT=5000
+JWT_SECRET=mysecret
+#https://jwtsecrets.com/#generator
+
+DATABASE_URL="postgresql://neondb_owner:npg_Gwrsz75fUNyo@ep-summer-bar-axi8uvlb-pooler.c-4.us-east-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require"
+
+RAZORPAY_KEY_ID=xxxxxxxxxxxxx
+RAZORPAY_SECRET_KEY=yyyyyyyyyy
+
+
+FOLDER STRUCTURE:
+----------------
+ReactTSEcomApp - backend
+			   - frontend 
+
+| Feature                         | Included  |
+| ------------------------------- | --------- |
+| Register                        | ✅         |
+| Login                           | ✅         |
+| JWT authentication              | ✅         |
+| HTTP-only cookie                | ✅         |
+| Localhost cookie configuration  | ✅         |
+| Production cookie configuration | ✅         |
+| Products                        | ✅         |
+| Product search                  | ✅         |
+| Add to cart                     | ✅         |
+| Checkout                        | ✅         |
+| Modify quantity                 | ✅         |
+| Remove products                 | ✅         |
+| Razorpay Test Mode              | ✅         |
+| Orders                          | ✅         |
+| Admin orders                    | ✅         |
+| Update order status             | ✅         |
+| Pending                         | ✅         |
+| Cancelled                       | ✅         |
+| Packed                          | ✅         |
+| OutForDelivery                  | ✅         |
+| Delivered                       | ✅         |
+| Admin product CRUD              | ✅         |
+| PostgreSQL                      | ✅         |
+| Existing Neon connection pool   | ✅         |
+
+------------------------------------------------------------
+PORT=5000
+JWT_SECRET=a958e14b76bff8d73a84e3ca9fcf9d197b6f5c242fae4a1133645cad5e4d6361
+#https://jwtsecrets.com/#generator
+
+
+RAZORPAY_KEY_ID=rzp_test_7loOYJatPLp2HD
+RAZORPAY_SECRET_KEY=eUO2oYhFEu7XlbzOopp6UYGL
+
+
+DATABASE_URL="postgresql://pernsss_store_user:re4rSmMlmbqlZF2HY2d8yJZJa1i9v6C5@dpg-d4bae9odl3ps739932hg-a.singapore-postgres.render.com/pernssss_store?sslmode=require"
+
+======================================================================
+
+ReactTSEcomApp/backend
+npm run dev
+
+npm install -D tsx
+
+npx tsc --noEmit
+npx tsc --listFiles --noEmit
+
+
+node_modules\.bin\tsc --version
+
+
+In VS Code:
+
+Press Ctrl + Shift + X
+Search:
+TypeScript 7
+
+TypeScript 7
+Microsoft
+microsoft.com
+613,253
+(13)
+TypeScript and JavaScript language support powered by the native TypeScript language server.
+Disable
+Uninstall
+Auto Update
+
+
+After installing it
+
+Open your server.ts, then:
+
+Ctrl + Shift + P
+
+Search:
+
+TypeScript: Enable TypeScript 7
+
+TypeScript: Restart TS Server
+
+
+Write .ts files → import them with .js → TypeScript compiles them to .js.
+
+============================================================
+TypeScript 7.0.2
+        ↓
+NodeNext
+        ↓
+ES Modules
+        ↓
+"type": "module"
+        ↓
+.js extensions for local imports
+        ↓
+tsx watch
+        ↓
+Express
+        ↓
+Neon PostgreSQL
+============================================================
+INSTALL THIS EXTENSION IN VS CODE EDITOR
+TypeScript 7
+Microsoft
+microsoft.com
+612,756
+(13)
+TypeScript and JavaScript language support powered by the native TypeScript language server.
+============================================================
+
+7. Localhost vs Production
+
+This part of our configuration is particularly important.
+
+Local development
+secure: false
+sameSite: "lax"
+
+because we're using:
+
+http://localhost
+Production
+secure: true
+sameSite: "none"
+
+because our frontend and backend may be on different domains.
+
+Our code handles this automatically:
+
+secure:
+    env.nodeEnv === "production",
+
+sameSite:
+    env.nodeEnv === "production"
+        ? "none"
+        : "lax",
+
+So we don't have to keep changing the code when deploying.

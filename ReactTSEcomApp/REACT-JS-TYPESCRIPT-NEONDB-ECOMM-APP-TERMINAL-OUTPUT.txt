@@ -1,0 +1,116 @@
+Microsoft Windows [Version 10.0.26100.8246]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>npm init -y
+Wrote to E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend\package.json:
+
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>npm install express pg dotenv cors cookie-parser
+
+added 87 packages, and audited 88 packages in 5s
+
+29 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>npm install -D typescript ts-node-dev @types/node @types/express @types/pg @types/cors @types/cookie-parser
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+
+added 73 packages, and audited 161 packages in 11s
+
+37 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>npx tsc --init
+
+Created a new tsconfig.json
+                                                                                                                     TS
+You can learn more at https://aka.ms/tsconfig
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>code .
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>
+
+++++++++++++++++++++++++++
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>npm install bcrypt
+
+added 3 packages, and audited 167 packages in 6s
+
+37 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>npm install -D @types/bcrypt
+
+added 1 package, and audited 168 packages in 2s
+
+37 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>
+++++++++++++++++++++++++++
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>npm install jsonwebtoken
+
+added 14 packages, and audited 182 packages in 2s
+
+38 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>npm install -D @types/jsonwebtoken
+
+added 2 packages, and audited 184 packages in 2s
+
+38 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+E:\MURALI\REACT-JS-CRASH-COURSE\ReactTSEcomApp\backend>
+++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++
+++++++++++++++++++++++++++

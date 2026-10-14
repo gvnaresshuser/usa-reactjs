@@ -1,0 +1,37 @@
+INSERT INTO products
+(
+    name,
+    description,
+    price,
+    image_url,
+    stock,
+    category
+)
+VALUES
+
+(
+    'iPhone 15',
+    'Apple iPhone 15 smartphone',
+    69999,
+    'https://example.com/iphone15.jpg',
+    10,
+    'Mobiles'
+),
+
+(
+    'Samsung Galaxy S24',
+    'Samsung Galaxy S24 smartphone',
+    64999,
+    'https://example.com/s24.jpg',
+    15,
+    'Mobiles'
+),
+
+(
+    'Sony Headphones',
+    'Wireless noise cancelling headphones',
+    12999,
+    'https://example.com/sony-headphones.jpg',
+    20,
+    'Audio'
+);
