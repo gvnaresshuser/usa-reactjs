@@ -11,6 +11,8 @@ const schema = z
       .min(3, "Username must be at least 3 characters")
       .regex(/^[A-Za-z]+$/, "Username must contain only alphabets"),
 
+    //In Zod, .pipe() passes the output of one schema to another schema for
+    // further validation.
     age: z
       .string()
       .transform(Number)
@@ -375,6 +377,13 @@ export default function AssignmentZODForm() {
   );
 }
 /*
+[A-Z] — matches an uppercase letter.
+( ) — captures the matched uppercase letter as Group 1.
+g — finds all uppercase letters in the string.
+" $1" — adds a space before each matched uppercase letter. 
+$1 represents the captured uppercase letter.
+-----------------------------------------------------------
+
 React Hook Form's useForm has three important generic parameters:
 useForm<TFieldValues, TContext, TTransformedValues>()
 

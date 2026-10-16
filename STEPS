@@ -103,31 +103,30 @@ E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 LATEST COMMIT
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Microsoft Windows [Version 10.0.26200.9457]
-(c) Microsoft Corporation. All rights reserved.
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'jwt-cookies/backend/package copy.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/backend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/backend/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/.gitignore', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/README.md', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/eslint.config.js', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/public/icons.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/src/App copy.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/src/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/src/assets/vite.svg', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/src/index copy.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/src/main.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/tsconfig.app.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/tsconfig.node.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookies/frontend/vite.config.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/backend/package-localhost.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/backend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/backend/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/backend/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/eslint.config.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/public/icons.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/src/App copy.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/src/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/src/assets/vite.svg', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/src/index copy.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/src/main copy.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/src/main.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/tsconfig.app.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/tsconfig.node.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'ReactTSEcomApp/frontend/vite.config.ts', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -135,281 +134,279 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
+        new file:   ReactTSEcomApp/.gitignore
+        new file:   ReactTSEcomApp/DEPLOYMENT-STEPS.txt
+        new file:   ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP-PROCESS.txt
+        new file:   ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP-STEPS.txt
+        new file:   ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP-TABLES.txt
+        new file:   ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP-TERMINAL-OUTPUT.txt
+        new file:   ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP.txt
+        new file:   ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-FRONTEND.txt
+        new file:   ReactTSEcomApp/SCREENS/5.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-1.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-10.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-11.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-12-VERCEL.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-13-VERCEL.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-14-VERCEL.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-15-VERCEL.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-16-VERCEL.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-17-VERCEL.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-18-VERCEL.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-19-RENDER.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-19-VERCEL.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-2.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-20.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-21.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-22.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-23.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-24.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-3.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-4.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-5.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-6.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-7.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-8.png
+        new file:   ReactTSEcomApp/SCREENS/DEPLOYMENT-9.png
+        new file:   ReactTSEcomApp/SCREENS/PAYMENT-SCREENS.png
+        new file:   ReactTSEcomApp/SEED.txt
+        new file:   ReactTSEcomApp/backend/.gitignore
+        new file:   ReactTSEcomApp/backend/SCREENS/Checklist for our specific Node.js + Express + TypeScript backend setup.png
+        new file:   ReactTSEcomApp/backend/STEPS
+        new file:   ReactTSEcomApp/backend/package-localhost.json
+        new file:   ReactTSEcomApp/backend/package-lock.json
+        new file:   ReactTSEcomApp/backend/package.json
+        new file:   ReactTSEcomApp/backend/src/app.ts
+        new file:   ReactTSEcomApp/backend/src/config/db.ts
+        new file:   ReactTSEcomApp/backend/src/config/env.ts
+        new file:   ReactTSEcomApp/backend/src/config/razorpay.ts
+        new file:   ReactTSEcomApp/backend/src/controllers/adminDashboardController.ts
+        new file:   ReactTSEcomApp/backend/src/controllers/adminOrderController.ts
+        new file:   ReactTSEcomApp/backend/src/controllers/adminProductController.ts
+        new file:   ReactTSEcomApp/backend/src/controllers/authController.ts
+        new file:   ReactTSEcomApp/backend/src/controllers/cartController.ts
+        new file:   ReactTSEcomApp/backend/src/controllers/orderController.ts
+        new file:   ReactTSEcomApp/backend/src/controllers/paymentController.ts
+        new file:   ReactTSEcomApp/backend/src/controllers/productController.ts
+        new file:   ReactTSEcomApp/backend/src/middleware/adminMiddleware.ts
+        new file:   ReactTSEcomApp/backend/src/middleware/authMiddleware.ts
+        new file:   ReactTSEcomApp/backend/src/models/adminDashboardModel.ts
+        new file:   ReactTSEcomApp/backend/src/models/adminOrderModel.ts
+        new file:   ReactTSEcomApp/backend/src/models/adminProductModel.ts
+        new file:   ReactTSEcomApp/backend/src/models/cartModel.ts
+        new file:   ReactTSEcomApp/backend/src/models/orderModel.ts
+        new file:   ReactTSEcomApp/backend/src/models/productModel.ts
+        new file:   ReactTSEcomApp/backend/src/models/userModel.ts
+        new file:   ReactTSEcomApp/backend/src/routes/adminDashboardRoutes.ts
+        new file:   ReactTSEcomApp/backend/src/routes/adminOrderRoutes.ts
+        new file:   ReactTSEcomApp/backend/src/routes/adminProductRoutes.ts
+        new file:   ReactTSEcomApp/backend/src/routes/authRoutes.ts
+        new file:   ReactTSEcomApp/backend/src/routes/cartRoutes.ts
+        new file:   ReactTSEcomApp/backend/src/routes/orderRoutes.ts
+        new file:   ReactTSEcomApp/backend/src/routes/paymentRoutes.ts
+        new file:   ReactTSEcomApp/backend/src/routes/productRoutes.ts
+        new file:   ReactTSEcomApp/backend/src/server.ts
+        new file:   ReactTSEcomApp/backend/tsconfig.json
+        new file:   ReactTSEcomApp/frontend/.gitignore
+        new file:   ReactTSEcomApp/frontend/README.md
+        new file:   ReactTSEcomApp/frontend/eslint.config.js
+        new file:   ReactTSEcomApp/frontend/index.html
+        new file:   ReactTSEcomApp/frontend/package-lock.json
+        new file:   ReactTSEcomApp/frontend/package.json
+        new file:   ReactTSEcomApp/frontend/public/favicon.svg
+        new file:   ReactTSEcomApp/frontend/public/icons.svg
+        new file:   ReactTSEcomApp/frontend/src/App copy.tsx
+        new file:   ReactTSEcomApp/frontend/src/App.css
+        new file:   ReactTSEcomApp/frontend/src/App.tsx
+        new file:   ReactTSEcomApp/frontend/src/assets/hero.png
+        new file:   ReactTSEcomApp/frontend/src/assets/react.svg
+        new file:   ReactTSEcomApp/frontend/src/assets/vite.svg
+        new file:   ReactTSEcomApp/frontend/src/components/Layout.tsx
+        new file:   ReactTSEcomApp/frontend/src/components/ModalPortal.tsx
+        new file:   ReactTSEcomApp/frontend/src/components/Navbar copy.tsx
+        new file:   ReactTSEcomApp/frontend/src/components/Navbar.tsx
+        new file:   ReactTSEcomApp/frontend/src/components/ProtectedRoute.tsx
+        new file:   ReactTSEcomApp/frontend/src/components/RegisterSuccessModal.tsx
+        new file:   ReactTSEcomApp/frontend/src/index copy.css
+        new file:   ReactTSEcomApp/frontend/src/index.css
+        new file:   ReactTSEcomApp/frontend/src/main copy.tsx
+        new file:   ReactTSEcomApp/frontend/src/main.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Cart.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Checkout.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Home.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Login.css
+        new file:   ReactTSEcomApp/frontend/src/pages/Login.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/OrderDetails.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Orders.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/PaymentSuccess.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Products.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Register copy.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Register-WITHOUT-CREATEPORTAL.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/Register.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/admin/AdminDashboard.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/admin/AdminLayout.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/admin/AdminOrders.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/admin/AdminProductForm.tsx
+        new file:   ReactTSEcomApp/frontend/src/pages/admin/AdminProducts.tsx
+        new file:   ReactTSEcomApp/frontend/src/redux/hooks.ts
+        new file:   ReactTSEcomApp/frontend/src/redux/slices/authSlice.ts
+        new file:   ReactTSEcomApp/frontend/src/redux/slices/cartSlice.ts
+        new file:   ReactTSEcomApp/frontend/src/redux/slices/productSlice.ts
+        new file:   ReactTSEcomApp/frontend/src/redux/store.ts
+        new file:   ReactTSEcomApp/frontend/src/services/api.ts
+        new file:   ReactTSEcomApp/frontend/src/types/auth.ts
+        new file:   ReactTSEcomApp/frontend/src/types/cart.ts
+        new file:   ReactTSEcomApp/frontend/src/types/product.ts
+        new file:   ReactTSEcomApp/frontend/tsconfig.app.json
+        new file:   ReactTSEcomApp/frontend/tsconfig.json
+        new file:   ReactTSEcomApp/frontend/tsconfig.node.json
+        new file:   ReactTSEcomApp/frontend/vercel.json
+        new file:   ReactTSEcomApp/frontend/vite.config.ts
         modified:   STEPS
-        new file:   jwt-cookies/.env copy
-        new file:   jwt-cookies/BACKENT-JWT-COOKIES.txt
-        new file:   jwt-cookies/IMPORTANT-module-NodeNext-moduleResolution-NodeNext.txt
-        new file:   jwt-cookies/NOTES.txt
-        new file:   jwt-cookies/PROMPT.txt
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/1.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/10-REFRESH-TOKEN-TEST.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/11-COMPLETE Logout Security Test.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/12-COMPLETE Logout Security Test.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/13-COMPLETE Logout Security Test.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/14-COMPLETE Logout Security Test.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/15-COMPLETE Logout Security Test.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/16-COMPLETE Logout Security Test.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/17-COMPLETE Logout Security Test.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/18-COMPLETE Logout Security Test.png
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/19-Test A \342\200\224 HTTP-only Cookie Authentication.png"
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/2.png
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/20-Test A \342\200\224 HTTP-only Cookie Authentication.png"
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/21-Test A \342\200\224 HTTP-only Cookie Authentication.png"
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/22-Test B \342\200\224 Bearer Authentication.png"
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/23-Test B \342\200\224 Bearer Authentication.png"
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/24-Test B \342\200\224 Bearer Authentication.png"
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/25-Test B \342\200\224 Bearer Authentication.png"
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/26-Test B \342\200\224 Bearer Authentication.png"
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/27-Test B \342\200\224 Bearer Authentication.png"
-        new file:   "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/28-Test B \342\200\224 Bearer Authentication.png"
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/29-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/3.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/30-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/31-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/32-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/33-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/34-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/35-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/36-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/37-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/38-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/39-TEST Role-Based Authorization.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/4.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/40-USER can view projects.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/41-USER can view projects.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/42-USER cannot delete projects.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/43-ADMINcan delete projects.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/44-ADMINcan delete projects.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/5-REFRESH-TOKEN-TEST.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/6-REFRESH-TOKEN-TEST.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/7-REFRESH-TOKEN-TEST.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/8-REFRESH-TOKEN-TEST.png
-        new file:   jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/9-REFRESH-TOKEN-TEST.png
-        new file:   jwt-cookies/TABLES.txt
-        new file:   jwt-cookies/TEST-BACKEND-THUNDER-CLIENT.txt
-        new file:   jwt-cookies/backend/.env
-        new file:   jwt-cookies/backend/.env.example
-        new file:   jwt-cookies/backend/.gitignore
-        new file:   jwt-cookies/backend/package copy.json
-        new file:   jwt-cookies/backend/package-lock.json
-        new file:   jwt-cookies/backend/package.json
-        new file:   jwt-cookies/backend/sql/001_schema.sql
-        new file:   jwt-cookies/backend/sql/002_seed.sql
-        new file:   jwt-cookies/backend/src/app.ts
-        new file:   jwt-cookies/backend/src/config/env.ts
-        new file:   jwt-cookies/backend/src/controllers/auth.controller.ts
-        new file:   jwt-cookies/backend/src/controllers/project.controller.ts
-        new file:   jwt-cookies/backend/src/controllers/user.controller.ts
-        new file:   jwt-cookies/backend/src/db/pool.ts
-        new file:   jwt-cookies/backend/src/middleware/auth.middleware.ts
-        new file:   jwt-cookies/backend/src/middleware/authorize.middleware.ts
-        new file:   jwt-cookies/backend/src/middleware/cors.middleware.ts
-        new file:   jwt-cookies/backend/src/middleware/error.middleware.ts
-        new file:   jwt-cookies/backend/src/middleware/not-found.middleware.ts
-        new file:   jwt-cookies/backend/src/middleware/validate.middleware.ts
-        new file:   jwt-cookies/backend/src/repositories/project.repository.ts
-        new file:   jwt-cookies/backend/src/repositories/refresh-token.repository.ts
-        new file:   jwt-cookies/backend/src/repositories/user.repository.ts
-        new file:   jwt-cookies/backend/src/routes/auth.routes.ts
-        new file:   jwt-cookies/backend/src/routes/project.routes.ts
-        new file:   jwt-cookies/backend/src/routes/user.routes.ts
-        new file:   jwt-cookies/backend/src/server.ts
-        new file:   jwt-cookies/backend/src/services/auth.service.ts
-        new file:   jwt-cookies/backend/src/services/project.service.ts
-        new file:   jwt-cookies/backend/src/services/user.service.ts
-        new file:   jwt-cookies/backend/src/types/auth.types.ts
-        new file:   jwt-cookies/backend/src/utils/cookies.ts
-        new file:   jwt-cookies/backend/src/utils/jwt.ts
-        new file:   jwt-cookies/backend/src/utils/password.ts
-        new file:   jwt-cookies/backend/src/validators/auth.validator.ts
-        new file:   jwt-cookies/backend/src/validators/project.validator.ts
-        new file:   jwt-cookies/backend/src/validators/user.validator.ts
-        new file:   jwt-cookies/backend/tsconfig copy.json
-        new file:   jwt-cookies/backend/tsconfig.json
-        new file:   jwt-cookies/frontend/.gitignore
-        new file:   jwt-cookies/frontend/README.md
-        new file:   jwt-cookies/frontend/SCREENS/CORS.txt
-        new file:   jwt-cookies/frontend/SCREENS/JWT Authentication with HTTP-Only Cookies.png
-        new file:   jwt-cookies/frontend/SCREENS/STEPS-FRONTEND.txt
-        new file:   jwt-cookies/frontend/eslint.config.js
-        new file:   jwt-cookies/frontend/index.html
-        new file:   jwt-cookies/frontend/package-lock.json
-        new file:   jwt-cookies/frontend/package.json
-        new file:   jwt-cookies/frontend/public/favicon.svg
-        new file:   jwt-cookies/frontend/public/icons.svg
-        new file:   jwt-cookies/frontend/src/App copy.tsx
-        new file:   jwt-cookies/frontend/src/App.css
-        new file:   jwt-cookies/frontend/src/App.tsx
-        new file:   jwt-cookies/frontend/src/api/authApi.ts
-        new file:   jwt-cookies/frontend/src/api/axios copy.ts
-        new file:   jwt-cookies/frontend/src/api/axios.ts
-        new file:   jwt-cookies/frontend/src/api/projectApi.ts
-        new file:   jwt-cookies/frontend/src/api/userApi.ts
-        new file:   jwt-cookies/frontend/src/assets/hero.png
-        new file:   jwt-cookies/frontend/src/assets/react.svg
-        new file:   jwt-cookies/frontend/src/assets/vite.svg
-        new file:   jwt-cookies/frontend/src/auth/AuthContext.tsx
-        new file:   jwt-cookies/frontend/src/auth/authService.ts
-        new file:   jwt-cookies/frontend/src/components/auth/ProtectedRoute.tsx
-        new file:   jwt-cookies/frontend/src/components/common/Alert.ts
-        new file:   jwt-cookies/frontend/src/index copy.css
-        new file:   jwt-cookies/frontend/src/index.css
-        new file:   jwt-cookies/frontend/src/main.tsx
-        new file:   jwt-cookies/frontend/src/pages/Dashboard.tsx
-        new file:   jwt-cookies/frontend/src/pages/Login.tsx
-        new file:   jwt-cookies/frontend/src/pages/Projects.tsx
-        new file:   jwt-cookies/frontend/src/pages/Register.tsx
-        new file:   jwt-cookies/frontend/src/pages/Users.tsx
-        new file:   jwt-cookies/frontend/src/types/auth.ts
-        new file:   jwt-cookies/frontend/tsconfig.app.json
-        new file:   jwt-cookies/frontend/tsconfig.json
-        new file:   jwt-cookies/frontend/tsconfig.node.json
-        new file:   jwt-cookies/frontend/vite.config.ts
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "JWT Cookies"
-[main dcd540e] JWT Cookies
- 130 files changed, 12122 insertions(+), 11 deletions(-)
- create mode 100644 jwt-cookies/.env copy
- create mode 100644 jwt-cookies/BACKENT-JWT-COOKIES.txt
- create mode 100644 jwt-cookies/IMPORTANT-module-NodeNext-moduleResolution-NodeNext.txt
- create mode 100644 jwt-cookies/NOTES.txt
- create mode 100644 jwt-cookies/PROMPT.txt
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/1.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/10-REFRESH-TOKEN-TEST.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/11-COMPLETE Logout Security Test.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/12-COMPLETE Logout Security Test.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/13-COMPLETE Logout Security Test.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/14-COMPLETE Logout Security Test.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/15-COMPLETE Logout Security Test.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/16-COMPLETE Logout Security Test.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/17-COMPLETE Logout Security Test.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/18-COMPLETE Logout Security Test.png
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/19-Test A \342\200\224 HTTP-only Cookie Authentication.png"
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/2.png
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/20-Test A \342\200\224 HTTP-only Cookie Authentication.png"
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/21-Test A \342\200\224 HTTP-only Cookie Authentication.png"
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/22-Test B \342\200\224 Bearer Authentication.png"
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/23-Test B \342\200\224 Bearer Authentication.png"
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/24-Test B \342\200\224 Bearer Authentication.png"
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/25-Test B \342\200\224 Bearer Authentication.png"
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/26-Test B \342\200\224 Bearer Authentication.png"
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/27-Test B \342\200\224 Bearer Authentication.png"
- create mode 100644 "jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/28-Test B \342\200\224 Bearer Authentication.png"
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/29-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/3.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/30-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/31-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/32-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/33-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/34-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/35-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/36-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/37-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/38-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/39-TEST Role-Based Authorization.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/4.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/40-USER can view projects.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/41-USER can view projects.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/42-USER cannot delete projects.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/43-ADMINcan delete projects.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/44-ADMINcan delete projects.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/5-REFRESH-TOKEN-TEST.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/6-REFRESH-TOKEN-TEST.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/7-REFRESH-TOKEN-TEST.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/8-REFRESH-TOKEN-TEST.png
- create mode 100644 jwt-cookies/SCREENS/THUNDER-CLIENT-BACKEND-TESTING/9-REFRESH-TOKEN-TEST.png
- create mode 100644 jwt-cookies/TABLES.txt
- create mode 100644 jwt-cookies/TEST-BACKEND-THUNDER-CLIENT.txt
- create mode 100644 jwt-cookies/backend/.env
- create mode 100644 jwt-cookies/backend/.env.example
- create mode 100644 jwt-cookies/backend/.gitignore
- create mode 100644 jwt-cookies/backend/package copy.json
- create mode 100644 jwt-cookies/backend/package-lock.json
- create mode 100644 jwt-cookies/backend/package.json
- create mode 100644 jwt-cookies/backend/sql/001_schema.sql
- create mode 100644 jwt-cookies/backend/sql/002_seed.sql
- create mode 100644 jwt-cookies/backend/src/app.ts
- create mode 100644 jwt-cookies/backend/src/config/env.ts
- create mode 100644 jwt-cookies/backend/src/controllers/auth.controller.ts
- create mode 100644 jwt-cookies/backend/src/controllers/project.controller.ts
- create mode 100644 jwt-cookies/backend/src/controllers/user.controller.ts
- create mode 100644 jwt-cookies/backend/src/db/pool.ts
- create mode 100644 jwt-cookies/backend/src/middleware/auth.middleware.ts
- create mode 100644 jwt-cookies/backend/src/middleware/authorize.middleware.ts
- create mode 100644 jwt-cookies/backend/src/middleware/cors.middleware.ts
- create mode 100644 jwt-cookies/backend/src/middleware/error.middleware.ts
- create mode 100644 jwt-cookies/backend/src/middleware/not-found.middleware.ts
- create mode 100644 jwt-cookies/backend/src/middleware/validate.middleware.ts
- create mode 100644 jwt-cookies/backend/src/repositories/project.repository.ts
- create mode 100644 jwt-cookies/backend/src/repositories/refresh-token.repository.ts
- create mode 100644 jwt-cookies/backend/src/repositories/user.repository.ts
- create mode 100644 jwt-cookies/backend/src/routes/auth.routes.ts
- create mode 100644 jwt-cookies/backend/src/routes/project.routes.ts
- create mode 100644 jwt-cookies/backend/src/routes/user.routes.ts
- create mode 100644 jwt-cookies/backend/src/server.ts
- create mode 100644 jwt-cookies/backend/src/services/auth.service.ts
- create mode 100644 jwt-cookies/backend/src/services/project.service.ts
- create mode 100644 jwt-cookies/backend/src/services/user.service.ts
- create mode 100644 jwt-cookies/backend/src/types/auth.types.ts
- create mode 100644 jwt-cookies/backend/src/utils/cookies.ts
- create mode 100644 jwt-cookies/backend/src/utils/jwt.ts
- create mode 100644 jwt-cookies/backend/src/utils/password.ts
- create mode 100644 jwt-cookies/backend/src/validators/auth.validator.ts
- create mode 100644 jwt-cookies/backend/src/validators/project.validator.ts
- create mode 100644 jwt-cookies/backend/src/validators/user.validator.ts
- create mode 100644 jwt-cookies/backend/tsconfig copy.json
- create mode 100644 jwt-cookies/backend/tsconfig.json
- create mode 100644 jwt-cookies/frontend/.gitignore
- create mode 100644 jwt-cookies/frontend/README.md
- create mode 100644 jwt-cookies/frontend/SCREENS/CORS.txt
- create mode 100644 jwt-cookies/frontend/SCREENS/JWT Authentication with HTTP-Only Cookies.png
- create mode 100644 jwt-cookies/frontend/SCREENS/STEPS-FRONTEND.txt
- create mode 100644 jwt-cookies/frontend/eslint.config.js
- create mode 100644 jwt-cookies/frontend/index.html
- create mode 100644 jwt-cookies/frontend/package-lock.json
- create mode 100644 jwt-cookies/frontend/package.json
- create mode 100644 jwt-cookies/frontend/public/favicon.svg
- create mode 100644 jwt-cookies/frontend/public/icons.svg
- create mode 100644 jwt-cookies/frontend/src/App copy.tsx
- create mode 100644 jwt-cookies/frontend/src/App.css
- create mode 100644 jwt-cookies/frontend/src/App.tsx
- create mode 100644 jwt-cookies/frontend/src/api/authApi.ts
- create mode 100644 jwt-cookies/frontend/src/api/axios copy.ts
- create mode 100644 jwt-cookies/frontend/src/api/axios.ts
- create mode 100644 jwt-cookies/frontend/src/api/projectApi.ts
- create mode 100644 jwt-cookies/frontend/src/api/userApi.ts
- create mode 100644 jwt-cookies/frontend/src/assets/hero.png
- create mode 100644 jwt-cookies/frontend/src/assets/react.svg
- create mode 100644 jwt-cookies/frontend/src/assets/vite.svg
- create mode 100644 jwt-cookies/frontend/src/auth/AuthContext.tsx
- create mode 100644 jwt-cookies/frontend/src/auth/authService.ts
- create mode 100644 jwt-cookies/frontend/src/components/auth/ProtectedRoute.tsx
- create mode 100644 jwt-cookies/frontend/src/components/common/Alert.ts
- create mode 100644 jwt-cookies/frontend/src/index copy.css
- create mode 100644 jwt-cookies/frontend/src/index.css
- create mode 100644 jwt-cookies/frontend/src/main.tsx
- create mode 100644 jwt-cookies/frontend/src/pages/Dashboard.tsx
- create mode 100644 jwt-cookies/frontend/src/pages/Login.tsx
- create mode 100644 jwt-cookies/frontend/src/pages/Projects.tsx
- create mode 100644 jwt-cookies/frontend/src/pages/Register.tsx
- create mode 100644 jwt-cookies/frontend/src/pages/Users.tsx
- create mode 100644 jwt-cookies/frontend/src/types/auth.ts
- create mode 100644 jwt-cookies/frontend/tsconfig.app.json
- create mode 100644 jwt-cookies/frontend/tsconfig.json
- create mode 100644 jwt-cookies/frontend/tsconfig.node.json
- create mode 100644 jwt-cookies/frontend/vite.config.ts
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "ReactTSEcommApp-14-10-2026"
+[main 2dad631] ReactTSEcommApp-14-10-2026
+ 129 files changed, 25615 insertions(+), 17 deletions(-)
+ create mode 100644 ReactTSEcomApp/.gitignore
+ create mode 100644 ReactTSEcomApp/DEPLOYMENT-STEPS.txt
+ create mode 100644 ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP-PROCESS.txt
+ create mode 100644 ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP-STEPS.txt
+ create mode 100644 ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP-TABLES.txt
+ create mode 100644 ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP-TERMINAL-OUTPUT.txt
+ create mode 100644 ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-APP.txt
+ create mode 100644 ReactTSEcomApp/REACT-JS-TYPESCRIPT-NEONDB-ECOMM-FRONTEND.txt
+ create mode 100644 ReactTSEcomApp/SCREENS/5.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-1.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-10.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-11.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-12-VERCEL.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-13-VERCEL.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-14-VERCEL.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-15-VERCEL.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-16-VERCEL.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-17-VERCEL.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-18-VERCEL.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-19-RENDER.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-19-VERCEL.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-2.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-20.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-21.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-22.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-23.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-24.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-3.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-4.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-5.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-6.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-7.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-8.png
+ create mode 100644 ReactTSEcomApp/SCREENS/DEPLOYMENT-9.png
+ create mode 100644 ReactTSEcomApp/SCREENS/PAYMENT-SCREENS.png
+ create mode 100644 ReactTSEcomApp/SEED.txt
+ create mode 100644 ReactTSEcomApp/backend/.gitignore
+ create mode 100644 ReactTSEcomApp/backend/SCREENS/Checklist for our specific Node.js + Express + TypeScript backend setup.png
+ create mode 100644 ReactTSEcomApp/backend/STEPS
+ create mode 100644 ReactTSEcomApp/backend/package-localhost.json
+ create mode 100644 ReactTSEcomApp/backend/package-lock.json
+ create mode 100644 ReactTSEcomApp/backend/package.json
+ create mode 100644 ReactTSEcomApp/backend/src/app.ts
+ create mode 100644 ReactTSEcomApp/backend/src/config/db.ts
+ create mode 100644 ReactTSEcomApp/backend/src/config/env.ts
+ create mode 100644 ReactTSEcomApp/backend/src/config/razorpay.ts
+ create mode 100644 ReactTSEcomApp/backend/src/controllers/adminDashboardController.ts
+ create mode 100644 ReactTSEcomApp/backend/src/controllers/adminOrderController.ts
+ create mode 100644 ReactTSEcomApp/backend/src/controllers/adminProductController.ts
+ create mode 100644 ReactTSEcomApp/backend/src/controllers/authController.ts
+ create mode 100644 ReactTSEcomApp/backend/src/controllers/cartController.ts
+ create mode 100644 ReactTSEcomApp/backend/src/controllers/orderController.ts
+ create mode 100644 ReactTSEcomApp/backend/src/controllers/paymentController.ts
+ create mode 100644 ReactTSEcomApp/backend/src/controllers/productController.ts
+ create mode 100644 ReactTSEcomApp/backend/src/middleware/adminMiddleware.ts
+ create mode 100644 ReactTSEcomApp/backend/src/middleware/authMiddleware.ts
+ create mode 100644 ReactTSEcomApp/backend/src/models/adminDashboardModel.ts
+ create mode 100644 ReactTSEcomApp/backend/src/models/adminOrderModel.ts
+ create mode 100644 ReactTSEcomApp/backend/src/models/adminProductModel.ts
+ create mode 100644 ReactTSEcomApp/backend/src/models/cartModel.ts
+ create mode 100644 ReactTSEcomApp/backend/src/models/orderModel.ts
+ create mode 100644 ReactTSEcomApp/backend/src/models/productModel.ts
+ create mode 100644 ReactTSEcomApp/backend/src/models/userModel.ts
+ create mode 100644 ReactTSEcomApp/backend/src/routes/adminDashboardRoutes.ts
+ create mode 100644 ReactTSEcomApp/backend/src/routes/adminOrderRoutes.ts
+ create mode 100644 ReactTSEcomApp/backend/src/routes/adminProductRoutes.ts
+ create mode 100644 ReactTSEcomApp/backend/src/routes/authRoutes.ts
+ create mode 100644 ReactTSEcomApp/backend/src/routes/cartRoutes.ts
+ create mode 100644 ReactTSEcomApp/backend/src/routes/orderRoutes.ts
+ create mode 100644 ReactTSEcomApp/backend/src/routes/paymentRoutes.ts
+ create mode 100644 ReactTSEcomApp/backend/src/routes/productRoutes.ts
+ create mode 100644 ReactTSEcomApp/backend/src/server.ts
+ create mode 100644 ReactTSEcomApp/backend/tsconfig.json
+ create mode 100644 ReactTSEcomApp/frontend/.gitignore
+ create mode 100644 ReactTSEcomApp/frontend/README.md
+ create mode 100644 ReactTSEcomApp/frontend/eslint.config.js
+ create mode 100644 ReactTSEcomApp/frontend/index.html
+ create mode 100644 ReactTSEcomApp/frontend/package-lock.json
+ create mode 100644 ReactTSEcomApp/frontend/package.json
+ create mode 100644 ReactTSEcomApp/frontend/public/favicon.svg
+ create mode 100644 ReactTSEcomApp/frontend/public/icons.svg
+ create mode 100644 ReactTSEcomApp/frontend/src/App copy.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/App.css
+ create mode 100644 ReactTSEcomApp/frontend/src/App.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/assets/hero.png
+ create mode 100644 ReactTSEcomApp/frontend/src/assets/react.svg
+ create mode 100644 ReactTSEcomApp/frontend/src/assets/vite.svg
+ create mode 100644 ReactTSEcomApp/frontend/src/components/Layout.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/components/ModalPortal.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/components/Navbar copy.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/components/Navbar.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/components/ProtectedRoute.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/components/RegisterSuccessModal.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/index copy.css
+ create mode 100644 ReactTSEcomApp/frontend/src/index.css
+ create mode 100644 ReactTSEcomApp/frontend/src/main copy.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/main.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Cart.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Checkout.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Home.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Login.css
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Login.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/OrderDetails.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Orders.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/PaymentSuccess.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Products.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Register copy.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Register-WITHOUT-CREATEPORTAL.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/Register.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/admin/AdminDashboard.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/admin/AdminLayout.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/admin/AdminOrders.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/admin/AdminProductForm.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/pages/admin/AdminProducts.tsx
+ create mode 100644 ReactTSEcomApp/frontend/src/redux/hooks.ts
+ create mode 100644 ReactTSEcomApp/frontend/src/redux/slices/authSlice.ts
+ create mode 100644 ReactTSEcomApp/frontend/src/redux/slices/cartSlice.ts
+ create mode 100644 ReactTSEcomApp/frontend/src/redux/slices/productSlice.ts
+ create mode 100644 ReactTSEcomApp/frontend/src/redux/store.ts
+ create mode 100644 ReactTSEcomApp/frontend/src/services/api.ts
+ create mode 100644 ReactTSEcomApp/frontend/src/types/auth.ts
+ create mode 100644 ReactTSEcomApp/frontend/src/types/cart.ts
+ create mode 100644 ReactTSEcomApp/frontend/src/types/product.ts
+ create mode 100644 ReactTSEcomApp/frontend/tsconfig.app.json
+ create mode 100644 ReactTSEcomApp/frontend/tsconfig.json
+ create mode 100644 ReactTSEcomApp/frontend/tsconfig.node.json
+ create mode 100644 ReactTSEcomApp/frontend/vercel.json
+ create mode 100644 ReactTSEcomApp/frontend/vite.config.ts
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 147, done.
-Counting objects: 100% (147/147), done.
+Enumerating objects: 154, done.
+Counting objects: 100% (154/154), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (137/137), done.
-Writing objects: 100% (145/145), 8.41 MiB | 1.07 MiB/s, done.
-Total 145 (delta 8), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (8/8), completed with 2 local objects.
+Compressing objects: 100% (149/149), done.
+Writing objects: 100% (152/152), 5.28 MiB | 1.06 MiB/s, done.
+Total 152 (delta 23), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (23/23), completed with 1 local object.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   f33b124..dcd540e  main -> main
+   dcd540e..2dad631  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
