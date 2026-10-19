@@ -34,8 +34,14 @@ let refreshPromise: Promise<void> | null = null;
  */
 let isRedirectingToLogin = false;
 
+// Reset the redirect flag after successful authentication
+export const resetLoginRedirect = (): void => {
+  isRedirectingToLogin = false;
+};
+
 const refreshSession = async (): Promise<void> => {
   if (!refreshPromise) {
+    console.log("Refreshing session...");
     showLoading(
       "Session expired. Refreshing your access token...",
     );
@@ -91,16 +97,19 @@ const isExcludedAuthRequest =
       } catch (refreshError) {
         if (!isRedirectingToLogin) {
           isRedirectingToLogin = true;
+          console.log("Session Expired, Your refresh token has expired or is no longer valid. Please login again.");
 
-        void Swal.fire({
-        icon: "error",
-        title: "Session Expired",
-        text: "Your refresh token has expired or is no longer valid. Please login again.",
-        confirmButtonText: "Login",
-      }).then(() => {
-        window.location.replace("/login");
-      });
+          void Swal.fire({
+            icon: "error",
+            title: "Session Expired",
+            text: "Your refresh token has expired or is no longer valid. Please login again.",
+            confirmButtonText: "Login",
+          }).then(() => {
+            window.location.replace("/login");
+          });
         }
+
+return Promise.reject(refreshError);
 
         return Promise.reject(refreshError);
       }

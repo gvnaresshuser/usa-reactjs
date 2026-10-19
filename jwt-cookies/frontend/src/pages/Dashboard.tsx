@@ -41,7 +41,7 @@ const Dashboard = () => {
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
       <header className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white shadow-lg">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        {/*  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
           <div>
             <h1 className="text-2xl font-bold">JWT Authentication</h1>
 
@@ -55,6 +55,30 @@ const Dashboard = () => {
           >
             Logout
           </button>
+        </div> */}
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+          <div>
+            <h1 className="text-2xl font-bold">JWT Authentication</h1>
+            <p className="text-sm text-blue-100">Secure Full-Stack Dashboard</p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <button
+              type="button"
+              onClick={() => window.location.reload()}
+              className="rounded-lg bg-white/20 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/30"
+            >
+              🔄 Refresh
+            </button>
+
+            <button
+              type="button"
+              onClick={() => void handleLogout()}
+              className="rounded-lg bg-white/20 px-4 py-2 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/30"
+            >
+              Logout
+            </button>
+          </div>
         </div>
       </header>
 

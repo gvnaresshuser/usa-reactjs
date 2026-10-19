@@ -1,8 +1,10 @@
-import { useState, type FormEvent } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { useAuth } from "../auth/AuthContext";
 import { showError, showSuccess } from "../components/common/Alert";
+
+import { resetLoginRedirect } from "../api/axios";
 
 const Login = () => {
   const { login } = useAuth();
@@ -15,7 +17,7 @@ const Login = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (
-    event: FormEvent<HTMLFormElement>,
+    event: React.SubmitEvent<HTMLFormElement>,
   ): Promise<void> => {
     event.preventDefault();
 
@@ -23,6 +25,9 @@ const Login = () => {
 
     try {
       await login(email, password);
+
+      // Reset the Axios session-expiry redirect flag
+      resetLoginRedirect();
 
       showSuccess("Login Successful", "Welcome back!");
 

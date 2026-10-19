@@ -18,6 +18,7 @@ import {
   loginSchema,
   registerSchema,
 } from "../validators/auth.validator.js";
+import { loginLimiter } from "../middleware/rate-limit.middleware.js";
 
 const router = Router();
 
@@ -28,11 +29,12 @@ router.post(
   register,
 );
 
-router.post(
+/* router.post(
   "/login",
   validate(loginSchema),
   login,
-);
+); */
+router.post("/login", loginLimiter, validate(loginSchema), login);
 
 router.post(
   "/refresh",
