@@ -29,9 +29,15 @@ function App() {
         <div>
           <nav>
             <ul>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/">Page1</Link></li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link to="/">Page1</Link>
+              </li>
             </ul>
           </nav>
           <Routes>
@@ -46,21 +52,35 @@ function App() {
       {/* AS A SEPARATE COMPONENT */}
       {/* <AllRoutes /> */}
 
-
       {/*---------------------- PROTECTED ROUTES ------------------------- */}
-      <div style={{ fontFamily: "Arial, sans-serif", textAlign: "center", padding: "20px" }}>
+      <div
+        style={{
+          fontFamily: "Arial, sans-serif",
+          textAlign: "center",
+          padding: "20px",
+        }}
+      >
         <Router>
           <Navbar />
           <Routes>
             {/* Public Routes */}
             <Route path="/login" element={<Login />} />
             <Route path="/admin-login" element={<AdminLogin />} />
-
             {/* Protected Routes for Users */}
+            {/* --------------------- USING OUTLET APPROACH --------------------- */}
             <Route element={<Privateroute />}>
               <Route path="/dashboard" element={<Dashboard />} />
             </Route>
-
+            {/* --------------------- USING CHILDREN APPROACH --------------------- */}
+            {/* <Route
+              path="/dashboard"
+              element={
+                <Privateroute>
+                  <Dashboard />
+                </Privateroute>
+              }
+            /> 
+            */}
             {/* Protected Routes for Admins */}
             <Route element={<Privaterouteadmin />}>
               <Route path="/admin-dashboard" element={<AdminDashboard />} />

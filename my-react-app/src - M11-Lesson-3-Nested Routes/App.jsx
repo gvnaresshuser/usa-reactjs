@@ -1,9 +1,14 @@
 // App.jsx
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import Profile from './Profile';
-import Settings from './Settings';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Dashboard from "./Dashboard";
+import Profile from "./Profile";
+import Settings from "./Settings";
+import "./App.css";
 function App() {
   return (
     <Router>
@@ -20,3 +25,8 @@ function App() {
 }
 
 export default App;
+/*
+Remember this simple rule:
+- replace — replace the current history entry.
+- Without replace — add a new history entry.
+*/

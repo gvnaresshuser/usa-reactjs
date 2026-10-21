@@ -1,5 +1,5 @@
 /* Navbar.css */
-.navbar-container {
+.navbar-container {    
     max-width: 900px;
     margin: 20px auto;
     padding: 20px;
@@ -8,6 +8,7 @@
     background: #020641;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
 
 .navbar-heading {
     text-align: center;
