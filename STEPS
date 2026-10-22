@@ -107,26 +107,18 @@ Microsoft Windows [Version 10.0.26200.9711]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'jwt-cookie-teaching-demo/README.md', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/backend/.env.example', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/backend/.gitignore', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/backend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/backend/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/backend/schema.sql', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/backend/src/server.ts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/backend/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/.gitignore', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/index.html', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/package.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/App copy.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/api copy.ts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/api.ts', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/main.tsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/style.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/vite.config.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/eslint.config.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/src/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/src/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/vite.config.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/server/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/server/package.json', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -135,136 +127,200 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   jwt-cookie-teaching-demo/README.md
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/1.CODE-EXPLANATION-server-js.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE INFORMATION.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE SETTING FOR LOCAL - PRODUCTION.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE SETTINGS.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Clear-Cookie-Response Header-Logout.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Client-Server-using-Cookies-Vs-JWT-in-Local-Storage.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/FLOW DIAGRAM.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/IMPORTANT.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/1.Authentication.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/2.1.What is JWT.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/2.Jwt Details.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/Helmet vs CORS vs JWT.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/REDIS.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/Traditional session-based vs JWT-based authentication.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/jwt generate secret.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/LocalStorage vs HttpOnly Cookies for JWT.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Possible values.png
-        new file:   "jwt-cookie-teaching-demo/SCREENS-JWT/React + Express + JWT flow for register \342\206\222 login \342\206\222 dashboard.png"
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Set-Cookie-Response Header-Login.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Should maxAge and expiresIn be the same.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/What withCredentials true does.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Why CSRF protection matters for cookies.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Why httpOnly Cookies + cookie-parser can be safer than localStorage JWTs.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/XSS.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/cookie-parser.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/cookieParser.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/document-cookie.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/frontend (React) is hosted on Heroku and your backend (Express) is on Vercel.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/sameSite- lax.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/sameSite.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/withCredentials-true.png
-        new file:   jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-App-tsx.png
-        new file:   jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-api-ts.png
-        new file:   jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-server-ts.png
-        new file:   jwt-cookie-teaching-demo/SCREENS/JWT Cookie Authentication Flow.png
-        new file:   jwt-cookie-teaching-demo/SCREENS/NOTES.png
-        new file:   jwt-cookie-teaching-demo/STEPS.txt
-        new file:   jwt-cookie-teaching-demo/backend/.env.example
-        new file:   jwt-cookie-teaching-demo/backend/.gitignore
-        new file:   jwt-cookie-teaching-demo/backend/package-lock.json
-        new file:   jwt-cookie-teaching-demo/backend/package.json
-        new file:   jwt-cookie-teaching-demo/backend/schema.sql
-        new file:   jwt-cookie-teaching-demo/backend/src/server.ts
-        new file:   jwt-cookie-teaching-demo/backend/tsconfig.json
-        new file:   jwt-cookie-teaching-demo/frontend/.gitignore
-        new file:   jwt-cookie-teaching-demo/frontend/index.html
-        new file:   jwt-cookie-teaching-demo/frontend/package-lock.json
-        new file:   jwt-cookie-teaching-demo/frontend/package.json
-        new file:   jwt-cookie-teaching-demo/frontend/src/App copy.tsx
-        new file:   jwt-cookie-teaching-demo/frontend/src/App.tsx
-        new file:   jwt-cookie-teaching-demo/frontend/src/api copy.ts
-        new file:   jwt-cookie-teaching-demo/frontend/src/api.ts
-        new file:   jwt-cookie-teaching-demo/frontend/src/main.tsx
-        new file:   jwt-cookie-teaching-demo/frontend/src/style.css
-        new file:   jwt-cookie-teaching-demo/frontend/tsconfig.json
-        new file:   jwt-cookie-teaching-demo/frontend/vite.config.ts
+        new file:   pern-auth-system/SCREENS-DATABASE/1.png
+        new file:   pern-auth-system/SCREENS-DATABASE/2.png
+        new file:   pern-auth-system/SCREENS-DATABASE/3.png
+        new file:   pern-auth-system/SCREENS-DATABASE/4.png
+        new file:   pern-auth-system/SCREENS-DATABASE/5.png
+        new file:   pern-auth-system/SCREENS-MORE/1.png
+        new file:   pern-auth-system/SCREENS-MORE/10.png
+        new file:   pern-auth-system/SCREENS-MORE/11.png
+        new file:   pern-auth-system/SCREENS-MORE/12.png
+        new file:   pern-auth-system/SCREENS-MORE/13.png
+        new file:   pern-auth-system/SCREENS-MORE/14.png
+        new file:   pern-auth-system/SCREENS-MORE/2.png
+        new file:   pern-auth-system/SCREENS-MORE/3.png
+        new file:   pern-auth-system/SCREENS-MORE/4.png
+        new file:   pern-auth-system/SCREENS-MORE/5.png
+        new file:   pern-auth-system/SCREENS-MORE/6.png
+        new file:   pern-auth-system/SCREENS-MORE/7.png
+        new file:   pern-auth-system/SCREENS-MORE/9.png
+        new file:   pern-auth-system/SCREENS-MORE/admin-login.png
+        new file:   pern-auth-system/SCREENS-MORE/admin-panel.png
+        new file:   pern-auth-system/SCREENS/1.Authorization-Authentication.png
+        new file:   pern-auth-system/SCREENS/10.CODE-EXPLANATION-FRONTEND-Login-jsx.png
+        new file:   pern-auth-system/SCREENS/11.CODE-EXPLANATION-FRONTEND-Navbar-jsx.png
+        new file:   pern-auth-system/SCREENS/12.CODE-EXPLANATION-FRONTEND-Products-jsx.png
+        new file:   pern-auth-system/SCREENS/13.CODE-EXPLANATION-FRONTEND-Register-jsx.png
+        new file:   pern-auth-system/SCREENS/2.CODE-EXPLANATION-BACKEND-index-js.png
+        new file:   pern-auth-system/SCREENS/3.CODE-EXPLANATION-BACKEND-db-js.png
+        new file:   pern-auth-system/SCREENS/4.CODE-EXPLANATION-BACKEND-auth-js.png
+        new file:   pern-auth-system/SCREENS/5.CODE-EXPLANATION-BACKEND-products-js.png
+        new file:   pern-auth-system/SCREENS/6.CODE-EXPLANATION-BACKEND-verifyToken-js.png
+        new file:   pern-auth-system/SCREENS/7.CODE-EXPLANATION-FRONTEND-App-jsx.png
+        new file:   pern-auth-system/SCREENS/8.CODE-EXPLANATION-FRONTEND-AdminPanel-jsx.png
+        new file:   pern-auth-system/SCREENS/9.CODE-EXPLANATION-FRONTEND-Dashboard-jsx.png
+        new file:   pern-auth-system/SCREENS/Bcrypt js + Local Storage + JWT Tokens.png
+        new file:   pern-auth-system/SCREENS/CODE-EXPLANATION-BACKEND-verifyToken-js.png
+        new file:   pern-auth-system/SCREENS/Flow in Dashboard component step-by-step.png
+        new file:   pern-auth-system/SCREENS/HEADER BEARER TOKEN.png
+        new file:   pern-auth-system/SCREENS/How Axios works.png
+        new file:   pern-auth-system/SCREENS/IMPORTANT.png
+        new file:   pern-auth-system/SCREENS/JWT Functions.png
+        new file:   pern-auth-system/SCREENS/JWT/1.Authentication.png
+        new file:   pern-auth-system/SCREENS/JWT/2.1.What is JWT.png
+        new file:   pern-auth-system/SCREENS/JWT/2.Jwt Details.png
+        new file:   pern-auth-system/SCREENS/JWT/jwt generate secret.png
+        new file:   pern-auth-system/SCREENS/Returning.png
+        new file:   pern-auth-system/SCREENS/atob().png
+        new file:   pern-auth-system/SCREENS/const decoded = JSON.parse(atob(token.split('.')[1]));.png
+        new file:   pern-auth-system/SCREENS/index-d-ts.png
+        new file:   pern-auth-system/SCREENS/verifyToken - req.user - decoded.png
+        new file:   pern-auth-system/STEPS-FRONTEND-BACKEND.txt
+        new file:   pern-auth-system/STEPS-TO-EXTRACT-PROJECT-AND-START.png
+        new file:   pern-auth-system/STEPS.txt
+        new file:   pern-auth-system/TABLES.txt
+        new file:   pern-auth-system/TESTING.txt
+        new file:   pern-auth-system/TO-DO-STEPS.txt
+        new file:   pern-auth-system/client/.gitignore
+        new file:   pern-auth-system/client/README.md
+        new file:   pern-auth-system/client/eslint.config.js
+        new file:   pern-auth-system/client/index.html
+        new file:   pern-auth-system/client/package-lock.json
+        new file:   pern-auth-system/client/package.json
+        new file:   pern-auth-system/client/public/vite.svg
+        new file:   pern-auth-system/client/src/App.css
+        new file:   pern-auth-system/client/src/App.jsx
+        new file:   pern-auth-system/client/src/assets/react.svg
+        new file:   pern-auth-system/client/src/index.css
+        new file:   pern-auth-system/client/src/main.jsx
+        new file:   pern-auth-system/client/src/pages/AdminPanel.jsx
+        new file:   pern-auth-system/client/src/pages/Dashboard copy.jsx
+        new file:   pern-auth-system/client/src/pages/Dashboard.jsx
+        new file:   pern-auth-system/client/src/pages/Login.jsx
+        new file:   pern-auth-system/client/src/pages/Navbar.jsx
+        new file:   pern-auth-system/client/src/pages/Products.jsx
+        new file:   pern-auth-system/client/src/pages/Profile.jsx
+        new file:   pern-auth-system/client/src/pages/Register copy.jsx
+        new file:   pern-auth-system/client/src/pages/Register.jsx
+        new file:   pern-auth-system/client/src/toast.js
+        new file:   pern-auth-system/client/vite.config.js
+        new file:   pern-auth-system/server/.env
+        new file:   pern-auth-system/server/.env copy
+        new file:   pern-auth-system/server/POSTGRESQL-DATABASE-ENTRIES.txt
+        new file:   pern-auth-system/server/db.js
+        new file:   pern-auth-system/server/index.js
+        new file:   pern-auth-system/server/middleware/verifyToken.js
+        new file:   pern-auth-system/server/package-lock.json
+        new file:   pern-auth-system/server/package.json
+        new file:   pern-auth-system/server/routes/auth.js
+        new file:   pern-auth-system/server/routes/products copy.js
+        new file:   pern-auth-system/server/routes/products.js
+        new file:   pern-auth-system/user-login.png
+        new file:   pern-auth-system/user-should-see-edit-and-delete.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "JWT"
-[main 598b2ab] JWT
- 58 files changed, 5259 insertions(+), 17 deletions(-)
- create mode 100644 jwt-cookie-teaching-demo/README.md
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/1.CODE-EXPLANATION-server-js.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE INFORMATION.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE SETTING FOR LOCAL - PRODUCTION.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE SETTINGS.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Clear-Cookie-Response Header-Logout.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Client-Server-using-Cookies-Vs-JWT-in-Local-Storage.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/FLOW DIAGRAM.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/IMPORTANT.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/1.Authentication.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/2.1.What is JWT.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/2.Jwt Details.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/Helmet vs CORS vs JWT.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/REDIS.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/Traditional session-based vs JWT-based authentication.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/jwt generate secret.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/LocalStorage vs HttpOnly Cookies for JWT.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Possible values.png
- create mode 100644 "jwt-cookie-teaching-demo/SCREENS-JWT/React + Express + JWT flow for register \342\206\222 login \342\206\222 dashboard.png"
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Set-Cookie-Response Header-Login.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Should maxAge and expiresIn be the same.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/What withCredentials true does.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Why CSRF protection matters for cookies.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Why httpOnly Cookies + cookie-parser can be safer than localStorage JWTs.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/XSS.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/cookie-parser.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/cookieParser.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/document-cookie.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/frontend (React) is hosted on Heroku and your backend (Express) is on Vercel.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/sameSite- lax.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/sameSite.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/withCredentials-true.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-App-tsx.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-api-ts.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-server-ts.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/JWT Cookie Authentication Flow.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/NOTES.png
- create mode 100644 jwt-cookie-teaching-demo/STEPS.txt
- create mode 100644 jwt-cookie-teaching-demo/backend/.env.example
- create mode 100644 jwt-cookie-teaching-demo/backend/.gitignore
- create mode 100644 jwt-cookie-teaching-demo/backend/package-lock.json
- create mode 100644 jwt-cookie-teaching-demo/backend/package.json
- create mode 100644 jwt-cookie-teaching-demo/backend/schema.sql
- create mode 100644 jwt-cookie-teaching-demo/backend/src/server.ts
- create mode 100644 jwt-cookie-teaching-demo/backend/tsconfig.json
- create mode 100644 jwt-cookie-teaching-demo/frontend/.gitignore
- create mode 100644 jwt-cookie-teaching-demo/frontend/index.html
- create mode 100644 jwt-cookie-teaching-demo/frontend/package-lock.json
- create mode 100644 jwt-cookie-teaching-demo/frontend/package.json
- create mode 100644 jwt-cookie-teaching-demo/frontend/src/App copy.tsx
- create mode 100644 jwt-cookie-teaching-demo/frontend/src/App.tsx
- create mode 100644 jwt-cookie-teaching-demo/frontend/src/api copy.ts
- create mode 100644 jwt-cookie-teaching-demo/frontend/src/api.ts
- create mode 100644 jwt-cookie-teaching-demo/frontend/src/main.tsx
- create mode 100644 jwt-cookie-teaching-demo/frontend/src/style.css
- create mode 100644 jwt-cookie-teaching-demo/frontend/tsconfig.json
- create mode 100644 jwt-cookie-teaching-demo/frontend/vite.config.ts
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "Pern-auth-system"
+[main 365b348] Pern-auth-system
+ 92 files changed, 7636 insertions(+), 79 deletions(-)
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/1.png
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/2.png
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/3.png
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/4.png
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/5.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/1.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/10.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/11.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/12.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/13.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/14.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/2.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/3.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/4.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/5.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/6.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/7.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/9.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/admin-login.png
+ create mode 100644 pern-auth-system/SCREENS-MORE/admin-panel.png
+ create mode 100644 pern-auth-system/SCREENS/1.Authorization-Authentication.png
+ create mode 100644 pern-auth-system/SCREENS/10.CODE-EXPLANATION-FRONTEND-Login-jsx.png
+ create mode 100644 pern-auth-system/SCREENS/11.CODE-EXPLANATION-FRONTEND-Navbar-jsx.png
+ create mode 100644 pern-auth-system/SCREENS/12.CODE-EXPLANATION-FRONTEND-Products-jsx.png
+ create mode 100644 pern-auth-system/SCREENS/13.CODE-EXPLANATION-FRONTEND-Register-jsx.png
+ create mode 100644 pern-auth-system/SCREENS/2.CODE-EXPLANATION-BACKEND-index-js.png
+ create mode 100644 pern-auth-system/SCREENS/3.CODE-EXPLANATION-BACKEND-db-js.png
+ create mode 100644 pern-auth-system/SCREENS/4.CODE-EXPLANATION-BACKEND-auth-js.png
+ create mode 100644 pern-auth-system/SCREENS/5.CODE-EXPLANATION-BACKEND-products-js.png
+ create mode 100644 pern-auth-system/SCREENS/6.CODE-EXPLANATION-BACKEND-verifyToken-js.png
+ create mode 100644 pern-auth-system/SCREENS/7.CODE-EXPLANATION-FRONTEND-App-jsx.png
+ create mode 100644 pern-auth-system/SCREENS/8.CODE-EXPLANATION-FRONTEND-AdminPanel-jsx.png
+ create mode 100644 pern-auth-system/SCREENS/9.CODE-EXPLANATION-FRONTEND-Dashboard-jsx.png
+ create mode 100644 pern-auth-system/SCREENS/Bcrypt js + Local Storage + JWT Tokens.png
+ create mode 100644 pern-auth-system/SCREENS/CODE-EXPLANATION-BACKEND-verifyToken-js.png
+ create mode 100644 pern-auth-system/SCREENS/Flow in Dashboard component step-by-step.png
+ create mode 100644 pern-auth-system/SCREENS/HEADER BEARER TOKEN.png
+ create mode 100644 pern-auth-system/SCREENS/How Axios works.png
+ create mode 100644 pern-auth-system/SCREENS/IMPORTANT.png
+ create mode 100644 pern-auth-system/SCREENS/JWT Functions.png
+ create mode 100644 pern-auth-system/SCREENS/JWT/1.Authentication.png
+ create mode 100644 pern-auth-system/SCREENS/JWT/2.1.What is JWT.png
+ create mode 100644 pern-auth-system/SCREENS/JWT/2.Jwt Details.png
+ create mode 100644 pern-auth-system/SCREENS/JWT/jwt generate secret.png
+ create mode 100644 pern-auth-system/SCREENS/Returning.png
+ create mode 100644 pern-auth-system/SCREENS/atob().png
+ create mode 100644 pern-auth-system/SCREENS/const decoded = JSON.parse(atob(token.split('.')[1]));.png
+ create mode 100644 pern-auth-system/SCREENS/index-d-ts.png
+ create mode 100644 pern-auth-system/SCREENS/verifyToken - req.user - decoded.png
+ create mode 100644 pern-auth-system/STEPS-FRONTEND-BACKEND.txt
+ create mode 100644 pern-auth-system/STEPS-TO-EXTRACT-PROJECT-AND-START.png
+ create mode 100644 pern-auth-system/STEPS.txt
+ create mode 100644 pern-auth-system/TABLES.txt
+ create mode 100644 pern-auth-system/TESTING.txt
+ create mode 100644 pern-auth-system/TO-DO-STEPS.txt
+ create mode 100644 pern-auth-system/client/.gitignore
+ create mode 100644 pern-auth-system/client/README.md
+ create mode 100644 pern-auth-system/client/eslint.config.js
+ create mode 100644 pern-auth-system/client/index.html
+ create mode 100644 pern-auth-system/client/package-lock.json
+ create mode 100644 pern-auth-system/client/package.json
+ create mode 100644 pern-auth-system/client/public/vite.svg
+ create mode 100644 pern-auth-system/client/src/App.css
+ create mode 100644 pern-auth-system/client/src/App.jsx
+ create mode 100644 pern-auth-system/client/src/assets/react.svg
+ create mode 100644 pern-auth-system/client/src/index.css
+ create mode 100644 pern-auth-system/client/src/main.jsx
+ create mode 100644 pern-auth-system/client/src/pages/AdminPanel.jsx
+ create mode 100644 pern-auth-system/client/src/pages/Dashboard copy.jsx
+ create mode 100644 pern-auth-system/client/src/pages/Dashboard.jsx
+ create mode 100644 pern-auth-system/client/src/pages/Login.jsx
+ create mode 100644 pern-auth-system/client/src/pages/Navbar.jsx
+ create mode 100644 pern-auth-system/client/src/pages/Products.jsx
+ create mode 100644 pern-auth-system/client/src/pages/Profile.jsx
+ create mode 100644 pern-auth-system/client/src/pages/Register copy.jsx
+ create mode 100644 pern-auth-system/client/src/pages/Register.jsx
+ create mode 100644 pern-auth-system/client/src/toast.js
+ create mode 100644 pern-auth-system/client/vite.config.js
+ create mode 100644 pern-auth-system/server/.env
+ create mode 100644 pern-auth-system/server/.env copy
+ create mode 100644 pern-auth-system/server/POSTGRESQL-DATABASE-ENTRIES.txt
+ create mode 100644 pern-auth-system/server/db.js
+ create mode 100644 pern-auth-system/server/index.js
+ create mode 100644 pern-auth-system/server/middleware/verifyToken.js
+ create mode 100644 pern-auth-system/server/package-lock.json
+ create mode 100644 pern-auth-system/server/package.json
+ create mode 100644 pern-auth-system/server/routes/auth.js
+ create mode 100644 pern-auth-system/server/routes/products copy.js
+ create mode 100644 pern-auth-system/server/routes/products.js
+ create mode 100644 pern-auth-system/user-login.png
+ create mode 100644 pern-auth-system/user-should-see-edit-and-delete.png
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 69, done.
-Counting objects: 100% (69/69), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (65/65), done.
-Writing objects: 100% (67/67), 28.93 MiB | 1.25 MiB/s, done.
-Total 67 (delta 4), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
-To https://github.com/gvnaresshuser/usa-reactjs.git
-   f6326bf..598b2ab  main -> main
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
