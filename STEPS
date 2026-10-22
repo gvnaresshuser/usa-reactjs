@@ -107,6 +107,17 @@ Microsoft Windows [Version 10.0.26200.9711]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'my-react-app/src - M11-Lesson-1-Deeply Nested Routes with Siblings/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M11-Lesson-1-Setting up React Router/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M11-Lesson-3-Nested Routes/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M11-Lesson-4-PrivateProtectedRoutes/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M11-Lesson-4-Redirects/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M11-Lesson-4-Redirects/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src - M11-Lesson-4-Redirects/index copy.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-M11-Lesson-2-Route Parameters/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-M11-Lesson-2-Route Parameters/App.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-M11-Lesson-2-Route Parameters/index.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'my-react-app/src-M11-Lesson-2-Route Parameters/main.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -114,27 +125,78 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
-        new file:   typescriptapp-rhk-zod/SCREENS/Role-Based Resolver.png
-        modified:   typescriptapp-rhk-zod/src/AssignmentZODForm-without-useForm-Context.tsx
-        modified:   typescriptapp-rhk-zod/src/AssignmentZODForm.tsx
+        modified:   my-react-app/src - M11-Lesson-1-Setting up React Router/App.jsx
+        modified:   my-react-app/src - M11-Lesson-1-Setting up React Router/Dashboard.jsx
+        modified:   my-react-app/src - M11-Lesson-3-Nested Routes/App.jsx
+        modified:   my-react-app/src - M11-Lesson-3-Nested Routes/Dashboard.jsx
+        new file:   my-react-app/src - M11-Lesson-3-Nested Routes/SCREENS/replace.png
+        modified:   my-react-app/src - M11-Lesson-4-PrivateProtectedRoutes/App.jsx
+        modified:   my-react-app/src - M11-Lesson-4-PrivateProtectedRoutes/Page1.jsx
+        modified:   my-react-app/src - M11-Lesson-4-PrivateProtectedRoutes/Privateroute.jsx
+        modified:   my-react-app/src - M11-Lesson-4-Redirects/components/Navbar.css
+        new file:   my-react-app/src - M11-Lesson-4-Redirects/index copy.css
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/App.css
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/App.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/1.Link Vs NavLink.png
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/2.5 Different ways to send data in React Router (v6+).png
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/3.Redux-Toolkit.png
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/4.Redux Toolkit - Terms & Functions.png
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/TERMS IN ROUTING.png
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/assets/react.svg
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/About.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/Dashboard.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/DetailsPage.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/HomePage.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/ReduxProfile.css
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/ReduxProfile.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/SearchPage.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/SetUserForm.css
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/SetUserForm.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/UserProfile.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/context/DataContext.js
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/index.css
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/main.jsx
+        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/store.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "RHK-ZOD Typescript Version 16-10-2026"
-[main 59766ea] RHK-ZOD Typescript Version 16-10-2026
- 4 files changed, 778 insertions(+), 623 deletions(-)
- create mode 100644 typescriptapp-rhk-zod/SCREENS/Role-Based Resolver.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "router related"
+[main f6326bf] router related
+ 32 files changed, 718 insertions(+), 123 deletions(-)
+ create mode 100644 my-react-app/src - M11-Lesson-3-Nested Routes/SCREENS/replace.png
+ create mode 100644 my-react-app/src - M11-Lesson-4-Redirects/index copy.css
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/App.css
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/App.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/1.Link Vs NavLink.png
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/2.5 Different ways to send data in React Router (v6+).png
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/3.Redux-Toolkit.png
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/4.Redux Toolkit - Terms & Functions.png
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/TERMS IN ROUTING.png
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/assets/react.svg
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/About.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/Dashboard.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/DetailsPage.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/HomePage.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/ReduxProfile.css
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/ReduxProfile.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/SearchPage.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/SetUserForm.css
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/SetUserForm.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/UserProfile.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/context/DataContext.js
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/index.css
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/main.jsx
+ create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/store.js
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 14, done.
-Counting objects: 100% (14/14), done.
+Enumerating objects: 33, done.
+Counting objects: 100% (33/33), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (8/8), done.
-Writing objects: 100% (8/8), 818.88 KiB | 18.20 MiB/s, done.
-Total 8 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (19/19), 372.67 KiB | 19.61 MiB/s, done.
+Total 19 (delta 14), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (14/14), completed with 14 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   2dad631..59766ea  main -> main
+   fee2d22..f6326bf  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
