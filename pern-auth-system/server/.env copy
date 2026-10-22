@@ -1,0 +1,4 @@
+PORT=5000
+#DATABASE_URL=postgresql://postgresql_user:GsDsXXIECaHl6oOiWNKMIPKIxGCkRpay@dpg-d178cbndiees73dtodng-a.oregon-postgres.render.com/postgresql_crud_db
+DATABASE_URL=postgresql://pern_store_user:fsqv5JP2NvWkfOG3SIUwfTosdkHoP6KD@dpg-d1ljijur433s73dq9d9g-a.singapore-postgres.render.com/pern_store_8a4e
+JWT_SECRET=a04b799600ad8fa1a0d043566e6d85f23d7506a7

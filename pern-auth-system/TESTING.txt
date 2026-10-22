@@ -1,0 +1,44 @@
+
+USING REGISTER IN APPLICATION
+CREATE USER
+Test
+test@gmail.com
+123456
+
+CREATE ADMIN
+Admin
+admin@gmail.com
+123456
+
+IN ORDER TO CHANGE ABOVE ADMIN WHICH IS CREATED AS ROLE = USER 
+AND GIVE APPROPRIATE PREMISSIONS...RUN BELOW UPDATE COMMAND ON userauth
+
+CHANGE IN PG ADMIN TOOL: public.usersauth TABLE
+
+SELECT * FROM public.usersauth ORDER BY id ASC 
+
+FOR ADMIN CHANGE ROLE AND PERMISSIONS
+role:admin
+permissions:{"read", "write", "update", "delete"}
+
+AS APPLICATION IS CREATING role='user' and permissions=[read], create admin user and 
+run this update query
+============================ RUN THIS QUERY ================================================
+UPDATE usersauth
+SET permissions = ARRAY['read', 'write', 'update', 'delete'], role='admin'
+WHERE role = 'user' and id=2;
+============================ RUN THIS QUERY ================================================
+
+
+AFTER THIS LOGIN AGAIN AS 
+admin@gmail.com  
+123456
+
+------------------------------------------
+Edit User
+GV Naressh
+test@gmail.com
+user
+read
+change to
+read,write,delete

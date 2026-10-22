@@ -1,0 +1,135 @@
+https://render.com/
+
+USING PG ADMIN TOOL
+CREATE THE FOLLOWING TABLES...
+USE THE PASSWORD FOR "Perns Ecommerce":7GCTvXNZnhUw757V4pINOvbb1umTQj3q
+
+--------------- WORKING ------------------------
+Recommended Version (Concise & Clear):
+
+CREATE TABLE IF NOT EXISTS public.usersauth (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    role VARCHAR(20) DEFAULT 'user',
+    permissions TEXT[] DEFAULT ARRAY['read']
+);
+--------------- WORKING ------------------------
+
+--------------- WORKING ------------------------
+
+CREATE TABLE IF NOT EXISTS public.productsauth
+(
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    price NUMERIC(10, 2) NOT NULL CHECK (price >= 0),
+    description TEXT NOT NULL,
+    image TEXT NOT NULL, -- You can also use VARCHAR if preferred
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+--------------- WORKING ------------------------
+
+
+-- Product 1
+INSERT INTO productsauth (name, price, description, image)
+VALUES (
+  'Wireless Mouse',
+  899.00,
+  'A smooth and precise wireless mouse with ergonomic design.',
+  'https://www.sathya.in/media/3492/catalog/mouse.jpg'
+);
+
+-- Product 2
+INSERT INTO productsauth (name, price, description, image)
+VALUES (
+  'Gaming Keyboard',
+  2499.00,
+  'Mechanical keyboard with RGB backlighting, designed for gamers.',
+  'https://t4.ftcdn.net/jpg/04/15/32/63/360_F_415326304_KqMrgDp1F6cvmT8z8JKQSkLb2oPCMTAX.jpg'
+);
+
+-- Product 3
+INSERT INTO productsauth (name, price, description, image)
+VALUES (
+  'Noise Cancelling Headphones',
+  4999.00,
+  'Over-ear headphones with active noise cancellation and deep bass.',
+  'https://z.nooncdn.com/products/tr:n-t_240/v1551338373/N21185490A_1.jpg'
+);
+
+-- Product 4
+INSERT INTO productsauth (name, price, description, image)
+VALUES (
+  'Smartphone Stand',
+  299.00,
+  'Adjustable aluminum phone holder compatible with all smartphones.',
+  'https://m.media-amazon.com/images/I/51Vxpmjhw7L._UF1000,1000_QL80_.jpg'
+);
+
+-- Product 5
+INSERT INTO productsauth (name, price, description, image)
+VALUES (
+  'USB-C Charging Cable',
+  199.00,
+  'Durable and fast-charging USB-C to USB-A cable, 1.5 meters.',
+  'https://www.shutterstock.com/image-vector/usb-type-a-c-micro-260nw-1545691667.jpg'
+);
+
+
+USING REGISTER IN APPLICATION
+CREATE USER
+Test
+test@gmail.com
+123456
+
+CREATE ADMIN
+Admin
+admin@gmail.com
+123456
+
+IN ORDER TO CHANGE ABOVE ADMIN WHICH IS CREATED AS ROLE = USER 
+AND GIVE APPROPRIATE PREMISSIONS...RUN BELOW UPDATE COMMAND ON userauth
+
+CHANGE IN PG ADMIN TOOL: public.usersauth TABLE
+SELECT * FROM public.usersauth ORDER BY id ASC 
+FOR ADMIN CHANGE ROLE AND PERMISSIONS
+role:admin
+permissions:{"read", "write", "update", "delete"}
+
+AS APPLICATION IS CREATING role='user' and permissions=[read], create admin user and 
+run this update query
+============================ RUN THIS QUERY ================================================
+UPDATE usersauth
+SET permissions = ARRAY['read', 'write', 'update', 'delete'], role='admin'
+WHERE role = 'user' and id=2;
+============================ RUN THIS QUERY ================================================
+
+
+AFTER THIS LOGIN AGAIN AS 
+admin@gmail.com and 
+123456
+
+
+CREATE TABLE IF NOT EXISTS public.usersauth
+(
+    id integer NOT NULL DEFAULT nextval('usersauth_id_seq'::regclass),
+    name text COLLATE pg_catalog."default" NOT NULL,
+    email text COLLATE pg_catalog."default" NOT NULL,
+    password text COLLATE pg_catalog."default" NOT NULL,
+    role character varying(20) COLLATE pg_catalog."default" DEFAULT 'user'::character varying,
+    permissions text[] COLLATE pg_catalog."default" DEFAULT ARRAY['read'::text],
+    CONSTRAINT usersauth_pkey PRIMARY KEY (id),
+    CONSTRAINT unique_email UNIQUE (email),
+    CONSTRAINT usersauth_email_key UNIQUE (email)
+)
+
+NEW POSTGRESQL ON RENDER.COM
+
+7GCTvXNZnhUw757V4pINOvbb1umTQj3q
+postgresql://perns_store_user:7GCTvXNZnhUw757V4pINOvbb1umTQj3q@dpg-d29eojk9c44c73eis890-a/perns_store
+postgresql://perns_store_user:7GCTvXNZnhUw757V4pINOvbb1umTQj3q@dpg-d29eojk9c44c73eis890-a.singapore-postgres.render.com/perns_store
+
+"start": "node index.js",
+"dev": "nodemon index.js",

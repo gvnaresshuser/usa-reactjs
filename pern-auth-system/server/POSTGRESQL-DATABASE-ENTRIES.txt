@@ -1,0 +1,33 @@
+https://render.com/
+Google sign-in
+gvnaressh@gmail.com
+
+
+Hostname : dpg-d29eojk9c44c73eis890-a
+Port : 5432
+Database : perns_store
+Username : perns_store_user
+Password : 7GCTvXNZnhUw757V4pINOvbb1umTQj3q
+
+Internal Database Url : postgresql://perns_store_user:7GCTvXNZnhUw757V4pINOvbb1umTQj3q@dpg-d29eojk9c44c73eis890-a/perns_store
+External Database Url : postgresql://perns_store_user:7GCTvXNZnhUw757V4pINOvbb1umTQj3q@dpg-d29eojk9c44c73eis890-a.singapore-postgres.render.com/perns_store
+
+IN PG ADMIN TOOL USE THIS:
+--------------------------
+Hostname : dpg-d29eojk9c44c73eis890-a.singapore-postgres.render.com
+
+
+Install PG Admin Tool:
+=====================
+https://www.pgadmin.org/download/pgadmin-4-windows/
+
+5.PG Admin Tool-Create a New Server
+
+
+npm install pg
+
+CREATE TABLE IF NOT EXISTS movies (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL
+);
+

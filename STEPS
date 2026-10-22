@@ -107,17 +107,26 @@ Microsoft Windows [Version 10.0.26200.9711]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'my-react-app/src - M11-Lesson-1-Deeply Nested Routes with Siblings/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M11-Lesson-1-Setting up React Router/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M11-Lesson-3-Nested Routes/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M11-Lesson-4-PrivateProtectedRoutes/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M11-Lesson-4-Redirects/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M11-Lesson-4-Redirects/index.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src - M11-Lesson-4-Redirects/index copy.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-M11-Lesson-2-Route Parameters/App.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-M11-Lesson-2-Route Parameters/App.jsx', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-M11-Lesson-2-Route Parameters/index.css', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'my-react-app/src-M11-Lesson-2-Route Parameters/main.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/.env.example', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/schema.sql', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/src/server.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/App copy.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/api copy.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/api.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/main.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/style.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/vite.config.ts', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -125,78 +134,137 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   my-react-app/src - M11-Lesson-1-Setting up React Router/App.jsx
-        modified:   my-react-app/src - M11-Lesson-1-Setting up React Router/Dashboard.jsx
-        modified:   my-react-app/src - M11-Lesson-3-Nested Routes/App.jsx
-        modified:   my-react-app/src - M11-Lesson-3-Nested Routes/Dashboard.jsx
-        new file:   my-react-app/src - M11-Lesson-3-Nested Routes/SCREENS/replace.png
-        modified:   my-react-app/src - M11-Lesson-4-PrivateProtectedRoutes/App.jsx
-        modified:   my-react-app/src - M11-Lesson-4-PrivateProtectedRoutes/Page1.jsx
-        modified:   my-react-app/src - M11-Lesson-4-PrivateProtectedRoutes/Privateroute.jsx
-        modified:   my-react-app/src - M11-Lesson-4-Redirects/components/Navbar.css
-        new file:   my-react-app/src - M11-Lesson-4-Redirects/index copy.css
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/App.css
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/App.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/1.Link Vs NavLink.png
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/2.5 Different ways to send data in React Router (v6+).png
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/3.Redux-Toolkit.png
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/4.Redux Toolkit - Terms & Functions.png
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/TERMS IN ROUTING.png
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/assets/react.svg
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/About.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/Dashboard.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/DetailsPage.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/HomePage.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/ReduxProfile.css
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/ReduxProfile.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/SearchPage.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/SetUserForm.css
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/SetUserForm.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/components/UserProfile.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/context/DataContext.js
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/index.css
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/main.jsx
-        new file:   my-react-app/src-M11-Lesson-2-Route Parameters/store.js
+        modified:   STEPS
+        new file:   jwt-cookie-teaching-demo/README.md
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/1.CODE-EXPLANATION-server-js.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE INFORMATION.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE SETTING FOR LOCAL - PRODUCTION.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE SETTINGS.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Clear-Cookie-Response Header-Logout.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Client-Server-using-Cookies-Vs-JWT-in-Local-Storage.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/FLOW DIAGRAM.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/IMPORTANT.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/1.Authentication.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/2.1.What is JWT.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/2.Jwt Details.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/Helmet vs CORS vs JWT.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/REDIS.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/Traditional session-based vs JWT-based authentication.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/jwt generate secret.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/LocalStorage vs HttpOnly Cookies for JWT.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Possible values.png
+        new file:   "jwt-cookie-teaching-demo/SCREENS-JWT/React + Express + JWT flow for register \342\206\222 login \342\206\222 dashboard.png"
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Set-Cookie-Response Header-Login.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Should maxAge and expiresIn be the same.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/What withCredentials true does.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Why CSRF protection matters for cookies.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/Why httpOnly Cookies + cookie-parser can be safer than localStorage JWTs.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/XSS.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/cookie-parser.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/cookieParser.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/document-cookie.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/frontend (React) is hosted on Heroku and your backend (Express) is on Vercel.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/sameSite- lax.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/sameSite.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/withCredentials-true.png
+        new file:   jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-App-tsx.png
+        new file:   jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-api-ts.png
+        new file:   jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-server-ts.png
+        new file:   jwt-cookie-teaching-demo/SCREENS/JWT Cookie Authentication Flow.png
+        new file:   jwt-cookie-teaching-demo/SCREENS/NOTES.png
+        new file:   jwt-cookie-teaching-demo/STEPS.txt
+        new file:   jwt-cookie-teaching-demo/backend/.env.example
+        new file:   jwt-cookie-teaching-demo/backend/.gitignore
+        new file:   jwt-cookie-teaching-demo/backend/package-lock.json
+        new file:   jwt-cookie-teaching-demo/backend/package.json
+        new file:   jwt-cookie-teaching-demo/backend/schema.sql
+        new file:   jwt-cookie-teaching-demo/backend/src/server.ts
+        new file:   jwt-cookie-teaching-demo/backend/tsconfig.json
+        new file:   jwt-cookie-teaching-demo/frontend/.gitignore
+        new file:   jwt-cookie-teaching-demo/frontend/index.html
+        new file:   jwt-cookie-teaching-demo/frontend/package-lock.json
+        new file:   jwt-cookie-teaching-demo/frontend/package.json
+        new file:   jwt-cookie-teaching-demo/frontend/src/App copy.tsx
+        new file:   jwt-cookie-teaching-demo/frontend/src/App.tsx
+        new file:   jwt-cookie-teaching-demo/frontend/src/api copy.ts
+        new file:   jwt-cookie-teaching-demo/frontend/src/api.ts
+        new file:   jwt-cookie-teaching-demo/frontend/src/main.tsx
+        new file:   jwt-cookie-teaching-demo/frontend/src/style.css
+        new file:   jwt-cookie-teaching-demo/frontend/tsconfig.json
+        new file:   jwt-cookie-teaching-demo/frontend/vite.config.ts
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "router related"
-[main f6326bf] router related
- 32 files changed, 718 insertions(+), 123 deletions(-)
- create mode 100644 my-react-app/src - M11-Lesson-3-Nested Routes/SCREENS/replace.png
- create mode 100644 my-react-app/src - M11-Lesson-4-Redirects/index copy.css
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/App.css
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/App.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/1.Link Vs NavLink.png
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/2.5 Different ways to send data in React Router (v6+).png
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/3.Redux-Toolkit.png
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/4.Redux Toolkit - Terms & Functions.png
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/SCREENS/TERMS IN ROUTING.png
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/assets/react.svg
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/About.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/Dashboard.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/DetailsPage.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/HomePage.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/ReduxProfile.css
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/ReduxProfile.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/SearchPage.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/SetUserForm.css
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/SetUserForm.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/components/UserProfile.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/context/DataContext.js
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/index.css
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/main.jsx
- create mode 100644 my-react-app/src-M11-Lesson-2-Route Parameters/store.js
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "JWT"
+[main 598b2ab] JWT
+ 58 files changed, 5259 insertions(+), 17 deletions(-)
+ create mode 100644 jwt-cookie-teaching-demo/README.md
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/1.CODE-EXPLANATION-server-js.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE INFORMATION.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE SETTING FOR LOCAL - PRODUCTION.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/COOKIE SETTINGS.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Clear-Cookie-Response Header-Logout.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Client-Server-using-Cookies-Vs-JWT-in-Local-Storage.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/FLOW DIAGRAM.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/IMPORTANT.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/1.Authentication.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/2.1.What is JWT.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/2.Jwt Details.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/Helmet vs CORS vs JWT.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/REDIS.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/Traditional session-based vs JWT-based authentication.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/jwt generate secret.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/LocalStorage vs HttpOnly Cookies for JWT.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Possible values.png
+ create mode 100644 "jwt-cookie-teaching-demo/SCREENS-JWT/React + Express + JWT flow for register \342\206\222 login \342\206\222 dashboard.png"
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Set-Cookie-Response Header-Login.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Should maxAge and expiresIn be the same.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/What withCredentials true does.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Why CSRF protection matters for cookies.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/Why httpOnly Cookies + cookie-parser can be safer than localStorage JWTs.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/XSS.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/cookie-parser.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/cookieParser.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/document-cookie.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/frontend (React) is hosted on Heroku and your backend (Express) is on Vercel.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/sameSite- lax.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/sameSite.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/withCredentials-true.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-App-tsx.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-api-ts.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/CODE-EXPLANATION-server-ts.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/JWT Cookie Authentication Flow.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/NOTES.png
+ create mode 100644 jwt-cookie-teaching-demo/STEPS.txt
+ create mode 100644 jwt-cookie-teaching-demo/backend/.env.example
+ create mode 100644 jwt-cookie-teaching-demo/backend/.gitignore
+ create mode 100644 jwt-cookie-teaching-demo/backend/package-lock.json
+ create mode 100644 jwt-cookie-teaching-demo/backend/package.json
+ create mode 100644 jwt-cookie-teaching-demo/backend/schema.sql
+ create mode 100644 jwt-cookie-teaching-demo/backend/src/server.ts
+ create mode 100644 jwt-cookie-teaching-demo/backend/tsconfig.json
+ create mode 100644 jwt-cookie-teaching-demo/frontend/.gitignore
+ create mode 100644 jwt-cookie-teaching-demo/frontend/index.html
+ create mode 100644 jwt-cookie-teaching-demo/frontend/package-lock.json
+ create mode 100644 jwt-cookie-teaching-demo/frontend/package.json
+ create mode 100644 jwt-cookie-teaching-demo/frontend/src/App copy.tsx
+ create mode 100644 jwt-cookie-teaching-demo/frontend/src/App.tsx
+ create mode 100644 jwt-cookie-teaching-demo/frontend/src/api copy.ts
+ create mode 100644 jwt-cookie-teaching-demo/frontend/src/api.ts
+ create mode 100644 jwt-cookie-teaching-demo/frontend/src/main.tsx
+ create mode 100644 jwt-cookie-teaching-demo/frontend/src/style.css
+ create mode 100644 jwt-cookie-teaching-demo/frontend/tsconfig.json
+ create mode 100644 jwt-cookie-teaching-demo/frontend/vite.config.ts
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 33, done.
-Counting objects: 100% (33/33), done.
+Enumerating objects: 69, done.
+Counting objects: 100% (69/69), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (19/19), done.
-Writing objects: 100% (19/19), 372.67 KiB | 19.61 MiB/s, done.
-Total 19 (delta 14), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (14/14), completed with 14 local objects.
+Compressing objects: 100% (65/65), done.
+Writing objects: 100% (67/67), 28.93 MiB | 1.25 MiB/s, done.
+Total 67 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   fee2d22..f6326bf  main -> main
+   f6326bf..598b2ab  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

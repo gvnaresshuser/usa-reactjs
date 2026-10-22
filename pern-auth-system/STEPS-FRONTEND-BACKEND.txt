@@ -1,0 +1,27 @@
+E:\MURALI\REACT-JS-TRAINING\pern-auth-system
+
+
+FRONTEND - E:\MURALI\REACT-JS-TRAINING\pern-auth-system
+npm create vite@latest client
+
+google search
+install tailwind css for vite 
+
+https://tailwindcss.com/docs/installation/using-vite
+
+TO START FRONTEND - npm run dev
+
+----------------------------------
+BACKEND - E:\MURALI\REACT-JS-TRAINING\pern-auth-system
+mkdir server
+cd server
+npm init -y
+package.json
+"type":"module"
+scripts
+"dev":"nodemon index.js"
+
+create files and folders related backend code
+index.js
+
+TO START BACKEND - npm run dev

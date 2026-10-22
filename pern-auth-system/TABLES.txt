@@ -1,0 +1,56 @@
+
+-- 1. Create users table
+CREATE TABLE IF NOT EXISTS public.usersauth (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    role VARCHAR(20) DEFAULT 'user',
+    permissions TEXT[] DEFAULT ARRAY['read']
+);
+
+-- 2. Create products table
+CREATE TABLE IF NOT EXISTS public.productsauth (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    price NUMERIC(10, 2) NOT NULL CHECK (price >= 0),
+    description TEXT NOT NULL,
+    image TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- 3. Insert sample products
+INSERT INTO public.productsauth
+    (name, price, description, image)
+VALUES
+(
+    'Wireless Mouse',
+    899.00,
+    'A smooth and precise wireless mouse with ergonomic design.',
+    'https://www.sathya.in/media/3492/catalog/mouse.jpg'
+),
+(
+    'Gaming Keyboard',
+    2499.00,
+    'Mechanical keyboard with RGB backlighting, designed for gamers.',
+    'https://t4.ftcdn.net/jpg/04/15/32/63/360_F_415326304_KqMrgDp1F6cvmT8z8JKQSkLb2oPCMTAX.jpg'
+),
+(
+    'Noise Cancelling Headphones',
+    4999.00,
+    'Over-ear headphones with active noise cancellation and deep bass.',
+    'https://z.nooncdn.com/products/tr:n-t_240/v1551338373/N21185490A_1.jpg'
+),
+(
+    'Smartphone Stand',
+    299.00,
+    'Adjustable aluminum phone holder compatible with all smartphones.',
+    'https://m.media-amazon.com/images/I/51Vxpmjhw7L._UF1000,1000_QL80_.jpg'
+),
+(
+    'USB-C Charging Cable',
+    199.00,
+    'Durable and fast-charging USB-C to USB-A cable, 1.5 meters.',
+    'https://www.shutterstock.com/image-vector/usb-type-a-c-micro-260nw-1545691667.jpg'
+);
