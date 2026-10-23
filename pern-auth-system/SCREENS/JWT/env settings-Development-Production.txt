@@ -1,0 +1,322 @@
+Simple, reusable cookie configuration for your React + TypeScript + Express + JWT access-token and refresh-token application, using `.env` settings for both development and production.
+
+The idea is that you change the environment variables, not your Express code, when deploying the application.
+
+ 1. `.env` configuration
+
+For local development, suppose React runs on `http://localhost:5173` and Express runs on `http://localhost:3000`.
+
+```
+
+NODE_ENV=development
+
+FRONTEND_URL=http://localhost:5173
+
+# Cookie settings
+COOKIE_HTTP_ONLY=true
+COOKIE_SECURE=false
+COOKIE_SAME_SITE=lax
+COOKIE_PATH=/
+COOKIE_DOMAIN=
+
+# Cookie lifetime in milliseconds
+ACCESS_COOKIE_MAX_AGE=900000
+REFRESH_COOKIE_MAX_AGE=604800000
+
+```
+
+For production, use HTTPS for both frontend and backend.
+
+```
+
+NODE_ENV=production
+
+FRONTEND_URL=https://app.example.com
+
+# Cookie settings
+COOKIE_HTTP_ONLY=true
+COOKIE_SECURE=true
+COOKIE_SAME_SITE=lax
+COOKIE_PATH=/
+COOKIE_DOMAIN=
+
+# Cookie lifetime in milliseconds
+ACCESS_COOKIE_MAX_AGE=900000
+REFRESH_COOKIE_MAX_AGE=604800000
+
+```
+
+Replace `app.example.com` with your actual frontend domain.
+
+Why leave `COOKIE_DOMAIN` empty? This creates a host-only cookie for the API host, which is generally safer. 
+You usually do not need to set `.example.com` just because your frontend and backend use different subdomains.
+
+ 2. Express cookie configuration — `config/cookieOptions.ts`
+
+Create one reusable configuration file so you do not repeat cookie settings in your login, refresh, and logout controllers.
+
+```
+
+import type { CookieOptions } from "express";
+
+const isProduction = process.env.NODE_ENV === "production";
+
+const sameSiteValue = (
+  process.env.COOKIE_SAME_SITE ?? "lax"
+).toLowerCase();
+
+if (!["strict", "lax", "none"].includes(sameSiteValue)) {
+  throw new Error("Invalid COOKIE_SAME_SITE value");
+}
+
+const sameSite = sameSiteValue as NonNullable<
+  CookieOptions["sameSite"]
+>;
+
+const httpOnly = process.env.COOKIE_HTTP_ONLY !== "false";
+const secure = process.env.COOKIE_SECURE === "true";
+
+if (sameSite === "none" && !secure) {
+  throw new Error("SameSite=None requires Secure=true");
+}
+
+if (isProduction && !secure) {
+  throw new Error("Production cookies must use Secure=true");
+}
+
+const domain = process.env.COOKIE_DOMAIN?.trim() || undefined;
+
+export const accessCookieOptions: CookieOptions = {
+  httpOnly,
+  secure,
+  sameSite,
+  path: process.env.COOKIE_PATH || "/",
+  maxAge: Number(process.env.ACCESS_COOKIE_MAX_AGE ?? 900000),
+  ...(domain ? { domain } : {}),
+};
+
+export const refreshCookieOptions: CookieOptions = {
+  ...accessCookieOptions,
+  maxAge: Number(
+    process.env.REFRESH_COOKIE_MAX_AGE ?? 604800000
+  ),
+};
+
+```
+
+ 3. Use the settings in your Express authentication controller
+
+After validating the user's credentials and generating the two JWTs, set the cookies like this:
+
+```
+
+import { Request, Response } from "express";
+import {
+  accessCookieOptions,
+  refreshCookieOptions,
+} from "../config/cookieOptions";
+
+// Call this after generating the JWT tokens.
+export function setAuthCookies(
+  res: Response,
+  accessToken: string,
+  refreshToken: string
+) {
+  res.cookie("accessToken", accessToken, accessCookieOptions);
+
+  res.cookie("refreshToken", refreshToken, refreshCookieOptions);
+}
+
+```
+
+For example, inside your login controller:
+
+```
+const accessToken = generateAccessToken(user);
+const refreshToken = generateRefreshToken(user);
+
+// Store the refresh-token session securely if your design requires it.
+
+setAuthCookies(res, accessToken, refreshToken);
+
+res.status(200).json({
+  message: "Login successful",
+  user: {
+    id: user.id,
+    name: user.name,
+  },
+});
+```
+
+The browser receives two `Set-Cookie` headers and stores the cookies. With `HttpOnly: true`, frontend JavaScript cannot read their values.
+
+ 4. Express CORS configuration
+
+Configure CORS separately from cookie options.
+
+```
+
+import cors from "cors";
+import express from "express";
+
+const app = express();
+
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true,
+  })
+);
+
+app.use(express.json());
+
+```
+
+On the React side, your Axios instance should include:
+
+```
+const api = axios.create({
+  baseURL: "http://localhost:3000/api",
+  withCredentials: true,
+});
+```
+
+For production, change `baseURL` to your deployed API URL.
+
+ 5. Clear cookies during logout
+
+Cookies must be cleared using matching cookie scope options, especially `path` and `domain`.
+
+```
+
+import { Response } from "express";
+import {
+  accessCookieOptions,
+  refreshCookieOptions,
+} from "../config/cookieOptions";
+
+export function clearAuthCookies(res: Response) {
+  const { maxAge: _accessMaxAge, ...accessOptions } =
+    accessCookieOptions;
+
+  const { maxAge: _refreshMaxAge, ...refreshOptions } =
+    refreshCookieOptions;
+
+  res.clearCookie("accessToken", accessOptions);
+  res.clearCookie("refreshToken", refreshOptions);
+}
+
+```
+
+Call this from your logout controller. Also revoke or invalidate the server-side refresh-token session, if your implementation maintains one.
+
+ 6. Quick comparison
+
+| Setting                 | Development                      | Production                       |
+| ----------------------- | -------------------------------- | -------------------------------- |
+| `COOKIE_HTTP_ONLY`      | `true`                           | `true`                           |
+| `COOKIE_SECURE`         | `false` for local HTTP           | `true`                           |
+| `COOKIE_SAME_SITE`      | `lax`                            | `lax` for same-site deployments  |
+| `COOKIE_DOMAIN`         | Empty                            | Empty by default                 |
+| `COOKIE_PATH`           | `/`                              | `/`                              |
+| Axios `withCredentials` | `true` for cross-origin requests | `true` for cross-origin requests |
+
+Important: If your frontend and API are on entirely different sites, you may need `COOKIE_SAME_SITE=none` with `COOKIE_SECURE=true`, plus appropriate CSRF protection. HTTPS is essential for production.
+
+One final distinction for your JWT lessons: cookie `maxAge` controls how long the browser retains the cookie; JWT expiration controls how long the token remains valid. Configure both, and validate JWT expiration on every protected request.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+`COOKIE_DOMAIN` is optional. You can leave it empty in your `.env` file. 😊
+
+Let me explain why.
+
+ 1. What does `COOKIE_DOMAIN` mean?
+
+Suppose your application has these URLs:
+
+- React frontend: `https://app.example.com`
+- Express backend: `https://api.example.com`
+
+When Express sets a cookie, the `Domain` attribute controls which hosts can receive that cookie.
+
+# Case 1: `COOKIE_DOMAIN` is empty
+
+```
+COOKIE_DOMAIN=
+```
+
+Your Express code converts the empty value to `undefined`:
+
+```
+const domain = process.env.COOKIE_DOMAIN?.trim() || undefined;
+```
+
+Then this code:
+
+```
+res.cookie("accessToken", token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: "lax",
+  path: "/",
+  // No domain specified
+});
+```
+
+creates a host-only cookie for `api.example.com`.
+
+The browser sends it to the matching API host, subject to the cookie's other rules.
+
+# Case 2: `COOKIE_DOMAIN=example.com`
+
+```
+COOKIE_DOMAIN=example.com
+```
+
+Now the server sets a cookie with the `Domain=example.com` attribute.
+
+The cookie can be sent to matching subdomains, such as:
+
+- `api.example.com`
+- `app.example.com`
+- `admin.example.com`
+
+This broadens the cookie's scope. It does not mean every subdomain can read an HTTP-only cookie through JavaScript; `HttpOnly` still applies.
+
+ 2. Visual comparison
+
+Recommended by default
+
+`COOKIE_DOMAIN=` (empty)
+
+api.example.com
+
+Cookie sent to this host
+
+`COOKIE_DOMAIN=example.com`
+
+app.example.com
+
+api.example.com
+
+admin.example.com
+
+All matching subdomains may receive the cookie, subject to other cookie rules.
+
+ 3. Is `COOKIE_DOMAIN` required?
+
+For your React + Express JWT application, I recommend:
+
+```
+# Development
+COOKIE_DOMAIN=
+```
+
+```
+# Production
+COOKIE_DOMAIN=
+```
+
+Even when React and Express use different subdomains, you can normally leave the domain empty. React does not need to read the cookie; the browser sends the API's cookie to the API.
+
+Remember: An empty `COOKIE_DOMAIN` does not mean cookies are disabled. It means Express leaves the `Domain` attribute unspecified, allowing the browser to restrict the cookie to the host that set it. This is generally the safer choice.

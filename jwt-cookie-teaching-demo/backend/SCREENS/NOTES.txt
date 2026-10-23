@@ -1,0 +1,357 @@
+E:\Advaitecs\jwt-cookie-teaching-demo\backend\
+│
+├── .env                  # Local development settings
+├── .env.production       # Production settings (keep private)
+├── .env.example          # Safe template, no secrets
+├── .gitignore
+├── package.json
+├── schema.sql
+└── src\
+    └── server.ts
+	
+	
+	Install dotenv-cli
+Run this inside:
+
+E:\Advaitecs\jwt-cookie-teaching-demo\backend
+npm install -D dotenv-cli
+
+
+2. Update your package.json scripts
+Keep all your existing dependencies and replace only the scripts section with this:
+
+"scripts": {
+  "dev": "dotenv -e .env -- tsx watch src/server.ts",
+  "build": "tsc",
+  "start": "node dist/server.js",
+  "start:production": "dotenv -e .env.production -- node dist/server.js",
+  "typecheck": "tsc --noEmit"
+}
+
+----------------------------------
+3. How to run the application
+Task	Command
+Local development	npm run dev
+Check TypeScript	npm run typecheck
+Build JavaScript	npm run build
+Run with existing environment variables	npm start
+Run using .env.production	npm run start:production
+
+For production, run:
+npm run build
+npm run start:production
+-----------------------------------
+
+Run these commands from your backend folder:
+npm run typecheck
+npm run build
+npm run dev
+
+
+Test the following endpoints in Thunder Client:
+
+Method		Endpoint			Purpose
+
+GET			http://localhost:5000/api/health			Verify the server
+POST		http://localhost:5000/api/auth/register		Register a user
+POST		http://localhost:5000/api/auth/login		Login and receive cookies
+GET			http://localhost:5000/api/auth/me			Verify the access token
+POST		http://localhost:5000/api/auth/refresh		Rotate the refresh token
+POST		http://localhost:5000/api/auth/logout		Revoke the refresh session and clear cookies
+
+
+GET			http://localhost:5000/api/health			Verify the server
+{
+  "success": true,
+  "message": "JWT cookie demo API is running"
+}
+
+POST		http://localhost:5000/api/auth/register		Register a user
+POST		http://localhost:5000/api/auth/login		Login and receive cookies
+GET			http://localhost:5000/api/auth/me			Verify the access token
+POST		http://localhost:5000/api/auth/refresh		Rotate the refresh token
+POST		http://localhost:5000/api/auth/logout		Revoke the refresh session and clear cookies
+
+=========================================================================
+Thunder Client testing guide for your JWT Cookie Teaching Demo, including request methods, URLs, JSON bodies, expected responses, and the correct testing order.
+1. Test API endpoints
+GET
+Health check
+
+http://localhost:5000/api/health
+
+No request body required.
+
+Expected response:
+{
+  "success": true,
+  "message": "JWT cookie demo API is running"
+}
+
+
+
+
+
+POST
+Register a user
+
+http://localhost:5000/api/auth/register
+
+Body → JSON:
+{
+  "name": "Ravi Kumar",
+  "email": "ravi@example.com",
+  "password": "Ravi@12345"
+}
+
+
+Expected response: 201 Created
+{
+  "success": true,
+  "message": "Registration successful",
+  "data": {
+    "user": {
+      "id": 2,
+      "name": "Ravi Kumar",
+      "email": "ravi@example.com"
+    }
+  }
+}
+
+
+The ID will depend on your database.
+
+
+
+POST
+Login
+
+http://localhost:5000/api/auth/login
+
+Body → JSON:
+{
+  "email": "ravi@example.com",
+  "password": "Ravi@12345"
+}
+
+
+Expected response: 200 OK
+{
+  "success": true,
+  "message": "Login successful",
+  "data": {
+    "user": {
+      "id": 2,
+      "name": "Ravi Kumar",
+      "email": "ravi@example.com"
+    }
+  }
+}
+
+
+The response also contains Set-Cookie headers for accessToken and refreshToken. They are HTTP-only cookies, so JavaScript cannot read them.
+
+SAVE ABOVE TOKENS FOR GET OPERATION....
+
+accesstoken
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoicmF2aUBleGFtcGxlLmNvbSIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3OTI3MzU4OTEsImV4cCI6MTc5MjczNjQ5MX0.sjQ6VU44mXwTunu9SnrVCxg4JzU4qPV3L3Gz7PtgL2c
+
+refreshtoken
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzkyNzM1ODkxLCJleHAiOjE3OTI3MzcwOTF9.92UowS-UoMhl_X-ZXPIb2xB7ZSS_9KQ8uPGmWvqFvHA
+
+INCREASE TIME IN .env FILE
+JWT_ACCESS_EXPIRES_IN=10m
+JWT_REFRESH_EXPIRES_IN=20m
+
+ALSO INCREASE COOKIE LIFETIME
+
+# Cookie lifetime in milliseconds
+ACCESS_COOKIE_MAX_AGE=600000
+REFRESH_COOKIE_MAX_AGE=1200000
+
+-----------------------------------------
+Token / Cookie	Duration	Milliseconds
+-----------------------------------------
+Access JWT		10 minutes	600000
+Access cookie	10 minutes	600000
+Refresh JWT		20 minutes	1200000
+Refresh cookie	20 minutes	1200000
+-----------------------------------------
+
+Remember the formula:
+
+Milliseconds = Minutes x 60 x 1000
+
+
+GET
+Get the current user
+
+http://localhost:5000/api/auth/me
+
+No body required.
+
+
+Expected response when authenticated:
+{
+  "success": true,
+  "data": {
+    "user": {
+      "id": 1,
+      "name": "Ravi Kumar",
+      "email": "ravi@example.com"
+    }
+  }
+}
+
+
+This request requires the access-token cookie.
+
+
+
+POST
+Refresh tokens
+
+http://localhost:5000/api/auth/refresh
+
+accesstoken
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImVtYWlsIjoicmF2aUBleGFtcGxlLmNvbSIsInR5cGUiOiJhY2Nlc3MiLCJpYXQiOjE3OTI3MzY0NDYsImV4cCI6MTc5MjczNzA0Nn0.1Yjdb84_4XIXA1SnJGXP40vgvhMDRD7KmmSUVGWbP48
+
+refreshtoken
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInR5cGUiOiJyZWZyZXNoIiwiaWF0IjoxNzkyNzM2NDQ2LCJleHAiOjE3OTI3Mzc2NDZ9.L1GO4lJrIxKpKOWUUi4Wx7f79kK81KhDhG18Fpbr_iY
+
+
+No body required.
+
+Expected response when the refresh session is valid:
+{
+  "success": true,
+  "message": "Tokens refreshed and refresh token rotated",
+  "data": {
+    "user": {
+      "id": 1,
+      "name": "Ravi Kumar",
+      "email": "ravi@example.com"
+    }
+  }
+}
+
+
+The backend revokes the old refresh session and sends a new access-token and refresh-token cookie.
+
+
+
+POST
+Logout
+
+http://localhost:5000/api/auth/logout
+
+No body required.
+
+Expected response:
+{
+  "success": true,
+  "message": "Logged out successfully"
+}
+
+
+The backend revokes the refresh session and clears both cookies.
+
+
+
+2. Correct testing sequence
+Since your development access token expires in 10s and the refresh token in 20s, follow this order.
+1. Register — create Ravi's account.
+
+2. Login — save the cookies returned by the server.
+
+3. Call /me — verify the access token.
+
+4. Wait over 10 seconds — the access token should expire.
+
+5. Call /me again — expect 401 Unauthorized.
+
+6. Call /refresh — obtain a new token pair, provided the refresh token has not expired.
+
+7. Call /me again — verify that the new access token works.
+
+8. Call /logout — revoke the refresh session.
+
+
+Important: Your refresh cookie has the path /api/auth, so it is sent to both /api/auth/refresh and /api/auth/logout. Your access cookie has the path /, so it is sent to /api/auth/me too.
+3. Thunder Client cookie handling
+After login, check the response headers for Set-Cookie. Thunder Client's cookie handling can depend on its version and settings.
+- If cookies are stored automatically, subsequent requests should send them.
+- If /api/auth/me returns 401 immediately after login, check the request's Cookie header and the cookie jar.
+- If the refresh endpoint is tested after 20 seconds, the refresh JWT will also have expired, and the backend should reject it.
+For the React frontend, remember to use Axios with withCredentials: true for cross-origin cookie requests. Thunder Client is separate from the browser's React cookie flow, so test both independently.
+
+
+Change your .env
+# JWT expiry
+JWT_ACCESS_EXPIRES_IN=10s
+JWT_REFRESH_EXPIRES_IN=20s
+
+# Cookie lifetime in milliseconds
+ACCESS_COOKIE_MAX_AGE=10000
+REFRESH_COOKIE_MAX_AGE=20000
+
+
+
+http://localhost:5000/api/auth/login
+
+Body → JSON:
+{
+  "email": "ravi@example.com",
+  "password": "Ravi@12345"
+}
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+There are two common project configurations.
+
+1. Simple TypeScript configuration (your project)
+frontend/
+├── src/
+│   ├── App.tsx
+│   ├── main.tsx
+│   ├── style.css
+│   └── vite-env.d.ts
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
+
+
+Here, a single tsconfig.json manages TypeScript settings for your application.
+
+2. Split TypeScript configuration (some Vite templates)
+frontend/
+├── src/
+├── tsconfig.json
+├── tsconfig.app.json
+├── tsconfig.node.json
+├── vite.config.ts
+└── package.json
+
+
+Here, TypeScript settings are separated by purpose.
+File	Purpose
+tsconfig.json	Main configuration, often referencing other configs
+tsconfig.app.json	TypeScript settings for React frontend code
+tsconfig.node.json	TypeScript settings for Node-based tooling such as vite.config.ts
+vite-env.d.ts	Vite client-side type declarations, including CSS imports
+
+Why do some Vite projects have three files?
+Different Vite templates, template versions, and manual project setups can use different configurations.
+
+For example, the split approach allows React browser code to use DOM types while Vite configuration files use Node.js types.
+Should you create the missing files?
+No, not necessary for your current JWT Cookie Demo.
+
+Your existing tsconfig.json is sufficient. Simply add:
+"types": ["vite/client"]
+
+
+This should resolve the CSS import type declaration error, assuming Vite is installed and style.css exists.
+
+tsconfig.app.json and tsconfig.node.json are optional ways to organize TypeScript configuration. They are not requirements for React or Vite.
+
+There is no need to restructure your working project just to add these files.
