@@ -1,0 +1,78 @@
+FOR ADMIN LOGIN:
+===============
+POST
+http://localhost:5000/api/auth/login
+{
+  "email": "admin@gmail.com",
+  "password": "123456"
+}
+--------------------------------------
+FOR USER LOGIN:
+==============
+POST
+http://localhost:5000/api/auth/login
+{
+  "email": "test@gmail.com",
+  "password": "123456"
+}
+--------------------------------------
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJwZXJtaXNzaW9ucyI6WyJyZWFkIiwid3JpdGUiLCJ1cGRhdGUiLCJkZWxldGUiXSwiaWF0IjoxNzkyODExMTAwLCJleHAiOjE3OTI4OTc1MDB9.sX2Rt_ds630XuOvQMQNEJj6pzV4HuWGPKrerBgZbgGA",
+  "decoded": {
+    "id": 2,
+    "name": "Admin",
+    "email": "admin@gmail.com",
+    "role": "admin",
+    "permissions": [
+      "read",
+      "write",
+      "update",
+      "delete"
+    ],
+    "iat": 1792811100,
+    "exp": 1792897500
+  }
+}
+
+
+
+
+EXPECTED RESPONSE
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkdWIE5hcmVzc2giLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwZXJtaXNzaW9ucyI6WyJyZWFkIiwiZGVsZXRlIiwid3JpdGUiXSwiaWF0IjoxNzkyODEwNjI4LCJleHAiOjE3OTI4OTcwMjh9.4ZkLO7_Dv3v-O3mhF3NglSjWJhktgDFE3SjJgZoIK68",
+  "decoded": {
+    "id": 1,
+    "name": "GV Naressh",
+    "email": "test@gmail.com",
+    "role": "user",
+    "permissions": [
+      "read",
+      "delete",
+      "write"
+    ],
+    "iat": 1792810628,
+    "exp": 1792897028
+  }
+}
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkdWIE5hcmVzc2giLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwZXJtaXNzaW9ucyI6WyJyZWFkIiwiZGVsZXRlIiwid3JpdGUiXSwiaWF0IjoxNzkyODEwNjI4LCJleHAiOjE3OTI4OTcwMjh9.4ZkLO7_Dv3v-O3mhF3NglSjWJhktgDFE3SjJgZoIK68
+
+
+
+  {
+    "id": 4,
+    "name": "uzwall",
+    "email": "uzwall@gmail.com",
+    "role": "user",
+    "permissions": [
+      "read"
+    ]
+  },
+  
+  http://localhost:5000/api/auth/users/4
+  {
+  "name": "uzwall Updated",
+  "email": "uzwall@gmail.com",
+  "role": "user",
+  "permissions": ["read", "write"]
+}

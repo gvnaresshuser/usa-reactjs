@@ -1,0 +1,328 @@
+Thunder Client testing guide for all authentication and product endpoints, including JWT authentication, admin authorization, and product permissions.
+
+Your server runs on port `5000`, and your routes are mounted as follows:
+
+- Authentication: `http://localhost:5000/api/auth`
+- Products: `http://localhost:5000/api/products`
+
+ 1. Register a new user
+
+POST
+
+`http://localhost:5000/api/auth/register`
+
+Thunder Client → Body → JSON
+
+```
+{
+  "name": "Test User",
+  "email": "testuser@gmail.com",
+  "password": "123456"
+}
+```
+
+Copy request body
+
+Expected result: `200 OK` with the newly created user. Your current registration code returns the user record, including the hashed password. For better security, avoid returning the password hash.
+
+Note: If this email already exists, registration may fail depending on your database constraints.
+
+ 2. Login and obtain a JWT
+
+POST
+
+`http://localhost:5000/api/auth/login`
+
+Body → JSON
+
+```
+{
+  "email": "test@gmail.com",
+  "password": "123456"
+```
+
+Copy request body
+
+Expected response:
+
+```
+{
+  "token": "eyJhbGciOiJIUzI1NiIs...",
+  "decoded": {
+    "id": 1,
+    "name": "Test User",
+    "email": "test@gmail.com",
+    "role": "user",
+    "permissions": ["read"],
+    "iat": 1790000000,
+    "exp": 1790086400
+  }
+}
+```
+
+The values above are illustrative; your actual response depends on your database.
+
+Important: Copy the actual `token` from your login response. You will use it for the protected endpoints below.
+
+In Thunder Client, open Auth → Bearer and paste the token into the Token field. Thunder Client will send:
+
+```
+Authorization: Bearer YOUR_JWT_TOKEN
+```
+
+ 3. Verify JWT token
+
+GET
+
+`http://localhost:5000/api/auth/verify`
+
+- Auth → Bearer → paste your login token.
+- Body: None.
+- Click Send.
+
+Expected response: `200 OK`
+
+```
+{
+  "valid": true,
+  "user": {
+    "id": 1,
+    "email": "test@gmail.com",
+    "role": "user"
+  }
+}
+```
+
+The user properties depend on the JWT payload.
+
+ 4. Get user profile
+
+GET
+
+`http://localhost:5000/api/auth/profile`
+
+- Auth → Bearer → paste the token.
+- Body: None.
+
+Expected response: `200 OK`
+
+```
+{
+  "id": 1,
+  "name": "Test User",
+  "email": "test@gmail.com"
+}
+```
+
+Your SQL query returns only `id`, `name`, and `email`.
+
+ 5. Get all users (Admin only)
+
+GET
+
+`http://localhost:5000/api/auth/users`
+
+- Auth → Bearer → use an admin's JWT token.
+- Body: None.
+
+Expected response: `200 OK`, containing an array of users.
+
+If you use a regular user's token, expect `403 Forbidden`:
+
+```
+{
+  "error": "Access denied. Admins only."
+}
+```
+
+ 6. Update a user (Admin token required by your current design)
+
+PUT
+
+`http://localhost:5000/api/auth/users/2`
+
+Auth → Bearer → admin token.
+
+Body → JSON:
+
+```
+{
+  "name": "Updated User",
+  "email": "updated@gmail.com",
+  "role": "user",
+  "permissions": ["read", "write"]
+}
+```
+
+Expected response:
+
+```
+{
+  "message": "User updated successfully"
+}
+```
+
+Change `2` to an existing user ID. Your current SQL updates the record but does not check whether a matching ID exists.
+
+ 7. Delete a user (Admin only)
+
+DELETE
+
+`http://localhost:5000/api/auth/users/2`
+
+Auth → Bearer → admin token.
+
+Body: None.
+
+Expected response:
+
+```
+{
+  "message": "User deleted successfully"
+}
+```
+
+Use an existing test-user ID. Your current endpoint can return this message even when no matching user exists.
+
+ 8. Get all products (Public endpoint)
+
+GET
+
+`http://localhost:5000/api/products`
+
+Auth: Not required.
+
+Body: None.
+
+Expected response: `200 OK`
+
+```
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "price": 55000,
+    "description": "Laptop for development",
+    "image": "https://example.com/laptop.jpg"
+  }
+]
+```
+
+The response depends on the records in your `productsauth` table.
+
+ 9. Add a product (JWT + write permission required)
+
+POST
+
+`http://localhost:5000/api/products`
+
+Auth: Bearer token belonging to a user whose JWT contains the `write` permission.
+
+Body → JSON
+
+```
+{
+  "name": "Keyboard",
+  "price": 1500,
+  "description": "Mechanical keyboard",
+  "image": "https://example.com/keyboard.jpg"
+}
+```
+
+Copy request body
+
+Expected response: `201 Created`, containing the newly inserted product.
+
+If the token is valid but its permissions do not include `write`, you should receive:
+
+```
+{
+  "error": "You do not have write access"
+}
+```
+
+Status: `403 Forbidden`.
+
+Teaching point: The permission is read from the JWT, so update the user's permissions in the database and log in again to obtain a token containing the updated permissions.
+
+ 10. Update a product
+
+PUT
+
+`http://localhost:5000/api/products/1`
+
+Auth: Bearer token required.
+
+Body → JSON
+
+```
+{
+  "name": "Updated Keyboard",
+  "price": 1800,
+  "description": "Updated mechanical keyboard",
+  "image": "https://example.com/keyboard-new.jpg"
+}
+```
+
+Copy request body
+
+Expected response:
+
+```
+{
+  "message": "Product updated successfully"
+}
+```
+
+Your current product update route checks only for a valid JWT. It does not check for the `write` permission or an admin role.
+
+ 11. Delete a product
+
+DELETE
+
+`http://localhost:5000/api/products/1`
+
+- Auth → Bearer → valid JWT token.
+- Body: None.
+- Replace `1` with the product ID you want to delete.
+
+Expected response:
+
+```
+{
+  "message": "Product deleted successfully"
+}
+```
+
+Like the update route, your current delete route requires a valid JWT but does not check the user's role or permissions.
+
+ 12. Test invalid and expired tokens
+
+Use these tests on any endpoint protected by `verifyToken`.
+
+| Test            | Expected result                        |
+| --------------- | -------------------------------------- |
+| No Bearer token | `401 Unauthorized`                     |
+| Invalid token   | `401 Unauthorized`                     |
+| Expired token   | `401 Unauthorized`                     |
+| Valid token     | Request proceeds to the route's checks |
+
+To test expiry, your login code can temporarily use `expiresIn: '10s'`. Log in, wait more than 10 seconds, and call `/api/auth/verify` again. Restore `'24h'` after testing.
+
+ Complete endpoint checklist
+
+| Method | Endpoint              | Authentication           |
+| ------ | --------------------- | ------------------------ |
+| POST   | `/api/auth/register`  | Not required             |
+| POST   | `/api/auth/login`     | Not required             |
+| GET    | `/api/auth/verify`    | JWT required             |
+| GET    | `/api/auth/profile`   | JWT required             |
+| GET    | `/api/auth/users`     | JWT + admin              |
+| PUT    | `/api/auth/users/:id` | JWT + admin              |
+| DELETE | `/api/auth/users/:id` | JWT + admin              |
+| GET    | `/api/products`       | Public                   |
+| POST   | `/api/products`       | JWT + `write` permission |
+| PUT    | `/api/products/:id`   | JWT required             |
+| DELETE | `/api/products/:id`   | JWT required             |
+
+One important security improvement, Sir: Your product `PUT` and `DELETE` endpoints currently allow any authenticated user to update or delete products. If that is not intentional, add an authorization check for the required permission or admin role, just as you did for adding products.

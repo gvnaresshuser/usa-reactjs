@@ -107,6 +107,17 @@ Microsoft Windows [Version 10.0.26200.9711]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/.env.example', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/src/server.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/App.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/src/style.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/frontend/tsconfig.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/.env copy', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/package copy.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/src/server copy.ts', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -115,44 +126,70 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/TRADITIONAL SESSIONID-Vs-JWT.png
-        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/protocol, domain (host), and port.png
-        modified:   pern-auth-system/SCREENS/JWT/1.Authentication.png
-        modified:   pern-auth-system/SCREENS/JWT/2.1.What is JWT.png
-        modified:   pern-auth-system/SCREENS/JWT/2.Jwt Details.png
-        new file:   pern-auth-system/SCREENS/JWT/Helmet vs CORS vs JWT.png
-        new file:   pern-auth-system/SCREENS/JWT/JWT settings and cookie settings.png
-        new file:   pern-auth-system/SCREENS/JWT/REDIS.png
-        new file:   pern-auth-system/SCREENS/JWT/TRADITIONAL SESSIONID-Vs-JWT.png
-        new file:   pern-auth-system/SCREENS/JWT/Traditional session-based vs JWT-based authentication.png
-        new file:   pern-auth-system/SCREENS/JWT/env settings-Development-Production.png
-        modified:   pern-auth-system/SCREENS/JWT/jwt generate secret.png
-        new file:   pern-auth-system/SCREENS/JWT/protocol, domain (host), and port.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/env settings-Development-Production.png
+        new file:   jwt-cookie-teaching-demo/SCREENS-JWT/JWT/env settings-Development-Production.txt
+        new file:   jwt-cookie-teaching-demo/backend/.env copy
+        modified:   jwt-cookie-teaching-demo/backend/.env.example
+        new file:   jwt-cookie-teaching-demo/backend/.env.production
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/1.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/10.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/11.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/2.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/3.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/4.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/5.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/6.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/7.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/8.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/9.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/NOTES.txt
+        new file:   jwt-cookie-teaching-demo/backend/package copy.json
+        modified:   jwt-cookie-teaching-demo/backend/package-lock.json
+        modified:   jwt-cookie-teaching-demo/backend/package.json
+        new file:   jwt-cookie-teaching-demo/backend/src/server copy.ts
+        modified:   jwt-cookie-teaching-demo/backend/src/server.ts
+        modified:   jwt-cookie-teaching-demo/frontend/src/App.tsx
+        modified:   jwt-cookie-teaching-demo/frontend/src/style.css
+        new file:   jwt-cookie-teaching-demo/frontend/src/vite-env.d.ts
+        modified:   jwt-cookie-teaching-demo/frontend/tsconfig.json
+        modified:   pern-auth-system/SCREENS/JWT/env settings-Development-Production.png
+        new file:   pern-auth-system/SCREENS/JWT/env settings-Development-Production.txt
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "JWT"
-[main 4136fef] JWT
- 14 files changed, 19 insertions(+), 206 deletions(-)
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/TRADITIONAL SESSIONID-Vs-JWT.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/protocol, domain (host), and port.png
- create mode 100644 pern-auth-system/SCREENS/JWT/Helmet vs CORS vs JWT.png
- create mode 100644 pern-auth-system/SCREENS/JWT/JWT settings and cookie settings.png
- create mode 100644 pern-auth-system/SCREENS/JWT/REDIS.png
- create mode 100644 pern-auth-system/SCREENS/JWT/TRADITIONAL SESSIONID-Vs-JWT.png
- create mode 100644 pern-auth-system/SCREENS/JWT/Traditional session-based vs JWT-based authentication.png
- create mode 100644 pern-auth-system/SCREENS/JWT/env settings-Development-Production.png
- create mode 100644 pern-auth-system/SCREENS/JWT/protocol, domain (host), and port.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "Access refresh"
+[main 299446d] Access refresh
+ 29 files changed, 2254 insertions(+), 189 deletions(-)
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/env settings-Development-Production.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS-JWT/JWT/env settings-Development-Production.txt
+ create mode 100644 jwt-cookie-teaching-demo/backend/.env copy
+ create mode 100644 jwt-cookie-teaching-demo/backend/.env.production
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/1.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/10.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/11.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/2.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/3.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/4.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/5.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/6.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/7.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/8.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/9.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/NOTES.txt
+ create mode 100644 jwt-cookie-teaching-demo/backend/package copy.json
+ create mode 100644 jwt-cookie-teaching-demo/backend/src/server copy.ts
+ create mode 100644 jwt-cookie-teaching-demo/frontend/src/vite-env.d.ts
+ create mode 100644 pern-auth-system/SCREENS/JWT/env settings-Development-Production.txt
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 23, done.
-Counting objects: 100% (23/23), done.
+Enumerating objects: 58, done.
+Counting objects: 100% (58/58), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (14/14), done.
-Writing objects: 100% (14/14), 2.61 MiB | 525.00 KiB/s, done.
-Total 14 (delta 8), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (8/8), completed with 7 local objects.
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (39/39), 2.58 MiB | 1017.00 KiB/s, done.
+Total 39 (delta 15), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (15/15), completed with 14 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   2bd71f0..4136fef  main -> main
+   4136fef..299446d  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
