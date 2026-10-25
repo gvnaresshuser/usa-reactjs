@@ -1,0 +1,44 @@
+Microsoft Windows [Version 10.0.26200.9711]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\Advaitecs\jwt-cookie-teaching-demo>mkdir bcrypt-argon2
+
+E:\Advaitecs\jwt-cookie-teaching-demo>cd backend
+
+E:\Advaitecs\jwt-cookie-teaching-demo\backend>cd ..
+
+E:\Advaitecs\jwt-cookie-teaching-demo>cd bcrypt-argon2
+
+E:\Advaitecs\jwt-cookie-teaching-demo\bcrypt-argon2>npm init -y
+Wrote to E:\Advaitecs\jwt-cookie-teaching-demo\bcrypt-argon2\package.json:
+
+{
+  "name": "bcrypt-argon2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
+
+
+
+E:\Advaitecs\jwt-cookie-teaching-demo\bcrypt-argon2>code .
+
+E:\Advaitecs\jwt-cookie-teaching-demo\bcrypt-argon2>
+==========================================================
+npm install argon2
+npm install -D @types/node
+---------------------------
+npm install bcrypt
+npm install -D @types/bcrypt
+
+npm install bcryptjs
+----------------------------
+FOR TYPESCRIPT INSTALL THESE
+npm install -D typescript tsx
