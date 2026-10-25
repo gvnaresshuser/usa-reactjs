@@ -104,10 +104,11 @@ LATEST COMMIT
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Microsoft Windows [Version 10.0.26200.9711]
+(c) Microsoft Corporation. All rights reserved.
+
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'jwt-cookie-teaching-demo/bcrypt-argon2/package copy.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/bcrypt-argon2/package-lock.json', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'jwt-cookie-teaching-demo/bcrypt-argon2/package.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -116,46 +117,28 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   jwt-cookie-teaching-demo/SCREENS/CrossOrigin-CrossSite.png
-        new file:   jwt-cookie-teaching-demo/SCREENS/Encoding Vs Encryption.png
-        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/STEPS
-        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/argon2-demo.js
-        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/argon2-demo.ts
-        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/bcrypt-demo.js
-        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/bcrypt-demo.ts
-        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/package copy.json
-        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/package-lock.json
-        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/package.json
-        new file:   pern-auth-system/SCREENS/CrossOrigin-CrossSite.png
-        new file:   pern-auth-system/SCREENS/Encoding Vs Encryption.png
+        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/ENDPOINT-TESTING TOOLS.txt
+        modified:   pern-auth-system/SCREENS/THUNDER-CLIENT/TESTING-THUNDER-CLIENT.txt
+        modified:   pern-auth-system/client/src/App.jsx
+        modified:   pern-auth-system/client/src/pages/AdminPanel.jsx
+        modified:   pern-auth-system/server/middleware/verifyToken.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "brcypt-argon2"
-[main 16c6901] brcypt-argon2
- 13 files changed, 1389 insertions(+), 71 deletions(-)
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/CrossOrigin-CrossSite.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/Encoding Vs Encryption.png
- create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/STEPS
- create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/argon2-demo.js
- create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/argon2-demo.ts
- create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/bcrypt-demo.js
- create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/bcrypt-demo.ts
- create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/package copy.json
- create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/package-lock.json
- create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/package.json
- create mode 100644 pern-auth-system/SCREENS/CrossOrigin-CrossSite.png
- create mode 100644 pern-auth-system/SCREENS/Encoding Vs Encryption.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "adjusted"
+[main ed7837f] adjusted
+ 6 files changed, 286 insertions(+), 72 deletions(-)
+ create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/ENDPOINT-TESTING TOOLS.txt
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 24, done.
-Counting objects: 100% (24/24), done.
+Enumerating objects: 30, done.
+Counting objects: 100% (30/30), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (18/18), done.
-Writing objects: 100% (18/18), 1.11 MiB | 919.00 KiB/s, done.
-Total 18 (delta 9), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (9/9), completed with 6 local objects.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (16/16), 6.42 KiB | 2.14 MiB/s, done.
+Total 16 (delta 12), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (12/12), completed with 12 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   e207939..16c6901  main -> main
+   16c6901..ed7837f  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
