@@ -1,0 +1,98 @@
+## Other popular API endpoint testing tools
+
+[Bruno API Client | Blog & News](https://images.openai.com/static-rsc-4/Lq4q9dGvYeWlkcdxW38-U4q4fjhztyKnDg0o47J8MED-lrc9CibG84ATiE29wbSHS6R9i0DJ2PZ9br1rRZJ06rG2R2Rc8LqwLbEsvZapmNsWpJM6Zf8snQpylt0TvXGl5t2kPUssLy_QXgxOk5bAz7aK7G4LcLgcoqmbjyAaqhs?purpose=inline)
+
+1\. Bruno
+
+Best for Git
+
+A desktop API client that saves requests as files, making it convenient to teach API testing alongside Git and GitHub.
+
+Website: [usebruno.com](https://www.usebruno.com/?utm_source=chatgpt.com)
+
+[Insomnia • Clockk](https://images.openai.com/static-rsc-4/tINsDtKOvEOHoizsELaNchTSpj6SRJsWSOE1rLRzfnAScfYIcxg075Y87_RDdLq_Be347XieEB8hIkT9Q3CO8YCY2tihn7t8EI2UOlj4UGpp4P1bhBmFXDUjwWt6LvvDyoBaByba-OyUcx5OUUOumeDQgqNipbOiid2ektnFDk8?purpose=inline)
+
+2\. Insomnia
+
+A desktop alternative for REST APIs, GraphQL, authentication headers, environments and request collections.
+
+Website: [insomnia.rest](https://insomnia.rest/?utm_source=chatgpt.com)
+
+[Hoppscotch Icon & Logo | Dashboard Icons & Logos](https://images.openai.com/static-rsc-4/z48MlMRQW1cIGCAzypggygo1l4StNgrlkcHPExo-c-tIGP6r41PuJ7NCdXInia3pHppiPGUSnQRQdvc6Tes2kitV36nY4ROGVZoZ_0miDBisEIzfqYZgcCKRjOFRqD8nCs8OmzfQQTyNR5ylPHZQs1JFk5AxDRNnqlzWJoTyGS8?purpose=inline)
+
+3\. Hoppscotch
+
+A browser-based API testing tool. Useful when students want to test endpoints without installing a desktop application.
+
+Website: [hoppscotch.io](https://hoppscotch.io/?utm_source=chatgpt.com)
+
+4\. REST Client
+
+Write HTTP requests directly in a `.http` file inside VS Code and execute them without opening a separate API client.
+
+Extension: [VS Code REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client\&utm_source=chatgpt.com)
+
+[Blog – HTTPie](https://images.openai.com/static-rsc-4/L8x8LiEDlSiPFORavdv3LOFK__O8rje1mOzUUtXTm6NyYPMV9vFCrDICaloTjxqzV0X2uBdtI77sl3bF55z3bU-1NHykxDLf_MZ7C5hwkpl0_sdtKEFaWUqR2qnCIDDbwkvwK6e9fPAKU338BpG8g3FD-K_qAm5FYpXviG0xOcA?purpose=inline)
+
+5\. HTTPie
+
+Test APIs using commands in the terminal. Good for demonstrating HTTP requests, headers, JSON bodies and automation.
+
+Website: [httpie.io](https://httpie.io/?utm_source=chatgpt.com)
+
+[Apidog Pricing & Reviews 2025 | Techjockey.com](https://images.openai.com/static-rsc-4/3Xf5-ABoEb5957Euf1myUoLEJn96Omrz1KKXuMr8flcYk9JEqY1Ybf5197xm5e7mP7z_4QLxqHIbwJGC1LTTsF3WTxWq0fQti5pv8lKvu3kzgnXFAkTVE9X7QW8asvk8Ql1z0Sy3jH8y4OY60lHbaNNnDIPbWqzxmSKen-KC4ao?purpose=inline)
+
+6\. Apidog
+
+Combines API design, request testing, documentation, mock servers and team collaboration.
+
+Website: [apidog.com](https://apidog.com/?utm_source=chatgpt.com)
+
+[Swagger Logo PNG Vector (SVG) Free Download](https://images.openai.com/static-rsc-4/DZMUKSvrP0DxUSnLmIuFJy_oanGakoT1xYpFcjU_0p0hhZvGKh6oQXi3K_gtjtDcLqmkv8Rz1kgpG-MCvVGXB4SyxYmt-ebmmKnjCK6iwmLkrtaEX8jfyhiI_cA9-w0YaQHvII5MM3ACSbn4H_0S7VUQFBH_Cyzgv4xpMCIM-js?purpose=inline)
+
+7\. Swagger UI
+
+Lets you explore and execute API requests directly from interactive API documentation generated from an OpenAPI specification.
+
+Website: [Swagger UI](https://swagger.io/tools/swagger-ui/?utm_source=chatgpt.com)
+
+[CURL Logo PNG Vector (SVG) Free Download](https://images.openai.com/static-rsc-4/-zCFFP4Pdm9EUy1tbTWESj95YuJ0bIYbYrHxSKY1A3Edpc81zGKyqeCuid4fQyRLRiXFWDeQndw6rViSbVzezUYrUZT8PTefVBtPj5QwzdNw6UafCAC2RBVptQoh9672ao_pGT-PB02iXjxpwrsGHsZ3ZFtiqc9ZqP6UbH43ZTg?purpose=inline)
+
+8\. cURL
+
+A command-line tool for sending HTTP requests. Useful for terminal demonstrations and scripts.
+
+Website: [curl.se](https://curl.se/?utm_source=chatgpt.com)
+
+[File:K6-load-testing-tool-logo.svg - Wikimedia Commons](https://images.openai.com/static-rsc-4/wp0EljWjHSw9jfQL-q7EpqlQ30-OVAe_YBPQC3ytvXU3TKVBOcxMr9CjjyyNX6bleeoMomT9aepL3ItOrMJLtERBrh6HSlwmWEw_dI8ExAgZQ3U3K3sdAcK5Krxw-QwiKtEYMBMlylSPrKAc9YkPd_pQymh1VqU89KI3imDc0fQ?purpose=inline)
+
+9\. Grafana k6
+
+Used to test API performance under concurrent users and heavy traffic rather than just checking individual requests.
+
+Website: [Grafana k6](https://grafana.com/oss/k6/?utm_source=chatgpt.com)
+
+These tools serve different purposes: Bruno, Insomnia and Hoppscotch are alternatives for sending requests; Swagger UI is especially useful for API documentation; and k6 is for performance testing.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://compile7.org\&sz=32)
+
+Compile7
+
++2
+
+
+
+## Which should you teach your students?
+
+For your React, Node.js, Express and PostgreSQL full-stack training, I would recommend this sequence:
+
+| Tool           | Teaching purpose                                            |
+| -------------- | ----------------------------------------------------------- |
+| Thunder Client | Test Express endpoints inside VS Code                       |
+| Postman        | Collections, environments, JWT authentication and API tests |
+| REST Client    | Execute requests from `.http` files stored with the project |
+| Swagger UI     | Document and explore APIs                                   |
+| cURL           | Understand HTTP requests from the terminal                  |
+| k6             | Introduce load and performance testing                      |
+
+My recommendation: Continue with Thunder Client for everyday endpoint testing, then introduce REST Client and Swagger UI. They provide two different approaches that students can use directly within their development workflow.

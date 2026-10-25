@@ -1,3 +1,32 @@
+Tool			Teaching purpose
+
+Thunder Client	Test Express endpoints inside VS Code
+Postman			Collections, environments, JWT authentication and API tests
+REST Client		Execute requests from .http files stored with the project
+Swagger UI		Document and explore APIs
+cURL			Understand HTTP requests from the terminal
+k6				Introduce load and performance testing
+
+
+List of technologies and frameworks that can generate and validate JWTs:
+
+1. Node.js – Express.js, NestJS, Fastify
+2. Java – Spring Boot, Jakarta EE
+3. C# – ASP.NET Core
+4. Python – Django, Flask, FastAPI
+5. PHP – Laravel, Symfony
+6. Ruby – Ruby on Rails, Sinatra
+7. Go – Gin, Fiber, Echo
+8. JavaScript/TypeScript – Hono, Koa
+9. Kotlin – Ktor, Spring Boot
+10. Rust – Actix Web, Axum
+11. Dart – Serverpod, Shelf
+12. Elixir – Phoenix
+13. Scala – Play Framework
+14. Swift – Vapor
+15. Cloud platforms / Identity providers – Keycloak, Auth0, Microsoft Entra ID, Amazon Cognito, Firebase Authentication
+
+
 Thunder Client testing guide for all authentication and product endpoints, including JWT authentication, admin authorization, and product permissions.
 
 Your server runs on port `5000`, and your routes are mounted as follows:
@@ -39,6 +68,7 @@ Body → JSON
 {
   "email": "test@gmail.com",
   "password": "123456"
+}
 ```
 
 Copy request body

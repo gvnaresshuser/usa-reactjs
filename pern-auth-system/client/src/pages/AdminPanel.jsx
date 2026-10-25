@@ -17,6 +17,7 @@ export default function AdminPanel() {
             const res = await axios.get('http://localhost:5000/api/auth/users', {
                 headers: { Authorization: `Bearer ${token}` }
             });
+            console.log(res.data);
             setUsers(res.data);
         } catch (err) {
             setError('You are not authorized to view this page.');

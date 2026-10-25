@@ -1,22 +1,31 @@
 // App.jsx
-import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Products from './pages/Products'; // ✅ Updated
-import Navbar from './pages/Navbar';
-import AdminPanel from './pages/AdminPanel';
-import Dashboard from './pages/Dashboard';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+  useLocation,
+} from "react-router-dom";
+import { useEffect, useState } from "react";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Products from "./pages/Products"; // ✅ Updated
+import Navbar from "./pages/Navbar";
+import AdminPanel from "./pages/AdminPanel";
+import Dashboard from "./pages/Dashboard";
 
 function AppContent() {
   const location = useLocation();
-  const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));//initally before login it is false
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    !!localStorage.getItem("token"),
+  ); //initally before login it is false
 
   useEffect(() => {
-    setIsAuthenticated(!!localStorage.getItem('token'));
+    setIsAuthenticated(!!localStorage.getItem("token"));
   }, [location]);
 
-  const hideNavbar = location.pathname === '/login' || location.pathname === '/register';
+  const hideNavbar =
+    location.pathname === "/login" || location.pathname === "/register";
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -45,3 +54,13 @@ function App() {
 }
 
 export default App;
+/*
+!!localStorage.getItem('token')
+The double NOT (!!) converts a value into a boolean (true or false).
+- If a token exists (non-empty string) → true
+- If a token does not exist (null) → false
+How it works:
+localStorage.getItem('token')   // "abc123" or null
+!localStorage.getItem('token')  // false or true
+!!localStorage.getItem('token') // true or false
+*/

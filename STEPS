@@ -103,10 +103,11 @@ E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 LATEST COMMIT
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Microsoft Windows [Version 10.0.26200.9711]
-(c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'jwt-cookie-teaching-demo/bcrypt-argon2/package copy.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/bcrypt-argon2/package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'jwt-cookie-teaching-demo/bcrypt-argon2/package.json', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -115,45 +116,46 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        modified:   pern-auth-system/SCREENS/JWT/TRADITIONAL SESSIONID-Vs-JWT.png
-        modified:   pern-auth-system/SCREENS/JWT/Traditional session-based vs JWT-based authentication.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/1-EXTENSION-VS-CODE-EDITOR.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/2.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/3.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/4.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/5.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/6.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/7.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/8.png
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/TESTING-THUNDER-CLIENT.txt
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/TESTING.txt
+        new file:   jwt-cookie-teaching-demo/SCREENS/CrossOrigin-CrossSite.png
+        new file:   jwt-cookie-teaching-demo/SCREENS/Encoding Vs Encryption.png
+        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/STEPS
+        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/argon2-demo.js
+        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/argon2-demo.ts
+        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/bcrypt-demo.js
+        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/bcrypt-demo.ts
+        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/package copy.json
+        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/package-lock.json
+        new file:   jwt-cookie-teaching-demo/bcrypt-argon2/package.json
+        new file:   pern-auth-system/SCREENS/CrossOrigin-CrossSite.png
+        new file:   pern-auth-system/SCREENS/Encoding Vs Encryption.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "JWT screens"
-[main e207939] JWT screens
- 13 files changed, 477 insertions(+), 34 deletions(-)
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/1-EXTENSION-VS-CODE-EDITOR.png
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/2.png
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/3.png
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/4.png
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/5.png
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/6.png
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/7.png
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/8.png
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/TESTING-THUNDER-CLIENT.txt
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/TESTING.txt
-
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "brcypt-argon2"
+[main 16c6901] brcypt-argon2
+ 13 files changed, 1389 insertions(+), 71 deletions(-)
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/CrossOrigin-CrossSite.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/Encoding Vs Encryption.png
+ create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/STEPS
+ create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/argon2-demo.js
+ create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/argon2-demo.ts
+ create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/bcrypt-demo.js
+ create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/bcrypt-demo.ts
+ create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/package copy.json
+ create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/package-lock.json
+ create mode 100644 jwt-cookie-teaching-demo/bcrypt-argon2/package.json
+ create mode 100644 pern-auth-system/SCREENS/CrossOrigin-CrossSite.png
+ create mode 100644 pern-auth-system/SCREENS/Encoding Vs Encryption.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 26, done.
-Counting objects: 100% (26/26), done.
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (19/19), done.
-Writing objects: 100% (19/19), 3.03 MiB | 1.04 MiB/s, done.
-Total 19 (delta 6), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 1.11 MiB | 919.00 KiB/s, done.
+Total 18 (delta 9), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (9/9), completed with 6 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   299446d..e207939  main -> main
+   e207939..16c6901  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
