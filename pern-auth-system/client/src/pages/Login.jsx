@@ -18,6 +18,8 @@ export default function Login() {
         form,
       );
       const token = res.data.token;
+      const decode = res.data.decoded;
+      console.log(decode);
       const decoded = jwtDecode(token);
       console.log(decoded);
 

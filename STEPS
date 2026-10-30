@@ -1,3 +1,50 @@
+
+LATEST COMMIT
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Microsoft Windows [Version 10.0.26200.9711]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'pern-auth-system/client/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/client/README-1.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'pern-auth-system/server/README.md', LF will be replaced by CRLF the next time Git touches it
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   STEPS
+        new file:   pern-auth-system/SCREENS/CHROME-EXTENSION-MARKDOWN-README.png
+        new file:   pern-auth-system/client/README-1.md
+        modified:   pern-auth-system/client/README.md
+        new file:   pern-auth-system/server/README.md
+
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "25-10-2026"
+[main 7ba54cb] 25-10-2026
+ 5 files changed, 307 insertions(+), 46 deletions(-)
+ create mode 100644 pern-auth-system/SCREENS/CHROME-EXTENSION-MARKDOWN-README.png
+ create mode 100644 pern-auth-system/client/README-1.md
+ create mode 100644 pern-auth-system/server/README.md
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 346.82 KiB | 19.27 MiB/s, done.
+Total 10 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   ed7837f..7ba54cb  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 Mr.Subba Reddy:+1 (310) 384-2796
 Mr.Ram:+1 (678) 834-2506
 
@@ -100,48 +147,6 @@ To https://github.com/gvnaresshuser/usa-reactjs.git
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 =====================================================================
 
-LATEST COMMIT
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Microsoft Windows [Version 10.0.26200.9711]
-(c) Microsoft Corporation. All rights reserved.
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'pern-auth-system/client/src/App.jsx', LF will be replaced by CRLF the next time Git touches it
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
-        new file:   pern-auth-system/SCREENS/THUNDER-CLIENT/ENDPOINT-TESTING TOOLS.txt
-        modified:   pern-auth-system/SCREENS/THUNDER-CLIENT/TESTING-THUNDER-CLIENT.txt
-        modified:   pern-auth-system/client/src/App.jsx
-        modified:   pern-auth-system/client/src/pages/AdminPanel.jsx
-        modified:   pern-auth-system/server/middleware/verifyToken.js
-
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "adjusted"
-[main ed7837f] adjusted
- 6 files changed, 286 insertions(+), 72 deletions(-)
- create mode 100644 pern-auth-system/SCREENS/THUNDER-CLIENT/ENDPOINT-TESTING TOOLS.txt
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
-Enumerating objects: 30, done.
-Counting objects: 100% (30/30), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (15/15), done.
-Writing objects: 100% (16/16), 6.42 KiB | 2.14 MiB/s, done.
-Total 16 (delta 12), reused 0 (delta 0), pack-reused 0
-remote: Resolving deltas: 100% (12/12), completed with 12 local objects.
-To https://github.com/gvnaresshuser/usa-reactjs.git
-   16c6901..ed7837f  main -> main
-
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 

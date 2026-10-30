@@ -96,3 +96,36 @@ This token has no expiry by default.
 Best practice: Set expiresIn when creating access tokens, and let jwt.verify() validate 
 their expiration automatically.
 */
+/*
+split() is a built-in JavaScript String method.
+The split(" ") method returns an array of strings by splitting a string wherever it finds a space.
+
+Let's understand with your JWT Bearer token example.
+1. Example
+const authHeader = "Bearer abc123xyz";
+
+const token = authHeader.split(" ");
+
+console.log(token);
+
+
+Output:
+["Bearer", "abc123xyz"]
+
+
+2. What does [1] mean?
+const token = authHeader.split(" ")[1];
+
+
+Here:
+- split(" ") splits the string into an array.
+- [0] returns "Bearer".
+- [1] returns "abc123xyz".
+Visual representation
+"Bearer abc123xyz"
+[0]
+Bearer
+
+[1]
+abc123xyz
+*/
