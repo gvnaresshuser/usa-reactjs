@@ -1,0 +1,155 @@
+# Cookie lifetime in milliseconds (60 minutes)
+
+ACCESS_COOKIE_MAX_AGE=3600000
+REFRESH_COOKIE_MAX_AGE=3600000
+For comparison:
+Duration Milliseconds
+10 minutes 600000
+20 minutes 1200000
+30 minutes 1800000
+60 minutes 3600000
+24 hours 86400000
+
+# Cookie lifetime in milliseconds
+
+ACCESS_COOKIE_MAX_AGE=10000
+REFRESH_COOKIE_MAX_AGE=20000
+
+Cookie paths determine which URLs on your backend are allowed to receive a particular cookie.
+
+In simple terms, cookie paths control where the browser sends cookies.
+
+1. ACCESS_COOKIE_PATH=/
+   ACCESS_COOKIE_PATH=/
+
+/ means the cookie is available to all paths on your backend.
+
+For example:
+API endpoint Access cookie sent?
+/api/products Yes
+/api/users Yes
+/api/orders Yes
+/api/auth/profile Yes
+
+This is useful because the access token is required for accessing protected APIs throughout your application. 2. REFRESH_COOKIE_PATH=/api/auth
+REFRESH_COOKIE_PATH=/api/auth
+
+This means the refresh token is sent only to URLs under /api/auth.
+
+For example:
+API endpoint Refresh cookie sent?
+/api/auth/refresh Yes
+/api/auth/logout Yes
+/api/auth/login Yes
+/api/products No
+/api/users No
+
+This restricts unnecessary exposure of the refresh token to other API endpoints.
+
+# Cookie settings
+
+COOKIE_HTTP_ONLY=true
+COOKIE_SECURE=false
+COOKIE_SAME_SITE=lax
+COOKIE_DOMAIN=
+
+Setting Purpose
+COOKIE_HTTP_ONLY=true
+Prevents JavaScript from accessing cookies. Protects against cookie theft through XSS.
+
+COOKIE_SECURE=false
+Allows cookies over HTTP. Use false for localhost development and true for HTTPS production.
+
+COOKIE_SAME_SITE=lax
+Restricts cookies in most cross-site requests, helping protect against CSRF attacks.
+
+COOKIE_DOMAIN=  
+Specifies which domain can receive the cookie. Empty means the browser uses the host that sets the cookie.
+
+Recommended configuration
+Local development:
+COOKIE_HTTP_ONLY=true
+COOKIE_SECURE=false
+COOKIE_SAME_SITE=lax
+COOKIE_DOMAIN=
+
+Production (HTTPS):
+COOKIE_HTTP_ONLY=true
+COOKIE_SECURE=true
+COOKIE_SAME_SITE=lax
+COOKIE_DOMAIN=yourdomain.com
+
+Remember:
+
+- HTTPOnly = JavaScript protection.
+- Secure = HTTPS only.
+- SameSite = Cross-site cookie protection.
+- Domain = Which domain receives the cookie.
+
+# COOKIE_SAME_SITE
+
+The COOKIE_SAME_SITE setting controls when browsers send cookies in cross-site requests.
+Value Meaning
+strict Cookies are sent only in same-site requests. Stronger cross-site protection.
+lax Cookies are sent in same-site requests and certain cross-site top-level navigations.
+none Cookies are allowed in cross-site requests. Requires COOKIE_SECURE=true (HTTPS).
+
+My recommendation:
+COOKIE_SAME_SITE=lax
+
+Lax is a good default for most applications because it balances security and usability.
+
+# React frontend
+
+CORS_ORIGIN=http://localhost:5173
+
+Meaning: Specifies which frontend origin is allowed to communicate with your Express backend.
+
+- http://localhost:5173 – Your React + Vite frontend URL.
+- Only requests from this configured origin are allowed by your CORS policy.
+  Example:
+
+React frontend: localhost:5173
+
+Express backend: localhost:5000
+
+CORS allows your React application to access backend APIs running on port 5000.
+
+Production: Replace this with your actual frontend domain.
+
+# satisfies
+
+const signAccess = (user: SafeUser): string =>
+jwt.sign(
+{
+userId: user.id,
+email: user.email,
+type: "access",
+} satisfies AccessPayload,
+ACCESS_SECRET,
+{
+expiresIn: ACCESS_EXPIRES as SignOptions["expiresIn"],
+}
+);
+In TypeScript, satisfies checks whether an object matches a specified type
+without changing the object's inferred type.
+
+What does it do?
+
+1. Creates an object containing userId, email, and type.
+2. Checks whether the object satisfies the AccessPayload interface.
+3. Reports a TypeScript compilation error if the object doesn't match the required structure.
+
+---
+
+JWT_ACCESS_EXPIRES_IN=10s
+JWT_REFRESH_EXPIRES_IN=30s
+
+ACCESS_COOKIE_MAX_AGE=10000
+REFRESH_COOKIE_MAX_AGE=30000
+
+Make sure your .env also has:
+REFRESH_COOKIE_MAX_AGE=30000
+ACCESS_COOKIE_MAX_AGE=10000
+
+Otherwise, the browser may remove the refresh cookie before its JWT expires.

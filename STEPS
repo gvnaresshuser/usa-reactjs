@@ -59,8 +59,12 @@ git push -u origin main
 GIT CLONE:
 ---------
 =====================================================================
+ENTIRE MATERIAL:
+---------------
 git clone https://github.com/gvnaresshuser/usa-reactjs.git
 =====================================================================
+ONLY html-basics
+-----------------
 git clone --filter=blob:none --no-checkout https://github.com/gvnaresshuser/usa-reactjs.git
 cd usa-reactjs
 git sparse-checkout init --cone
@@ -68,16 +72,36 @@ git sparse-checkout set html-basics
 git checkout main
 
 =====================================================================
+ONLY my-react-app
+-----------------
 git clone --filter=blob:none --no-checkout https://github.com/gvnaresshuser/usa-reactjs.git
 cd usa-reactjs
 git sparse-checkout init --cone
 git sparse-checkout set my-react-app
 git checkout main
 =====================================================================
+cd my-react-app
+code .
 npm install
 npm run dev
 
 --------------------
+
+
+PROTOCOL+PORT+DOMAIN
+
+
+cross origin
+cross site - if subdomains are different dashboard,inventory
+
+http/https://5000/ somename.com/dashboard
+http/https://5000/ somename.com/inventory
+
+http://localhost:5173/register
+http://localhost:5000/api/auth/register
+
+
+
 
 E:\>git clone --filter=blob:none --no-checkout https://github.com/gvnaresshuser/usa-reactjs.git
 Cloning into 'usa-reactjs'...

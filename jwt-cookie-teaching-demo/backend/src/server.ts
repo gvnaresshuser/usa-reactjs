@@ -244,6 +244,8 @@ const signAccess = (user: SafeUser): string =>
       expiresIn: ACCESS_EXPIRES as SignOptions["expiresIn"],
     }
   );
+  //In TypeScript, satisfies checks whether an object matches a specified type 
+  //without changing the object's inferred type.
 
 const signRefresh = (userId: number): string =>
   jwt.sign(
@@ -303,7 +305,16 @@ const createRefreshSession = async (
   userId: number,
   token: string
 ): Promise<void> => {
-  const decoded = jwt.decode(token) as { exp?: number } | null;
+  //const decoded = jwt.decode(token) as { exp?: number } | null;
+const decoded = jwt.decode(token) as { exp?: number } | null;
+
+if (!decoded?.exp) {
+  throw new Error("Could not read refresh-token expiry");
+}
+
+console.log("JWT expires at:", new Date(decoded.exp * 1000));
+console.log("Current time:", new Date());
+
 
   if (!decoded?.exp) {
     throw new Error("Could not read refresh-token expiry");
@@ -393,6 +404,9 @@ const authenticate = asyncRoute(async (req, res, next) => {
     });
   }
 });
+//res.locals.user = user; is used to store the authenticated user's information 
+//temporarily so that subsequent middleware or controllers can access it during the 
+//same request.
 
 // --------------------------------------------------
 // 11. HEALTH CHECK
