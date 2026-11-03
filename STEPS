@@ -14,31 +14,23 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
-        new file:   pern-auth-system/SCREENS-DATABASE/neon-1.png
-        new file:   pern-auth-system/SCREENS-DATABASE/neon-2.png
-        new file:   pern-auth-system/SCREENS-DATABASE/neon-3.png
-        new file:   pern-auth-system/SCREENS-DATABASE/neon-4.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "neon db"
-[main 481ad20] neon db
- 5 files changed, 12 insertions(+), 28 deletions(-)
- create mode 100644 pern-auth-system/SCREENS-DATABASE/neon-1.png
- create mode 100644 pern-auth-system/SCREENS-DATABASE/neon-2.png
- create mode 100644 pern-auth-system/SCREENS-DATABASE/neon-3.png
- create mode 100644 pern-auth-system/SCREENS-DATABASE/neon-4.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "03-11-2026"
+[main 39e0e49] 03-11-2026
+ 1 file changed, 27 insertions(+), 12 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
 git: 'credential-manager-core' is not a git command. See 'git --help'.
-Enumerating objects: 13, done.
-Counting objects: 100% (13/13), done.
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (9/9), done.
-Writing objects: 100% (9/9), 2.16 MiB | 1.18 MiB/s, done.
-Total 9 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 631 bytes | 210.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   df84a7d..481ad20  main -> main
+   481ad20..39e0e49  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 
@@ -62,7 +54,74 @@ git branch -M main
 git push -u origin main
 
 
+
+
+GIT CLONE:
+---------
 =====================================================================
+git clone https://github.com/gvnaresshuser/usa-reactjs.git
+=====================================================================
+git clone --filter=blob:none --no-checkout https://github.com/gvnaresshuser/usa-reactjs.git
+cd usa-reactjs
+git sparse-checkout init --cone
+git sparse-checkout set html-basics
+git checkout main
+
+=====================================================================
+git clone --filter=blob:none --no-checkout https://github.com/gvnaresshuser/usa-reactjs.git
+cd usa-reactjs
+git sparse-checkout init --cone
+git sparse-checkout set my-react-app
+git checkout main
+=====================================================================
+npm install
+npm run dev
+
+--------------------
+
+E:\>git clone --filter=blob:none --no-checkout https://github.com/gvnaresshuser/usa-reactjs.git
+Cloning into 'usa-reactjs'...
+remote: Enumerating objects: 875, done.
+remote: Counting objects: 100% (81/81), done.
+remote: Compressing objects: 100% (55/55), done.
+remote: Total 875 (delta 44), reused 57 (delta 23), pack-reused 794 (from 1)
+Receiving objects: 100% (875/875), 127.48 KiB | 234.00 KiB/s, done.
+Resolving deltas: 100% (493/493), done.
+
+E:\>cd usa-reactjs
+
+E:\usa-reactjs>git sparse-checkout init --cone
+
+E:\usa-reactjs>git sparse-checkout set html-basics
+
+E:\usa-reactjs>git checkout main
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 10 (delta 0), reused 1 (delta 0), pack-reused 8 (from 1)
+Receiving objects: 100% (10/10), 3.11 MiB | 1.25 MiB/s, done.
+Updating files: 100% (10/10), done.
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+E:\usa-reactjs>code .
+
+E:\usa-reactjs>git clone --filter=blob:none --no-checkout https://github.com/gvnaresshuser/usa-reactjs.git
+Cloning into 'usa-reactjs'...
+remote: Enumerating objects: 875, done.
+remote: Counting objects: 100% (81/81), done.
+remote: Compressing objects: 100% (55/55), done.
+remote: Total 875 (delta 44), reused 57 (delta 23), pack-reused 794 (from 1)
+Receiving objects: 100% (875/875), 127.48 KiB | 1.55 MiB/s, done.
+Resolving deltas: 100% (493/493), done.
+
+--------------------
+--------------------
+npm install
+npm run dev
+
+
+
 Microsoft Windows [Version 10.0.26100.8246]
 (c) Microsoft Corporation. All rights reserved.
 
