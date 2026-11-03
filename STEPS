@@ -5,27 +5,42 @@ LATEST COMMIT
 Microsoft Windows [Version 10.0.26200.9711]
 (c) Microsoft Corporation. All rights reserved.
 
-E:\Advaitecs>git add .
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
 
-E:\Advaitecs>git status
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
 Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   PUSHED-TO-GITHUB.txt
-        new file:   pern-auth-system/SCREENS/Axios.png
-        modified:   pern-auth-system/client/src/pages/Login.jsx
-        modified:   pern-auth-system/server/middleware/verifyToken.js
-        modified:   pern-auth-system/server/routes/auth.js
+        modified:   STEPS
+        new file:   pern-auth-system/SCREENS-DATABASE/neon-1.png
+        new file:   pern-auth-system/SCREENS-DATABASE/neon-2.png
+        new file:   pern-auth-system/SCREENS-DATABASE/neon-3.png
+        new file:   pern-auth-system/SCREENS-DATABASE/neon-4.png
 
 
-E:\Advaitecs>git commit -m "Pern-auth-system"
-[main 28c55ff] Pern-auth-system
- 5 files changed, 185 insertions(+), 113 deletions(-)
- create mode 100644 pern-auth-system/SCREENS/Axios.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "neon db"
+[main 481ad20] neon db
+ 5 files changed, 12 insertions(+), 28 deletions(-)
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/neon-1.png
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/neon-2.png
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/neon-3.png
+ create mode 100644 pern-auth-system/SCREENS-DATABASE/neon-4.png
 
-E:\Advaitecs>git push
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
+git: 'credential-manager-core' is not a git command. See 'git --help'.
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.16 MiB | 1.18 MiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/gvnaresshuser/usa-reactjs.git
+   df84a7d..481ad20  main -> main
+
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
