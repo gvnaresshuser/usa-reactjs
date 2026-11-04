@@ -6,6 +6,7 @@ Microsoft Windows [Version 10.0.26200.9711]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
+warning: in the working copy of 'jwt-cookie-teaching-demo/backend/src/server.ts', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -14,23 +15,35 @@ Your branch is up to date with 'origin/main'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   STEPS
+        new file:   jwt-cookie-teaching-demo/SCREENS/JWT Cookie-Based Authentication System using Node.js, Express, TypeScript and PostgreSQL..png
+        new file:   jwt-cookie-teaching-demo/SCREENS/expires_at--created_at.png
+        new file:   jwt-cookie-teaching-demo/backend/SCREENS/ENV-NOTES
+        modified:   jwt-cookie-teaching-demo/backend/src/server.ts
+        new file:   pern-auth-system/SCREENS/Preflight Mechanism.png
+        modified:   pern-auth-system/server/index.js
+        modified:   pern-auth-system/server/routes/auth.js
+        modified:   pern-auth-system/server/routes/products.js
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "03-11-2026"
-[main 39e0e49] 03-11-2026
- 1 file changed, 27 insertions(+), 12 deletions(-)
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "04-11-2026"
+[main 496385f] 04-11-2026
+ 9 files changed, 280 insertions(+), 68 deletions(-)
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/JWT Cookie-Based Authentication System using Node.js, Express, TypeScript and PostgreSQL..png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/expires_at--created_at.png
+ create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/ENV-NOTES
+ create mode 100644 pern-auth-system/SCREENS/Preflight Mechanism.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
 git: 'credential-manager-core' is not a git command. See 'git --help'.
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 631 bytes | 210.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (20/20), 2.47 MiB | 1.03 MiB/s, done.
+Total 20 (delta 12), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (12/12), completed with 12 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   481ad20..39e0e49  main -> main
+   ce2c5e0..496385f  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 
