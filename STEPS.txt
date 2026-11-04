@@ -6,7 +6,6 @@ Microsoft Windows [Version 10.0.26200.9711]
 (c) Microsoft Corporation. All rights reserved.
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git add .
-warning: in the working copy of 'jwt-cookie-teaching-demo/backend/src/server.ts', LF will be replaced by CRLF the next time Git touches it
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git status
 On branch main
@@ -14,39 +13,31 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        modified:   STEPS
-        new file:   jwt-cookie-teaching-demo/SCREENS/JWT Cookie-Based Authentication System using Node.js, Express, TypeScript and PostgreSQL..png
-        new file:   jwt-cookie-teaching-demo/SCREENS/expires_at--created_at.png
-        new file:   jwt-cookie-teaching-demo/backend/SCREENS/ENV-NOTES
-        modified:   jwt-cookie-teaching-demo/backend/src/server.ts
-        new file:   pern-auth-system/SCREENS/Preflight Mechanism.png
-        modified:   pern-auth-system/server/index.js
-        modified:   pern-auth-system/server/routes/auth.js
-        modified:   pern-auth-system/server/routes/products.js
+        renamed:    STEPS -> STEPS.txt
+        new file:   jwt-cookie-teaching-demo/SCREENS/Cross-Domain and Cross-Site.png
+        new file:   jwt-cookie-teaching-demo/SCREENS/Functions - Explanation.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "04-11-2026"
-[main 496385f] 04-11-2026
- 9 files changed, 280 insertions(+), 68 deletions(-)
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/JWT Cookie-Based Authentication System using Node.js, Express, TypeScript and PostgreSQL..png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/expires_at--created_at.png
- create mode 100644 jwt-cookie-teaching-demo/backend/SCREENS/ENV-NOTES
- create mode 100644 pern-auth-system/SCREENS/Preflight Mechanism.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "notes on jwt"
+[main ad1d980] notes on jwt
+ 3 files changed, 25 insertions(+), 12 deletions(-)
+ rename STEPS => STEPS.txt (88%)
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/Cross-Domain and Cross-Site.png
+ create mode 100644 jwt-cookie-teaching-demo/SCREENS/Functions - Explanation.png
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
 git: 'credential-manager-core' is not a git command. See 'git --help'.
-Enumerating objects: 35, done.
-Counting objects: 100% (35/35), done.
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (20/20), done.
-Writing objects: 100% (20/20), 2.47 MiB | 1.03 MiB/s, done.
-Total 20 (delta 12), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (12/12), completed with 12 local objects.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (7/7), 4.83 MiB | 1.21 MiB/s, done.
+Total 7 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   ce2c5e0..496385f  main -> main
+   496385f..ad1d980  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
-
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Mr.Subba Reddy:+1 (310) 384-2796
