@@ -49,7 +49,10 @@ useEffect(() => {
 }, []);
 
 
-  const submit = async (event: React.FormEvent<HTMLFormElement>) => {
+  //const submit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const submit: NonNullable<React.ComponentProps<"form">["onSubmit"]> = async (
+    event,
+  ) => {
     event.preventDefault();
     setBusy(true);
     setMessage("");
@@ -67,7 +70,10 @@ useEffect(() => {
       setPassword("");
     } catch (error: unknown) {
       const err = error as { response?: { data?: { message?: string } } };
-      setMessage(err.response?.data?.message ?? "Request failed. Check the backend and database.");
+      setMessage(
+        err.response?.data?.message ??
+          "Request failed. Check the backend and database.",
+      );
     } finally {
       setBusy(false);
     }

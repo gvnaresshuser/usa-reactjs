@@ -203,6 +203,8 @@ app.use(
 
 app.use(express.json());
 app.use(cookieParser());
+//In Node.js + Express, cookie-parser is middleware used to read cookies 
+//sent by the browser in an incoming HTTP request.
 
 // --------------------------------------------------
 // 5. TYPES
@@ -296,6 +298,18 @@ const clearAuthCookies = (res: Response): void => {
 
   res.clearCookie(REFRESH_COOKIE, refreshClearOptions);
 };
+/*
+This is JavaScript object destructuring.
+It does two things:
+1. Extracts maxAge from accessCookieOptions and assigns it to _accessMaxAge.
+2. Copies all remaining properties into accessClearOptions.
+
+Remember this simple concept:
+- res.cookie() → Sends a cookie to the browser.
+- cookie-parser → Reads cookies from the browser's request.
+- req.cookies → Provides the parsed cookies.
+cookie-parser does not create, send, or verify JWT tokens. It only parses cookies.
+*/
 
 // --------------------------------------------------
 // 8. DATABASE HELPERS

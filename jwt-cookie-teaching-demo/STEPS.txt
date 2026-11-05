@@ -157,3 +157,78 @@ Log in and wait more than 15 minutes without refreshing the session. Click Call 
 
 
 Important: With your current 10-second access-token and 15-minute refresh-token settings, Test B requires waiting over 15 minutes. For classroom demonstrations, temporarily set both token lifetimes to a few seconds in .env, restart the backend, and wait until both tokens expire.
+
+
+---------------------------------------------------------------------------
+'FormEvent' is deprecated.ts(6385)
+index.d.ts(2173, 8): The declaration was marked as deprecated here.
+
+//const submit = async (event: React.FormEvent<HTMLFormElement>) => {
+
+const submit: NonNullable<React.ComponentProps<"form">["onSubmit"]> = async (
+    event,
+  ) => {
+
+Expression	                  Meaning
+
+React.ComponentProps<"form">	Gets all props supported by a native form element
+["onSubmit"]	               Extracts the onSubmit event handler type
+NonNullable	                  Removes null and undefined from the type
+event	                        Automatically gets the correct event type
+
+Use this approach. It avoids the deprecated FormEvent reference and lets 
+TypeScript infer the correct React form event type.
+--------------------------------------------------------------
+?? is called the Nullish Coalescing Operator in JavaScript.
+
+It means: If the left-hand value is null or undefined, use the right-hand value. Otherwise, use the left-hand value.
+1. Your example
+const email = String(req.body?.email ?? "");
+
+
+Let's break it down:
+- req.body?.email → Safely accesses the email property.
+- ?? "" → If email is null or undefined, use an empty string.
+- String() → Converts the resulting value into a string.
+----------------------------------------------------------------
+const result = await pool.query<
+  SafeUser & { password_hash: string }
+>(
+  `SELECT id, name, email, password_hash
+   FROM demo_users
+   WHERE email = $1`,
+  [email]
+);
+
+
+The < > tells TypeScript what type of data to expect in the database query result rows.
+1. Understand the generic type
+pool.query<SafeUser & { password_hash: string }>()
+
+
+Here:
+- pool.query → Executes the PostgreSQL query.
+- < > → Specifies the expected result type.
+- SafeUser → Existing TypeScript interface or type.
+- & → Intersection operator (combines two types).
+- { password_hash: string } → Adds the password_hash property.
+2. What does the intersection mean?
+Suppose you have:
+type SafeUser = {
+  id: number;
+  name: string;
+  email: string;
+};
+
+
+Now:
+SafeUser & { password_hash: string }
+
+
+Means:
+{
+  id: number;
+  name: string;
+  email: string;
+  password_hash: string;
+}

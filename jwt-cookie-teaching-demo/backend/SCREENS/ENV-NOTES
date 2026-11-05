@@ -3,7 +3,7 @@
 ACCESS_COOKIE_MAX_AGE=3600000
 REFRESH_COOKIE_MAX_AGE=3600000
 For comparison:
-Duration Milliseconds
+Duration Milliseconds 10 x 60 x 1000
 10 minutes 600000
 20 minutes 1200000
 30 minutes 1800000
@@ -31,8 +31,10 @@ API endpoint Access cookie sent?
 /api/orders Yes
 /api/auth/profile Yes
 
-This is useful because the access token is required for accessing protected APIs throughout your application. 2. REFRESH_COOKIE_PATH=/api/auth
-REFRESH_COOKIE_PATH=/api/auth
+This is useful because the access token is required for accessing protected APIs throughout your application.
+
+2. REFRESH_COOKIE_PATH=/api/auth
+   REFRESH_COOKIE_PATH=/api/auth
 
 This means the refresh token is sent only to URLs under /api/auth.
 

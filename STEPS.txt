@@ -13,29 +13,25 @@ Your branch is up to date with 'origin/main'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-        renamed:    STEPS -> STEPS.txt
-        new file:   jwt-cookie-teaching-demo/SCREENS/Cross-Domain and Cross-Site.png
-        new file:   jwt-cookie-teaching-demo/SCREENS/Functions - Explanation.png
+        modified:   STEPS.txt
+        modified:   jwt-cookie-teaching-demo/SCREENS/Cross-Domain and Cross-Site.png
 
 
-E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "notes on jwt"
-[main ad1d980] notes on jwt
- 3 files changed, 25 insertions(+), 12 deletions(-)
- rename STEPS => STEPS.txt (88%)
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/Cross-Domain and Cross-Site.png
- create mode 100644 jwt-cookie-teaching-demo/SCREENS/Functions - Explanation.png
+E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git commit -m "cross-domain-cross-site"
+[main c92c2e2] cross-domain-cross-site
+ 2 files changed, 18 insertions(+), 27 deletions(-)
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>git push
 git: 'credential-manager-core' is not a git command. See 'git --help'.
-Enumerating objects: 10, done.
-Counting objects: 100% (10/10), done.
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (7/7), done.
-Writing objects: 100% (7/7), 4.83 MiB | 1.21 MiB/s, done.
-Total 7 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 702.63 KiB | 16.73 MiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 To https://github.com/gvnaresshuser/usa-reactjs.git
-   496385f..ad1d980  main -> main
+   ad1d980..c92c2e2  main -> main
 
 E:\MURALI\REACT-JS-CRASH-COURSE\usa-reactjs>
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

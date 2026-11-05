@@ -9,6 +9,8 @@ const api = axios.create({
   baseURL: "http://localhost:5000/api",
   withCredentials: true,
 });
+//withCredentials: true tells Axios to send cookies and other credentials along 
+//with cross-origin HTTP requests.
 
 interface RetryConfig extends InternalAxiosRequestConfig {
   _retried?: boolean;
